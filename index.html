@@ -1,0 +1,1908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="theme-color" content="#33691E">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>NV Compatibility Calculator</title>
+<meta name="description" content="Interventional Radiology device compatibility & clinical reference — 791 devices, IFU rules, procedure kits and specialty domains (CTO, DCB, thrombectomy, closure, contrast, biliary, HCC, pediatric). Educational use only, not for clinical decision-making.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; manifest-src 'self'">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta name="permissions-policy" content="geolocation=(), microphone=(), camera=(), payment=(), usb=()">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<style>
+:root{
+  --pri:#558B2F;--pri-d:#33691E;--pri-l:#F1F8E9;--pri-c:#FFFFFF;
+  --sec:#2E7D32;--sec-l:#E8F5E9;
+  --red:#C62828;--red-l:#FFEBEE;
+  --amb:#FF8F00;--amb-l:#FFF8E1;
+  --pur:#689F38;--pur-l:#F1F8E9;
+  --teal:#00796B;--teal-l:#E0F2F1;
+  --coral:#7CB342;--coral-l:#F1F8E9;
+  --bg:#F9FBE7;--surface:#FFFFFF;--surface2:#F1F8E9;
+  --txt:#1B5E20;--txt2:#33691E;--txt3:#757575;
+  --border:rgba(0,0,0,0.06);--border2:rgba(0,0,0,0.12);
+  --r:10px;--r2:16px;--r3:24px;
+  --sh:0 1px 3px rgba(0,0,0,0.06),0 1px 2px rgba(0,0,0,0.04);
+  --sh2:0 4px 16px rgba(0,0,0,0.08);
+  --nav-h:64px;--top-h:56px;
+  --safe-top:env(safe-area-inset-top,0px);
+  --safe-bot:env(safe-area-inset-bottom,0px);
+}
+/* Dark palette — applied when <html data-theme="dark">, or automatically
+   via prefers-color-scheme when the user hasn't chosen explicitly. */
+:root[data-theme="dark"]{
+  --pri:#7CB342;--pri-d:#9CCC65;--pri-l:#1B2A12;--pri-c:#0D1A08;
+  --sec:#66BB6A;--sec-l:#12321A;
+  --red:#EF5350;--red-l:#3A1414;
+  --amb:#FFB300;--amb-l:#3A2C0A;
+  --pur:#9CCC65;--pur-l:#1B2A12;
+  --teal:#4DB6AC;--teal-l:#0E2B29;
+  --coral:#9CCC65;--coral-l:#1B2A12;
+  --bg:#101410;--surface:#181D18;--surface2:#20261F;
+  --txt:#E8F5E9;--txt2:#C5E1C7;--txt3:#8FA090;
+  --border:rgba(255,255,255,0.08);--border2:rgba(255,255,255,0.14);
+  --sh:0 1px 3px rgba(0,0,0,0.4),0 1px 2px rgba(0,0,0,0.3);
+  --sh2:0 4px 16px rgba(0,0,0,0.5);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]):not([data-theme="dark"]){
+    --pri:#7CB342;--pri-d:#9CCC65;--pri-l:#1B2A12;--pri-c:#0D1A08;
+    --sec:#66BB6A;--sec-l:#12321A;
+    --red:#EF5350;--red-l:#3A1414;
+    --amb:#FFB300;--amb-l:#3A2C0A;
+    --pur:#9CCC65;--pur-l:#1B2A12;
+    --teal:#4DB6AC;--teal-l:#0E2B29;
+    --coral:#9CCC65;--coral-l:#1B2A12;
+    --bg:#101410;--surface:#181D18;--surface2:#20261F;
+    --txt:#E8F5E9;--txt2:#C5E1C7;--txt3:#8FA090;
+    --border:rgba(255,255,255,0.08);--border2:rgba(255,255,255,0.14);
+    --sh:0 1px 3px rgba(0,0,0,0.4),0 1px 2px rgba(0,0,0,0.3);
+    --sh2:0 4px 16px rgba(0,0,0,0.5);
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html,body{height:100%;overflow:hidden;background:var(--bg)}
+body{font-family:'Segoe UI',Roboto,-apple-system,sans-serif;font-size:14px;color:var(--txt);transition:background .2s,color .2s}
+
+/* ── APP SHELL ── */
+#app{display:flex;flex-direction:column;height:100%;max-width:480px;margin:0 auto;position:relative;background:var(--surface);box-shadow:0 0 40px rgba(0,0,0,0.15)}
+
+/* ── LANDSCAPE (default) LAYOUT ──
+   The app defaults to landscape (see manifest.json "orientation") but is never
+   locked — the device/browser is always free to rotate back to portrait, which
+   falls through to the single-column phone layout above. In landscape with
+   enough width, widen the shell and let list-style screens flow into a
+   multi-column grid instead of one long single-file list. */
+@media (orientation:landscape) and (min-width:680px){
+  #app{max-width:min(96vw,1180px)}
+  #catalog-list,#proc-list,#cases-list,#modules-list{
+    display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px;align-content:start
+  }
+  #catalog-list .dev-card{margin:0}
+  .metrics-grid{grid-template-columns:repeat(6,1fr)}
+}
+
+/* ── TOPBAR ── */
+#topbar{background:linear-gradient(135deg,#1B5E20 0%,#558B2F 100%);color:#fff;
+  padding:calc(var(--safe-top) + 10px) 16px 10px;
+  display:flex;align-items:center;gap:10px;flex-shrink:0;
+  min-height:var(--top-h);z-index:100;box-shadow:0 2px 8px rgba(13,32,96,0.3)}
+.appicon{width:34px;height:34px;background:rgba(255,255,255,0.15);border-radius:10px;
+  display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.toptitles{flex:1}
+.toptitle{font-size:16px;font-weight:600;line-height:1.2}
+.topsub{font-size:11px;opacity:.7}
+#topright{display:flex;gap:6px;align-items:center}
+.topbtn{background:rgba(255,255,255,0.12);border:none;color:#fff;border-radius:8px;
+  padding:6px 10px;font-size:12px;cursor:pointer;font-family:inherit;font-weight:500}
+.topbtn:active{background:rgba(255,255,255,0.2)}
+#strict-ind{background:#FF6B6B;color:#fff;font-size:10px;font-weight:700;
+  padding:2px 7px;border-radius:20px;letter-spacing:.5px;display:none}
+
+/* ── SCREENS ── */
+#screens{flex:1;overflow:hidden;position:relative}
+.screen{position:absolute;inset:0;overflow-y:auto;overflow-x:hidden;
+  -webkit-overflow-scrolling:touch;display:none;
+  padding-bottom:calc(var(--nav-h) + var(--safe-bot) + 8px)}
+.screen.active{display:block}
+
+/* ── BOTTOM NAV ── */
+#bnav{background:var(--surface);border-top:1px solid var(--border);
+  display:flex;padding-bottom:var(--safe-bot);flex-shrink:0;
+  box-shadow:0 -2px 10px rgba(0,0,0,0.06);z-index:100}
+.nb{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:3px;padding:8px 4px 6px;cursor:pointer;border:none;background:none;
+  color:var(--txt3);font-size:10px;font-weight:500;font-family:inherit;
+  transition:color .15s;min-height:var(--nav-h);position:relative}
+.nb .ico{font-size:22px;line-height:1;transition:transform .2s}
+.nb.on{color:var(--pri)}
+.nb.on .ico{transform:translateY(-1px)}
+.nb.on::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);
+  width:40px;height:3px;background:var(--pri);border-radius:3px 3px 0 0}
+
+/* ── COMMON ── */
+.scard{background:var(--surface);border-radius:var(--r2);padding:14px 16px;
+  margin:0 12px 10px;box-shadow:var(--sh);border:1px solid var(--border)}
+.scard-sm{background:var(--surface);border-radius:var(--r);padding:11px 13px;
+  margin:0 12px 7px;box-shadow:var(--sh);border:1px solid var(--border)}
+.sec-hdr{font-size:11px;font-weight:700;color:var(--txt3);text-transform:uppercase;
+  letter-spacing:.8px;margin:14px 16px 7px;padding-bottom:5px;
+  border-bottom:1px solid var(--border)}
+.row-item{display:flex;align-items:center;gap:10px;padding:10px 12px;
+  border-bottom:1px solid var(--border);cursor:pointer;transition:background .12s}
+.row-item:last-child{border-bottom:none}
+.row-item:active{background:var(--pri-l)}
+.badge{display:inline-block;font-size:10px;font-weight:600;padding:2px 8px;border-radius:20px;letter-spacing:.2px}
+.b-blue{background:var(--pri-l);color:#1E3A8A}
+.b-green{background:var(--sec-l);color:#065F46}
+.b-red{background:var(--red-l);color:#991B1B}
+.b-amb{background:var(--amb-l);color:#7C2D12}
+.b-pur{background:var(--pur-l);color:#4527A0}
+.b-teal{background:var(--teal-l);color:#00695C}
+.b-gray{background:#F3F4F6;color:#374151}
+.b-coral{background:var(--coral-l);color:#BF360C}
+.empty{text-align:center;padding:40px 20px;color:var(--txt3);font-size:13px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;
+  background:var(--pri);color:#fff;border:none;border-radius:var(--r);
+  padding:10px 20px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;
+  transition:background .15s,transform .1s;letter-spacing:.1px}
+.btn:active{background:var(--pri-d);transform:scale(0.98)}
+.btn:disabled{background:#CBD5E0;color:#9CA3AF;cursor:not-allowed}
+.btn-out{background:transparent;color:var(--pri);border:1.5px solid var(--pri)}
+.btn-out:active{background:var(--pri-l)}
+.btn-sm{padding:6px 14px;font-size:12px}
+.btn-xs{padding:4px 10px;font-size:11px}
+.btn-red{background:var(--red)}
+.btn-red:active{background:#B71C1C}
+
+/* ── HOME ── */
+#home-hero{background:linear-gradient(135deg,#1B5E20 0%,#558B2F 100%);
+  background-size:cover;background-position:center;
+  padding:40px 16px 44px;color:#fff;margin-bottom:0;text-shadow:0 2px 4px rgba(0,0,0,0.5)}
+.hero-title{font-size:22px;font-weight:800;margin-bottom:6px;letter-spacing:-0.5px}
+.hero-sub{font-size:13px;opacity:.9;line-height:1.5;font-weight:500}
+.metrics-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px}
+.metric{background:var(--surface);border-radius:var(--r2);padding:12px 10px;
+  text-align:center;box-shadow:var(--sh);border:1px solid var(--border)}
+.metric .mv{font-size:22px;font-weight:700;color:var(--pri);line-height:1.1}
+.metric .ml{font-size:10px;color:var(--txt3);margin-top:2px;letter-spacing:.3px}
+.quick-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0 12px 10px}
+.qbtn{background:var(--surface);border:1px solid var(--border);border-radius:var(--r2);
+  padding:14px 12px;cursor:pointer;display:flex;align-items:center;gap:10px;
+  transition:all .15s;box-shadow:var(--sh)}
+.qbtn:active{background:var(--pri-l);border-color:var(--pri);transform:scale(.98)}
+.qbtn .qi{font-size:24px}
+.qbtn .qt{font-size:12px;font-weight:600;color:var(--txt);line-height:1.3}
+
+/* ── TRAINING ── */
+.module-card{background:var(--surface);border-radius:var(--r2);margin:0 12px 10px;
+  overflow:hidden;box-shadow:var(--sh);border:1px solid var(--border);cursor:pointer}
+.module-hdr{padding:14px 16px;display:flex;align-items:center;gap:12px}
+.module-ico{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;
+  justify-content:center;font-size:22px;flex-shrink:0}
+.module-info{flex:1}
+.module-title{font-size:13.5px;font-weight:600;line-height:1.3}
+.module-meta{font-size:11px;color:var(--txt3);margin-top:2px}
+.module-prog{height:4px;background:#E5E7EB;border-radius:2px;margin:0 16px 12px}
+.module-fill{height:100%;border-radius:2px;background:var(--pri);transition:width .4s}
+.module-body{display:none;padding:0 16px 16px;border-top:1px solid var(--border)}
+.module-body.open{display:block}
+.obj-list{margin:10px 0}
+.obj-item{display:flex;align-items:flex-start;gap:8px;margin-bottom:6px;font-size:12.5px;color:var(--txt2)}
+.obj-dot{width:6px;height:6px;border-radius:3px;background:var(--pri);margin-top:5px;flex-shrink:0}
+.step-list{margin:8px 0}
+.step{display:flex;gap:10px;margin-bottom:10px;align-items:flex-start}
+.step-num{width:22px;height:22px;border-radius:11px;background:var(--pri);color:#fff;
+  font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.step-txt{font-size:12.5px;color:var(--txt2);line-height:1.5;flex:1}
+.ifu-alert{background:#FFF3E0;border-left:3px solid #FF9800;border-radius:0 var(--r) var(--r) 0;
+  padding:8px 12px;margin:10px 0;font-size:11.5px;color:#7C2D12;line-height:1.5}
+.quiz-section{margin-top:12px}
+.quiz-q{font-size:12.5px;font-weight:600;color:var(--txt);margin-bottom:8px}
+.quiz-opt{background:var(--bg);border:1px solid var(--border);border-radius:var(--r);
+  padding:9px 12px;margin-bottom:6px;cursor:pointer;font-size:12px;color:var(--txt2);
+  transition:all .15s;display:flex;align-items:center;gap:8px}
+.quiz-opt:active{background:var(--pri-l);border-color:var(--pri)}
+.quiz-opt.correct{background:var(--sec-l);border-color:var(--sec);color:var(--sec)}
+.quiz-opt.wrong{background:var(--red-l);border-color:var(--red);color:var(--red)}
+.quiz-opt.disabled{cursor:default;pointer-events:none}
+.quiz-result{font-size:11.5px;margin-top:6px;padding:6px 10px;border-radius:var(--r);
+  display:none}
+.quiz-result.show{display:block}
+
+/* ── COMPATIBILITY ── */
+.compat-pair{background:var(--surface);border-radius:var(--r2);margin:0 12px 8px;
+  overflow:hidden;box-shadow:var(--sh);border:1px solid var(--border)}
+.compat-hdr{padding:10px 12px;display:flex;align-items:center;gap:8px;
+  font-size:12px;font-weight:600}
+.compat-body{padding:0 12px 12px;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.compat-sel{position:relative}
+.compat-sel label{font-size:10px;font-weight:700;color:var(--txt3);text-transform:uppercase;
+  letter-spacing:.5px;display:block;margin-bottom:4px}
+.compat-sel select{width:100%;border:1.5px solid var(--border2);border-radius:var(--r);
+  padding:8px 10px;font-size:12px;background:var(--surface);color:var(--txt);
+  font-family:inherit;appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%239CA3AF' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 10px center;padding-right:28px;
+  cursor:pointer}
+.compat-sel select:focus{outline:none;border-color:var(--pri);box-shadow:0 0 0 2px rgba(21,101,192,.15)}
+.compat-result{grid-column:1/-1;border-radius:var(--r);padding:9px 12px;
+  font-size:12px;font-weight:600;line-height:1.4;margin-top:2px;display:none}
+.cr-ok{background:var(--sec-l);color:var(--sec);display:block}
+.cr-warn{background:var(--amb-l);color:var(--amb);display:block}
+.cr-err{background:var(--red-l);color:var(--red);display:block}
+.cr-ifu{background:var(--teal-l);color:var(--teal);display:block}
+
+/* ── CATALOG ── */
+#cat-search{margin:10px 12px 6px;background:var(--surface);border:1.5px solid var(--border2);
+  border-radius:22px;padding:10px 16px;font-size:13px;font-family:inherit;
+  color:var(--txt);width:calc(100% - 24px)}
+#cat-search:focus{outline:none;border-color:var(--pri)}
+.cat-filter-row{display:flex;gap:6px;overflow-x:auto;padding:2px 12px 8px;scrollbar-width:none}
+.cat-filter-row::-webkit-scrollbar{display:none}
+.fchip{background:var(--surface);border:1px solid var(--border2);border-radius:20px;
+  padding:4px 12px;font-size:11.5px;cursor:pointer;white-space:nowrap;color:var(--txt2);
+  font-weight:500;font-family:inherit;transition:all .12s;flex-shrink:0}
+.fchip:active,.fchip.on{background:var(--pri);color:#fff;border-color:var(--pri)}
+.dev-card{display:flex;align-items:center;gap:10px;padding:10px 12px;
+  border-bottom:1px solid var(--border);cursor:pointer;transition:background .12s}
+.dev-card:active{background:var(--pri-l)}
+.dev-dot{width:10px;height:10px;border-radius:5px;flex-shrink:0}
+.dev-info{flex:1;min-width:0}
+.dev-name{font-size:13px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dev-meta{font-size:11px;color:var(--txt3);margin-top:1px}
+.dev-dims{font-size:11px;color:var(--txt2)}
+.ifu-tag{font-size:9px;background:var(--teal-l);color:var(--teal);padding:1px 6px;
+  border-radius:20px;font-weight:700;letter-spacing:.3px;flex-shrink:0}
+.dmso-tag{font-size:9px;background:var(--pri-l);color:var(--pri-d);padding:1px 6px;
+  border-radius:20px;font-weight:700;letter-spacing:.3px;flex-shrink:0}
+
+/* ── PROCEDURES ── */
+.proc-card{background:var(--surface);border-radius:var(--r2);margin:0 12px 8px;
+  overflow:hidden;box-shadow:var(--sh);border:1px solid var(--border)}
+.proc-hdr{padding:13px 14px;display:flex;align-items:center;gap:10px;cursor:pointer}
+.proc-hdr:active{background:var(--pri-l)}
+.proc-title{font-size:13.5px;font-weight:600;flex:1}
+.proc-arrow{font-size:18px;color:var(--txt3);transition:transform .2s}
+.proc-arrow.open{transform:rotate(180deg)}
+.proc-body{display:none;border-top:1px solid var(--border);padding:12px 14px}
+.proc-body.open{display:block}
+.proc-dev{display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid var(--border);font-size:12px}
+.proc-dev:last-child{border-bottom:none}
+.proc-cat{color:var(--txt3);min-width:130px;font-size:11px}
+
+/* ── LITERATURE ── */
+.lit-card{background:var(--surface);border-radius:var(--r);margin:0 12px 6px;
+  padding:11px 13px;box-shadow:var(--sh);border:1px solid var(--border)}
+.lit-title{font-size:12.5px;font-weight:500;line-height:1.45;margin-bottom:4px}
+.lit-meta{font-size:11px;color:var(--txt3);display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.type-filters{display:flex;gap:6px;overflow-x:auto;padding:4px 12px 8px;scrollbar-width:none}
+.type-filters::-webkit-scrollbar{display:none}
+
+/* ── DETAIL MODAL ── */
+#modal{position:fixed;inset:0;z-index:500;display:flex;align-items:flex-end;
+  background:rgba(0,0,0,0);pointer-events:none;transition:background .25s}
+#modal.open{background:rgba(0,0,0,0.45);pointer-events:all}
+#modal-sheet{background:var(--surface);border-radius:20px 20px 0 0;width:100%;
+  max-width:480px;margin:0 auto;max-height:85vh;overflow-y:auto;
+  transform:translateY(100%);transition:transform .3s cubic-bezier(.32,.72,0,1)}
+#modal.open #modal-sheet{transform:translateY(0)}
+.modal-handle{width:36px;height:4px;background:#E5E7EB;border-radius:2px;
+  margin:12px auto 0}
+.modal-content{padding:14px 18px 24px}
+.modal-title{font-size:16px;font-weight:700;margin-bottom:3px}
+.modal-sub{font-size:12px;color:var(--txt3);margin-bottom:12px}
+.dim-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:10px 0}
+.dim-item{background:var(--bg);border-radius:var(--r);padding:10px 12px}
+.dim-lbl{font-size:10px;font-weight:700;color:var(--txt3);text-transform:uppercase;letter-spacing:.5px;margin-bottom:3px}
+.dim-val{font-size:15px;font-weight:600;color:var(--pri)}
+
+/* ── GENERIC REFERENCE RENDERER ── */
+.ref-hub-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 12px}
+.ref-hub-tile{background:var(--surface);border:1px solid var(--border);border-radius:var(--r2);
+  padding:14px 12px;cursor:pointer;box-shadow:var(--sh)}
+.ref-hub-tile:active{background:var(--surface2)}
+.ref-hub-icon{font-size:22px;margin-bottom:6px}
+.ref-hub-title{font-size:12.5px;font-weight:700;color:var(--txt);line-height:1.3}
+.ref-hub-sub{font-size:10.5px;color:var(--txt3);margin-top:3px}
+.ref-search{margin:10px 12px 6px;background:var(--surface);border:1.5px solid var(--border2);
+  border-radius:22px;padding:10px 16px;font-size:13px;font-family:inherit;color:var(--txt);width:calc(100% - 24px)}
+.ref-section-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r2);
+  padding:14px;margin:0 12px 10px;box-shadow:var(--sh)}
+.ref-section-title{font-size:13px;font-weight:700;color:var(--pri-d);margin-bottom:8px;
+  text-transform:uppercase;letter-spacing:.3px}
+.ref-detail{font-size:12.5px;color:var(--txt2);line-height:1.6}
+.ref-row{display:flex;flex-wrap:wrap;gap:6px;padding:5px 0;border-bottom:1px solid var(--border)}
+.ref-row:last-child{border-bottom:none}
+.ref-key{flex:0 0 40%;font-size:11px;font-weight:700;color:var(--txt3);text-transform:uppercase;letter-spacing:.3px}
+.ref-val{flex:1 1 55%;font-size:12.5px;color:var(--txt2)}
+.ref-subitem{background:var(--bg);border-radius:var(--r);padding:8px 10px;margin-bottom:6px}
+.ref-subitem-title{font-size:12px;font-weight:700;color:var(--pri-d);margin-bottom:4px}
+.chip-wrap{display:flex;flex-wrap:wrap;gap:4px}
+.ref-chip{background:var(--pri-l);color:var(--pri-d);font-size:11px;font-weight:600;
+  padding:2px 8px;border-radius:10px}
+
+/* ── SETTINGS ── */
+.setting-row{display:flex;align-items:center;gap:12px;padding:14px 16px;
+  border-bottom:1px solid var(--border)}
+.setting-info{flex:1}
+.setting-title{font-size:13.5px;font-weight:500}
+.setting-desc{font-size:11px;color:var(--txt3);margin-top:2px}
+.toggle{position:relative;width:44px;height:24px;flex-shrink:0}
+.toggle input{opacity:0;width:0;height:0}
+.tgl{position:absolute;inset:0;background:#CBD5E0;border-radius:24px;cursor:pointer;transition:background .2s}
+.tgl::before{content:'';position:absolute;width:18px;height:18px;left:3px;top:3px;
+  background:#fff;border-radius:50%;transition:transform .2s;box-shadow:0 1px 3px rgba(0,0,0,0.2)}
+.toggle input:checked + .tgl{background:var(--pri)}
+.toggle input:checked + .tgl::before{transform:translateX(20px)}
+</style>
+<script>
+// Apply saved/system theme before first paint to avoid a flash of the wrong theme.
+(function(){
+  try {
+    var saved = localStorage.getItem('ir_theme');
+    if (saved === 'dark' || saved === 'light') {
+      document.documentElement.setAttribute('data-theme', saved);
+    }
+  } catch (e) {}
+})();
+</script>
+</head>
+<body>
+<div id="app">
+
+<!-- TOPBAR -->
+<div id="topbar">
+  <div class="appicon" style="background:linear-gradient(135deg,#1B5E20 0%,#558B2F 100%);border:1px solid rgba(255,255,255,0.3)"></div>
+  <div class="toptitles">
+    <div class="toptitle">NV Compatibility Calculator</div>
+    <div class="topsub" id="top-sub">Neurovascular Device Reference</div>
+  </div>
+  <div id="topright">
+    <span id="strict-ind">STRICT</span>
+    <button class="topbtn" onclick="showModal('about')">ℹ</button>
+  </div>
+</div>
+
+<!-- SCREENS -->
+<div id="screens">
+
+<!-- ═══ HOME ═══ -->
+<div class="screen active" id="s-home">
+  <div id="home-hero">
+    <div class="hero-title">Welcome, Clinician 👋</div>
+    <div class="hero-sub">NV device compatibility, procedure training & clinical reference — offline-ready.</div>
+  </div>
+  <div class="metrics-grid">
+    <div class="metric"><div class="mv" id="m-devs">100+</div><div class="ml">Devices</div></div>
+    <div class="metric"><div class="mv">8</div><div class="ml">Modules</div></div>
+    <div class="metric"><div class="mv" id="m-ifu">—</div><div class="ml">IFU Rules</div></div>
+  </div>
+  <div class="sec-hdr">QUICK ACCESS</div>
+  <div class="quick-grid">
+    <div class="qbtn" onclick="goTo('training')"><span class="qi">🎓</span><span class="qt">Training Modules</span></div>
+    <div class="qbtn" onclick="goTo('length')"><span class="qi">📏</span><span class="qt">Length Check</span></div>
+    <div class="qbtn" onclick="goTo('compat')"><span class="qi">🔬</span><span class="qt">Compat. Check</span></div>
+    <div class="qbtn" onclick="goTo('catalog')"><span class="qi">📱</span><span class="qt">Device Catalog</span></div>
+    <div class="qbtn" onclick="goTo('proc')"><span class="qi">📋</span><span class="qt">Procedure Kits</span></div>
+    <div class="qbtn" onclick="goTo('flash')"><span class="qi">🃏</span><span class="qt">Flashcards</span></div>
+    <div class="qbtn" onclick="goTo('cases')"><span class="qi">🏥</span><span class="qt">Case Studies</span></div>
+    <div class="qbtn" onclick="goTo('lit')"><span class="qi">📚</span><span class="qt">Literature</span></div>
+    <div class="qbtn" onclick="goTo('ifu')"><span class="qi">✅</span><span class="qt">IFU Rules</span></div>
+    <div class="qbtn" onclick="goTo('refhub')"><span class="qi">📖</span><span class="qt">Reference Library</span></div>
+  </div>
+  <div class="sec-hdr">PROGRESS OVERVIEW</div>
+  <div id="progress-cards"></div>
+  <div class="sec-hdr">DISCLAIMER</div>
+  <div class="scard" style="border-left:3px solid var(--red);background:var(--red-l)">
+    <div style="font-size:12px;color:var(--red);line-height:1.6">
+      ⚠ <strong>Educational reference only.</strong> Not cleared for clinical use. Always verify all device compatibility against current manufacturer IFU before clinical application. Data sourced from published IFUs and peer-reviewed literature 2024–2025.
+    </div>
+  </div>
+</div>
+
+<!-- ═══ TRAINING ═══ -->
+<div class="screen" id="s-training">
+  <div style="padding:12px 12px 6px">
+    <div style="font-size:13px;color:var(--txt2);line-height:1.5">Tap any module to expand content, device guidance, and self-assessment questions.</div>
+  </div>
+  <div id="module-list"></div>
+</div>
+
+<!-- ═══ COMPATIBILITY ═══ -->
+<div class="screen" id="s-compat">
+  <div class="scard" style="background:var(--pri-l);border-color:rgba(21,101,192,.2)">
+    <div style="font-size:12.5px;color:var(--pri-d);line-height:1.5">
+      Select an <strong>outer</strong> and <strong>inner</strong> device in each pair. Results update automatically with IFU validation and dimensional analysis.
+    </div>
+  </div>
+  <div id="compat-pairs"></div>
+  <div class="scard" style="background:#FFF3E0;border-color:#FFB74D">
+    <div style="font-size:11.5px;color:#7C2D12;line-height:1.5">⚠ IFU rules take precedence over dimensional checks. A dimensionally fitting device may still be IFU-excluded. Always verify against current manufacturer IFU.</div>
+  </div>
+</div>
+
+<!-- ═══ CATALOG ═══ -->
+<div class="screen" id="s-catalog">
+  <input id="cat-search" type="search" placeholder="🔍  Search by name, manufacturer, category…" oninput="filterCatalog()">
+  <div class="cat-filter-row" id="cat-filters"></div>
+  <div style="font-size:11px;color:var(--txt3);margin:0 14px 6px" id="cat-count"></div>
+  <div id="catalog-list"></div>
+</div>
+
+<!-- ═══ PROCEDURES ═══ -->
+<div class="screen" id="s-proc">
+  <div class="scard-sm" style="background:var(--teal-l);border-color:rgba(0,105,92,.2)">
+    <div style="font-size:12px;color:var(--teal);line-height:1.5" id="proc-intro">Pre-built clinical procedure kits. Tap a kit for the full device stack, checks and warnings.</div>
+  </div>
+  <input type="search" class="ref-search" id="proc-search" placeholder="🔍  Search procedure kits…" oninput="renderProcs(this.value)">
+  <div id="proc-list"></div>
+</div>
+
+<!-- ═══ LENGTH CHECK ═══ -->
+<div class="screen" id="s-length">
+  <div class="scard" style="background:var(--pur-l);border-color:rgba(69,39,160,.2)">
+    <div style="font-size:12.5px;color:var(--pur);line-height:1.5">
+      Plan your <strong>coaxial stack</strong>. Each inner device must be longer than the outer one to ensure distal reach and proximal control.
+    </div>
+  </div>
+  <div id="length-stack-area"></div>
+  <div class="scard" style="background:#FFF3E0;border-color:#FFB74D">
+    <div style="font-size:11.5px;color:#7C2D12;line-height:1.5">⚠ Pro tip: Catheters typically need 15-20cm extension. Microwires should exceed microcatheter length by >30cm.</div>
+  </div>
+</div>
+
+<!-- ═══ LITERATURE ═══ -->
+<div class="screen" id="s-lit">
+  <div class="type-filters" id="type-filters"></div>
+  <div id="lit-list"></div>
+</div>
+
+</div><!-- /screens -->
+
+<!-- BOTTOM NAV -->
+<div id="bnav">
+  <button class="nb on" id="nb-home" onclick="goTo('home')"><span class="ico">🏠</span><span>Home</span></button>
+  <button class="nb" id="nb-training" onclick="goTo('training')"><span class="ico">🎓</span><span>Training</span></button>
+  <button class="nb" id="nb-compat" onclick="goTo('compat')"><span class="ico">🔬</span><span>Compat.</span></button>
+  <button class="nb" id="nb-catalog" onclick="goTo('catalog')"><span class="ico">📱</span><span>Devices</span></button>
+  <button class="nb" id="nb-proc" onclick="goTo('proc')"><span class="ico">📋</span><span>Kits</span></button>
+  <button class="nb" id="nb-lit" onclick="goTo('lit')"><span class="ico">📚</span><span>Refs</span></button>
+</div>
+
+</div><!-- /app -->
+
+<!-- MODAL -->
+<div id="modal" onclick="closeModal(event)">
+  <div id="modal-sheet">
+    <div class="modal-handle"></div>
+    <div class="modal-content" id="modal-content"></div>
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script>
+// ── DATA ──────────────────────────────────────────────────────────────────────
+function escapeHtml(str) {
+  return String(str).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+// ── THEME (dark / light) ──────────────────────────────────────────
+function getTheme() {
+  const saved = localStorage.getItem('ir_theme');
+  if (saved === 'dark' || saved === 'light') return saved;
+  return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
+function themeLabel() {
+  const saved = localStorage.getItem('ir_theme');
+  return saved ? `${saved === 'dark' ? 'Dark' : 'Light'} mode (manual)` : `Following system (${getTheme()})`;
+}
+function applyTheme(mode) {
+  document.documentElement.setAttribute('data-theme', mode);
+  const meta = document.querySelector('meta[name="theme-color"]');
+  if (meta) meta.setAttribute('content', mode === 'dark' ? '#101410' : '#33691E');
+}
+function toggleTheme() {
+  const next = getTheme() === 'dark' ? 'light' : 'dark';
+  localStorage.setItem('ir_theme', next);
+  applyTheme(next);
+  const d = document.getElementById('theme-desc-s');
+  if (d) d.textContent = themeLabel();
+}
+applyTheme(getTheme());
+if (window.matchMedia) {
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+    if (!localStorage.getItem('ir_theme')) applyTheme(e.matches ? 'dark' : 'light');
+  });
+}
+
+// ── GENERIC REFERENCE RENDERER ──────────────────────────────────────
+// Turns any JSON node from NV_DATA into readable HTML, so the many new
+// reference domains (CTO rules, DCB rules, contrast agents, etc.) don't each
+// need bespoke markup.
+function humanize(key) {
+  return String(key)
+    .replace(/[_-]+/g, ' ')
+    .replace(/([a-z0-9])([A-Z])/g, '$1 $2')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .replace(/\b\w/g, c => c.toUpperCase());
+}
+
+function renderNode(val, depth) {
+  depth = depth || 0;
+  if (val === null || val === undefined || val === '') return '';
+  if (typeof val === 'boolean') return `<span class="badge ${val ? 'b-green' : 'b-red'}">${val ? '✓ Yes' : '✗ No'}</span>`;
+  if (typeof val === 'number') return `<span style="font-weight:600">${val}</span>`;
+  if (typeof val === 'string') return escapeHtml(val);
+  if (Array.isArray(val)) {
+    if (!val.length) return '';
+    const allPrimitive = val.every(x => x === null || typeof x !== 'object');
+    if (allPrimitive) {
+      const items = val.filter(x => x !== null && x !== '');
+      if (!items.length) return '';
+      return `<div class="chip-wrap">${items.map(x => `<span class="ref-chip">${escapeHtml(String(x))}</span>`).join('')}</div>`;
+    }
+    return val.map((item, i) => {
+      const label = (item && typeof item === 'object' && (item.name || item.id || item.trigger || item.primary))
+        ? escapeHtml(item.name || item.id || item.trigger || item.primary)
+        : (val.length > 1 ? `#${i + 1}` : '');
+      const body = renderNode(item, depth + 1);
+      if (!body) return '';
+      return `<div class="ref-subitem">${label ? `<div class="ref-subitem-title">${label}</div>` : ''}${body}</div>`;
+    }).join('');
+  }
+  if (typeof val === 'object') {
+    const rows = Object.keys(val).map(k => {
+      if (k === 'name') return '';
+      const rendered = renderNode(val[k], depth + 1);
+      if (!rendered) return '';
+      return `<div class="ref-row"><div class="ref-key">${humanize(k)}</div><div class="ref-val">${rendered}</div></div>`;
+    }).filter(Boolean).join('');
+    return rows;
+  }
+  return '';
+}
+
+// Store of arrays currently shown in a list screen, keyed by a short id, so
+// detail modals can look items up by index without re-passing huge objects
+// through onclick="" attributes.
+const _refStore = {};
+function registerRefStore(key, arr) { _refStore[key] = arr; return arr; }
+
+function renderRefCardList(containerId, items, storeKey, opts) {
+  opts = opts || {};
+  registerRefStore(storeKey, items);
+  const el = document.getElementById(containerId);
+  if (!el) return;
+  if (!items || !items.length) { el.innerHTML = `<div class="empty">No entries found.</div>`; return; }
+  el.innerHTML = items.map((item, i) => {
+    const title = item.name || item.primary || item.id || `Item ${i + 1}`;
+    const sub = [item.manufacturer, item.category || item.type || item.primaryCategory].filter(Boolean).join(' · ');
+    const badge = item.status ? `<span class="badge ${item.status === 'CONTRAINDICATED' ? 'b-red' : 'b-teal'}" style="font-size:9px">${escapeHtml(item.status)}</span>` : '';
+    return `<div class="dev-card" onclick="openRefDetail('${storeKey}',${i})">
+      <span class="dev-dot" style="background:${opts.dotColor || '#689F38'}"></span>
+      <div class="dev-info">
+        <div class="dev-name">${escapeHtml(String(title))}</div>
+        <div class="dev-meta">${escapeHtml(sub)}</div>
+      </div>
+      ${badge}
+    </div>`;
+  }).join('');
+}
+
+function openRefDetail(storeKey, i) {
+  const item = _refStore[storeKey][i];
+  const title = item.name || item.primary || item.id || 'Detail';
+  const mc = document.getElementById('modal-content');
+  mc.innerHTML = `<div class="modal-title">${escapeHtml(String(title))}</div>
+    <div class="ref-detail">${renderNode(item, 0)}</div>
+    <div class="btn btn-sm btn-out" style="width:100%;margin-top:12px" onclick="closeModal()">Close</div>`;
+  document.getElementById('modal').classList.add('open');
+}
+
+function renderRefDict(containerId, dict, opts) {
+  opts = opts || {};
+  const el = document.getElementById(containerId);
+  if (!el) return;
+  const keys = Object.keys(dict || {}).filter(k => !opts.skip || !opts.skip.includes(k));
+  if (!keys.length) { el.innerHTML = `<div class="empty">No entries found.</div>`; return; }
+  el.innerHTML = keys.map(k => {
+    const body = renderNode(dict[k], 0);
+    if (!body) return '';
+    return `<div class="ref-section-card">
+      <div class="ref-section-title">${humanize(k)}</div>
+      <div class="ref-detail">${body}</div>
+    </div>`;
+  }).join('');
+}
+
+function filterRefCardList(containerId, items, storeKey, query, opts) {
+  const q = (query || '').toLowerCase();
+  if (!q) { renderRefCardList(containerId, items, storeKey, opts); return; }
+  const filtered = items.filter(item => JSON.stringify(item).toLowerCase().includes(q));
+  renderRefCardList(containerId, filtered, storeKey, opts);
+}
+
+const IPF = 0.0131234, TOL = 0.001;
+
+const DEVICES = (window.NV_DATA && window.NV_DATA.devices ? window.NV_DATA.devices : []).map(d => [
+  d.category,
+  d.name,
+  d.manufacturer,
+  (typeof d.odInch === 'number') ? d.odInch : null,
+  (typeof d.idInch === 'number') ? d.idInch : null,
+  (typeof d.workingLengthCm === 'number') ? d.workingLengthCm : null,
+  (typeof d.totalLengthCm === 'number') ? d.totalLengthCm : null,
+  d.dmsoCompatible === true ? 'Yes' : (d.dmsoCompatible === false ? 'No' : ''),
+  d.notes || ''
+]);
+// Parallel array (same index as DEVICES) carrying the fields the old 9-tuple format
+// has no slot for — odFr/idFr, stabilityData (pressure/temp), material, specifications —
+// used by the extended Compat Check / detail views without disturbing the legacy shape.
+const DEVICES_EXT = (window.NV_DATA && window.NV_DATA.devices ? window.NV_DATA.devices : []);
+
+const IFU_RULES = (window.NV_DATA && window.NV_DATA.ifuRules ? window.NV_DATA.ifuRules : []).map(r => [
+  r.primary, r.compatible, (r.citation || '') + (r.status ? ' [' + r.status + ']' : '')
+]);
+
+const TEMPLATES = [
+  {name:"Flow Diversion – Femoral (Pipeline)",type:"FLOW DIVERSION",site:"FEMORAL",
+   note:"Triaxial setup. DAPT required. Verify Phenom 027 IFU pairing.",
+   devs:[["SHEATH / BGC","NeuronMAX 088","Penumbra"],["GUIDE","Neuron 070","Penumbra"],
+         ["INTERMEDIATE","Navien 072","Medtronic"],["MICROCATHETER","Phenom 027","Medtronic"],
+         ["MICROWIRE","Synchro2-14 Standard (200cm)","Stryker"],["FLOW DIVERTER","Pipeline Flex","Medtronic"]]},
+  {name:"Flow Diversion – Radial (FRED)",type:"FLOW DIVERSION",site:"RADIAL",
+   note:"All-MicroVention stack. Confirm catheter lengths for radial approach.",
+   devs:[["SHEATH / BGC","6F Sheath Standard","Generic"],["GUIDE","Sofia Plus","MicroVention"],
+         ["INTERMEDIATE","Sofia 6F","MicroVention"],["MICROCATHETER","Headway 27","MicroVention"],
+         ["MICROWIRE","Traxcess 14","MicroVention"],["FLOW DIVERTER","FRED","MicroVention"]]},
+  {name:"Simple Coiling – Femoral",type:"COILING SIMPLE",site:"FEMORAL",
+   note:"Standard for small/medium aneurysms.",
+   devs:[["SHEATH / BGC","6F Sheath Standard","Generic"],["GUIDE","Envoy 6F MPD","Cerenovus"],
+         ["MICROCATHETER","Headway 17 Advanced","MicroVention"],["MICROWIRE","Traxcess 14","MicroVention"],
+         ["COIL","HydroCoil","MicroVention"]]},
+  {name:"Stent-Assisted Coiling – Femoral",type:"STENT-ASSISTED COILING",site:"FEMORAL",
+   note:"Enterprise 2 + Axium for wide-neck aneurysms. DAPT required.",
+   devs:[["SHEATH / BGC","6F Sheath Standard","Generic"],["GUIDE","Envoy 6F MPD","Cerenovus"],
+         ["MICROCATHETER","Excelsior 1018","Stryker"],["MICROWIRE","Synchro2-14 Standard (200cm)","Stryker"],
+         ["COIL","Axium Ultra","Medtronic"],["BRIDGING STENT","Enterprise 2","Cerenovus"]]},
+  {name:"Thrombectomy – ADAPT + SR",type:"THROMBECTOMY",site:"FEMORAL",
+   note:"Combined aspiration + stent retriever. BGC for flow arrest.",
+   devs:[["SHEATH / BGC","NeuronMAX 088","Penumbra"],["SHEATH / BGC","Bobby BGC","MicroVention"],
+         ["ASPIRATION","ACE 64","Penumbra"],["MICROCATHETER","Marksman","Medtronic"],
+         ["MICROWIRE","Synchro2-14 Standard (200cm)","Stryker"],["STENT RETRIEVER","Solitaire X","Medtronic"]]},
+  {name:"WEB Intrasaccular – Femoral",type:"INTRASACCULAR",site:"FEMORAL",
+   note:"Wide-neck bifurcation. No DAPT required. Oversize WEB by ~1mm.",
+   devs:[["SHEATH / BGC","6F Sheath Standard","Generic"],["GUIDE","Benchmark 071","Penumbra"],
+         ["MICROCATHETER","Via 27","MicroVention"],["MICROWIRE","Traxcess 14","MicroVention"],
+         ["INTRASACCULAR","WEB SL/SLS","Terumo Neuro"]]},
+  {name:"AVM Embolization – Onyx 18",type:"AVM EMBOLIZATION",site:"FEMORAL",
+   note:"DMSO flush protocol required. Echelon-10 validated for Onyx delivery.",
+   devs:[["SHEATH / BGC","6F Sheath Standard","Generic"],["GUIDE","Envoy 6F MPD","Cerenovus"],
+         ["INTERMEDIATE","Fargo Mini","Balt"],["MICROCATHETER","Echelon-10","Medtronic"],
+         ["MICROWIRE","Mirage 0.008","Medtronic"],["LIQUID EMBOLIC","Onyx 18","Medtronic"]]},
+];
+
+const MODULES = [
+  {id:"access", title:"Access Techniques & Sheath Selection", icon:"🩺", color:"#FBE9E7",
+   badge:"Fundamentals", badge_cls:"b-coral",
+   objectives:["Select appropriate sheath for femoral vs radial approach","Understand ID/OD sizing for coaxial system planning","Know NeuronMAX 088 vs Shuttle SL 6F indications"],
+   overview:"Access sheath selection sets the foundation for every neuro IR procedure. Femoral access typically uses a 6Fr short sheath; radial access benefits from thin-wall sheaths (Glidesheath Slender). For complex neuro cases, a long 90cm sheath provides enhanced proximal support.",
+   steps:["Confirm access site (femoral vs radial) based on anatomy and patient positioning","Select sheath: Standard 6F (11cm) for simple cases; Shuttle SL 6F (90cm) or NeuronMAX 088 for added support","Ensure sheath ID (in inches) is larger than guide catheter OD","Place sheath under fluoroscopic guidance; confirm position before advancing guide","Flush thoroughly; use heparinised saline throughout"],
+   ifu:"NeuronMAX 088 has ID 0.088\". AXS Infinity LS Plus has largest ID at 0.091\". Glidesheath Slender recommended for transradial (thin wall, 1Fr advantage).",
+   quiz:[{q:"What is the inner diameter of NeuronMAX 088?",opts:["0.070\"","0.080\"","0.088\"","0.091\""],ans:2,exp:"NeuronMAX 088 has 0.088\" ID — the 088 in the name refers to this."},
+         {q:"Which sheath is optimal for transradial neuro access?",opts:["Shuttle SL 6F","Glidesheath Slender","Ballast 088","NeuronMAX 088"],ans:1,exp:"Glidesheath Slender has thin hydrophilic walls giving 1Fr space advantage — ideal for radial."},
+         {q:"AXS Infinity LS Plus has the largest inner diameter at:",opts:["0.087\"","0.088\"","0.091\"","0.095\""],ans:2,exp:"AXS Infinity LS Plus: 0.091\" ID — currently one of the largest proximal platforms."}]},
+  {id:"guide", title:"Guiding Catheter Selection", icon:"🧭", color:"#FFF3E0",
+   badge:"Intermediate", badge_cls:"b-amb",
+   objectives:["Distinguish 0.070\" vs 0.071\" vs 0.072\" ID guide catheters","Understand triaxial system planning","Select radial vs femoral guide catheter strategy"],
+   overview:"Guide catheter selection determines what intermediate and microcatheters can be placed. Most 6Fr neurovascular guides have 0.070\"–0.072\" inner diameter. Softer distal segments (Benchmark 071, Neuron 070) allow deeper placement without vessel injury.",
+   steps:["Select guide catheter based on procedure type and ID required for coaxial system","Advance guide into ICA/VA over Glidewire 0.035\" under roadmap","Confirm stable position before advancing intermediate catheter","Consider Benchmark 071 or Neuron 070 for distal guide placement (cavernous ICA)","Sofia Plus/Chaperon 6F for radial approach due to excellent trackability"],
+   ifu:"Sofia Plus ID 0.070\", Benchmark 071 ID 0.071\", RIST Radial Guide ID 0.072\". Fubuki 8Fr has ID 0.086\" — used as guide or long sheath. Cerebase DA 090 has 0.090\" ID for maximum lumen.",
+   quiz:[{q:"Benchmark 071 inner diameter is:",opts:["0.070\"","0.071\"","0.072\"","0.079\""],ans:1,exp:"Benchmark 071: 0.071\" ID. The '071' in the name indicates the inner diameter."},
+         {q:"Which guide catheter is best designed for transradial neuro access?",opts:["Envoy 6F MPD","Neuron 070","RIST Radial Guide","Fubuki 8Fr"],ans:2,exp:"RIST Radial Guide (Medtronic) is specifically designed for transradial access at 115cm working length."},
+         {q:"The Cerebase DA 090 offers which unique advantage?",opts:["Smallest profile","0.090\" ID — largest neurovascular guide lumen","Longest 115cm working length","Dedicated radial compatibility"],ans:1,exp:"Cerebase DA 090 provides 0.090\" inner diameter — the largest among neurovascular guide catheters."}]},
+  {id:"micro", title:"Microcatheter Selection", icon:"🔬", color:"#FBE9E7",
+   badge:"Advanced", badge_cls:"b-coral",
+   objectives:["Match microcatheter to therapeutic device per IFU","Understand DMSO compatibility requirements","Distinguish 0.017\" vs 0.021\" vs 0.027\" ID microcatheters"],
+   overview:"Microcatheter selection is critical: the wrong choice can violate IFU requirements and potentially harm patients. Key dimensions are OD (must fit through intermediate catheter) and ID (must accommodate device or wire). DMSO compatibility is essential for liquid embolics.",
+   steps:["Identify the therapeutic device and check IFU for validated delivery microcatheters","Confirm microcatheter OD fits inside intermediate/aspiration catheter ID (tolerance ±0.001\")","Check DMSO compatibility if using Onyx/Squid — NOT ALL microcatheters are DMSO compatible","Advance microcatheter over appropriate microwire (0.014\" standard, 0.010\" for small vessel)","Shape tip per IFU recommendation; use steam or hot water shaping"],
+   ifu:"Pipeline Flex/Shield IFU: Phenom 027 or Marksman ONLY. FRED IFU: Headway 27 ONLY. Surpass Evolve: Excelsior XT-17 or XT-27 ONLY. NOT DMSO: SL-10 (150cm), Magic 1.5/1.8Fr, Marksman. DMSO OK: Echelon-10/14, Marathon, Apollo, HW17/21/27, Sonic 1.5Fr, Gama-17, XT-17/27.",
+   quiz:[{q:"Which microcatheter is IFU-validated for Pipeline Flex delivery?",opts:["Headway 27","Via 27","Phenom 027","Excelsior XT-27"],ans:2,exp:"Phenom 027 AND Marksman are the only IFU-validated catheters for Pipeline Flex delivery per §3.1."},
+         {q:"Headway 27 is IFU-validated for which flow diverter?",opts:["Pipeline Flex","Surpass Evolve","FRED","SILK"],ans:2,exp:"Headway 27 is the ONLY validated delivery catheter for the FRED flow diverter per IFU §3.1."},
+         {q:"Which microcatheter should NOT be used with Onyx?",opts:["Echelon-10","Sonic 1.5Fr","Magic 1.5Fr","Gama-17"],ans:2,exp:"Magic 1.5Fr is NOT DMSO compatible — using Onyx would dissolve the catheter material. Use Echelon-10 or Sonic 1.5Fr."}]},
+  {id:"fd", title:"Flow Diversion Techniques", icon:"🌀", color:"#FFF3E0",
+   badge:"Advanced", badge_cls:"b-amb",
+   objectives:["Understand triaxial vs biaxial FD setup","Know IFU microcatheter requirements for each FD device","Master sizing and deployment technique"],
+   overview:"Flow diversion (Pipeline, FRED, Surpass Evolve, SILK) treats wide-neck and fusiform aneurysms by redirecting flow and promoting neointima. Requires dual antiplatelet therapy (DAPT). Strict IFU microcatheter rules must be followed.",
+   steps:["Confirm DAPT compliance (aspirin + P2Y12) pre-procedure","Establish triaxial access: long sheath → guide → intermediate (Navien/React) → IFU-validated microcatheter","Size FD: diameter = 1:1 with parent artery; length covers aneurysm neck + 5mm each end","Advance microcatheter distal to aneurysm over Synchro 14","Unsheathe device under roadmap; confirm proximal/distal landing zones","Post-deployment angiography; check apposition and flow reduction"],
+   ifu:"Pipeline Flex/Shield: ONLY Phenom 027 or Marksman. FRED: ONLY Headway 27. Surpass Evolve: ONLY Excelsior XT-17 or XT-27. SILK (Balt): ONLY Gama-17. p48 MW (Phenox): 0.021\" microcatheter. Using wrong catheter violates IFU and may void liability.",
+   quiz:[{q:"Which microcatheter is mandated for Surpass Evolve?",opts:["Phenom 027","Headway 27","Excelsior XT-17 or XT-27","Marksman"],ans:2,exp:"Surpass Evolve IFU §2 specifies Excelsior XT-17 or XT-27 as the ONLY validated delivery catheters."},
+         {q:"For Pipeline sizing, the device diameter should be:",opts:["0.5mm oversized","1:1 parent artery diameter","1mm oversized","2mm oversized"],ans:1,exp:"Pipeline is sized 1:1 with the parent artery diameter, not oversized."},
+         {q:"DAPT for flow diversion typically consists of:",opts:["Aspirin only","Aspirin + heparin","Aspirin + P2Y12 inhibitor","Warfarin + aspirin"],ans:2,exp:"Dual antiplatelet therapy (DAPT) = aspirin + clopidogrel (or prasugrel/ticagrelor) is required for flow diversion."}]},
+  {id:"coiling", title:"Aneurysm Coiling Techniques", icon:"🌀", color:"#FBE9E7",
+   badge:"Core Skill", badge_cls:"b-coral",
+   objectives:["Distinguish simple vs balloon-assisted vs stent-assisted coiling","Select appropriate coil and microcatheter","Understand IFU rules for stent-assisted coiling"],
+   overview:"Endovascular coiling remains a primary treatment for intracranial aneurysms. Selection between simple, balloon-assisted (BAC), and stent-assisted (SAC) coiling depends on aneurysm neck width, dome-to-neck ratio, and patient antiplatelet tolerance.",
+   steps:["Measure aneurysm on 3D-RA: width, height, neck diameter, dome-to-neck ratio","Simple coiling if D/N ratio >1.5 and neck <4mm; consider BAC for wide neck","Select microcatheter: standard 0.017\" for most coils; match to coil OD","Frame coil = largest diameter coil; fill and finish with progressively smaller coils","BAC: inflate HyperGlide/HyperForm during coil deployment to protect neck","SAC: deploy Neuroform Atlas/Enterprise 2 first then coil through jailed microcatheter"],
+   ifu:"Enterprise 2 IFU §4.1: Excelsior 1018 or Headway 17 Advanced only. LVIS Jr IFU: Headway 17 Advanced or SL-10. Neuroform Atlas: SL-10. LEO Baby: SL-10. Target 360 coils: SL-10 recommended (check IFU).",
+   quiz:[{q:"Enterprise 2 is IFU-validated with which microcatheter?",opts:["Headway 27","Phenom 027","Excelsior 1018","Via 27"],ans:2,exp:"Enterprise 2 IFU §4.1 validates Excelsior 1018 AND Headway 17 Advanced."},
+         {q:"LVIS Jr requires which microcatheter per IFU?",opts:["Headway 27","Headway 17 Advanced or SL-10","Via 17","Excelsior 1018"],ans:1,exp:"LVIS Jr IFU §3.2 specifies Headway 17 Advanced or SL-10."},
+         {q:"The dome-to-neck ratio threshold for simple coiling is typically:",opts:[">1.0",">1.5",">2.0",">2.5"],ans:1,exp:"A dome-to-neck ratio >1.5 with neck <4mm is generally suitable for simple coiling."}]},
+  {id:"thrombectomy", title:"Mechanical Thrombectomy", icon:"⚡", color:"#FFEBEE",
+   badge:"Emergency", badge_cls:"b-red",
+   objectives:["Apply ADAPT and combined technique principles","Know IFU for Solitaire X, Trevo, EmboTrap III","Understand BGC role in flow arrest"],
+   overview:"Mechanical thrombectomy is the standard of care for large vessel occlusion (LVO) stroke. Techniques include direct aspiration (ADAPT), stent retrieval (SR), and combined (ARTS). Time is brain — fastest recanalization strategy should be used.",
+   steps:["Establish access rapidly: large-bore femoral sheath or BGC (Bobby/Emboguard/Walrus)","Advance BGC to proximal ICA/VA for flow arrest during retrieval","Navigate microcatheter (Marksman for Solitaire; Trevo Pro 18 for Trevo) past thrombus","Deploy stent retriever across thrombus; wait 3-5 minutes","Inflate BGC, apply aspiration via ACE 64/JET 7, retrieve device slowly","ADAPT: advance ACE 64/RED 068 directly to face of clot; apply aspiration"],
+   ifu:"Solitaire X IFU §3.3: Marksman catheter required. Trevo NXT/ProVue XP: Trevo Pro 18 or Trak-21. EmboTrap III: 0.021\" catheter (Excelsior 1018). BGC lumen: Bobby 0.086\", Emboguard 0.087\", Walrus 0.087\".",
+   quiz:[{q:"Which microcatheter is required by IFU for Solitaire X?",opts:["Trevo Pro 18","Via 27","Marksman","Headway 27"],ans:2,exp:"Solitaire X IFU §3.3 specifies the Marksman microcatheter."},
+         {q:"In ADAPT technique, aspiration catheter is advanced to:",opts:["Proximal ICA","M1/M2 junction","Face of the clot","Distal M2"],ans:2,exp:"ADAPT = direct aspiration first pass — catheter tip positioned directly at clot face for maximum aspiration."},
+         {q:"Bobby BGC inner diameter is:",opts:["0.084\"","0.086\"","0.087\"","0.091\""],ans:1,exp:"Bobby BGC (MicroVention) has 0.086\" inner diameter, slightly smaller than Walrus/Emboguard (0.087\")."}]},
+  {id:"avm", title:"AVM & DAVF Embolization", icon:"🧬", color:"#FFF3E0",
+   badge:"Complex", badge_cls:"b-amb",
+   objectives:["Understand DMSO-compatible catheter requirements for Onyx","Select appropriate microcatheter for AVM nidus access","Know differences between Onyx, Squid, PHIL, and NBCA"],
+   overview:"AVM and DAVF embolization uses liquid embolics (Onyx, Squid, PHIL, NBCA) delivered through microcatheters. The key challenge is catheter selection — DMSO-containing embolics (Onyx, Squid) require DMSO-compatible catheters. PHIL is non-DMSO.",
+   steps:["Assess AVM on MRI/DSA: identify feeders, nidus, venous drainage, eloquent cortex","Plan targeted feeder approach using flow-directed (Magic) or wire-directed (Echelon-10) catheter","For Onyx/Squid: ensure DMSO-compatible catheter (Echelon-10, Sonic 1.5Fr, Gama-17)","DMSO pre-fill: inject 0.3mL DMSO through catheter to pre-condition before Onyx","Inject Onyx/Squid slowly; allow controlled reflux for plug formation","Detach microcatheter tip (if detachable, e.g. Apollo, Sonic 1.5Fr) or remove with controlled pull"],
+   ifu:"DMSO compatible: Echelon-10, Echelon-14, Marathon, Apollo, HW17/21/27, Duo 167, Sonic 1.5Fr, Gama-17, XT-17/27. NOT DMSO: SL-10 (150cm), Magic 1.5/1.8Fr, Marksman. PHIL IFU: Headway 17 validated (non-DMSO).",
+   quiz:[{q:"Which microcatheter is compatible with Onyx 18?",opts:["Magic 1.5Fr","Excelsior SL-10 (150cm)","Echelon-10","Marksman"],ans:2,exp:"Echelon-10 is DMSO compatible and IFU-validated for Onyx delivery. Magic 1.5Fr and SL-10 are NOT DMSO compatible."},
+         {q:"PHIL differs from Onyx in that it:",opts:["Has higher viscosity","Does not require DMSO","Contains ethylene vinyl alcohol","Is used only for DAVF"],ans:1,exp:"PHIL (Precipitating Hydrophobic Injectable Liquid) is non-DMSO — a major advantage over Onyx for catheter compatibility."},
+         {q:"The DMSO pre-fill volume before Onyx injection is typically:",opts:["0.1 mL","0.3 mL","1.0 mL","2.0 mL"],ans:1,exp:"Standard practice: inject ~0.3 mL DMSO through microcatheter dead-space volume before Onyx to prevent precipitation at catheter tip."}]},
+  {id:"web", title:"Intrasaccular Devices (WEB, Contour)", icon:"🌐", color:"#FBE9E7",
+   badge:"Novel", badge_cls:"b-coral",
+   objectives:["Size WEB device correctly using 3D measurements","Select appropriate Via microcatheter per WEB IFU","Understand patient selection advantages vs traditional coiling"],
+   overview:"Intrasaccular flow disruption devices (WEB, Contour, Artisse/LUNA, Trenza) treat wide-neck bifurcation aneurysms without stent placement — no DAPT required. WEB is the most-studied with FDA clearance. Via microcatheters are IFU-specified for WEB delivery.",
+   steps:["Measure aneurysm on 3D-RA: width, height, and neck diameter in working projection","Size WEB: width = aneurysm width +1mm for SL; height = aneurysm height","Select Via 17 for WEB 17 devices; Via 27 for WEB SL/SLS; Via 33 for larger WEB","Navigate Via microcatheter into aneurysm fundus under roadmap guidance","Deploy WEB; confirm complete neck coverage on angiography","No DAPT required (major advantage over stent-assisted techniques)"],
+   ifu:"WEB 17 IFU: Via 17 ONLY. WEB SL/SLS IFU: Via 27 (or Via 33 for larger). Artisse/LUNA: 0.027\" microcatheter. Contour: 0.027\" microcatheter. Always confirm current IFU — device sizing tables updated regularly.",
+   quiz:[{q:"Which microcatheter is required for WEB SL/SLS delivery?",opts:["Via 17","Via 27","Headway 27","Phenom 027"],ans:1,exp:"WEB SL/SLS IFU mandates Via 27 microcatheter. Via 17 is for WEB 17 (smaller devices)."},
+         {q:"A key advantage of intrasaccular devices over stent-assisted coiling:",opts:["Lower cost","No DAPT required","Better occlusion rates at 1 year","Applicable to all aneurysm morphologies"],ans:1,exp:"No DAPT requirement is a major advantage, particularly for elderly patients, those on anticoagulation, or unruptured aneurysms needing staged surgical procedures."},
+         {q:"WEB sizing rule for width dimension:",opts:["Aneurysm width - 1mm","Aneurysm width exact","Aneurysm width + 1mm","Aneurysm width × 1.2"],ans:2,exp:"WEB SL width = aneurysm width + 1mm (slight oversizing ensures conformability and neck coverage)."}]},
+];
+
+const REFS = [
+  {n:1,auth:"Lynch J",title:"Primer on Neurointerventional Devices",j:"NeuroTool.org",y:2023,type:"Resource",url:"https://www.neurotool.org/primer.html"},
+  {n:2,auth:"Nelson PK et al",title:"The pipeline embolization device for intracranial aneurysms",j:"AJNR",y:2011,type:"RCT",url:""},
+  {n:3,auth:"Arthur AS et al",title:"WEB Intrasaccular Therapy (WEB-IT) 12-month results",j:"J Neurointerv Surg",y:2019,type:"Prospective",url:""},
+  {n:4,auth:"Turk AS et al",title:"Initial clinical experience with ADAPT technique",j:"J Neurointerv Surg",y:2014,type:"Prospective",url:""},
+  {n:5,auth:"Berkhemer OA et al",title:"MR CLEAN trial — thrombectomy for stroke",j:"NEJM",y:2015,type:"RCT",url:""},
+  {n:6,auth:"Nogueira RG et al",title:"DAWN trial — late window thrombectomy",j:"NEJM",y:2018,type:"RCT",url:""},
+  {n:7,auth:"Cekirge HS et al",title:"FRED flow-diverter device clinical study",j:"AJNR",y:2016,type:"Retrospective",url:""},
+  {n:8,auth:"Albuquerque FC et al",title:"Review of Surpass flow diverter",j:"J Neurosurg",y:2014,type:"Review",url:""},
+  {n:9,auth:"Spiotta AM et al",title:"Intrasaccular devices: comprehensive review",j:"PMC",y:2024,type:"Review",url:""},
+  {n:10,auth:"Behme D et al",title:"WEB intrasaccular flow disrupter for wide-neck aneurysms",j:"AJNR",y:2015,type:"Retrospective",url:""},
+  {n:11,auth:"Sioutas GS et al",title:"EmboTrap III stent retriever multicenter US",j:"Interv Neuroradiol",y:2025,type:"Multicenter",url:""},
+  {n:12,auth:"Starke RM et al",title:"AVM embolization with Onyx and liquid embolics",j:"J Neurosurg",y:2014,type:"Review",url:""},
+  {n:13,auth:"Medtronic","title":"Pipeline Flex IFU v4.2 §3.1",j:"Manufacturer",y:2022,type:"IFU",url:""},
+  {n:14,auth:"MicroVention/Terumo","title":"FRED IFU v5 §3.1",j:"Manufacturer",y:2023,type:"IFU",url:""},
+  {n:15,auth:"Stryker Neurovascular","title":"Surpass Evolve IFU v3 §2",j:"Manufacturer",y:2023,type:"IFU",url:""},
+  {n:16,auth:"Balt Extrusion","title":"SILK FD IFU — Gama-17 validated delivery",j:"Manufacturer",y:2021,type:"IFU",url:""},
+  {n:17,auth:"Cerenovus","title":"Enterprise 2 IFU §4.1 compatible microcatheters",j:"Manufacturer",y:2022,type:"IFU",url:""},
+  {n:18,auth:"Terumo Neuro","title":"WEB System IFU — Via catheter requirements",j:"Manufacturer",y:2022,type:"IFU",url:""},
+  {n:19,auth:"Pierot L et al","title":"Adjunctive techniques in endovascular aneurysm treatment",j:"Neurosurgery",y:2010,type:"Review",url:""},
+  {n:20,auth:"Jankowitz B et al","title":"Balloon guide catheter usage in thrombectomy",j:"J Neurointerv Surg",y:2022,type:"Comparative",url:""},
+];
+
+const MFR_COLORS = {
+  "Medtronic":"#E64A19","Stryker":"#E65100","MicroVention":"#6A1B9A",
+  "Terumo Neuro":"#6A1B9A","Penumbra":"#C62828","Balt":"#00695C",
+  "Cerenovus":"#F57F17","Phenox":"#AD1457","Asahi":"#2E7D32",
+  "Cook Medical":"#E64A19","Merit":"#546E7A","Imperative Care":"#7B1FA2",
+  "Boston Scientific":"#0277BD","Generic":"#9E9E9E","Kaneka":"#388E3C",
+  "Rapid Medical":"#558B2F"
+};
+
+const TYPE_COLORS = {
+  "RCT":"b-blue","Review":"b-teal","Prospective":"b-green","Retrospective":"b-gray",
+  "IFU":"b-red","Multicenter":"b-amb","Resource":"b-pur","Comparative":"b-coral"
+};
+
+// ── STATE ──────────────────────────────────────────────────────────────────
+let progress = JSON.parse(localStorage.getItem('ir_progress') || '{}');
+let catFilter = null;
+let litFilter = null;
+let openModule = null;
+let openProc = null;
+let strictMode = JSON.parse(localStorage.getItem('ir_strict') || 'false');
+
+function saveProgress() { localStorage.setItem('ir_progress', JSON.stringify(progress)); }
+
+// ── NAVIGATION ───────────────────────────────────────────────────────────
+function goTo(name) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nb').forEach(b => b.classList.remove('on'));
+  document.getElementById('s-' + name).classList.add('active');
+  const nb = document.getElementById('nb-' + name);
+  if (nb) nb.classList.add('on');
+  const subs = {
+    home:'NV Compatibility & Reference',training:'Training Modules',
+    compat:'Compatibility Check',catalog:'Device Catalog',
+    proc:'Procedure Templates',lit:'Literature & References'
+  };
+  document.getElementById('top-sub').textContent = subs[name] || '';
+}
+
+// ── MODAL ────────────────────────────────────────────────────────────────
+function showModal(type, data) {
+  const m = document.getElementById('modal');
+  const mc = document.getElementById('modal-content');
+  if (type === 'about') {
+    mc.innerHTML = `<div class="modal-title">NV Compatibility Calculator</div>
+      <div style="width:100%;height:140px;background:linear-gradient(135deg,#1B5E20 0%,#558B2F 100%);border-radius:12px;margin:10px 0 15px;box-shadow:var(--sh)"></div>
+      <div class="modal-sub">Version 3.0 | Educational Reference</div>
+      <div style="font-size:12.5px;color:var(--txt2);line-height:1.7;margin-bottom:14px">
+        <strong>${DEVICES.length} devices</strong> across ${new Set(DEVICES.map(d=>d[0])).size} categories<br>
+        <strong>8 training modules</strong> with MCQ assessment<br>
+        <strong>${IFU_RULES_FULL.length} IFU rules</strong> from manufacturer documentation<br>
+        <strong>${typeof PROC_KITS!=='undefined'?PROC_KITS.length:'—'} procedure kits</strong> (neurovascular, general IR, peripheral)<br>
+        <strong>${typeof REF_DOMAINS!=='undefined'?REF_DOMAINS.length:'—'} reference domains</strong> — CTO, DCB, thrombectomy, closure, contrast, biliary, HCC, pediatric &amp; more<br>
+        <strong>${REFS.length} literature references</strong><br>
+        Full offline support via Service Worker
+      </div>
+      <div style="font-size:10.5px;color:var(--txt3);margin-bottom:10px">Data source: ${window.NV_DATA && window.NV_DATA.source ? escapeHtml(window.NV_DATA.source) : 'bundled dataset'}</div>
+      <div style="margin-bottom:15px;padding:12px;background:var(--bg);border-radius:var(--r);border:1px solid var(--border)">
+        <div style="font-size:11px;font-weight:700;color:var(--txt3);text-transform:uppercase;letter-spacing:.5px;margin-bottom:5px">Contact & Feedback</div>
+        <div style="font-size:13px;color:var(--pri);font-weight:600">shadirawa@gmail.com</div>
+        <div style="font-size:11px;color:var(--txt2);margin-top:2px">For data corrections or feature requests</div>
+      </div>
+      <div class="btn btn-sm btn-out" style="width:100%;margin-bottom:8px" onclick="closeModal()">Close</div>
+      <div style="font-size:10.5px;color:var(--txt3);text-align:center;margin-top:8px">
+        ⚠ Educational use only. Not for clinical decision-making.
+      </div>`;
+  } else if (type === 'device' && data) {
+    const d = data;
+    const ext = DEVICES_EXT[DEVICES.indexOf(d)] || {};
+    const ifu_rules = IFU_RULES.filter(r => r[0] === d[1] || r[1] === d[1]);
+    const extRows = [];
+    if (ext.odFr != null) extRows.push(['OD (Fr)', ext.odFr]);
+    if (ext.idFr != null) extRows.push(['ID (Fr)', ext.idFr]);
+    if (ext.material) extRows.push(['Material', ext.material]);
+    if (ext.stabilityData) {
+      const sd = ext.stabilityData;
+      if (sd.tempRangeC) extRows.push(['Temp Range', sd.tempRangeC + '°C']);
+      if (sd.maxPressurePsi != null) extRows.push(['Max Pressure', sd.maxPressurePsi + ' psi / ' + (sd.maxPressureBar ?? '?') + ' bar']);
+    }
+    mc.innerHTML = `<div class="modal-title">${escapeHtml(d[1])}</div>
+      <div class="modal-sub" style="display:flex;align-items:center;gap:8px">
+        <span style="width:10px;height:10px;border-radius:5px;background:${MFR_COLORS[d[2]]||'#9E9E9E'};display:inline-block"></span>
+        ${escapeHtml(d[2])} &nbsp;·&nbsp; <span class="badge b-gray">${escapeHtml(d[0])}</span>
+        ${d[7]==='Yes'?'<span class="badge b-teal">DMSO ✓</span>':(d[7]==='No'?'<span class="badge b-red">NOT DMSO</span>':'')}
+      </div>
+      <div class="dim-grid">
+        <div class="dim-item"><div class="dim-lbl">OD Inch</div><div class="dim-val">${d[3]!=null?d[3].toFixed(4)+'"':'—'}</div></div>
+        <div class="dim-item"><div class="dim-lbl">ID Inch</div><div class="dim-val">${d[4]!=null?d[4].toFixed(4)+'"':'—'}</div></div>
+        <div class="dim-item"><div class="dim-lbl">Working Len.</div><div class="dim-val">${d[5]||'—'}${d[5]?'cm':''}</div></div>
+        <div class="dim-item"><div class="dim-lbl">Total Len.</div><div class="dim-val">${d[6]||'—'}${d[6]?'cm':''}</div></div>
+      </div>
+      ${extRows.length?`<div class="ref-detail" style="margin:8px 0">${extRows.map(([k,v])=>`<div class="ref-row"><div class="ref-key">${escapeHtml(k)}</div><div class="ref-val">${escapeHtml(String(v))}</div></div>`).join('')}</div>`:''}
+      ${d[8]?`<div class="ifu-alert">${escapeHtml(d[8])}</div>`:''}
+      ${ifu_rules.length?`<div style="font-size:11px;font-weight:700;color:var(--teal);margin:10px 0 6px;text-transform:uppercase;letter-spacing:.5px">IFU Rules (${ifu_rules.length})</div>`+''+ifu_rules.map(r=>`<div style="font-size:11.5px;color:var(--txt2);margin-bottom:5px;padding:6px 10px;background:var(--teal-l);border-radius:var(--r);line-height:1.5">${r[0]===d[1]?'<strong>'+escapeHtml(r[0])+'</strong> → '+escapeHtml(r[1]):escapeHtml(r[0])+' → <strong>'+escapeHtml(r[1])+'</strong>'}<br><span style="font-size:10.5px;color:var(--teal)">${escapeHtml(r[2])}</span></div>`).join(''):''}
+      <div class="btn btn-sm btn-out" style="width:100%;margin-top:12px" onclick="closeModal()">Close</div>`;
+  }
+  m.classList.add('open');
+}
+
+function closeModal(e) {
+  if (e && e.target !== document.getElementById('modal')) return;
+  document.getElementById('modal').classList.remove('open');
+}
+
+// ── HOME ─────────────────────────────────────────────────────────────────
+function renderHome() {
+  document.getElementById('m-devs').textContent = DEVICES.length;
+  document.getElementById('m-ifu').textContent = IFU_RULES.length;
+  const done = Object.keys(progress).filter(k => progress[k]?.done).length;
+  const pc = document.getElementById('progress-cards');
+  pc.innerHTML = MODULES.map(m => {
+    const p = progress[m.id] || {};
+    const pct = p.done ? 100 : (p.quizScore ? Math.round(p.quizScore/3*100) : 0);
+    return `<div class="scard-sm" style="display:flex;align-items:center;gap:10px;cursor:pointer" onclick="goTo('training')">
+      <span style="font-size:20px">${m.icon}</span>
+      <div style="flex:1">
+        <div style="font-size:12.5px;font-weight:500;margin-bottom:3px">${m.title}</div>
+        <div style="height:5px;background:#E5E7EB;border-radius:3px;overflow:hidden">
+          <div style="height:100%;width:${pct}%;background:${pct===100?'#0D6E3C':'#E64A19'};transition:width .4s;border-radius:3px"></div>
+        </div>
+      </div>
+      <span style="font-size:11px;color:var(--txt3);font-weight:600;min-width:28px;text-align:right">${pct}%</span>
+    </div>`;
+  }).join('');
+}
+
+// ── TRAINING ─────────────────────────────────────────────────────────────
+function renderTraining() {
+  document.getElementById('module-list').innerHTML = MODULES.map((m, mi) => {
+    const p = progress[m.id] || {};
+    const pct = p.done ? 100 : (p.quizScore ? Math.round(p.quizScore/3*100) : 0);
+    return `<div class="module-card" id="mc-${m.id}">
+      <div class="module-hdr" onclick="toggleModule('${m.id}')">
+        <div class="module-ico" style="background:${m.color}">${m.icon}</div>
+        <div class="module-info">
+          <div class="module-title">${m.title}</div>
+          <div class="module-meta"><span class="badge ${m.badge_cls}">${m.badge}</span>
+            ${p.done?'<span style="color:#0D6E3C;font-size:11px;margin-left:6px">✓ Complete</span>':''}
+          </div>
+        </div>
+        <svg width="20" height="20" viewBox="0 0 20 20" style="flex-shrink:0;transition:transform .2s;transform:${openModule===m.id?'rotate(180deg)':'rotate(0deg)'}"><path d="M5 7l5 5 5-5" stroke="#9CA3AF" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+      </div>
+      <div class="module-prog"><div class="module-fill" style="width:${pct}%"></div></div>
+      <div class="module-body ${openModule===m.id?'open':''}" id="mb-${m.id}">
+        <div style="font-size:13px;color:var(--txt2);line-height:1.6;margin-bottom:10px">${m.overview}</div>
+        <div style="font-size:11px;font-weight:700;color:var(--txt3);text-transform:uppercase;letter-spacing:.6px;margin-bottom:6px">Learning Objectives</div>
+        <div class="obj-list">${m.objectives.map(o=>`<div class="obj-item"><span class="obj-dot"></span>${o}</div>`).join('')}</div>
+        <div style="font-size:11px;font-weight:700;color:var(--txt3);text-transform:uppercase;letter-spacing:.6px;margin:10px 0 6px">Step-by-Step Technique</div>
+        <div class="step-list">${m.steps.map((s,i)=>`<div class="step"><span class="step-num">${i+1}</span><span class="step-txt">${s}</span></div>`).join('')}</div>
+        <div class="ifu-alert">📋 <strong>IFU Notes:</strong> ${m.ifu}</div>
+        <div class="quiz-section">
+          <div style="font-size:11px;font-weight:700;color:var(--txt3);text-transform:uppercase;letter-spacing:.6px;margin-bottom:8px">Self Assessment (${p.done?'Completed':'3 Questions'})</div>
+          ${m.quiz.map((q,qi)=>renderQuiz(m.id,qi,q,p)).join('')}
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function renderQuiz(mid, qi, q, p) {
+  const ans_given = p.answers && p.answers[qi] !== undefined;
+  return `<div style="margin-bottom:14px">
+    <div class="quiz-q">${qi+1}. ${q.q}</div>
+    ${q.opts.map((o,oi)=>`<div class="quiz-opt ${ans_given?(oi===q.ans?'correct disabled':(oi===p.answers[qi]?'wrong disabled':'disabled')):''}"
+      ${!ans_given?`onclick="answerQuiz('${mid}',${qi},${oi},${q.ans},this)"`:''}
+      >${ans_given&&oi===q.ans?'✓ ':''}${ans_given&&oi===p.answers[qi]&&oi!==q.ans?'✗ ':''}${o}</div>`).join('')}
+    ${ans_given?`<div class="quiz-result show" style="background:${p.answers[qi]===q.ans?'var(--sec-l)':'var(--amb-l)'};color:${p.answers[qi]===q.ans?'var(--sec)':'var(--amb)'}">
+      ${p.answers[qi]===q.ans?'✓ Correct!':'✗ Incorrect — '}${q.exp}</div>`:''}
+  </div>`;
+}
+
+function answerQuiz(mid, qi, selected, correct, el) {
+  if (!progress[mid]) progress[mid] = {};
+  if (!progress[mid].answers) progress[mid].answers = {};
+  progress[mid].answers[qi] = selected;
+  // Check if all 3 answered
+  const m = MODULES.find(x=>x.id===mid);
+  if (Object.keys(progress[mid].answers).length === m.quiz.length) {
+    const score = m.quiz.filter((q,i) => progress[mid].answers[i] === q.ans).length;
+    progress[mid].quizScore = score;
+    if (score === m.quiz.length) progress[mid].done = true;
+  }
+  saveProgress();
+  renderTraining();
+  renderHome();
+}
+
+function toggleModule(id) {
+  openModule = openModule === id ? null : id;
+  renderTraining();
+  if (openModule) {
+    setTimeout(() => {
+      document.getElementById('mc-'+id).scrollIntoView({behavior:'smooth', block:'start'});
+    }, 100);
+  }
+}
+
+// ── COMPATIBILITY ─────────────────────────────────────────────────────────
+// Category names as they appear in the new 791-device dataset. Some old
+// pairs (e.g. "SHEATH / BGC") mapped to a single category that the new data
+// splits into two (SHEATH, BALLOON GUIDE CATHETER) — those use an array.
+const CAT_SHEATH_BGC = ["SHEATH","BALLOON GUIDE CATHETER"];
+const COMPAT_PAIRS = [
+  {label:"Sheath → Guiding Catheter",a:CAT_SHEATH_BGC,b:"GUIDING CATHETER",check:"lumen",desc:"Sheath ID must be ≥ Guide OD"},
+  {label:"Sheath → Balloon Guide Cath.",a:CAT_SHEATH_BGC,b:CAT_SHEATH_BGC,check:"lumen",desc:"Sheath ID must be ≥ BGC OD"},
+  {label:"Guide → Intermediate Cath.",a:"GUIDING CATHETER",b:"INTERMEDIATE CATHETER",check:"lumen",desc:"Guide ID must be ≥ Intermediate OD"},
+  {label:"BGC → Aspiration Cath.",a:CAT_SHEATH_BGC,b:"ASPIRATION CATHETER",check:"lumen",desc:"BGC ID must be ≥ Aspiration OD"},
+  {label:"Intermediate → Microcatheter",a:"INTERMEDIATE CATHETER",b:"MICROCATHETER",check:"lumen",desc:"Intermediate ID ≥ Microcatheter OD"},
+  {label:"Aspiration → Microcatheter",a:"ASPIRATION CATHETER",b:"MICROCATHETER",check:"lumen",desc:"Aspiration ID ≥ Microcatheter OD"},
+  {label:"Micro → Flow Diverter (IFU)",a:"MICROCATHETER",b:"FLOW DIVERTER",check:"ifu",desc:"IFU rule check + dimensional"},
+  {label:"Micro → Bridging Stent (IFU)",a:"MICROCATHETER",b:"BRIDGING STENT",check:"ifu",desc:"IFU rule check + dimensional"},
+  {label:"Micro → Stent Retriever (IFU)",a:"MICROCATHETER",b:"STENT RETRIEVER",check:"ifu",desc:"IFU rule check + dimensional"},
+  {label:"Micro → Intrasaccular (IFU)",a:"MICROCATHETER",b:"INTRASACCULAR DEVICE",check:"ifu",desc:"IFU rule check required"},
+  {label:"Micro → Coil",a:"MICROCATHETER",b:"COIL",check:"lumen",desc:"Microcatheter ID ≥ Coil OD"},
+  {label:"Wire → Microcatheter",a:"MICROWIRE",b:"MICROCATHETER",check:"wire",desc:"Wire OD ≤ Micro ID; Wire length > WL + 30cm"},
+  {label:"Micro → Liquid Embolic (DMSO)",a:"MICROCATHETER",b:"LIQUID EMBOLIC",check:"dmso",desc:"DMSO compatibility if Onyx/Squid"},
+];
+
+const CAT_BG = {
+  "SHEATH":"#C7D7FA","BALLOON GUIDE CATHETER":"#C7D7FA","GUIDING CATHETER":"#DDD6FE",
+  "INTERMEDIATE CATHETER":"#A7F3D0","ASPIRATION CATHETER":"#FCA5A5",MICROCATHETER:"#BAE6FD",
+  MICROWIRE:"#D1FAE5",COIL:"#FBCFE8","FLOW DIVERTER":"#FED7AA",
+  "BRIDGING STENT":"#E9D5FF","STENT RETRIEVER":"#FECACA",
+  "INTRASACCULAR DEVICE":"#CCFBF1",BALLOON:"#FEF3C7","LIQUID EMBOLIC":"#FCE7F3"
+};
+
+function getByCategory(cat) {
+  const cats = Array.isArray(cat) ? cat : [cat];
+  return DEVICES.filter(d => cats.includes(d[0]));
+}
+
+function checkCompat(outer, inner, check) {
+  const oId = outer[4], iOd = inner[3];
+  if (check === 'lumen') {
+    if (oId == null || iOd == null) return {cls:'cr-warn',txt:'⚠ Missing dimensional data — verify IFU manually'};
+    const m = oId - iOd;
+    if (m < -TOL) return {cls:'cr-err',txt:`❌ INCOMPATIBLE — ID undersized by ${Math.abs(m).toFixed(4)}"`};
+    if (m < 0.002) return {cls:'cr-warn',txt:`⚠ TIGHT FIT — ${m.toFixed(4)}" margin. Verify lubrication.`};
+    return {cls:'cr-ok',txt:`✅ COMPATIBLE — ${m.toFixed(4)}" margin`};
+  }
+  if (check === 'ifu') {
+    const rules = IFU_RULES.filter(r => r[0] === inner[1]);
+    if (rules.length > 0) {
+      const hit = rules.find(r => r[1] === outer[1]);
+      if (hit) return {cls:'cr-ifu',txt:`✅ IFU VALIDATED — ${hit[2]}`};
+      const valid = rules.map(r => r[1]).join(', ');
+      if (strictMode) return {cls:'cr-err',txt:`❌ IFU EXCLUSION (STRICT) — ${inner[1]} requires: ${valid}`};
+      return {cls:'cr-err',txt:`❌ IFU EXCLUSION — ${inner[1]} validated with: ${valid}`};
+    }
+    if (strictMode) return {cls:'cr-err',txt:`❌ STRICT MODE — No IFU rule found for ${inner[1]}`};
+    if (oId == null || iOd == null) return {cls:'cr-warn',txt:'⚠ No IFU rule — insufficient dimensional data'};
+    const m = oId - iOd;
+    if (m < -TOL) return {cls:'cr-err',txt:`❌ No IFU rule + UNDERSIZED by ${Math.abs(m).toFixed(4)}"`};
+    if (m < 0.002) return {cls:'cr-warn',txt:`⚠ No IFU rule — TIGHT FIT ${m.toFixed(4)}"`};
+    return {cls:'cr-warn',txt:`⚠ No IFU rule — dimensional fit OK (${m.toFixed(4)}")`};
+  }
+  if (check === 'wire') {
+    const wOd = outer[3], mId = inner[4];
+    const wLen = outer[6], mWL = inner[5];
+    const issues = [];
+    if (wOd != null && mId != null && wOd > mId + TOL) issues.push(`Wire OD (${wOd.toFixed(4)}") > Micro ID (${mId.toFixed(4)}")`);
+    if (wLen != null && mWL != null && wLen <= mWL + 30) issues.push(`Wire ${wLen}cm too short for ${mWL}cm catheter (need >${mWL+30}cm)`);
+    if (issues.length) return {cls:'cr-err', txt:'❌ '+issues.join('; ')};
+    return {cls:'cr-ok',txt:'✅ Wire compatible — OD fits, length adequate'};
+  }
+  if (check === 'dmso') {
+    const needsDMSO = ['Onyx 18','Onyx 34','Squid 12','Squid 18'].includes(inner[1]);
+    if (!needsDMSO) return {cls:'cr-ok',txt:`✅ ${inner[1]} does not require DMSO — any compatible catheter`};
+    const catDMSO = outer[7];
+    if (catDMSO === 'Yes') return {cls:'cr-ok',txt:`✅ DMSO COMPATIBLE — ${outer[1]} validated for ${inner[1]}`};
+    if (catDMSO === 'No') return {cls:'cr-err',txt:`❌ DMSO INCOMPATIBLE — ${outer[1]} NOT DMSO. Risk of catheter dissolution!`};
+    return {cls:'cr-warn',txt:`⚠ ${outer[1]} DMSO status unknown — verify IFU before use`};
+  }
+  return {cls:'cr-warn',txt:'⚠ Unable to check'};
+}
+
+function renderCompat() {
+  document.getElementById('compat-pairs').innerHTML = COMPAT_PAIRS.map((pair, pi) => {
+    const aDevs = getByCategory(pair.a);
+    const bDevs = getByCategory(pair.b);
+    const bg = CAT_BG[Array.isArray(pair.a)?pair.a[0]:pair.a] || '#F3F4F6';
+    return `<div class="compat-pair">
+      <div class="compat-hdr" style="background:${bg}">${pair.label}
+        <span style="font-size:10px;color:var(--txt3);font-weight:400;margin-left:auto">${pair.desc}</span>
+      </div>
+      <div class="compat-body">
+        <div class="compat-sel">
+          <label>Outer Device</label>
+          <select onchange="updateCompat(${pi})" id="cs-a-${pi}">
+            <option value="">— select —</option>
+            ${aDevs.map(d=>`<option value="${escapeHtml(d[1])}">${escapeHtml(d[1])}</option>`).join('')}
+          </select>
+        </div>
+        <div class="compat-sel">
+          <label>Inner Device</label>
+          <select onchange="updateCompat(${pi})" id="cs-b-${pi}">
+            <option value="">— select —</option>
+            ${bDevs.map(d=>`<option value="${escapeHtml(d[1])}">${escapeHtml(d[1])}</option>`).join('')}
+          </select>
+        </div>
+        <div class="compat-result" id="cr-${pi}"></div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function updateCompat(pi) {
+  const aVal = document.getElementById(`cs-a-${pi}`).value;
+  const bVal = document.getElementById(`cs-b-${pi}`).value;
+  const res = document.getElementById(`cr-${pi}`);
+  if (!aVal || !bVal) { res.className='compat-result'; return; }
+  const a = DEVICES.find(d => d[1] === aVal);
+  const b = DEVICES.find(d => d[1] === bVal);
+  if (!a || !b) return;
+  const r = checkCompat(a, b, COMPAT_PAIRS[pi].check);
+  res.className = 'compat-result ' + r.cls;
+  res.textContent = r.txt;
+}
+
+// ── CATALOG ───────────────────────────────────────────────────────────────
+let catalogFilter = null;
+
+function renderCatalogFilters() {
+  const cats = [...new Set(DEVICES.map(d => d[0]))];
+  const el = document.getElementById('cat-filters');
+  el.innerHTML = `<button class="fchip ${!catalogFilter?'on':''}" onclick="setCatFilter(null,this)">All (${DEVICES.length})</button>`
+    + cats.map(c => `<button class="fchip" onclick="setCatFilter('${c}',this)">${c}</button>`).join('');
+}
+
+function setCatFilter(f, btn) {
+  catalogFilter = f;
+  document.querySelectorAll('#cat-filters .fchip').forEach(c => c.classList.remove('on'));
+  btn.classList.add('on');
+  filterCatalog();
+}
+
+function filterCatalog() {
+  const q = (document.getElementById('cat-search')?.value || '').toLowerCase();
+  let filtered = catalogFilter ? DEVICES.filter(d => d[0] === catalogFilter) : [...DEVICES];
+  if (q) filtered = filtered.filter(d =>
+    d[1].toLowerCase().includes(q) || d[2].toLowerCase().includes(q) || d[0].toLowerCase().includes(q) || (d[8]||'').toLowerCase().includes(q));
+  document.getElementById('cat-count').textContent = `Showing ${filtered.length} of ${DEVICES.length} devices`;
+  document.getElementById('catalog-list').innerHTML = filtered.map(d => {
+    const idx = DEVICES.indexOf(d);
+    const ifu = IFU_RULES.some(r => r[0] === d[1] || r[1] === d[1]);
+    const dims = [d[3]!=null?`OD ${d[3].toFixed(4)}"`:null, d[4]!=null?`ID ${d[4].toFixed(4)}"`:null, d[5]?`${d[5]}cm`:null].filter(Boolean).join(' · ');
+    return `<div class="dev-card" onclick="showModal('device', DEVICES[${idx}])">
+      <span class="dev-dot" style="background:${MFR_COLORS[d[2]]||'#9E9E9E'}"></span>
+      <div class="dev-info">
+        <div class="dev-name">${escapeHtml(d[1])}</div>
+        <div class="dev-meta">${escapeHtml(d[2])} · <span class="dev-dims">${dims||'—'}</span></div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:flex-end;gap:3px">
+        ${ifu?'<span class="ifu-tag">IFU</span>':''}
+        ${d[7]==='Yes'?'<span class="dmso-tag">DMSO</span>':(d[7]==='No'?'<span class="badge b-red" style="font-size:9px">¬DMSO</span>':'')}
+      </div>
+    </div>`;
+  }).join('') || `<div class="empty">No devices found for "${escapeHtml(q)}"</div>`;
+}
+
+// ── PROCEDURES ────────────────────────────────────────────────────────────
+const PROC_BADGE = {
+  "FLOW DIVERSION":"b-amb","COILING SIMPLE":"b-green","STENT-ASSISTED COILING":"b-teal",
+  "THROMBECTOMY":"b-red","INTRASACCULAR":"b-blue","AVM EMBOLIZATION":"b-pur"
+};
+const SITE_BADGE = {FEMORAL:"b-gray",RADIAL:"b-green"};
+
+function renderProcs(query) {
+  // PROC_KITS is assembled later (in the "enhanced features" script) from
+  // TEMPLATES + the NV_DATA procedure domains; the original app's own init
+  // sequence calls renderProcs() once before that has run, so no-op then —
+  // the enhanced-features init calls it again once PROC_KITS is ready.
+  if (typeof PROC_KITS === 'undefined') return;
+  const q = (query || '').toLowerCase();
+  const kits = q ? PROC_KITS.filter(k => JSON.stringify(k).toLowerCase().includes(q)) : PROC_KITS;
+  document.getElementById('proc-intro').textContent =
+    `${PROC_KITS.length} pre-built clinical procedure kits across neurovascular, general IR and peripheral vascular. Tap a kit for its full device stack, checks and warnings.`;
+  registerRefStore('proc', kits);
+  const el = document.getElementById('proc-list');
+  if (!kits.length) { el.innerHTML = `<div class="empty">No procedure kits found.</div>`; return; }
+  el.innerHTML = kits.map((k, i) => {
+    const type = k.type || k.procedureType || k.category || '';
+    const site = k.site || k.accessSite || (Array.isArray(k.targetVessels)?k.targetVessels.join(', '):'') || '';
+    return `<div class="proc-card" style="cursor:pointer" onclick="openRefDetail('proc',${i})">
+      <div class="proc-hdr">
+        <div style="flex:1">
+          <div class="proc-title">${escapeHtml(k.name||'Untitled Kit')}</div>
+          <div style="display:flex;gap:5px;margin-top:4px;flex-wrap:wrap">
+            <span class="badge b-gray">${escapeHtml(k.domain||'')}</span>
+            ${type?`<span class="badge ${PROC_BADGE[type]||'b-gray'}">${escapeHtml(String(type))}</span>`:''}
+            ${site?`<span class="badge ${SITE_BADGE[site]||'b-gray'}">${escapeHtml(String(site))}</span>`:''}
+          </div>
+        </div>
+        <span class="proc-arrow">▾</span>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+// ── LITERATURE ────────────────────────────────────────────────────────────
+function renderLitFilters() {
+  const types = [...new Set(REFS.map(r => r.type))];
+  document.getElementById('type-filters').innerHTML =
+    `<button class="fchip on" onclick="setLitFilter(null,this)">All</button>`
+    + types.map(t => `<button class="fchip" onclick="setLitFilter('${t}',this)">${t}</button>`).join('');
+}
+
+function setLitFilter(f, btn) {
+  litFilter = f;
+  document.querySelectorAll('#type-filters .fchip').forEach(c => c.classList.remove('on'));
+  btn.classList.add('on');
+  renderLitList();
+}
+
+function renderLitList() {
+  const filtered = litFilter ? REFS.filter(r => r.type === litFilter) : REFS;
+  document.getElementById('lit-list').innerHTML = filtered.map(r => `
+    <div class="lit-card">
+      <div class="lit-title">${r.n}. ${r.auth}. <em>${r.title}</em></div>
+      <div class="lit-meta">
+        <span class="badge ${TYPE_COLORS[r.type]||'b-gray'}">${r.type}</span>
+        <span>${r.j}</span><span>·</span><span>${r.y}</span>
+        ${r.url?`<a href="${r.url}" style="color:var(--pri);font-size:11px" target="_blank">↗</a>`:''}
+      </div>
+    </div>`).join('');
+}
+
+// ── SERVICE WORKER ────────────────────────────────────────────────────────
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js').catch(() => {});
+}
+
+// ── INIT ──────────────────────────────────────────────────────────────────
+renderHome();
+renderTraining();
+renderCompat();
+renderCatalogFilters();
+filterCatalog();
+renderProcs();
+renderLitFilters();
+renderLitList();
+</script>
+</body>
+</html>
+<!-- Enhanced additions injected at end of body -->
+
+<script>
+// ══════════════════════════════════════════════════════════════════
+// ENHANCED FEATURES — Flashcards, Cases, Settings, Anatomy SVG
+// ══════════════════════════════════════════════════════════════════
+
+// ── FLASHCARDS DATA ──────────────────────────────────────────────
+const FLASHCARDS = [
+  {q:"Pipeline Flex IFU-validated delivery catheter(s)?",a:"Phenom 027 AND Marksman (IFU §3.1). No other catheter is validated.",cat:"Flow Diverter"},
+  {q:"FRED flow diverter validated delivery catheter?",a:"Headway 27 ONLY (IFU §3.1). No other catheter is IFU-approved.",cat:"Flow Diverter"},
+  {q:"Surpass Evolve validated delivery catheters?",a:"Excelsior XT-17 OR XT-27 ONLY (IFU §2). Both Stryker-specific.",cat:"Flow Diverter"},
+  {q:"SILK flow diverter validated delivery catheter?",a:"Gama-17 (Balt system). DMSO compatible.",cat:"Flow Diverter"},
+  {q:"WEB SL/SLS delivery catheter?",a:"Via 27 (MicroVention IFU). Via 33 for larger WEB DL sizes.",cat:"Intrasaccular"},
+  {q:"WEB 17 delivery catheter?",a:"Via 17 (MicroVention IFU). Note: Via 17 ≠ Headway 17 for WEB purposes.",cat:"Intrasaccular"},
+  {q:"Enterprise 2 compatible microcatheters?",a:"Excelsior 1018 AND Headway 17 Advanced (IFU §4.1). Closed-cell stent.",cat:"Bridging Stent"},
+  {q:"LVIS Jr compatible microcatheters?",a:"Headway 17 Advanced OR Excelsior SL-10 (150cm) (IFU §3.2). Braided low-profile.",cat:"Bridging Stent"},
+  {q:"Solitaire X delivery catheter?",a:"Marksman microcatheter (IFU §3.3) or Phenom 021/027. Not Trevo Pro.",cat:"Thrombectomy"},
+  {q:"Trevo NXT/ProVue XP delivery catheter?",a:"Trevo Pro 18 OR Trak-21. Both Stryker-specific.",cat:"Thrombectomy"},
+  {q:"NeuronMAX 088 inner diameter?",a:"0.088\" — largest standard neuro sheath. The '088' refers to ID in inches.",cat:"Sheaths / BGC"},
+  {q:"AXS Infinity LS Plus inner diameter?",a:"0.091\" — currently largest proximal access platform available.",cat:"Sheaths / BGC"},
+  {q:"Bobby BGC inner diameter?",a:"0.086\" (MicroVention). Slightly smaller than Emboguard/Walrus (0.087\").",cat:"Sheaths / BGC"},
+  {q:"Benchmark 071 inner diameter?",a:"0.071\" — the '071' in the name IS the inner diameter in inches.",cat:"Guide Catheters"},
+  {q:"Which microcatheters are DMSO compatible?",a:"Echelon-10/14, Marathon, Apollo, Headway 17/21/27, Duo 167, Sonic 1.5Fr, Gama-17, Phenom 017/021/027. NOT: SL-10 (150cm), Magic 1.5/1.8Fr, Marksman.",cat:"DMSO"},
+  {q:"Can Magic 1.5Fr be used with Onyx?",a:"NO — Magic is NOT DMSO compatible. Use Echelon-10, Sonic 1.5Fr, or Gama-17 for Onyx/Squid delivery.",cat:"DMSO"},
+  {q:"What microwire does HyperGlide/HyperForm require?",a:"X-Pedion 0.010\" (Medtronic) — mandated by IFU. Synchro 14 does NOT fit.",cat:"Balloons"},
+  {q:"ACE 64 inner diameter?",a:"0.064\" ID, OD 0.072\", working length 132cm.",cat:"Aspiration"},
+  {q:"JET 7 inner diameter?",a:"0.072\" ID, OD 0.082\", working length 132cm — largest Penumbra reperfusion.",cat:"Aspiration"},
+  {q:"Neuroform Atlas delivery catheter?",a:"Excelsior SL-10 (150cm) (0.0165\" microcatheter). Laser-cut open-cell nitinol stent.",cat:"Bridging Stent"},
+  {q:"What wire overhang is needed beyond microcatheter working length?",a:"At least 30cm. Wire total length must exceed microcatheter working length + 30cm.",cat:"Wires"},
+  {q:"Navien 072 inner diameter?",a:"0.072\" — large-lumen intermediate; very supportive for flow diverter delivery.",cat:"Intermediate"},
+  {q:"PHIL advantage over Onyx?",a:"PHIL is non-DMSO — can be used through any microcatheter without special preparation.",cat:"Liquid Embolics"},
+  {q:"Vectra 078 significance?",a:"0.078\" ID — one of largest reperfusion catheters for mechanical thrombectomy.",cat:"Intermediate"},
+  {q:"Fargo Mini catheter profile and use?",a:"OD 0.053\", ID 0.040\", 127cm. Highly flexible for AVM/DAVF embolization via Balt.",cat:"Intermediate"},
+  {q:"FRED Jr delivery catheter?",a:"Headway 21 (MicroVention). Small-vessel flow diversion.",cat:"Flow Diverter"},
+  {q:"Sofia Plus inner diameter?",a:"0.070\" — same as Neuron 070. Good radial trackability.",cat:"Guide Catheters"},
+  {q:"DAPT requirement for WEB?",a:"NO DAPT required for WEB devices — major advantage over stent-assisted coiling.",cat:"Intrasaccular"},
+  {q:"Cerebase DA 090 inner diameter?",a:"0.090\" — largest inner diameter among standard neurovascular guide catheters.",cat:"Guide Catheters"},
+  {q:"EmboTrap III delivery catheter?",a:"0.021\" microcatheter required — e.g. Excelsior 1018. Dual-layer CE+FDA cleared.",cat:"Thrombectomy"},
+  {q:"ERIC Retrieval Device microcatheter requirement?",a:"ERIC 3 requires 0.017\" ID (Headway 17); ERIC 4 and 6 require 0.021\" ID (Headway 21).",cat:"Thrombectomy"},
+  {q:"Scepter C/XC inner lumen diameter?",a:"0.0165\" — allows for 0.014\" microwire and liquid embolic injection through same lumen.",cat:"Balloons"},
+];
+
+// ── CASE STUDIES DATA ─────────────────────────────────────────────
+const CASES = [
+  {
+    id:"case1", title:"Case 1: Unruptured MCA Bifurcation Aneurysm",
+    scenario:"A 58-year-old female presents with incidental right MCA bifurcation aneurysm on MRI. 3D-RA measures: width 8mm, height 7mm, neck 5.5mm, dome-to-neck ratio 1.27. Patient is on aspirin only.",
+    question:"What is the optimal treatment strategy?",
+    options:[
+      "Simple coiling (dome-to-neck >1.0)",
+      "Balloon-assisted coiling — wide neck unsuitable for simple coiling",
+      "WEB intrasaccular device — wide-neck bifurcation, no DAPT needed",
+      "Flow diversion — requires stent crossing both M2s"
+    ],
+    correct:2,
+    explanation:"WEB is ideal: wide-neck (5.5mm) bifurcation aneurysm, D/N ratio 1.27 (<1.5 = not simple coilable). No DAPT needed — major advantage. Would use Via 27 microcatheter. Size WEB SL width = 8+1 = 9mm.",
+    devices:["WEB SL/SLS (Terumo Neuro)","Via 27 (MicroVention)","Benchmark 071 (Penumbra)","Traxcess 14 (MicroVention)"]
+  },
+  {
+    id:"case2", title:"Case 2: LVO Stroke — M1 Occlusion",
+    scenario:"72-year-old male, NIHSS 18, last known well 90 minutes ago. CT perfusion shows large ischemic penumbra. CTA confirms right M1 occlusion.",
+    question:"Which thrombectomy setup is most appropriate?",
+    options:[
+      "Marksman + Solitaire X only (SR technique)",
+      "ACE 64 alone (ADAPT technique)",
+      "Bobby BGC + ACE 64 + Marksman + Solitaire X (combined technique)",
+      "3MAX aspiration alone (distal access)"
+    ],
+    correct:2,
+    explanation:"Combined technique with BGC provides best first-pass effect (FPE). Bobby BGC arrests flow, ACE 64 provides proximal aspiration, Marksman delivers Solitaire X. IFU: Solitaire X requires Marksman (§3.3).",
+    devices:["Bobby BGC (MicroVention)","ACE 64 (Penumbra)","Marksman (Medtronic)","Solitaire X (Medtronic)","NeuronMAX 088 (Penumbra)"]
+  },
+  {
+    id:"case3", title:"Case 3: Giant Fusiform Basilar Aneurysm",
+    scenario:"45-year-old male with brainstem compression from giant (18mm) fusiform basilar artery aneurysm. Unsuitable for surgical clipping. Triaxial femoral access planned.",
+    question:"Which microcatheter is IFU-validated for Pipeline Flex delivery?",
+    options:[
+      "Headway 27 — standard for large aneurysms",
+      "Phenom 027 — IFU-validated delivery catheter",
+      "Via 27 — high-flow catheter",
+      "Excelsior XT-27 — Stryker dedicated system"
+    ],
+    correct:1,
+    explanation:"Phenom 027 AND Marksman are the ONLY IFU-validated catheters for Pipeline Flex (§3.1). Excelsior XT-27 is for Surpass Evolve. Headway 27 is for FRED. Via 27 is for WEB. Using wrong catheter violates IFU.",
+    devices:["NeuronMAX 088 (Penumbra)","Neuron 070 (Penumbra)","Navien 072 (Medtronic)","Phenom 027 (Medtronic)","Pipeline Flex (Medtronic)"]
+  },
+  {
+    id:"case4", title:"Case 4: AVM Embolization — Eloquent Cortex",
+    scenario:"32-year-old with Spetzler-Martin Grade III AVM involving left motor cortex. Plan: targeted feeder embolization before radiosurgery. Onyx 18 planned.",
+    question:"Which microcatheter setup is correct for Onyx delivery?",
+    options:[
+      "Excelsior SL-10 (150cm) — standard coiling catheter",
+      "Magic 1.5Fr — highly flexible flow-directed",
+      "Echelon-10 — DMSO compatible for Onyx",
+      "Headway Duo 156 — ultra-low profile"
+    ],
+    correct:2,
+    explanation:"Echelon-10 is DMSO compatible — IFU-validated for Onyx delivery. Magic 1.5Fr is NOT DMSO compatible (would dissolve). SL-10 (150cm) and Headway Duo 156 are also not DMSO compatible. For distal AVM: Mirage 0.008\" wire.",
+    devices:["Envoy 6F MPD (Cerenovus)","Fargo Mini (Balt)","Echelon-10 (Medtronic)","Mirage 0.008 (Medtronic)","Onyx 18 (Medtronic)"]
+  },
+  {
+    id:"case5", title:"Case 5: Wide-Neck Aneurysm — Stent Coiling",
+    scenario:"67-year-old with unruptured 10mm MCA aneurysm, neck 5mm, D/N ratio 2.0. Flow diversion not preferred due to distal aneurysm location. Plan: Enterprise 2 stent-assisted coiling.",
+    question:"Which microcatheter is validated by Enterprise 2 IFU?",
+    options:[
+      "Neuroform Atlas — laser-cut stent delivery",
+      "Excelsior 1018 — validated per Enterprise 2 IFU §4.1",
+      "Via 27 — high-flow intrasaccular catheter",
+      "Headway 27 — FRED delivery catheter"
+    ],
+    correct:1,
+    explanation:"Enterprise 2 IFU §4.1 validates Excelsior 1018 AND Headway 17 Advanced. Neuroform Atlas uses SL-10 (150cm). Via 27 is for WEB. Headway 27 is for FRED. DAPT required before Enterprise 2 deployment.",
+    devices:["Envoy 6F MPD (Cerenovus)","6F Sheath Standard","Excelsior 1018 (Stryker)","Synchro 14 (Stryker)","Axium Ultra (Medtronic)","Enterprise 2 (Cerenovus)"]
+  },
+];
+
+// ── FLASHCARD STATE ────────────────────────────────────────────────
+let fcIndex = 0, fcFlipped = false, fcFilter = null;
+let caseAnswers = JSON.parse(localStorage.getItem('ir_cases')||'{}');
+function saveCases() { localStorage.setItem('ir_cases', JSON.stringify(caseAnswers)); }
+
+// ── ADD NEW SCREENS TO DOM ─────────────────────────────────────────
+function injectNewScreens() {
+  const screensEl = document.getElementById('screens');
+
+  // FLASHCARDS SCREEN
+  screensEl.insertAdjacentHTML('beforeend', `
+  <div class="screen" id="s-flash">
+    <div style="padding:10px 12px 4px">
+      <div style="font-size:13px;color:var(--txt2)">Tap card to reveal answer. Swipe or use buttons to navigate.</div>
+    </div>
+    <div style="padding:8px 12px 0;display:flex;gap:5px;flex-wrap:wrap" id="fc-filters">
+      <button class="fchip on" onclick="setFCFilter(null,this)">All (${FLASHCARDS.length})</button>
+      ${[...new Set(FLASHCARDS.map(f=>f.cat))].map(c=>`<button class="fchip" onclick="setFCFilter('${c}',this)">${c}</button>`).join('')}
+    </div>
+    <div id="fc-area" style="padding:12px;display:flex;flex-direction:column;align-items:center;gap:12px">
+      <div id="fc-counter" style="font-size:12px;color:var(--txt3);font-weight:600"></div>
+      <div id="fc-card" onclick="flipCard()"
+        style="width:100%;min-height:200px;background:var(--surface);border-radius:var(--r2);
+               padding:24px 20px;box-shadow:var(--sh2);border:1.5px solid var(--border2);
+               cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;
+               text-align:center;transition:background .2s;position:relative">
+        <div id="fc-tag" style="position:absolute;top:12px;right:12px"></div>
+        <div id="fc-side" style="font-size:11px;font-weight:700;color:var(--pri);text-transform:uppercase;letter-spacing:.6px;margin-bottom:10px"></div>
+        <div id="fc-text" style="font-size:14px;font-weight:500;line-height:1.55;color:var(--txt)"></div>
+      </div>
+      <div id="fc-hint" style="font-size:11px;color:var(--txt3)">👆 Tap card to reveal answer</div>
+      <div style="display:flex;gap:10px;width:100%">
+        <button class="btn btn-out" style="flex:1" onclick="fcNav(-1)">← Prev</button>
+        <button class="btn" style="flex:1" onclick="fcNav(1)">Next →</button>
+      </div>
+      <div style="display:flex;gap:8px;width:100%">
+        <button class="btn" style="flex:1;background:var(--sec)" onclick="markFC(true)">✓ Know it</button>
+        <button class="btn btn-red" style="flex:1" onclick="markFC(false)">✗ Review</button>
+      </div>
+      <div id="fc-score" style="font-size:12px;color:var(--txt3)"></div>
+    </div>
+  </div>`);
+
+  // CASE STUDIES SCREEN
+  screensEl.insertAdjacentHTML('beforeend', `
+  <div class="screen" id="s-cases">
+    <div style="padding:10px 12px 6px">
+      <div style="font-size:13px;color:var(--txt2);line-height:1.5">5 clinical scenarios with device selection questions. Test your IFU knowledge.</div>
+    </div>
+    <div id="cases-list"></div>
+  </div>`);
+
+  // SETTINGS SCREEN
+  screensEl.insertAdjacentHTML('beforeend', `
+  <div class="screen" id="s-settings">
+    <div class="sec-hdr">DISPLAY</div>
+    <div class="scard" style="padding:0">
+      <div class="setting-row">
+        <div class="setting-info">
+          <div class="setting-title">Dark Mode</div>
+          <div class="setting-desc" id="theme-desc-s">${themeLabel()}</div>
+        </div>
+        <label class="toggle">
+          <input type="checkbox" id="theme-toggle-s" ${getTheme()==='dark'?'checked':''} onchange="toggleTheme()">
+          <span class="tgl"></span>
+        </label>
+      </div>
+    </div>
+
+    <div class="sec-hdr">CLINICAL MODE</div>
+    <div class="scard" style="padding:0">
+      <div class="setting-row" id="strict-row">
+        <div class="setting-info">
+          <div class="setting-title">Strict IFU Mode</div>
+          <div class="setting-desc" id="strict-desc-s">OFF — Dimensional fallback enabled for devices without IFU rules</div>
+        </div>
+        <label class="toggle">
+          <input type="checkbox" id="strict-toggle-s" ${strictMode?'checked':''} onchange="toggleStrictMode()">
+          <span class="tgl"></span>
+        </label>
+      </div>
+      <div class="setting-row">
+        <div class="setting-info">
+          <div class="setting-title">DMSO Warnings</div>
+          <div class="setting-desc">Always shown for liquid embolic pairings</div>
+        </div>
+        <span class="badge b-green">Active</span>
+      </div>
+    </div>
+
+    <div class="sec-hdr">PROGRESS</div>
+    <div class="scard" style="padding:0">
+      <div class="setting-row">
+        <div class="setting-info">
+          <div class="setting-title">Training Progress</div>
+          <div class="setting-desc" id="prog-desc">Loading…</div>
+        </div>
+        <button class="btn btn-xs btn-out btn-red" onclick="confirmReset('training')">Reset</button>
+      </div>
+      <div class="setting-row">
+        <div class="setting-info">
+          <div class="setting-title">Case Study Progress</div>
+          <div class="setting-desc" id="case-desc">Loading…</div>
+        </div>
+        <button class="btn btn-xs btn-out btn-red" onclick="confirmReset('cases')">Reset</button>
+      </div>
+      <div class="setting-row">
+        <div class="setting-info">
+          <div class="setting-title">Flashcard Scores</div>
+          <div class="setting-desc" id="fc-desc">Loading…</div>
+        </div>
+        <button class="btn btn-xs btn-out btn-red" onclick="confirmReset('fc')">Reset</button>
+      </div>
+    </div>
+
+    <div class="sec-hdr">CATALOG STATS</div>
+    <div class="scard" style="padding:0">
+      <div class="setting-row"><div class="setting-info"><div class="setting-title">Total Devices</div><div class="setting-desc">${new Set(DEVICES.map(d=>d[0])).size} categories</div></div><span class="badge b-blue">${DEVICES.length}</span></div>
+      <div class="setting-row"><div class="setting-info"><div class="setting-title">IFU Rules</div><div class="setting-desc">Manufacturer-validated pairings</div></div><span class="badge b-teal">${IFU_RULES.length}</span></div>
+      <div class="setting-row"><div class="setting-info"><div class="setting-title">Training Modules</div><div class="setting-desc">With MCQ self-assessment</div></div><span class="badge b-green">${MODULES.length}</span></div>
+      <div class="setting-row"><div class="setting-info"><div class="setting-title">Procedure Kits</div></div><span class="badge b-pur">${typeof PROC_KITS!=='undefined'?PROC_KITS.length:TEMPLATES.length}</span></div>
+      <div class="setting-row"><div class="setting-info"><div class="setting-title">Flashcards</div></div><span class="badge b-amb">${FLASHCARDS.length}</span></div>
+      <div class="setting-row"><div class="setting-info"><div class="setting-title">Case Studies</div></div><span class="badge b-coral">${CASES.length}</span></div>
+    </div>
+
+    <div class="sec-hdr">REFERENCE LIBRARY</div>
+    <div class="scard" style="padding:0">
+      <div class="setting-row" style="cursor:pointer" onclick="goTo('ifu')"><div class="setting-info"><div class="setting-title">IFU Rules Browser</div><div class="setting-desc">Search all ${IFU_RULES.length} rules</div></div><span style="color:var(--txt3)">›</span></div>
+      <div class="setting-row" style="cursor:pointer" onclick="goTo('refhub')"><div class="setting-info"><div class="setting-title">Reference Library</div><div class="setting-desc">${typeof REF_DOMAINS!=='undefined'?REF_DOMAINS.length:'—'} additional IR domains</div></div><span style="color:var(--txt3)">›</span></div>
+    </div>
+
+    <div class="sec-hdr">CONTACT</div>
+    <div class="scard" style="padding:14px">
+      <div style="font-size:13px;font-weight:600;color:var(--txt);margin-bottom:4px">Support & Feedback</div>
+      <div style="font-size:12px;color:var(--txt2);line-height:1.5;margin-bottom:10px">Have a suggestion or found an error in the device data? Feel free to reach out.</div>
+      <a href="mailto:shadirawa@gmail.com" style="text-decoration:none">
+        <div class="btn btn-sm" style="width:100%;gap:8px">📧 shadirawa@gmail.com</div>
+      </a>
+    </div>
+
+    <div class="sec-hdr">ABOUT</div>
+    <div class="scard">
+      <div style="font-size:13px;font-weight:600;margin-bottom:4px">NV Compatibility Calculator v2.0</div>
+      <div style="font-size:12px;color:var(--txt2);line-height:1.6">
+        Comprehensive NV device compatibility, training, and clinical reference.<br>
+        Data sourced from manufacturer IFUs and peer-reviewed literature 2024–2025.<br><br>
+        <strong style="color:var(--red)">⚠ Educational use only. Not cleared for clinical use.</strong>
+      </div>
+    </div>
+  </div>`);
+}
+
+// ── ENHANCED BOTTOM NAV ────────────────────────────────────────────
+function upgradeNav() {
+  const nav = document.getElementById('bnav');
+  // Add flashcard, cases, settings buttons
+  nav.innerHTML = `
+    <button class="nb on" id="nb-home" onclick="goTo('home')"><span class="ico">🏠</span><span>Home</span></button>
+    <button class="nb" id="nb-training" onclick="goTo('training')"><span class="ico">🎓</span><span>Train</span></button>
+    <button class="nb" id="nb-length" onclick="goTo('length')"><span class="ico">📏</span><span>Length</span></button>
+    <button class="nb" id="nb-compat" onclick="goTo('compat')"><span class="ico">🔬</span><span>Check</span></button>
+    <button class="nb" id="nb-catalog" onclick="goTo('catalog')"><span class="ico">📱</span><span>Devices</span></button>
+    <button class="nb" id="nb-settings" onclick="goTo('settings')"><span class="ico">⚙️</span><span>More</span></button>`;
+}
+
+// ── OVERRIDE goTo TO HANDLE NEW SCREENS ───────────────────────────
+const _origGoTo = goTo;
+goTo = function(name) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nb').forEach(b => b.classList.remove('on'));
+  const scr = document.getElementById('s-' + name);
+  const nb = document.getElementById('nb-' + name);
+  if (scr) scr.classList.add('active');
+  if (nb) nb.classList.add('on');
+  const subs = {
+    home:'NV Compatibility & Reference', training:'Training Modules',
+    flash:'Flashcards', compat:'Compatibility Check', catalog:'Device Catalog',
+    proc:'Procedure Kits', lit:'Literature', cases:'Case Studies', settings:'Settings',
+    length:'Length Check', ifu:'IFU Rules', refhub:'Reference Library'
+  };
+  REF_DOMAINS_TITLES().forEach(([k,t]) => { subs[k] = t; });
+  document.getElementById('top-sub').textContent = subs[name] || '';
+  if (name === 'flash') renderFlashcard();
+  if (name === 'cases') renderCases();
+  if (name === 'settings') renderSettings();
+  if (name === 'training') renderTraining();
+  if (name === 'home') renderHome();
+  if (name === 'proc') renderProcs();
+  if (name === 'lit') renderLitList();
+  if (name === 'length') renderLengthCheck();
+  if (name === 'catalog') { renderCatalogFilters(); filterCatalog(); }
+  if (name === 'ifu') renderIfuScreen();
+  if (typeof REF_DOMAINS !== 'undefined' && REF_DOMAINS.some(d => d.key === name)) renderRefDomain(name);
+};
+// Safe accessor: REF_DOMAINS is defined later in this same script, but goTo
+// can be invoked (via nav clicks) only after the whole script has run, so by
+// call-time it always exists — this helper just avoids a ReferenceError if
+// goTo is ever invoked during initial parse.
+function REF_DOMAINS_TITLES() {
+  return (typeof REF_DOMAINS !== 'undefined') ? REF_DOMAINS.map(d => [d.key, d.title]) : [];
+}
+
+// ── LENGTH CHECK ENGINE ──────────────────────────────────────────
+const LENGTH_LAYERS = [
+  {label:"1. Outer Sheath / BGC",cat:CAT_SHEATH_BGC},
+  {label:"2. Guiding Catheter",cat:"GUIDING CATHETER"},
+  {label:"3. Intermediate / Aspiration",cat:["ASPIRATION CATHETER","INTERMEDIATE CATHETER"]},
+  {label:"4. Microcatheter",cat:"MICROCATHETER"},
+  {label:"5. Microwire",cat:"MICROWIRE"}
+];
+
+function renderLengthCheck() {
+  const el = document.getElementById('length-stack-area');
+  el.innerHTML = `
+    <div id="length-summary" style="display:none;margin:0 12px 12px;border-radius:var(--r2);padding:12px 14px;font-size:12.5px;font-weight:600;line-height:1.4"></div>
+    ` + LENGTH_LAYERS.map((layer, li) => {
+    const devs = getByCategory(layer.cat);
+    const bg = CAT_BG[Array.isArray(layer.cat)?layer.cat[0]:layer.cat] || '#F3F4F6';
+    return `<div class="compat-pair">
+      <div class="compat-hdr" style="background:${bg}">${layer.label}</div>
+      <div class="compat-body" style="grid-template-columns: 1fr">
+        <div class="compat-sel">
+          <select onchange="updateLengthCheck()" id="ls-dev-${li}">
+            <option value="">— select device —</option>
+            ${devs.map(d=>`<option value="${escapeHtml(d[1])}">${escapeHtml(d[1])} (${d[5]||d[6]||'—'}cm)</option>`).join('')}
+          </select>
+        </div>
+        <div id="ls-info-${li}" style="font-size:11px;color:var(--txt2);margin-top:4px;display:none"></div>
+      </div>
+    </div>`;
+  }).join('');
+  updateLengthCheck();
+}
+
+function updateLengthCheck() {
+  const selected = LENGTH_LAYERS.map((_, i) => {
+    const val = document.getElementById(`ls-dev-${i}`).value;
+    return DEVICES.find(d => d[1] === val);
+  });
+
+  let prevLen = null;
+  let issues = 0;
+  let warns = 0;
+
+  selected.forEach((dev, i) => {
+    const infoEl = document.getElementById(`ls-info-${i}`);
+    if (!dev) { infoEl.style.display = 'none'; return; }
+
+    // For wires, use total_cm (index 6), for catheters use work_cm (index 5)
+    const currentLen = (dev[0] === "MICROWIRE" ? dev[6] : dev[5]) || 0;
+    let txt = `Length: **${currentLen}cm**`;
+    let statusCls = '';
+
+    if (prevLen !== null && currentLen > 0) {
+      const diff = currentLen - prevLen;
+      if (dev[0] === "MICROWIRE") {
+        if (diff < 30) { txt += ` <span style="color:var(--red)">— ❌ Needs >30cm overhang (current: ${diff}cm)</span>`; issues++; }
+        else { txt += ` <span style="color:var(--sec)">— ✅ OK (+${diff}cm)</span>`; }
+      } else {
+        if (diff <= 0) { txt += ` <span style="color:var(--red)">— ❌ Too short (current: ${diff}cm)</span>`; issues++; }
+        else if (diff < 10) { txt += ` <span style="color:var(--red)">— ❌ Minimal extension (+${diff}cm). Need ~15-20cm.</span>`; issues++; }
+        else if (diff < 15) { txt += ` <span style="color:var(--amb)">— ⚠ Tight fit (+${diff}cm)</span>`; warns++; }
+        else { txt += ` <span style="color:var(--sec)">— ✅ OK (+${diff}cm)</span>`; }
+      }
+    }
+
+    infoEl.innerHTML = txt.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+    infoEl.style.display = 'block';
+
+    // Only update prevLen if current device is a catheter.
+    // Wires don't bound the next device in the same way, but here they are the end.
+    if (currentLen > 0) prevLen = currentLen;
+  });
+
+  const sumEl = document.getElementById('length-summary');
+  if (selected.filter(Boolean).length < 2) { sumEl.style.display = 'none'; return; }
+
+  sumEl.style.display = 'block';
+  if (issues > 0) {
+    sumEl.style.background='var(--red-l)'; sumEl.style.border='1.5px solid #FCA5A5'; sumEl.style.color='var(--red)';
+    sumEl.textContent = `❌ ${issues} length issue${issues>1?'s':''} detected in stack`;
+  } else if (warns > 0) {
+    sumEl.style.background='var(--amb-l)'; sumEl.style.border='1.5px solid #FCD34D'; sumEl.style.color='var(--amb)';
+    sumEl.textContent = `⚠ ${warns} warning${warns>1?'s':''} — some extensions are tight`;
+  } else {
+    sumEl.style.background='var(--sec-l)'; sumEl.style.border='1.5px solid #86EFAC'; sumEl.style.color='var(--sec)';
+    sumEl.textContent = `✅ Length stack validated`;
+  }
+}
+
+// ── FLASHCARD ENGINE ───────────────────────────────────────────────
+let fcKnown = JSON.parse(localStorage.getItem('ir_fc_known')||'{}');
+let fcReview = JSON.parse(localStorage.getItem('ir_fc_review')||'{}');
+function saveFCProgress() {
+  localStorage.setItem('ir_fc_known', JSON.stringify(fcKnown));
+  localStorage.setItem('ir_fc_review', JSON.stringify(fcReview));
+}
+
+function setFCFilter(f, btn) {
+  fcFilter = f; fcIndex = 0; fcFlipped = false;
+  document.querySelectorAll('#fc-filters .fchip').forEach(c => c.classList.remove('on'));
+  btn.classList.add('on');
+  renderFlashcard();
+}
+
+function getFilteredFC() {
+  return fcFilter ? FLASHCARDS.filter(f=>f.cat===fcFilter) : FLASHCARDS;
+}
+
+function renderFlashcard() {
+  const cards = getFilteredFC();
+  if (!cards.length) return;
+  if (fcIndex >= cards.length) fcIndex = 0;
+  const card = cards[fcIndex];
+  document.getElementById('fc-counter').textContent = `${fcIndex+1} / ${cards.length}`;
+  const known = fcKnown[FLASHCARDS.indexOf(card)];
+  const review = fcReview[FLASHCARDS.indexOf(card)];
+  document.getElementById('fc-tag').innerHTML = known ? '<span class="badge b-green">✓ Known</span>' :
+    review ? '<span class="badge b-red">Review</span>' : '';
+  document.getElementById('fc-side').textContent = fcFlipped ? '💡 ANSWER' : '❓ QUESTION';
+  document.getElementById('fc-text').textContent = fcFlipped ? card.a : card.q;
+  document.getElementById('fc-card').style.background = fcFlipped ? 'var(--pri-l)' : 'var(--surface)';
+  document.getElementById('fc-hint').textContent = fcFlipped ? `Category: ${card.cat}` : '👆 Tap card to reveal answer';
+  const k=Object.keys(fcKnown).length, r=Object.keys(fcReview).length;
+  document.getElementById('fc-score').textContent = `Known: ${k} | Review: ${r} | Unseen: ${FLASHCARDS.length-k-r}`;
+}
+
+function flipCard() {
+  fcFlipped = !fcFlipped;
+  renderFlashcard();
+  // Haptic feedback on Android
+  if (window.AndroidBridge) try { AndroidBridge.vibrate(20); } catch(e){}
+}
+
+function fcNav(dir) {
+  const cards = getFilteredFC();
+  fcIndex = (fcIndex + dir + cards.length) % cards.length;
+  fcFlipped = false;
+  renderFlashcard();
+}
+
+function markFC(known) {
+  const cards = getFilteredFC();
+  const card = cards[fcIndex];
+  const idx = FLASHCARDS.indexOf(card);
+  if (known) { fcKnown[idx]=true; delete fcReview[idx]; }
+  else { fcReview[idx]=true; delete fcKnown[idx]; }
+  saveFCProgress();
+  fcNav(1);
+}
+
+// ── CASES ENGINE ───────────────────────────────────────────────────
+function renderCases() {
+  document.getElementById('cases-list').innerHTML = CASES.map((c,ci) => {
+    const ans = caseAnswers[c.id];
+    const done = ans !== undefined;
+    return `<div class="scard" id="case-${ci}" style="overflow:hidden">
+      <div style="font-size:13.5px;font-weight:700;color:var(--pri);margin-bottom:6px">${c.title}</div>
+      <div style="font-size:12.5px;color:var(--txt2);line-height:1.6;margin-bottom:10px;background:var(--bg);border-radius:var(--r);padding:10px;border-left:3px solid var(--pri)">${c.scenario}</div>
+      <div style="font-size:12.5px;font-weight:600;color:var(--txt);margin-bottom:8px">❓ ${c.question}</div>
+      ${c.options.map((o,oi) => `<div onclick="${done?'':'caseAnswer('+ci+','+oi+')'}"
+        style="padding:9px 12px;border-radius:var(--r);margin-bottom:6px;cursor:${done?'default':'pointer'};font-size:12px;line-height:1.4;
+               border:1.5px solid ${done?(oi===c.correct?'var(--sec)':oi===ans?'var(--red)':'var(--border)'):('var(--border2)')};
+               background:${done?(oi===c.correct?'var(--sec-l)':oi===ans&&oi!==c.correct?'var(--red-l)':'var(--bg)'):'var(--bg)'};
+               color:${done?(oi===c.correct?'var(--sec)':oi===ans&&oi!==c.correct?'var(--red)':'var(--txt2)'):'var(--txt2)'};
+               font-weight:${done&&oi===c.correct?'600':'400'}">
+        ${done&&oi===c.correct?'✓ ':''}${done&&oi===ans&&oi!==c.correct?'✗ ':''}${o}
+      </div>`).join('')}
+      ${done?`<div style="background:${ans===c.correct?'var(--sec-l)':'var(--amb-l)'};border-radius:var(--r);padding:10px 12px;margin-top:4px;font-size:12px;line-height:1.5;color:${ans===c.correct?'var(--sec)':'var(--amb)'}">
+        <strong>${ans===c.correct?'✅ Correct!':'⚠ Review:'}  </strong>${c.explanation}
+        <div style="margin-top:8px;font-size:11px;color:var(--teal);font-weight:600">Typical device stack:</div>
+        <div style="font-size:11px;color:var(--txt2);margin-top:3px">${c.devices.join(' → ')}</div>
+      </div>`:''}
+    </div>`;
+  }).join('');
+}
+
+function caseAnswer(ci, oi) {
+  const c = CASES[ci];
+  caseAnswers[c.id] = oi;
+  saveCases();
+  renderCases();
+  document.getElementById('case-'+ci).scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+
+// ── SETTINGS ENGINE ────────────────────────────────────────────────
+function toggleStrictMode() {
+  strictMode = document.getElementById('strict-toggle-s').checked;
+  localStorage.setItem('ir_strict', JSON.stringify(strictMode));
+  document.getElementById('strict-desc-s').textContent = strictMode ?
+    'ON — Only explicit IFU rules accepted; no dimensional fallback' :
+    'OFF — Dimensional fallback enabled for devices without IFU rules';
+  document.getElementById('strict-ind').style.display = strictMode ? 'inline-block' : 'none';
+}
+
+function confirmReset(type) {
+  if (!confirm(`Reset ${type} progress? This cannot be undone.`)) return;
+  if (type === 'training') { progress = {}; saveProgress(); renderHome(); }
+  else if (type === 'cases') { caseAnswers = {}; saveCases(); }
+  else if (type === 'fc') { fcKnown = {}; fcReview = {}; saveFCProgress(); }
+  renderSettings();
+}
+
+function renderSettings() {
+  const modulesDone = Object.keys(progress).filter(k=>progress[k]?.done).length;
+  const quizTotal = Object.values(progress).reduce((s,p)=>s+(p.quizScore||0),0);
+  document.getElementById('prog-desc') &&
+    (document.getElementById('prog-desc').textContent = `${modulesDone}/${MODULES.length} modules complete, ${quizTotal} quiz points`);
+  const casesDone = Object.keys(caseAnswers).length;
+  const casesCorrect = CASES.filter(c=>caseAnswers[c.id]===c.correct).length;
+  document.getElementById('case-desc') &&
+    (document.getElementById('case-desc').textContent = `${casesDone}/${CASES.length} answered, ${casesCorrect} correct`);
+  const k=Object.keys(fcKnown).length, r=Object.keys(fcReview).length;
+  document.getElementById('fc-desc') &&
+    (document.getElementById('fc-desc').textContent = `${k} known, ${r} flagged for review`);
+}
+
+// ── OVERALL COMPAT SUMMARY ─────────────────────────────────────────
+function addCompatSummary() {
+  const compatScreen = document.getElementById('s-compat');
+  compatScreen.insertAdjacentHTML('afterbegin', `
+  <div id="compat-summary" style="display:none;margin:10px 12px 0;border-radius:var(--r2);padding:12px 14px;font-size:12.5px;font-weight:600;line-height:1.4"></div>`);
+}
+
+// Track changes for summary
+const _origUpdateCompat = updateCompat;
+updateCompat = function(pi) {
+  _origUpdateCompat(pi);
+  updateCompatSummary();
+};
+
+function updateCompatSummary() {
+  const results = Array.from(document.querySelectorAll('[id^="cr-"]'));
+  const shown = results.filter(r => r.style.display !== 'none' && r.textContent);
+  if (!shown.length) { document.getElementById('compat-summary').style.display='none'; return; }
+  const errors = shown.filter(r => r.classList.contains('cr-err')).length;
+  const warns  = shown.filter(r => r.classList.contains('cr-warn')).length;
+  const ok     = shown.filter(r => r.classList.contains('cr-ok') || r.classList.contains('cr-ifu')).length;
+  const sumEl  = document.getElementById('compat-summary');
+  sumEl.style.display = 'block';
+  if (errors) {
+    sumEl.style.background='var(--red-l)'; sumEl.style.border='1.5px solid #FCA5A5'; sumEl.style.color='var(--red)';
+    sumEl.textContent = `❌ ${errors} incompatibility issue${errors>1?'s':''} detected — device chain has errors`;
+  } else if (warns) {
+    sumEl.style.background='var(--amb-l)'; sumEl.style.border='1.5px solid #FCD34D'; sumEl.style.color='var(--amb)';
+    sumEl.textContent = `⚠ ${warns} warning${warns>1?'s':''} — review tight fits / missing IFU data`;
+  } else {
+    sumEl.style.background='var(--sec-l)'; sumEl.style.border='1.5px solid #86EFAC'; sumEl.style.color='var(--sec)';
+    sumEl.textContent = `✅ Chain validated — ${ok} pair${ok>1?'s':''} compatible`;
+  }
+}
+
+// ── IFU RULES SCREEN (full 237-rule dataset, with search) ─────────
+const IFU_RULES_FULL = (window.NV_DATA && window.NV_DATA.ifuRules) ? window.NV_DATA.ifuRules : [];
+function renderIfuScreen(query) {
+  const q = (query || '').toLowerCase();
+  const filtered = q ? IFU_RULES_FULL.filter(r => JSON.stringify(r).toLowerCase().includes(q)) : IFU_RULES_FULL;
+  document.getElementById('ifu-count').textContent = `Showing ${filtered.length} of ${IFU_RULES_FULL.length} IFU rules`;
+  renderRefCardList('ifu-list', filtered, 'ifu', {dotColor:'#00796B'});
+}
+
+// ── REFERENCE LIBRARY: domain config ───────────────────────────────
+// Every entry beyond the neurovascular core (devices/IFU/compat/length/kits)
+// lives here. Each is rendered generically via renderRefDict/renderNode —
+// see the "GENERIC REFERENCE RENDERER" block above — so adding a further
+// domain later just means appending a row to this array.
+const REF_DOMAINS = [
+  {key:'cto', title:'CTO Crossing', icon:'🎯', sub:'Chronic total occlusion rules', get:()=>window.NV_DATA.ctoRules, skip:['description']},
+  {key:'dcb', title:'DCB Therapy', icon:'💊', sub:'Drug-coated balloon rules', get:()=>window.NV_DATA.dcbRules, skip:['description']},
+  {key:'mt', title:'Mech. Thrombectomy', icon:'🧲', sub:'MT device comparison & rules', get:()=>window.NV_DATA.mtDevices},
+  {key:'vcd', title:'Vascular Closure', icon:'🩹', sub:'Closure device selection', get:()=>window.NV_DATA.vasularClosureDevices},
+  {key:'retr', title:'Retrievable Devices', icon:'🪝', sub:'Stents & retrieval protocols', get:()=>window.NV_DATA.retrievableDevices},
+  {key:'contrast', title:'Contrast & Embolics', icon:'💧', sub:'Agents, embolics & material matrix', get:()=>window.NV_DATA.contrastAgents},
+  {key:'biliary', title:'Biliary', icon:'🫗', sub:'Biliary catheter rules', get:()=>window.NV_DATA.biliaryCatheterRules},
+  {key:'hcc', title:'HCC / TACE', icon:'🎗️', sub:'HCC embolization rules', get:()=>window.NV_DATA.hccEmbolizationRules},
+  {key:'pstent', title:'Peripheral Stents', icon:'🔗', sub:'Peripheral stent rules', get:()=>window.NV_DATA.peripheralStenRules},
+  {key:'pediatric', title:'Pediatric IR', icon:'🧒', sub:'Pediatric considerations', get:()=>window.NV_DATA.pediatricGuidelines, skip:['version']},
+  {key:'alerts', title:'Alerts & Safety', icon:'🚨', sub:'Safety alert system', get:()=>window.NV_DATA.alertsSystem, skip:['version']},
+  {key:'alerttmpl', title:'Procedure Alerts', icon:'🔔', sub:'Per-procedure alert templates', get:()=>window.NV_DATA.procedureAlertTemplates, skip:['version']},
+];
+
+function injectRefScreens() {
+  const screensEl = document.getElementById('screens');
+
+  // IFU RULES SCREEN
+  screensEl.insertAdjacentHTML('beforeend', `
+  <div class="screen" id="s-ifu">
+    <input type="search" class="ref-search" id="ifu-search" placeholder="🔍  Search IFU rules…" oninput="renderIfuScreen(this.value)">
+    <div style="padding:0 12px 6px;font-size:11px;color:var(--txt3)" id="ifu-count"></div>
+    <div id="ifu-list"></div>
+  </div>`);
+
+  // REFERENCE LIBRARY HUB
+  screensEl.insertAdjacentHTML('beforeend', `
+  <div class="screen" id="s-refhub">
+    <div style="padding:12px 12px 4px;font-size:12.5px;color:var(--txt2)">
+      Beyond the neurovascular core (devices, IFU rules, compatibility & length checks), this reference
+      library covers additional interventional radiology domains from the same dataset.
+    </div>
+    <div class="ref-hub-grid">
+      ${REF_DOMAINS.map(d => `<div class="ref-hub-tile" onclick="goTo('${d.key}')">
+        <div class="ref-hub-icon">${d.icon}</div>
+        <div class="ref-hub-title">${escapeHtml(d.title)}</div>
+        <div class="ref-hub-sub">${escapeHtml(d.sub)}</div>
+      </div>`).join('')}
+    </div>
+    <div class="ref-section-card">
+      <div class="ref-section-title">Implant Categories</div>
+      <div class="chip-wrap">${(window.NV_DATA.implantCategories||[]).map(c=>`<span class="ref-chip">${escapeHtml(c)}</span>`).join('')}</div>
+    </div>
+  </div>`);
+
+  // ONE SCREEN PER REFERENCE DOMAIN
+  REF_DOMAINS.forEach(d => {
+    screensEl.insertAdjacentHTML('beforeend', `
+    <div class="screen" id="s-${d.key}">
+      <div style="padding:10px 12px 0">
+        <span class="btn btn-sm btn-out" onclick="goTo('refhub')">← Reference Library</span>
+      </div>
+      <div id="refdom-${d.key}"></div>
+    </div>`);
+  });
+}
+
+function renderRefDomain(key) {
+  const domain = REF_DOMAINS.find(d => d.key === key);
+  if (!domain) return;
+  const data = domain.get() || {};
+  renderRefDict(`refdom-${key}`, data, {skip: domain.skip});
+}
+
+// ── PROCEDURE KITS (merged: legacy TEMPLATES + procedureTemplates + peripheralProcedureTemplates) ──
+function buildProcKits() {
+  const kits = [];
+  TEMPLATES.forEach(t => kits.push(Object.assign({domain:'Neurovascular'}, t)));
+  const pt = (window.NV_DATA.procedureTemplates && window.NV_DATA.procedureTemplates.procedures) || [];
+  pt.forEach(p => kits.push(Object.assign({domain:'General IR'}, p)));
+  const ppt = (window.NV_DATA.peripheralProcedureTemplates && window.NV_DATA.peripheralProcedureTemplates.procedures) || [];
+  ppt.forEach(p => kits.push(Object.assign({domain:'Peripheral Vascular'}, p)));
+  return kits;
+}
+const PROC_KITS = buildProcKits();
+
+// ── INIT ALL ENHANCEMENTS ─────────────────────────────────────────
+injectNewScreens();
+injectRefScreens();
+upgradeNav();
+addCompatSummary();
+renderFlashcard();
+renderCases();
+renderSettings();
+renderProcs();
+
+console.log(`IR Trainer v2.0 Enhanced — ${DEVICES.length} devices, ${FLASHCARDS.length} flashcards, ${CASES.length} cases, ${IFU_RULES_FULL.length} IFU rules, ${REF_DOMAINS.length} reference domains, ${PROC_KITS.length} procedure kits`);
+</script>
