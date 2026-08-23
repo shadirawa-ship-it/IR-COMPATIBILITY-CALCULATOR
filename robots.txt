@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shadirawa-ship-it.github.io/IR-COMPATIBILITY-CALCULATOR/sitemap.xml
