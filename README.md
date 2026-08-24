@@ -35,6 +35,12 @@ stored in the browser's `localStorage` on-device and never transmitted anywhere.
 
 ## Since the last version
 
+- **Y-connector / RHV in Length Check**: an optional toggle at the top of the
+  Length Check screen accounts for a Y-connector (rotating hemostatic valve)
+  mounted on the outer sheath/BGC hub, selectable from 5–8cm. When enabled, its
+  length is added to the required overhang between the outer sheath/BGC and the
+  guiding catheter, since the connector sits inline and consumes part of that
+  proximal length before the next device can advance.
 - **Device database swap**: all 791 devices + 237 IFU rules from the new dataset now
   drive the Device Catalog, Compatibility Check, and Length Check screens — same
   screens, same logic, far more complete data. A parallel `DEVICES_EXT` array
