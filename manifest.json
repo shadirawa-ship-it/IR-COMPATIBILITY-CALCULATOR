@@ -23,5 +23,6 @@
     {"src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"}
   ],
   "screenshots": [],
-  "prefer_related_applications": false
+  "prefer_related_applications": false,
+  "icons_source": "Brain aneurysm medical imaging — integrated as NV Compatibility Calculator logo"
 }
