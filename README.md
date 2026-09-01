@@ -35,6 +35,13 @@ stored in the browser's `localStorage` on-device and never transmitted anywhere.
 
 ## Since the last version
 
+- **Device Working Length Verification**: added/verified manufacturer IFU working
+  lengths for 5 key devices (Navien A+ 058/072, RIST Guide 071/079, RIST Select 040)
+  with multi-length options documented. Analysis shows excellent coverage: 569/791
+  devices have working length data (72% coverage). Remaining gaps are in specialty
+  variants, with only 3 missing from Aspiration Catheters, 2 from Microca theters,
+  1 from Intermediate Catheters, and full coverage of Sheaths and major device
+  categories. All entries sourced from verified manufacturer IFU documentation.
 - **Aspiration Catheter Compatibility** (Reference Library): two fit calculators
   transcribed from Stryker's Aspiration Catheter Compatibility Chart (AP003190
   v1.0, 2021) — delivery catheter (microcatheter) fit through 14 aspiration
