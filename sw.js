@@ -1,4 +1,4 @@
-const CACHE_NAME = 'ir-trainer-v3.1.0';
+const CACHE_NAME = 'ir-trainer-v3.2.0';
 const SCOPE = self.registration.scope;
 const ASSETS = [
   './index.html',

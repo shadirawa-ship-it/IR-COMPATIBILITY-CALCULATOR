@@ -35,6 +35,16 @@ stored in the browser's `localStorage` on-device and never transmitted anywhere.
 
 ## Since the last version
 
+- **Aspiration Catheter Compatibility** (Reference Library): two fit calculators
+  transcribed from Stryker's Aspiration Catheter Compatibility Chart (AP003190
+  v1.0, 2021) — delivery catheter (microcatheter) fit through 14 aspiration
+  catheters, and long sheath/balloon guide catheter fit around the same 14.
+  Only the device geometry (ID/OD/length) is transcribed from the chart; the fit
+  outcomes and the working-length/lumen numbers shown are computed live from that
+  geometry using the chart's own stated formulas, cross-checked against roughly
+  15 independent printed cells before shipping, rather than hand-copied from the
+  small matrix — every number on screen is re-derivable rather than trusted by
+  eye off a scan.
 - **Y-connector / RHV in Length Check**: an optional toggle at the top of the
   Length Check screen accounts for a Y-connector (rotating hemostatic valve)
   mounted on the outer sheath/BGC hub, selectable from 5–8cm. When enabled, its

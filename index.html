@@ -1559,7 +1559,8 @@ goTo = function(name) {
     home:'NV Compatibility & Reference', training:'Training Modules',
     flash:'Flashcards', compat:'Compatibility Check', catalog:'Device Catalog',
     proc:'Procedure Kits', lit:'Literature', cases:'Case Studies', settings:'Settings',
-    length:'Length Check', ifu:'IFU Rules', refhub:'Reference Library'
+    length:'Length Check', ifu:'IFU Rules', refhub:'Reference Library',
+    aspcompat:'Aspiration Catheter Compatibility'
   };
   REF_DOMAINS_TITLES().forEach(([k,t]) => { subs[k] = t; });
   document.getElementById('top-sub').textContent = subs[name] || '';
@@ -1573,6 +1574,7 @@ goTo = function(name) {
   if (name === 'length') renderLengthCheck();
   if (name === 'catalog') { renderCatalogFilters(); filterCatalog(); }
   if (name === 'ifu') renderIfuScreen();
+  if (name === 'aspcompat') renderAspCompat();
   if (typeof REF_DOMAINS !== 'undefined' && REF_DOMAINS.some(d => d.key === name)) renderRefDomain(name);
 };
 // Safe accessor: REF_DOMAINS is defined later in this same script, but goTo
@@ -1902,6 +1904,134 @@ const REF_DOMAINS = [
   {key:'alerttmpl', title:'Procedure Alerts', icon:'🔔', sub:'Per-procedure alert templates', get:()=>window.NV_DATA.procedureAlertTemplates, skip:['version']},
 ];
 
+// ── ASPIRATION CATHETER COMPATIBILITY (Stryker AP003190 v1.0, 2021) ──
+// Device geometry (ID/OD/length) is transcribed directly from the printed chart.
+// Compatibility outcomes and working-length/lumen numbers are COMPUTED live from
+// that geometry using the chart's own stated formulas (validated against ~15
+// independent printed cells before shipping this), rather than hand-copied from
+// the small matrix cells — this keeps every displayed number auditable and
+// avoids silently propagating a transcription slip into a clinical calculator.
+// "Distal Access Catheter" family (AXS Catalyst 5/6/7) uses a 5cm hub+strain
+// relief and a 2cm Tuohy-Borst instead of the standard 4cm hub+strain relief
+// and 7cm rotating hemostatic valve (RHV) — hence the 7cm vs 11cm deduction.
+const ASP_CATH_ID = [ // for delivery-catheter (microcatheter) fit — table 1
+  {name:'JET D', bore:'medium', distalID:1.37, proxID:1.63, lens:[138], ded:11},
+  {name:'Sofia 5F', bore:'medium', distalID:1.40, proxID:1.40, lens:[125], ded:11},
+  {name:'AXS Catalyst 5 Distal Access Catheter', bore:'medium', distalID:1.47, proxID:1.47, lens:[132], ded:7},
+  {name:'AXS Catalyst 6 Distal Access Catheter', bore:'medium', distalID:1.52, proxID:1.52, lens:[132], ded:7},
+  {name:'5MAX ACE', bore:'medium', distalID:1.52, proxID:1.73, lens:[132], ded:11},
+  {name:'ACE 64', bore:'medium', distalID:1.63, proxID:1.73, lens:[132], ded:11},
+  {name:'AXS Catalyst 7 Distal Access Catheter', bore:'large', distalID:1.73, proxID:1.73, lens:[125,132], ded:7},
+  {name:'ACE 68', bore:'large', distalID:1.73, proxID:1.73, lens:[132], ded:11},
+  {name:'React 68', bore:'large', distalID:1.73, proxID:1.73, lens:[132], ded:11},
+  {name:'Sofia Plus', bore:'large', distalID:1.78, proxID:1.78, lens:[125,131], ded:11},
+  {name:'React 71', bore:'large', distalID:1.80, proxID:1.80, lens:[132], ded:11},
+  {name:'AXS Vecta 71 Aspiration Catheter', bore:'large', distalID:1.80, proxID:1.80, lens:[125,132], ded:11},
+  {name:'JET 7', bore:'large', distalID:1.83, proxID:1.83, lens:[132], ded:11},
+  {name:'AXS Vecta 74 Aspiration Catheter', bore:'large', distalID:1.88, proxID:1.88, lens:[125,132], ded:11},
+];
+const DELIVERY_CATHS = [ // rows for table 1 (distal/max OD in mm, length in cm)
+  {name:'Excelsior XT-27 Microcatheter', distalOD:0.92, maxOD:0.97, len:150},
+  {name:'Velocity', distalOD:0.87, maxOD:1.12, len:160},
+  {name:'Phenom 21', distalOD:0.77, maxOD:0.87, len:160},
+  {name:'Marksman 027', distalOD:0.94, maxOD:1.07, len:160},
+  {name:'3MAX', distalOD:1.27, maxOD:1.57, len:160},
+  {name:'AXS Offset Delivery Assist Catheter', distalOD:0.91, maxOD:1.30, len:150, note:'Bulb OD starts 2cm proximal to distal tip'},
+  {name:'Trevo Trak 21 Microcatheter', distalOD:0.79, maxOD:0.89, len:162},
+];
+const ASP_CATH_OD = [ // for sheath/BGC fit — table 2 (OD in inches, for lumen-space math)
+  {name:'JET D', bore:'medium', distalOD:0.065, proxOD:0.080, lens:[138]},
+  {name:'Sofia 5F', bore:'medium', distalOD:0.068, proxOD:0.068, lens:[125]},
+  {name:'AXS Catalyst 5 Distal Access Catheter', bore:'medium', distalOD:0.069, proxOD:0.073, lens:[132]},
+  {name:'AXS Catalyst 6 Distal Access Catheter', bore:'medium', distalOD:0.071, proxOD:0.079, lens:[132]},
+  {name:'5MAX ACE', bore:'medium', distalOD:0.074, proxOD:0.083, lens:[132]},
+  {name:'ACE 64', bore:'medium', distalOD:0.080, proxOD:0.084, lens:[132]},
+  {name:'AXS Catalyst 7 Distal Access Catheter', bore:'large', distalOD:0.082, proxOD:0.0825, lens:[125,132]},
+  {name:'Sofia Plus', bore:'large', distalOD:0.082, proxOD:0.083, lens:[125,131]},
+  {name:'AXS Vecta 71 Aspiration Catheter', bore:'large', distalOD:0.082, proxOD:0.085, lens:[125,132]},
+  {name:'React 68', bore:'large', distalOD:0.083, proxOD:0.083, lens:[132]},
+  {name:'AXS Vecta 74 Aspiration Catheter', bore:'large', distalOD:0.083, proxOD:0.087, lens:[125,132]},
+  {name:'ACE 68', bore:'large', distalOD:0.084, proxOD:0.085, lens:[132]},
+  {name:'JET 7', bore:'large', distalOD:0.085, proxOD:0.0855, lens:[132]},
+  {name:'React 71', bore:'large', distalOD:0.084, proxOD:0.0855, lens:[132]},
+];
+const SHEATH_BGC = [ // rows for table 2 (distal ID in inches)
+  {name:'Benchmark', distalID:0.071, lens:[95,105,115], note:'ID sourced from FDA 510(k)'},
+  {name:'8F Cello Balloon Guide Catheter', distalID:0.075, lens:[95]},
+  {name:'8F Merci Balloon Guide Catheter', distalID:0.078, lens:[80,95]},
+  {name:'8F FlowGate2 Balloon Guide Catheter', distalID:0.084, lens:[85,95]},
+  {name:'9F Merci Balloon Guide Catheter', distalID:0.085, lens:[80,95]},
+  {name:'9F Cello Balloon Guide Catheter', distalID:0.085, lens:[92]},
+  {name:'6F Shuttle Sheath', distalID:0.087, lens:[80,90]},
+  {name:'Neuron Max 088', distalID:0.088, lens:[80,90]},
+  {name:'AXS Infinity LS Long Sheath', distalID:0.088, lens:[70,80,90]},
+  {name:'Cerebase DA', distalID:0.090, lens:[80,90,95]},
+  {name:'AXS Infinity LS Plus Long Sheath', distalID:0.091, lens:[70,80,90]},
+];
+
+function deliveryFit(delivery, asp) {
+  const diamOK = delivery.maxOD < asp.distalID;
+  return asp.lens.map(l => {
+    const overhang = delivery.len - l - asp.ded;
+    return {len: l, ok: diamOK && overhang >= 5, overhang};
+  });
+}
+function sheathFit(sheath, asp) {
+  return asp.lens.map(l => {
+    const lumen = Math.round((sheath.distalID - asp.proxOD) * 1000) / 1000;
+    return {len: l, ok: lumen >= 0.001, lumen};
+  });
+}
+
+function renderAspCompat() {
+  const cellStyle = ok => ok
+    ? 'background:var(--sec-l);color:var(--sec);font-weight:700'
+    : 'background:#F1F1F3;color:var(--txt3)';
+  function table(rowLabel, rows, cols, fitFn, fmt) {
+    return `<div style="overflow-x:auto;margin:0 12px 14px;border-radius:var(--r2);border:1px solid var(--border)">
+      <table style="border-collapse:collapse;font-size:10.5px;white-space:nowrap;width:100%">
+        <thead><tr>
+          <th style="position:sticky;left:0;background:var(--surface);padding:6px 8px;text-align:left;border-bottom:1.5px solid var(--border)">${escapeHtml(rowLabel)}</th>
+          ${cols.map(c=>`<th style="padding:6px 8px;border-bottom:1.5px solid var(--border);font-weight:600">${escapeHtml(c.name)}</th>`).join('')}
+        </tr></thead>
+        <tbody>
+          ${rows.map(r => `<tr>
+            <td style="position:sticky;left:0;background:var(--surface);padding:6px 8px;font-weight:600;border-bottom:1px solid var(--border)">${escapeHtml(r.name)}</td>
+            ${cols.map(c => {
+              const fits = fitFn(r, c);
+              const anyOk = fits.some(f=>f.ok);
+              const txt = fits.map(f => f.ok ? fmt(f) : '—').join(' / ');
+              return `<td style="padding:6px 8px;text-align:center;border-bottom:1px solid var(--border);${cellStyle(anyOk)}">${txt}</td>`;
+            }).join('')}
+          </tr>`).join('')}
+        </tbody>
+      </table>
+    </div>`;
+  }
+  const html = `
+    <div style="padding:10px 12px 4px;font-size:12px;color:var(--txt2);line-height:1.5">
+      Source geometry (ID/OD/length) transcribed from Stryker's Aspiration Catheter
+      Compatibility Chart (AP003190 v1.0, 2021). Fit outcomes and the numbers shown are
+      <strong>computed live</strong> from that geometry using the chart's own stated
+      assumptions — not copied from the printed matrix — so every value here is
+      re-derivable and auditable. Always verify against the current manufacturer
+      chart/IFU before clinical use.
+    </div>
+    <div style="padding:0 12px 8px;font-size:11.5px;font-weight:700;color:var(--txt)">Delivery catheter (microcatheter) fit — overhang shown in cm</div>
+    ${table('Delivery catheter ↓ / Aspiration catheter →', DELIVERY_CATHS, ASP_CATH_ID, deliveryFit, f=>`${f.overhang}cm`)}
+    <div style="padding:0 12px 8px;font-size:11.5px;font-weight:700;color:var(--txt)">Long sheath / balloon guide catheter fit — remaining lumen shown in inches</div>
+    ${table('Sheath / BGC ↓ / Aspiration catheter →', SHEATH_BGC, ASP_CATH_OD, sheathFit, f=>`${f.lumen}in`)}
+    <div style="padding:0 12px 16px;font-size:10.5px;color:var(--txt3);line-height:1.5">
+      Deduction assumption: 4cm hub + strain relief + 7cm RHV (11cm total) for most
+      aspiration catheters; AXS Catalyst 5/6/7 "Distal Access Catheters" use a 5cm hub +
+      2cm Tuohy-Borst (7cm total) instead. Delivery-catheter fit requires the diameter to
+      clear the aspiration catheter's distal ID <em>and</em> ≥5cm of working-length overhang.
+      Sheath/BGC fit requires ≥0.001in of remaining lumen between the sheath's distal ID
+      and the aspiration catheter's proximal OD.
+    </div>`;
+  document.getElementById('aspcompat-area').innerHTML = html;
+}
+
 function injectRefScreens() {
   const screensEl = document.getElementById('screens');
 
@@ -1913,6 +2043,15 @@ function injectRefScreens() {
     <div id="ifu-list"></div>
   </div>`);
 
+  // ASPIRATION CATHETER COMPATIBILITY SCREEN
+  screensEl.insertAdjacentHTML('beforeend', `
+  <div class="screen" id="s-aspcompat">
+    <div style="padding:10px 12px 0">
+      <span class="btn btn-sm btn-out" onclick="goTo('refhub')">← Reference Library</span>
+    </div>
+    <div id="aspcompat-area"></div>
+  </div>`);
+
   // REFERENCE LIBRARY HUB
   screensEl.insertAdjacentHTML('beforeend', `
   <div class="screen" id="s-refhub">
@@ -1921,6 +2060,11 @@ function injectRefScreens() {
       library covers additional interventional radiology domains from the same dataset.
     </div>
     <div class="ref-hub-grid">
+      <div class="ref-hub-tile" onclick="goTo('aspcompat')">
+        <div class="ref-hub-icon">🧪</div>
+        <div class="ref-hub-title">Aspiration Catheter Compatibility</div>
+        <div class="ref-hub-sub">Delivery catheter &amp; sheath/BGC fit (Stryker chart)</div>
+      </div>
       ${REF_DOMAINS.map(d => `<div class="ref-hub-tile" onclick="goTo('${d.key}')">
         <div class="ref-hub-icon">${d.icon}</div>
         <div class="ref-hub-title">${escapeHtml(d.title)}</div>
