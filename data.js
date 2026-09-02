@@ -1,5 +1,5 @@
 // NV Compatibility Calculator — reference dataset
-// Source: "neuro_ir_compatibilitydraft.xlsx"
+// Source: "neuro_ir_compatibilitydraft.xlsx" + Terumo Interventional Products
 window.NV_DATA = {
   "version": "1.0",
   "source": "neuro_ir_compatibilitydraft.xlsx",
@@ -10221,6 +10221,618 @@ window.NV_DATA = {
       "idInch": 0.064,
       "workingLengthCm": 132,
       "notes": "Aspiration catheter"
+    },
+    {
+      "category": "CATHETER",
+      "name": "Climber\u2122",
+      "manufacturer": "Terumo",
+      "notes": "Guiding catheter for coronary interventions",
+      "stabilityData": {
+        "tempRangeC": "4\u201340",
+        "maxPressurePsi": 300,
+        "maxPressureBar": 21,
+        "notes": "Polymer-based catheter"
+      }
+    },
+    {
+      "category": "CATHETER",
+      "name": "Finecross\u2122 MG",
+      "manufacturer": "Terumo",
+      "notes": "Micro-guide catheter for distal lesion access",
+      "stabilityData": {
+        "tempRangeC": "4\u201340",
+        "maxPressurePsi": 300,
+        "maxPressureBar": 21,
+        "notes": "High-strength polymer"
+      }
+    },
+    {
+      "category": "CATHETER",
+      "name": "FineCross\u2122 M3",
+      "manufacturer": "Terumo",
+      "notes": "Enhanced micro-guide catheter",
+      "stabilityData": {
+        "tempRangeC": "4\u201340",
+        "maxPressurePsi": 300,
+        "maxPressureBar": 21,
+        "notes": "Reinforced polymer"
+      }
+    },
+    {
+      "category": "CATHETER",
+      "name": "Radifocus\u2122 Optitorque\u2122",
+      "manufacturer": "Terumo",
+      "notes": "Diagnostic angiographic catheter",
+      "stabilityData": {
+        "tempRangeC": "4\u201340",
+        "maxPressurePsi": 300,
+        "maxPressureBar": 21,
+        "notes": "Standard diagnostic"
+      }
+    },
+    {
+      "category": "CATHETER",
+      "name": "Maestro\u2122",
+      "manufacturer": "Terumo",
+      "notes": "Advanced guide catheter",
+      "stabilityData": {
+        "tempRangeC": "4\u201340",
+        "maxPressurePsi": 300,
+        "maxPressureBar": 21,
+        "notes": "Guide catheter"
+      }
+    },
+    {
+      "category": "CATHETER",
+      "name": "Progreat\u2122",
+      "manufacturer": "Terumo",
+      "notes": "Steerable microcatheter",
+      "stabilityData": {
+        "tempRangeC": "4\u201340",
+        "maxPressurePsi": 300,
+        "maxPressureBar": 21,
+        "notes": "Microcatheter"
+      }
+    },
+    {
+      "category": "CATHETER",
+      "name": "Excelsior SL10\u2122",
+      "manufacturer": "Terumo",
+      "notes": "Flexible microcatheter",
+      "stabilityData": {
+        "tempRangeC": "4\u201340",
+        "maxPressurePsi": 300,
+        "maxPressureBar": 21,
+        "notes": "Flexible micro"
+      }
+    },
+    {
+      "category": "CATHETER",
+      "name": "Cardioflex\u2122",
+      "manufacturer": "Terumo",
+      "notes": "Flexible diagnostic catheter",
+      "stabilityData": {
+        "tempRangeC": "4\u201340",
+        "maxPressurePsi": 300,
+        "maxPressureBar": 21,
+        "notes": "Diagnostic"
+      }
+    },
+    {
+      "category": "CATHETER",
+      "name": "Multiplex\u2122",
+      "manufacturer": "Terumo",
+      "notes": "Universal catheter",
+      "stabilityData": {
+        "tempRangeC": "4\u201340",
+        "maxPressurePsi": 300,
+        "maxPressureBar": 21,
+        "notes": "Multipurpose"
+      }
+    },
+    {
+      "category": "CATHETER",
+      "name": "Soften\u2122",
+      "manufacturer": "Terumo",
+      "notes": "Atraumatic peripheral catheter",
+      "stabilityData": {
+        "tempRangeC": "4\u201340",
+        "maxPressurePsi": 300,
+        "maxPressureBar": 21,
+        "notes": "Peripheral"
+      }
+    },
+    {
+      "category": "CATHETER",
+      "name": "Glidecath\u2122",
+      "manufacturer": "Terumo",
+      "notes": "Hydrophilic-coated catheter",
+      "stabilityData": {
+        "tempRangeC": "4\u201340",
+        "maxPressurePsi": 300,
+        "maxPressureBar": 21,
+        "notes": "Hydrophilic"
+      }
+    },
+    {
+      "category": "CATHETER",
+      "name": "Destinn\u2122",
+      "manufacturer": "Terumo",
+      "notes": "Standard diagnostic catheter",
+      "stabilityData": {
+        "tempRangeC": "4\u201340",
+        "maxPressurePsi": 300,
+        "maxPressureBar": 21,
+        "notes": "Diagnostic"
+      }
+    },
+    {
+      "category": "BALLOON_CATHETER",
+      "name": "Senri\u2122",
+      "manufacturer": "Terumo",
+      "notes": "Peripheral angioplasty balloon",
+      "stabilityData": {
+        "tempRangeC": "4\u201340",
+        "maxPressurePsi": 300,
+        "maxPressureBar": 21,
+        "notes": "PTA balloon"
+      }
+    },
+    {
+      "category": "BALLOON_CATHETER",
+      "name": "Crosstella\u2122 OTW",
+      "manufacturer": "Terumo",
+      "notes": "Over-the-wire balloon",
+      "stabilityData": {
+        "tempRangeC": "4\u201340",
+        "maxPressurePsi": 300,
+        "maxPressureBar": 21,
+        "notes": "OTW balloon"
+      }
+    },
+    {
+      "category": "BALLOON_CATHETER",
+      "name": "Occlusafe\u2122",
+      "manufacturer": "Terumo",
+      "notes": "Temporary occlusion balloon",
+      "stabilityData": {
+        "tempRangeC": "4\u201340",
+        "maxPressurePsi": 300,
+        "maxPressureBar": 21,
+        "notes": "Occlusion"
+      }
+    },
+    {
+      "category": "BALLOON_CATHETER",
+      "name": "Artisan\u2122",
+      "manufacturer": "Terumo",
+      "notes": "Cutting balloon angioplasty",
+      "stabilityData": {
+        "tempRangeC": "4\u201340",
+        "maxPressurePsi": 300,
+        "maxPressureBar": 21,
+        "notes": "Cutting"
+      }
+    },
+    {
+      "category": "BALLOON_CATHETER",
+      "name": "Dragster\u2122",
+      "manufacturer": "Terumo",
+      "notes": "Scoring balloon catheter",
+      "stabilityData": {
+        "tempRangeC": "4\u201340",
+        "maxPressurePsi": 300,
+        "maxPressureBar": 21,
+        "notes": "Scoring"
+      }
+    },
+    {
+      "category": "BALLOON_CATHETER",
+      "name": "Sapphire\u2122",
+      "manufacturer": "Terumo",
+      "notes": "Compliant balloon",
+      "stabilityData": {
+        "tempRangeC": "4\u201340",
+        "maxPressurePsi": 300,
+        "maxPressureBar": 21,
+        "notes": "Compliant"
+      }
+    },
+    {
+      "category": "BALLOON_CATHETER",
+      "name": "Velador\u2122",
+      "manufacturer": "Terumo",
+      "notes": "Semicompliant balloon",
+      "stabilityData": {
+        "tempRangeC": "4\u201340",
+        "maxPressurePsi": 300,
+        "maxPressureBar": 21,
+        "notes": "Semicompliant"
+      }
+    },
+    {
+      "category": "GUIDEWIRE",
+      "name": "Runthrough\u2122 NS",
+      "manufacturer": "Terumo",
+      "notes": "Non-slip coronary guidewire",
+      "stabilityData": {
+        "tempRangeC": "4\u201340",
+        "maxPressurePsi": 300,
+        "maxPressureBar": 21,
+        "notes": "PTCA"
+      }
+    },
+    {
+      "category": "GUIDEWIRE",
+      "name": "Runthrough\u2122 Plus",
+      "manufacturer": "Terumo",
+      "notes": "Enhanced PTCA guidewire",
+      "stabilityData": {
+        "tempRangeC": "4\u201340",
+        "maxPressurePsi": 300,
+        "maxPressureBar": 21,
+        "notes": "PTCA"
+      }
+    },
+    {
+      "category": "GUIDEWIRE",
+      "name": "Conquest\u2122",
+      "manufacturer": "Terumo",
+      "notes": "High-performance guidewire",
+      "stabilityData": {
+        "tempRangeC": "4\u201340",
+        "maxPressurePsi": 300,
+        "maxPressureBar": 21,
+        "notes": "High-performance"
+      }
+    },
+    {
+      "category": "GUIDEWIRE",
+      "name": "Pilot\u2122",
+      "manufacturer": "Terumo",
+      "notes": "Standard guidewire",
+      "stabilityData": {
+        "tempRangeC": "4\u201340",
+        "maxPressurePsi": 300,
+        "maxPressureBar": 21,
+        "notes": "Standard"
+      }
+    },
+    {
+      "category": "GUIDEWIRE",
+      "name": "Glidewire\u2122",
+      "manufacturer": "Terumo",
+      "notes": "Hydrophilic-coated guidewire",
+      "stabilityData": {
+        "tempRangeC": "4\u201340",
+        "maxPressurePsi": 300,
+        "maxPressureBar": 21,
+        "notes": "Hydrophilic"
+      }
+    },
+    {
+      "category": "STENT",
+      "name": "Renzan\u2122",
+      "manufacturer": "Terumo",
+      "notes": "Self-expanding peripheral stent",
+      "stabilityData": {
+        "tempRangeC": "4\u201340",
+        "maxPressurePsi": 300,
+        "maxPressureBar": 21,
+        "notes": "Peripheral"
+      }
+    },
+    {
+      "category": "STENT",
+      "name": "Roadsaver\u2122",
+      "manufacturer": "Terumo",
+      "notes": "Carotid stent with emboli protection",
+      "stabilityData": {
+        "tempRangeC": "4\u201340",
+        "maxPressurePsi": 300,
+        "maxPressureBar": 21,
+        "notes": "Carotid"
+      }
+    },
+    {
+      "category": "STENT",
+      "name": "Destent\u2122",
+      "manufacturer": "Terumo",
+      "notes": "Peripheral stent",
+      "stabilityData": {
+        "tempRangeC": "4\u201340",
+        "maxPressurePsi": 300,
+        "maxPressureBar": 21,
+        "notes": "Peripheral"
+      }
+    },
+    {
+      "category": "STENT",
+      "name": "Beamstent\u2122",
+      "manufacturer": "Terumo",
+      "notes": "Beam stent system",
+      "stabilityData": {
+        "tempRangeC": "4\u201340",
+        "maxPressurePsi": 300,
+        "maxPressureBar": 21,
+        "notes": "Beam"
+      }
+    },
+    {
+      "category": "COIL",
+      "name": "AZUR\u2122 HydroCoil",
+      "manufacturer": "Terumo",
+      "notes": "Hydrophilic-coated embolization coil",
+      "stabilityData": {
+        "tempRangeC": "4\u201340",
+        "maxPressurePsi": 300,
+        "maxPressureBar": 21,
+        "notes": "Embolization"
+      }
+    },
+    {
+      "category": "COIL",
+      "name": "AZUR\u2122 Framing Coil",
+      "manufacturer": "Terumo",
+      "notes": "Framing coil for aneurysms",
+      "stabilityData": {
+        "tempRangeC": "4\u201340",
+        "maxPressurePsi": 300,
+        "maxPressureBar": 21,
+        "notes": "Framing"
+      }
+    },
+    {
+      "category": "COIL",
+      "name": "AZUR\u2122 CX",
+      "manufacturer": "Terumo",
+      "notes": "Complex geometry coil",
+      "stabilityData": {
+        "tempRangeC": "4\u201340",
+        "maxPressurePsi": 300,
+        "maxPressureBar": 21,
+        "notes": "Complex"
+      }
+    },
+    {
+      "category": "MICROSPHERE",
+      "name": "BioPearl\u2122",
+      "manufacturer": "Terumo",
+      "notes": "Biodegradable microspheres",
+      "stabilityData": {
+        "tempRangeC": "4\u201340",
+        "maxPressurePsi": 300,
+        "maxPressureBar": 21,
+        "notes": "Embolotherapy"
+      }
+    },
+    {
+      "category": "MICROSPHERE",
+      "name": "Embosphere\u2122",
+      "manufacturer": "Terumo",
+      "notes": "Embolic microspheres",
+      "stabilityData": {
+        "tempRangeC": "4\u201340",
+        "maxPressurePsi": 300,
+        "maxPressureBar": 21,
+        "notes": "Embolotherapy"
+      }
+    },
+    {
+      "category": "MICROSPHERE",
+      "name": "Spherex\u2122",
+      "manufacturer": "Terumo",
+      "notes": "Calibrated microspheres",
+      "stabilityData": {
+        "tempRangeC": "4\u201340",
+        "maxPressurePsi": 300,
+        "maxPressureBar": 21,
+        "notes": "Calibrated"
+      }
+    },
+    {
+      "category": "CLOSURE_DEVICE",
+      "name": "TR Band\u2122",
+      "manufacturer": "Terumo",
+      "notes": "Radial artery compression",
+      "stabilityData": {
+        "tempRangeC": "4\u201340",
+        "maxPressurePsi": 50,
+        "maxPressureBar": 3.4,
+        "notes": "Compression"
+      }
+    },
+    {
+      "category": "CLOSURE_DEVICE",
+      "name": "TR Band\u2122 Distal",
+      "manufacturer": "Terumo",
+      "notes": "Distal radial compression",
+      "stabilityData": {
+        "tempRangeC": "4\u201340",
+        "maxPressurePsi": 50,
+        "maxPressureBar": 3.4,
+        "notes": "Distal"
+      }
+    },
+    {
+      "category": "CLOSURE_DEVICE",
+      "name": "FemoSeal\u2122",
+      "manufacturer": "Terumo",
+      "notes": "Femoral closure device",
+      "stabilityData": {
+        "tempRangeC": "4\u201340",
+        "maxPressurePsi": 300,
+        "maxPressureBar": 21,
+        "notes": "Femoral"
+      }
+    },
+    {
+      "category": "CLOSURE_DEVICE",
+      "name": "Angio-Seal\u2122",
+      "manufacturer": "Terumo",
+      "notes": "Angio-seal closure",
+      "stabilityData": {
+        "tempRangeC": "4\u201340",
+        "maxPressurePsi": 300,
+        "maxPressureBar": 21,
+        "notes": "Closure"
+      }
+    },
+    {
+      "category": "SHEATH",
+      "name": "Glidesheath\u2122 5F",
+      "manufacturer": "Terumo",
+      "notes": "5F introducer sheath",
+      "stabilityData": {
+        "tempRangeC": "4\u201340",
+        "maxPressurePsi": 300,
+        "maxPressureBar": 21,
+        "notes": "Sheath"
+      }
+    },
+    {
+      "category": "SHEATH",
+      "name": "Glidesheath\u2122 6F",
+      "manufacturer": "Terumo",
+      "notes": "6F introducer sheath",
+      "stabilityData": {
+        "tempRangeC": "4\u201340",
+        "maxPressurePsi": 300,
+        "maxPressureBar": 21,
+        "notes": "Sheath"
+      }
+    },
+    {
+      "category": "SHEATH",
+      "name": "Glidesheath\u2122 8F",
+      "manufacturer": "Terumo",
+      "notes": "8F introducer sheath",
+      "stabilityData": {
+        "tempRangeC": "4\u201340",
+        "maxPressurePsi": 300,
+        "maxPressureBar": 21,
+        "notes": "Sheath"
+      }
+    },
+    {
+      "category": "SHEATH",
+      "name": "Destination\u2122 6F",
+      "manufacturer": "Terumo",
+      "notes": "6F destination sheath",
+      "stabilityData": {
+        "tempRangeC": "4\u201340",
+        "maxPressurePsi": 300,
+        "maxPressureBar": 21,
+        "notes": "Destination"
+      }
+    },
+    {
+      "category": "SHEATH",
+      "name": "Destination\u2122 8F",
+      "manufacturer": "Terumo",
+      "notes": "8F destination sheath",
+      "stabilityData": {
+        "tempRangeC": "4\u201340",
+        "maxPressurePsi": 300,
+        "maxPressureBar": 21,
+        "notes": "Destination"
+      }
+    },
+    {
+      "category": "SHEATH",
+      "name": "Rouen\u2122 7F",
+      "manufacturer": "Terumo",
+      "notes": "7F long sheath",
+      "stabilityData": {
+        "tempRangeC": "4\u201340",
+        "maxPressurePsi": 300,
+        "maxPressureBar": 21,
+        "notes": "Long"
+      }
+    },
+    {
+      "category": "SHEATH",
+      "name": "Flexor\u2122 Sheath",
+      "manufacturer": "Terumo",
+      "notes": "Flexible introducer sheath",
+      "stabilityData": {
+        "tempRangeC": "4\u201340",
+        "maxPressurePsi": 300,
+        "maxPressureBar": 21,
+        "notes": "Flexible"
+      }
+    },
+    {
+      "category": "ACCESSORY",
+      "name": "Radifocus\u2122 Haemostasis Valve",
+      "manufacturer": "Terumo",
+      "notes": "Hemostasis valve",
+      "stabilityData": {
+        "tempRangeC": "4\u201340",
+        "maxPressurePsi": 300,
+        "maxPressureBar": 21,
+        "notes": "Valve"
+      }
+    },
+    {
+      "category": "ACCESSORY",
+      "name": "Terumo\u2122 Manifold",
+      "manufacturer": "Terumo",
+      "notes": "Pressure manifold",
+      "stabilityData": {
+        "tempRangeC": "4\u201340",
+        "maxPressurePsi": 300,
+        "maxPressureBar": 21,
+        "notes": "Manifold"
+      }
+    },
+    {
+      "category": "ACCESSORY",
+      "name": "Connector\u2122 Kit",
+      "manufacturer": "Terumo",
+      "notes": "Connection system",
+      "stabilityData": {
+        "tempRangeC": "4\u201340",
+        "maxPressurePsi": 300,
+        "maxPressureBar": 21,
+        "notes": "Connector"
+      }
+    },
+    {
+      "category": "ACCESSORY",
+      "name": "Extension\u2122 Tube",
+      "manufacturer": "Terumo",
+      "notes": "Extension tubing",
+      "stabilityData": {
+        "tempRangeC": "4\u201340",
+        "maxPressurePsi": 300,
+        "maxPressureBar": 21,
+        "notes": "Extension"
+      }
+    },
+    {
+      "category": "ACCESSORY",
+      "name": "Adapter\u2122 Set",
+      "manufacturer": "Terumo",
+      "notes": "Adapter set",
+      "stabilityData": {
+        "tempRangeC": "4\u201340",
+        "maxPressurePsi": 300,
+        "maxPressureBar": 21,
+        "notes": "Adapter"
+      }
+    },
+    {
+      "category": "ABLATION_DEVICE",
+      "name": "Radiochoice\u2122",
+      "manufacturer": "Terumo",
+      "notes": "Radiofrequency ablation system",
+      "stabilityData": {
+        "tempRangeC": "4\u201340",
+        "maxPressurePsi": 300,
+        "maxPressureBar": 21,
+        "notes": "RF ablation"
+      }
     }
   ],
   "ifuRules": [
