@@ -1,5 +1,5 @@
 // NV Compatibility Calculator — reference dataset
-// Source: "neuro_ir_compatibilitydraft.xlsx" + Terumo Interventional Products
+// Source: "neuro_ir_compatibilitydraft.xlsx" + Terumo Interventional Products (70 devices added - Sept 2, 2026)
 window.NV_DATA = {
   "version": "1.0",
   "source": "neuro_ir_compatibilitydraft.xlsx",
