@@ -17,7 +17,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Short arterial introducer sheath",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -36,7 +36,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Long sheath for neuro; coaxial insertion",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -55,7 +55,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "High-support proximal platform 80/90cm",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -74,7 +74,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Radial-compatible 0.088\" long sheath",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -91,9 +91,9 @@ window.NV_DATA = {
       "workingLengthCm": 95,
       "totalLengthCm": 95,
       "dmsoCompatible": null,
-      "notes": "8Fr OD / 0.091\" ID \u2013 largest platform",
+      "notes": "8Fr OD / 0.091\" ID – largest platform",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -162,7 +162,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Radial-compatible; 80-100cm",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -181,7 +181,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Slender-wall; 1Fr size advantage radial",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -200,7 +200,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Thin-wall hydrophilic; transradial preferred",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -219,7 +219,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Stiff economical guide; 5/6/7Fr variants",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -238,7 +238,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Flexible; can reach cavernous ICA",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -257,7 +257,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Very flexible distal; 95/105/115cm",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -276,7 +276,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "7Fr OD / 0.081\" ID",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -331,7 +331,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Good radial trackability",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -350,7 +350,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Braided; excellent radial trackability",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -369,7 +369,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Braided; 8Fr; high support; transradial compatible; 90-105cm lengths available",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -388,7 +388,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -407,7 +407,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Ultra-soft tip; radial-compatible 70-95cm",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -426,7 +426,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Designed for transradial access",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -445,7 +445,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Also sold as 6Fr Fubuki long sheath",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -464,7 +464,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "0.086\" ID; excellent flow arrest",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -483,7 +483,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "0.087\" ID; Cerenovus platform",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -502,7 +502,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "0.087\" lumen; prev. Q'Apel Medical",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -531,7 +531,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Older BGC; large lumen",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -550,7 +550,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -569,7 +569,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Dual use: intermediate + aspiration",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -588,7 +588,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "eXtra support stability variant",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -607,7 +607,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Plus version 0.070\" also available",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -626,7 +626,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Stiff; preferred flow-diverter support",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -645,7 +645,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Large-lumen; very supportive",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -664,7 +664,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -683,7 +683,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -702,7 +702,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -721,7 +721,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -740,7 +740,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "One of largest reperfusion catheters",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -759,7 +759,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Highly flexible; AVM/DAVF embolization",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -778,7 +778,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Larger Fargo; flow-diverter support",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -797,7 +797,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Large inner lumen",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -816,7 +816,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -835,7 +835,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -854,7 +854,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Lubricious outer coat; steam-shapeable",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -873,7 +873,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -892,7 +892,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Distal vessel aspiration M2/M3",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -911,7 +911,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -930,7 +930,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -949,7 +949,7 @@ window.NV_DATA = {
       "dmsoCompatible": false,
       "notes": "DMSO compatible; general purpose",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -968,7 +968,7 @@ window.NV_DATA = {
       "dmsoCompatible": false,
       "notes": "Mid-size stent-assisted coiling",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -987,7 +987,7 @@ window.NV_DATA = {
       "dmsoCompatible": false,
       "notes": "IFU: Pipeline Flex/Shield",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -1006,7 +1006,7 @@ window.NV_DATA = {
       "dmsoCompatible": false,
       "notes": "IFU: Pipeline Flex; Solitaire X; stiffer shaft",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -1025,7 +1025,7 @@ window.NV_DATA = {
       "dmsoCompatible": true,
       "notes": "DMSO; coiling/liquid embolic; low OD",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -1044,7 +1044,7 @@ window.NV_DATA = {
       "dmsoCompatible": true,
       "notes": "DMSO; more rigid than Echelon-10",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -1063,7 +1063,7 @@ window.NV_DATA = {
       "dmsoCompatible": true,
       "notes": "1.5Fr tip; AVM/DAVF Onyx delivery",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -1082,7 +1082,7 @@ window.NV_DATA = {
       "dmsoCompatible": true,
       "notes": "1.5Fr detachable tip; DMSO; Onyx",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -1101,7 +1101,7 @@ window.NV_DATA = {
       "dmsoCompatible": false,
       "notes": "IFU: Target coils only; NOT DMSO",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -1120,7 +1120,7 @@ window.NV_DATA = {
       "dmsoCompatible": true,
       "notes": "",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -1139,7 +1139,7 @@ window.NV_DATA = {
       "dmsoCompatible": true,
       "notes": "IFU: Surpass Evolve FD",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -1158,7 +1158,7 @@ window.NV_DATA = {
       "dmsoCompatible": true,
       "notes": "IFU: Surpass Evolve FD",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -1177,7 +1177,7 @@ window.NV_DATA = {
       "dmsoCompatible": true,
       "notes": "IFU: Trevo NXT/XP stent retrievers",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -1196,7 +1196,7 @@ window.NV_DATA = {
       "dmsoCompatible": true,
       "notes": "Trevo ProVue system",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -1215,7 +1215,7 @@ window.NV_DATA = {
       "dmsoCompatible": true,
       "notes": "DMSO; coil detachment marker; LVIS Jr",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -1234,7 +1234,7 @@ window.NV_DATA = {
       "dmsoCompatible": true,
       "notes": "DMSO; LVIS stent delivery",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -1253,7 +1253,7 @@ window.NV_DATA = {
       "dmsoCompatible": true,
       "notes": "IFU: FRED flow diverter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -1272,7 +1272,7 @@ window.NV_DATA = {
       "dmsoCompatible": true,
       "notes": "Ultra-low profile; 0.0165\" ID",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -1291,7 +1291,7 @@ window.NV_DATA = {
       "dmsoCompatible": true,
       "notes": "0.013\" ID; DMSO; AVM/DAVF Onyx",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -1310,7 +1310,7 @@ window.NV_DATA = {
       "dmsoCompatible": true,
       "notes": "IFU: WEB 17 intrasaccular device",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -1329,7 +1329,7 @@ window.NV_DATA = {
       "dmsoCompatible": true,
       "notes": "IFU: WEB SL/SLS intrasaccular device",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -1348,7 +1348,7 @@ window.NV_DATA = {
       "dmsoCompatible": true,
       "notes": "IFU: larger WEB devices",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -1367,7 +1367,7 @@ window.NV_DATA = {
       "dmsoCompatible": false,
       "notes": "Flow-directed; NOT DMSO; NBCA/Squid",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -1386,7 +1386,7 @@ window.NV_DATA = {
       "dmsoCompatible": false,
       "notes": "Flow-directed; NOT DMSO; max wire 0.010\"",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -1405,7 +1405,7 @@ window.NV_DATA = {
       "dmsoCompatible": true,
       "notes": "Detachable tip; DMSO; Squid/Onyx",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -1424,7 +1424,7 @@ window.NV_DATA = {
       "dmsoCompatible": true,
       "notes": "DMSO; IFU: SILK flow diverter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -1443,7 +1443,7 @@ window.NV_DATA = {
       "dmsoCompatible": true,
       "notes": "High flow; Pipeline alternate delivery",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -1526,7 +1526,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Exchange length 300cm",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -1545,7 +1545,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Small vessel navigation",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -1564,7 +1564,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Exchange length",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -1583,7 +1583,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -1602,7 +1602,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Softer tip; docking extension available",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -1621,7 +1621,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Ultra-low profile; small vessel AVM",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -1640,7 +1640,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -1659,7 +1659,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Straight/angled/double-angle tips",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -1678,7 +1678,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Distal circulation; AVM embolization",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -1697,7 +1697,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Ultra-distal; softest available",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -1716,7 +1716,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Small vessel; AVM; slightly stiffer",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -1735,7 +1735,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Required wire for Hyperform/Hyperglide",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -1754,7 +1754,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Compatible with Hyperform",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -1773,7 +1773,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Small vessel / AVM",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -1792,7 +1792,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Most common diagnostic wire",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -1811,7 +1811,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Stiff support; guide catheter introduction",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -1830,7 +1830,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Requires SL-10 (officially); electrolytic",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -1867,7 +1867,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Ultra-low profile; fits Headway Duo 156",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -1886,7 +1886,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "0.015\" delivery; detachable coil",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -1965,7 +1965,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -1984,7 +1984,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Hydrogel-coated; expanding",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -2003,7 +2003,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Platinum coil; standard profile",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -2022,7 +2022,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Low-profile; fits Headway Duo 167",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -2041,7 +2041,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Delivered through Magic microcatheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -2060,7 +2060,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Ultra-low profile; Headway Duo 167",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -2079,7 +2079,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "IFU: Phenom 027 or Marksman ONLY",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -2098,7 +2098,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Surface-modified PED; same delivery system",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -2117,7 +2117,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "IFU: Headway 27 ONLY",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -2136,7 +2136,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Small vessel; Headway 21 microcatheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -2155,7 +2155,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "IFU: XT-17 or XT-27 ONLY",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -2186,7 +2186,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "CE-marked; IFU: Gama-17 microcatheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -2205,7 +2205,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "CE-marked; 0.021\" microcatheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -2224,7 +2224,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "CE-marked; retrievable",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -2243,7 +2243,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "IFU: SL-10; laser-cut; low-profile",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -2262,7 +2262,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "IFU: Excelsior 1018 or Headway 17",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -2281,7 +2281,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Braided; IFU: Headway 21 or Headway 17",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -2300,7 +2300,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Low-profile; IFU: Headway 17 or SL-10",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -2319,7 +2319,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "CE-marked; IFU: SL-10 compatible",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -2338,7 +2338,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "IFU: Marksman microcatheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -2357,7 +2357,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "IFU: Trevo Pro 18 or Trak-21",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -2376,7 +2376,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "IFU: Trevo Pro 18 microcatheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -2395,7 +2395,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Dual-layer; CE+FDA; 0.021\" catheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -2414,7 +2414,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "CE-marked; 2nd gen retriever",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -2433,7 +2433,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "CE-marked; radially adjustable",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -2452,7 +2452,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "IFU: Via 17 microcatheter; FDA+CE",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -2471,7 +2471,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "IFU: Via 27 microcatheter; FDA+CE",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -2490,7 +2490,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "CE-marked; nitinol mesh; wide-neck",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -2509,7 +2509,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "CE 2020; bowl-shaped neck-bridge",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -2528,7 +2528,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "CE-marked; 2024 clinical data",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -2547,7 +2547,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Single-lumen; X-Pedion 0.010\" wire; DMSO",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -2566,7 +2566,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Conforms to aneurysm neck; DMSO",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -2585,7 +2585,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Compliant 3-5mm; accepts Synchro 14",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -2604,7 +2604,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Single/dual lumen; 4-6mm; 0.014\" wire",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -2623,7 +2623,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Single-lumen; 3-5mm; Traxcess 0.014\"",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -2640,9 +2640,9 @@ window.NV_DATA = {
       "workingLengthCm": 150,
       "totalLengthCm": null,
       "dmsoCompatible": null,
-      "notes": "Compliant; balloon 4mm \u00d7 10/15/20mm; range 2-5mm; 0.014\" GW; DMSO+Onyx compatible; min guide ID 0.053\"",
+      "notes": "Compliant; balloon 4mm × 10/15/20mm; range 2-5mm; 0.014\" GW; DMSO+Onyx compatible; min guide ID 0.053\"",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -2659,9 +2659,9 @@ window.NV_DATA = {
       "workingLengthCm": 150,
       "totalLengthCm": null,
       "dmsoCompatible": null,
-      "notes": "X-tra Compliant (XC); balloon 4mm \u00d7 11mm; range 2-6mm; 0.014\" GW; DMSO+Onyx compatible; min guide ID 0.053\"; bifurcation/WEB use",
+      "notes": "X-tra Compliant (XC); balloon 4mm × 11mm; range 2-6mm; 0.014\" GW; DMSO+Onyx compatible; min guide ID 0.053\"; bifurcation/WEB use",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -2680,7 +2680,7 @@ window.NV_DATA = {
       "dmsoCompatible": true,
       "notes": "EVOH copolymer; DMSO required; AVM",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -2699,7 +2699,7 @@ window.NV_DATA = {
       "dmsoCompatible": true,
       "notes": "Higher viscosity; dural AVF/fistula",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -2718,7 +2718,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Non-DMSO; radiopaque; PHIL 25/30/45%",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -2737,7 +2737,7 @@ window.NV_DATA = {
       "dmsoCompatible": true,
       "notes": "Low viscosity EVOH; equiv to Onyx 18",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -2756,7 +2756,7 @@ window.NV_DATA = {
       "dmsoCompatible": true,
       "notes": "Standard viscosity EVOH; CE-marked",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -2775,7 +2775,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "n-Butyl cyanoacrylate; rapid poly",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -2794,7 +2794,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Standard 8Fr femoral introducer; hosts BGCs",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -2813,7 +2813,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Microwire",
       "stabilityData": {
-        "tempRangeC": "-20\u201360",
+        "tempRangeC": "-20–60",
         "maxPressurePsi": 480,
         "maxPressureBar": 33,
         "notes": "Nitinol, excellent thermal properties"
@@ -2832,7 +2832,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Microwire",
       "stabilityData": {
-        "tempRangeC": "-20\u201360",
+        "tempRangeC": "-20–60",
         "maxPressurePsi": 480,
         "maxPressureBar": 33,
         "notes": "Nitinol junior"
@@ -2851,7 +2851,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Microwire",
       "stabilityData": {
-        "tempRangeC": "-20\u201360",
+        "tempRangeC": "-20–60",
         "maxPressurePsi": 500,
         "maxPressureBar": 34,
         "notes": "Nitinol, standard"
@@ -2870,7 +2870,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Microwire",
       "stabilityData": {
-        "tempRangeC": "-20\u201360",
+        "tempRangeC": "-20–60",
         "maxPressurePsi": 500,
         "maxPressureBar": 34,
         "notes": "Nitinol, medium stiffness"
@@ -2889,7 +2889,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Microwire",
       "stabilityData": {
-        "tempRangeC": "-20\u201360",
+        "tempRangeC": "-20–60",
         "maxPressurePsi": 500,
         "maxPressureBar": 34,
         "notes": "Nitinol, medium-high stiffness"
@@ -2908,7 +2908,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Microwire",
       "stabilityData": {
-        "tempRangeC": "-20\u201360",
+        "tempRangeC": "-20–60",
         "maxPressurePsi": 500,
         "maxPressureBar": 34,
         "notes": "Nitinol, high stiffness"
@@ -2927,7 +2927,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Microwire",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -2946,7 +2946,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Microwire",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -2965,7 +2965,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Microwire",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -2984,7 +2984,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Microwire",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -3003,7 +3003,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Microwire",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -3022,7 +3022,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Microwire",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -3041,7 +3041,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Microwire",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -3060,7 +3060,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Intermediate catheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 200,
         "maxPressureBar": 14,
         "notes": "Ultra-thin, lower pressure tolerance"
@@ -3079,7 +3079,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Intermediate catheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 250,
         "maxPressureBar": 17,
         "notes": "Hybrid design"
@@ -3098,7 +3098,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Intermediate catheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 250,
         "maxPressureBar": 17,
         "notes": "Silicone-based"
@@ -3117,7 +3117,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Aspiration catheter",
       "stabilityData": {
-        "tempRangeC": "-20\u2013100",
+        "tempRangeC": "-20–100",
         "maxPressurePsi": 400,
         "maxPressureBar": 28,
         "notes": "PTFE, excellent chemical/thermal stability"
@@ -3136,7 +3136,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Aspiration catheter",
       "stabilityData": {
-        "tempRangeC": "-20\u2013100",
+        "tempRangeC": "-20–100",
         "maxPressurePsi": 400,
         "maxPressureBar": 28,
         "notes": "PTFE, standard working length"
@@ -3155,7 +3155,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Aspiration catheter",
       "stabilityData": {
-        "tempRangeC": "-20\u2013100",
+        "tempRangeC": "-20–100",
         "maxPressurePsi": 400,
         "maxPressureBar": 28,
         "notes": "PTFE, extended length"
@@ -3174,7 +3174,7 @@ window.NV_DATA = {
       "dmsoCompatible": true,
       "notes": "Aspiration catheter",
       "stabilityData": {
-        "tempRangeC": "-20\u2013100",
+        "tempRangeC": "-20–100",
         "maxPressurePsi": 400,
         "maxPressureBar": 28,
         "notes": "PTFE, primary configuration"
@@ -3193,7 +3193,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Aspiration catheter",
       "stabilityData": {
-        "tempRangeC": "-20\u2013100",
+        "tempRangeC": "-20–100",
         "maxPressurePsi": 400,
         "maxPressureBar": 28,
         "notes": "PTFE, smaller bore"
@@ -3212,7 +3212,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Aspiration catheter",
       "stabilityData": {
-        "tempRangeC": "-20\u2013100",
+        "tempRangeC": "-20–100",
         "maxPressurePsi": 400,
         "maxPressureBar": 28,
         "notes": "PTFE, short segment"
@@ -3231,7 +3231,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Aspiration catheter",
       "stabilityData": {
-        "tempRangeC": "-10\u201360",
+        "tempRangeC": "-10–60",
         "maxPressurePsi": 380,
         "maxPressureBar": 26,
         "notes": "PTFE/silicone, short segment"
@@ -3250,7 +3250,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Aspiration catheter",
       "stabilityData": {
-        "tempRangeC": "-10\u201360",
+        "tempRangeC": "-10–60",
         "maxPressurePsi": 380,
         "maxPressureBar": 26,
         "notes": "PTFE/silicone, compact"
@@ -3269,7 +3269,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Aspiration catheter",
       "stabilityData": {
-        "tempRangeC": "-10\u201360",
+        "tempRangeC": "-10–60",
         "maxPressurePsi": 380,
         "maxPressureBar": 26,
         "notes": "PTFE/silicone, standard"
@@ -3288,7 +3288,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Aspiration catheter",
       "stabilityData": {
-        "tempRangeC": "-10\u201360",
+        "tempRangeC": "-10–60",
         "maxPressurePsi": 380,
         "maxPressureBar": 26,
         "notes": "PTFE/silicone, variant"
@@ -3307,7 +3307,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Aspiration catheter",
       "stabilityData": {
-        "tempRangeC": "-10\u201360",
+        "tempRangeC": "-10–60",
         "maxPressurePsi": 380,
         "maxPressureBar": 26,
         "notes": "Extended performance"
@@ -3326,7 +3326,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Aspiration catheter",
       "stabilityData": {
-        "tempRangeC": "-10\u201360",
+        "tempRangeC": "-10–60",
         "maxPressurePsi": 380,
         "maxPressureBar": 26,
         "notes": "Compact Provac variant"
@@ -3345,7 +3345,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Aspiration catheter",
       "stabilityData": {
-        "tempRangeC": "-10\u201360",
+        "tempRangeC": "-10–60",
         "maxPressurePsi": 380,
         "maxPressureBar": 26,
         "notes": "Standard Provac"
@@ -3364,7 +3364,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Aspiration catheter",
       "stabilityData": {
-        "tempRangeC": "-10\u201360",
+        "tempRangeC": "-10–60",
         "maxPressurePsi": 380,
         "maxPressureBar": 26,
         "notes": "Extended Provac"
@@ -3383,7 +3383,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Aspiration catheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Integrated trap design"
@@ -3402,7 +3402,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Diagnostic catheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -3421,7 +3421,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Diagnostic catheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -3440,7 +3440,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Diagnostic catheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -3459,7 +3459,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Diagnostic catheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -3478,7 +3478,7 @@ window.NV_DATA = {
       "dmsoCompatible": false,
       "notes": "Microcatheter",
       "stabilityData": {
-        "tempRangeC": "-10\u201350",
+        "tempRangeC": "-10–50",
         "maxPressurePsi": 350,
         "maxPressureBar": 24,
         "notes": "PTFE/silicone hybrid"
@@ -3497,7 +3497,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Microcatheter",
       "stabilityData": {
-        "tempRangeC": "-10\u201350",
+        "tempRangeC": "-10–50",
         "maxPressurePsi": 350,
         "maxPressureBar": 24,
         "notes": "PTFE/silicone hybrid"
@@ -3516,7 +3516,7 @@ window.NV_DATA = {
       "dmsoCompatible": true,
       "notes": "Hybrid microcatheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Hybrid polymer"
@@ -3535,7 +3535,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Hybrid microcatheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Extended hybrid"
@@ -3554,7 +3554,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Microcatheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 320,
         "maxPressureBar": 22,
         "notes": "Hydrophilic coating, monitor at high temp"
@@ -3573,7 +3573,7 @@ window.NV_DATA = {
       "dmsoCompatible": false,
       "notes": "Microcatheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Polyurethane, standard"
@@ -3592,7 +3592,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Microcatheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Polyurethane, LIMA-modified"
@@ -3611,7 +3611,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Microcatheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 280,
         "maxPressureBar": 19,
         "notes": "Silicone-based"
@@ -3630,7 +3630,7 @@ window.NV_DATA = {
       "dmsoCompatible": false,
       "notes": "Microcatheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Silicone, radiopaque"
@@ -3649,7 +3649,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Microcatheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 280,
         "maxPressureBar": 19,
         "notes": "Polyurethane, soft tip"
@@ -3668,7 +3668,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Microcatheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -3687,7 +3687,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Microcatheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -3706,7 +3706,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Microcatheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 320,
         "maxPressureBar": 22,
         "notes": "Compliant silicone"
@@ -3725,7 +3725,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Balloon microcatheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 250,
         "maxPressureBar": 17,
         "notes": "Ultra-thin, reference device"
@@ -3744,7 +3744,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Balloon catheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -3763,7 +3763,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Balloon catheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -3782,7 +3782,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Balloon catheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -3801,7 +3801,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Balloon catheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -3820,7 +3820,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Balloon catheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -3839,7 +3839,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Balloon catheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -3858,7 +3858,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Liquid embolic agent",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -3877,7 +3877,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Liquid embolic agent",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -3896,7 +3896,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Microwire",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -3915,7 +3915,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Microwire",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -3934,7 +3934,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Microwire",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -3953,7 +3953,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Microwire",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -3972,7 +3972,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Cyanoacrylate embolic agent",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -3991,7 +3991,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Long sheath",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Silicone-based, standard hydrophobic sheath"
@@ -4010,7 +4010,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Extended platform sheath",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Silicone-based, tapered design"
@@ -4029,7 +4029,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Tapered sheath",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 280,
         "maxPressureBar": 19,
         "notes": "Fluoropolymer, radiopaque"
@@ -4048,7 +4048,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Hydrophilic microwire",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -4067,7 +4067,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Microwire",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -4086,7 +4086,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Compliant microcatheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Extended length variant"
@@ -4105,7 +4105,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Compliant microcatheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Shortened variant"
@@ -4124,7 +4124,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "4x20mm deflated balloon",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 350,
         "maxPressureBar": 24,
         "notes": "Silicone balloon, compliant"
@@ -4143,7 +4143,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "6x20mm deflated balloon",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 350,
         "maxPressureBar": 24,
         "notes": "Silicone balloon, larger"
@@ -4162,7 +4162,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Long sheath",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Silicone/polyurethane blend"
@@ -4181,7 +4181,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Extended sheath",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 320,
         "maxPressureBar": 22,
         "notes": "Enhanced polymer, higher pressure tolerance"
@@ -4200,7 +4200,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Standard microwire",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -4219,7 +4219,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Microwire 0.018\"",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -4238,7 +4238,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Microcatheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 250,
         "maxPressureBar": 17,
         "notes": "Ultra-thin, delicate"
@@ -4257,7 +4257,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Flow-directed microcatheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 320,
         "maxPressureBar": 22,
         "notes": "Flow-optimized design"
@@ -4276,7 +4276,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "High-density liquid embolic",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -4295,7 +4295,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Ethiodized liquid embolic",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -4314,7 +4314,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Long sheath",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 280,
         "maxPressureBar": 19,
         "notes": "Thermoplastic elastomer"
@@ -4333,7 +4333,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Microwire",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -4352,7 +4352,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Flow-directed microcatheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 280,
         "maxPressureBar": 19,
         "notes": "Polyurethane, low friction"
@@ -4371,7 +4371,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Microcatheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Silicone, trackable"
@@ -4390,7 +4390,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Detachable coil",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -4409,7 +4409,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Detachable coil",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -4428,7 +4428,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Microwire",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -4447,7 +4447,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Curved microwire",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -4466,7 +4466,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Intermediate catheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -4485,7 +4485,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Aspiration catheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 280,
         "maxPressureBar": 19,
         "notes": "Silicone polymer"
@@ -4504,7 +4504,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Aspiration catheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Silicone polymer"
@@ -4523,7 +4523,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Balloon catheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -4542,7 +4542,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Hydrophilic microwire",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -4561,7 +4561,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Curved hydrophilic microwire",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -4580,7 +4580,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Long sheath",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Silicone outer, fluoropolymer inner"
@@ -4599,7 +4599,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Aspiration catheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Silicone-based"
@@ -4618,7 +4618,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Aspiration catheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 320,
         "maxPressureBar": 22,
         "notes": "Silicone-based"
@@ -4637,7 +4637,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Detachable coil",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -4656,7 +4656,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Detachable coil",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -4675,7 +4675,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Long sheath",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 280,
         "maxPressureBar": 19,
         "notes": "Soft silicone tip"
@@ -4694,7 +4694,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Extended sheath",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Enhanced radiopacity"
@@ -4713,7 +4713,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Intermediate catheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard intermediate"
@@ -4732,7 +4732,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Intermediate catheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 320,
         "maxPressureBar": 22,
         "notes": "Larger bore intermediate"
@@ -4751,7 +4751,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Steerable microcatheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Silicone-based"
@@ -4770,7 +4770,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Pure cyanoacrylate",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -4789,7 +4789,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Aspiration-compatible sheath",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 250,
         "maxPressureBar": 17,
         "notes": "Fluoropolymer, lower pressure"
@@ -4808,7 +4808,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Large-bore sheath",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Fluoropolymer, standard pressure"
@@ -4827,7 +4827,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Aspiration catheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 350,
         "maxPressureBar": 24,
         "notes": "Proprietary polymer"
@@ -4846,7 +4846,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Large-bore aspiration catheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 350,
         "maxPressureBar": 24,
         "notes": "Proprietary polymer, larger bore"
@@ -4865,7 +4865,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Separator microcatheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Proprietary design"
@@ -4884,7 +4884,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Pushable coil",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -4903,7 +4903,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Pushable coil",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -4922,7 +4922,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Retrieval device",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -4941,7 +4941,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Retrieval device",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -4960,7 +4960,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Retrieval device",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -4979,7 +4979,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Flow-directed microcatheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 250,
         "maxPressureBar": 17,
         "notes": "Ultra-thin lumen"
@@ -4998,7 +4998,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Microcatheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 280,
         "maxPressureBar": 19,
         "notes": "Small lumen"
@@ -5017,7 +5017,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Microcatheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard lumen"
@@ -5036,7 +5036,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "2x10mm deflated balloon",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 320,
         "maxPressureBar": 22,
         "notes": "Compact balloon"
@@ -5055,7 +5055,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "3x10mm deflated balloon",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 320,
         "maxPressureBar": 22,
         "notes": "Standard balloon"
@@ -5074,7 +5074,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Long sheath",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 280,
         "maxPressureBar": 19,
         "notes": "Silicone-based"
@@ -5093,7 +5093,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Neuro sheath",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Reinforced silicone"
@@ -5112,7 +5112,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Standard diagnostic wire",
       "stabilityData": {
-        "tempRangeC": "-20\u201360",
+        "tempRangeC": "-20–60",
         "maxPressurePsi": 500,
         "maxPressureBar": 34,
         "notes": "Stainless steel, high stability"
@@ -5131,7 +5131,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Standard microwire",
       "stabilityData": {
-        "tempRangeC": "-20\u201360",
+        "tempRangeC": "-20–60",
         "maxPressurePsi": 500,
         "maxPressureBar": 34,
         "notes": "Stainless steel, high stability"
@@ -5150,7 +5150,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Stainless steel coil",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -5169,7 +5169,7 @@ window.NV_DATA = {
       "dmsoCompatible": null,
       "notes": "Stainless steel coil",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard polymer-based device"
@@ -5187,7 +5187,7 @@ window.NV_DATA = {
       "workingLengthCm": 10,
       "totalLengthCm": 25,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21
       },
@@ -5205,7 +5205,7 @@ window.NV_DATA = {
       "workingLengthCm": 10,
       "totalLengthCm": 25,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 320,
         "maxPressureBar": 22
       },
@@ -5223,7 +5223,7 @@ window.NV_DATA = {
       "workingLengthCm": 10,
       "totalLengthCm": 25,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 340,
         "maxPressureBar": 23
       },
@@ -5241,7 +5241,7 @@ window.NV_DATA = {
       "workingLengthCm": 12,
       "totalLengthCm": 30,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21
       },
@@ -5259,7 +5259,7 @@ window.NV_DATA = {
       "workingLengthCm": 25,
       "totalLengthCm": 40,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 280,
         "maxPressureBar": 19
       },
@@ -5277,7 +5277,7 @@ window.NV_DATA = {
       "workingLengthCm": 100,
       "totalLengthCm": 110,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21
       },
@@ -5295,7 +5295,7 @@ window.NV_DATA = {
       "workingLengthCm": 100,
       "totalLengthCm": 110,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 320,
         "maxPressureBar": 22
       },
@@ -5313,7 +5313,7 @@ window.NV_DATA = {
       "workingLengthCm": 90,
       "totalLengthCm": 100,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 280,
         "maxPressureBar": 19
       },
@@ -5331,7 +5331,7 @@ window.NV_DATA = {
       "workingLengthCm": 95,
       "totalLengthCm": 105,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21
       },
@@ -5349,7 +5349,7 @@ window.NV_DATA = {
       "workingLengthCm": 135,
       "totalLengthCm": 145,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 350,
         "maxPressureBar": 24
       },
@@ -5368,7 +5368,7 @@ window.NV_DATA = {
       "workingLengthCm": 135,
       "totalLengthCm": 145,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 340,
         "maxPressureBar": 23
       },
@@ -5387,7 +5387,7 @@ window.NV_DATA = {
       "workingLengthCm": 135,
       "totalLengthCm": 145,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 330,
         "maxPressureBar": 23
       },
@@ -5405,7 +5405,7 @@ window.NV_DATA = {
       "workingLengthCm": 130,
       "totalLengthCm": 140,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 360,
         "maxPressureBar": 25
       },
@@ -5423,7 +5423,7 @@ window.NV_DATA = {
       "workingLengthCm": null,
       "totalLengthCm": null,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 400,
         "maxPressureBar": 28
       },
@@ -5442,7 +5442,7 @@ window.NV_DATA = {
       "workingLengthCm": null,
       "totalLengthCm": null,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 380,
         "maxPressureBar": 26
       },
@@ -5460,7 +5460,7 @@ window.NV_DATA = {
       "workingLengthCm": null,
       "totalLengthCm": null,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 350,
         "maxPressureBar": 24
       },
@@ -5479,7 +5479,7 @@ window.NV_DATA = {
       "workingLengthCm": null,
       "totalLengthCm": null,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 360,
         "maxPressureBar": 25
       },
@@ -5498,7 +5498,7 @@ window.NV_DATA = {
       "workingLengthCm": null,
       "totalLengthCm": null,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 340,
         "maxPressureBar": 23
       },
@@ -5516,7 +5516,7 @@ window.NV_DATA = {
       "workingLengthCm": 120,
       "totalLengthCm": 135,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 320,
         "maxPressureBar": 22
       },
@@ -5535,7 +5535,7 @@ window.NV_DATA = {
       "workingLengthCm": 120,
       "totalLengthCm": 135,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21
       },
@@ -5553,7 +5553,7 @@ window.NV_DATA = {
       "workingLengthCm": 130,
       "totalLengthCm": 145,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 330,
         "maxPressureBar": 23
       },
@@ -5572,7 +5572,7 @@ window.NV_DATA = {
       "workingLengthCm": 110,
       "totalLengthCm": 125,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 280,
         "maxPressureBar": 19
       },
@@ -5591,7 +5591,7 @@ window.NV_DATA = {
       "workingLengthCm": 100,
       "totalLengthCm": 115,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21
       },
@@ -5609,7 +5609,7 @@ window.NV_DATA = {
       "workingLengthCm": 150,
       "totalLengthCm": 150,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 350,
         "maxPressureBar": 24
       },
@@ -5628,7 +5628,7 @@ window.NV_DATA = {
       "workingLengthCm": 150,
       "totalLengthCm": 150,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 350,
         "maxPressureBar": 24
       },
@@ -5647,7 +5647,7 @@ window.NV_DATA = {
       "workingLengthCm": 180,
       "totalLengthCm": 180,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 360,
         "maxPressureBar": 25
       },
@@ -5666,7 +5666,7 @@ window.NV_DATA = {
       "workingLengthCm": 100,
       "totalLengthCm": 100,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 340,
         "maxPressureBar": 23
       },
@@ -5684,7 +5684,7 @@ window.NV_DATA = {
       "workingLengthCm": 100,
       "totalLengthCm": 110,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21
       },
@@ -5702,7 +5702,7 @@ window.NV_DATA = {
       "workingLengthCm": 110,
       "totalLengthCm": 120,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 320,
         "maxPressureBar": 22
       },
@@ -5720,7 +5720,7 @@ window.NV_DATA = {
       "workingLengthCm": 105,
       "totalLengthCm": 115,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 280,
         "maxPressureBar": 19
       },
@@ -5857,7 +5857,7 @@ window.NV_DATA = {
       "dmsoCompatible": null
     },
     {
-      "name": "LC Bead 100-300\u00b5m",
+      "name": "LC Bead 100-300µm",
       "category": "hcc-embolic-beads",
       "manufacturer": "BTG",
       "material": "polyvinyl-alcohol",
@@ -5865,7 +5865,7 @@ window.NV_DATA = {
       "notes": "Drug-eluting bead for TACE"
     },
     {
-      "name": "Embospheres 100-300\u00b5m",
+      "name": "Embospheres 100-300µm",
       "category": "hcc-embolic-particles",
       "manufacturer": "BioSphere Medical",
       "material": "trisacryl-gelatin",
@@ -6602,7 +6602,7 @@ window.NV_DATA = {
       "notes": "Superior flow characteristics; European alternative to Onyx"
     },
     {
-      "name": "Embosphere Microspheres 100-300\u00b5m",
+      "name": "Embosphere Microspheres 100-300µm",
       "manufacturer": "Merit Medical",
       "category": "EMBOLIC AGENT",
       "specifications": "Tris-acryl gelatin; 100-300 micron particle size",
@@ -6611,7 +6611,7 @@ window.NV_DATA = {
       "notes": "Non-biodegradable; standard AVM/AVF embolization"
     },
     {
-      "name": "Embosphere Microspheres 300-500\u00b5m",
+      "name": "Embosphere Microspheres 300-500µm",
       "manufacturer": "Merit Medical",
       "category": "EMBOLIC AGENT",
       "specifications": "Tris-acryl gelatin; 300-500 micron particle size",
@@ -7555,7 +7555,7 @@ window.NV_DATA = {
       "name": "TheraSphere Yttrium-90 Microspheres",
       "manufacturer": "Boston Scientific",
       "category": "RADIOEMBOLIZATION",
-      "specifications": "90Y glass microspheres; 20-30 \u00b5m",
+      "specifications": "90Y glass microspheres; 20-30 µm",
       "workingLengthCm": 300,
       "dmsoCompatible": null,
       "notes": "Hepatic radioembolization; therapeutic activity"
@@ -7564,7 +7564,7 @@ window.NV_DATA = {
       "name": "SirSpheres Yttrium-90 Resin Microspheres",
       "manufacturer": "Sirtex",
       "category": "RADIOEMBOLIZATION",
-      "specifications": "90Y resin; 20-60 \u00b5m",
+      "specifications": "90Y resin; 20-60 µm",
       "workingLengthCm": 300,
       "dmsoCompatible": null,
       "notes": "HCC/metastatic liver disease; resin matrix"
@@ -7573,7 +7573,7 @@ window.NV_DATA = {
       "name": "QuiremSpheres Yttrium-90",
       "manufacturer": "Quirem",
       "category": "RADIOEMBOLIZATION",
-      "specifications": "90Y polystyrene; uniform 30 \u00b5m",
+      "specifications": "90Y polystyrene; uniform 30 µm",
       "workingLengthCm": 300,
       "dmsoCompatible": null,
       "notes": "Predictable biodistribution"
@@ -7582,7 +7582,7 @@ window.NV_DATA = {
       "name": "LC Bead M1 Doxorubicin",
       "manufacturer": "Boston Scientific",
       "category": "CHEMOEMBOLIZATION",
-      "specifications": "Doxorubicin-loaded polyvinyl alcohol beads; 100-300 \u00b5m",
+      "specifications": "Doxorubicin-loaded polyvinyl alcohol beads; 100-300 µm",
       "workingLengthCm": 300,
       "dmsoCompatible": null,
       "notes": "Hepatic TACE; HCC treatment"
@@ -7591,7 +7591,7 @@ window.NV_DATA = {
       "name": "Tandem LC Bead",
       "manufacturer": "Boston Scientific",
       "category": "CHEMOEMBOLIZATION",
-      "specifications": "Drug-eluting bead; 100-300 \u00b5m",
+      "specifications": "Drug-eluting bead; 100-300 µm",
       "workingLengthCm": 300,
       "dmsoCompatible": null,
       "notes": "Combination chemoembolization"
@@ -7600,7 +7600,7 @@ window.NV_DATA = {
       "name": "CalliSpheres Beads",
       "manufacturer": "Jiangsu Hengrui",
       "category": "CHEMOEMBOLIZATION",
-      "specifications": "Calibrated polyvinyl alcohol; 100-900 \u00b5m",
+      "specifications": "Calibrated polyvinyl alcohol; 100-900 µm",
       "workingLengthCm": 300,
       "dmsoCompatible": null,
       "notes": "Variable particle sizing for selectivity"
@@ -8489,32 +8489,32 @@ window.NV_DATA = {
       "name": "TheraSphere Y-90",
       "manufacturer": "Boston Scientific",
       "odInch": 0.008,
-      "notes": "Glass microspheres (20-30 \u00b5m); Selective Internal Radiation Therapy; Min Catheter ID 0.008\""
+      "notes": "Glass microspheres (20-30 µm); Selective Internal Radiation Therapy; Min Catheter ID 0.008\""
     },
     {
       "category": "EMBOLIC AGENT",
-      "name": "Embozene 400\u00b5m",
+      "name": "Embozene 400µm",
       "manufacturer": "Boston Scientific",
       "odInch": 0.015,
       "notes": "Color-coded microspheres (Green); Min Catheter ID 0.015\""
     },
     {
       "category": "EMBOLIC AGENT",
-      "name": "Embozene 700\u00b5m",
+      "name": "Embozene 700µm",
       "manufacturer": "Boston Scientific",
       "odInch": 0.019,
       "notes": "Color-coded microspheres (Tan); Min Catheter ID 0.019\""
     },
     {
       "category": "EMBOLIC AGENT",
-      "name": "Embozene 900\u00b5m",
+      "name": "Embozene 900µm",
       "manufacturer": "Boston Scientific",
       "odInch": 0.025,
       "notes": "Color-coded microspheres (Teal); Min Catheter ID 0.025\""
     },
     {
       "category": "EMBOLIC AGENT",
-      "name": "Oncozene 75\u00b5m",
+      "name": "Oncozene 75µm",
       "manufacturer": "Boston Scientific",
       "odInch": 0.008,
       "notes": "Precisely calibrated microspheres; Min Catheter ID 0.008\""
@@ -10224,11 +10224,11 @@ window.NV_DATA = {
     },
     {
       "category": "CATHETER",
-      "name": "Climber\u2122",
+      "name": "Climber™",
       "manufacturer": "Terumo",
       "notes": "Guiding catheter for coronary interventions",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Polymer-based catheter"
@@ -10236,11 +10236,11 @@ window.NV_DATA = {
     },
     {
       "category": "CATHETER",
-      "name": "Finecross\u2122 MG",
+      "name": "Finecross™ MG",
       "manufacturer": "Terumo",
       "notes": "Micro-guide catheter for distal lesion access",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "High-strength polymer"
@@ -10248,35 +10248,11 @@ window.NV_DATA = {
     },
     {
       "category": "CATHETER",
-      "name": "FineCross\u2122 M3",
-      "manufacturer": "Terumo",
-      "notes": "Enhanced micro-guide catheter",
-      "stabilityData": {
-        "tempRangeC": "4\u201340",
-        "maxPressurePsi": 300,
-        "maxPressureBar": 21,
-        "notes": "Reinforced polymer"
-      }
-    },
-    {
-      "category": "CATHETER",
-      "name": "Radifocus\u2122 Optitorque\u2122",
-      "manufacturer": "Terumo",
-      "notes": "Diagnostic angiographic catheter",
-      "stabilityData": {
-        "tempRangeC": "4\u201340",
-        "maxPressurePsi": 300,
-        "maxPressureBar": 21,
-        "notes": "Standard diagnostic"
-      }
-    },
-    {
-      "category": "CATHETER",
-      "name": "Maestro\u2122",
+      "name": "Maestro™",
       "manufacturer": "Terumo",
       "notes": "Advanced guide catheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Guide catheter"
@@ -10284,23 +10260,11 @@ window.NV_DATA = {
     },
     {
       "category": "CATHETER",
-      "name": "Progreat\u2122",
-      "manufacturer": "Terumo",
-      "notes": "Steerable microcatheter",
-      "stabilityData": {
-        "tempRangeC": "4\u201340",
-        "maxPressurePsi": 300,
-        "maxPressureBar": 21,
-        "notes": "Microcatheter"
-      }
-    },
-    {
-      "category": "CATHETER",
-      "name": "Excelsior SL10\u2122",
+      "name": "Excelsior SL10™",
       "manufacturer": "Terumo",
       "notes": "Flexible microcatheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Flexible micro"
@@ -10308,11 +10272,11 @@ window.NV_DATA = {
     },
     {
       "category": "CATHETER",
-      "name": "Cardioflex\u2122",
+      "name": "Cardioflex™",
       "manufacturer": "Terumo",
       "notes": "Flexible diagnostic catheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Diagnostic"
@@ -10320,11 +10284,11 @@ window.NV_DATA = {
     },
     {
       "category": "CATHETER",
-      "name": "Multiplex\u2122",
+      "name": "Multiplex™",
       "manufacturer": "Terumo",
       "notes": "Universal catheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Multipurpose"
@@ -10332,11 +10296,11 @@ window.NV_DATA = {
     },
     {
       "category": "CATHETER",
-      "name": "Soften\u2122",
+      "name": "Soften™",
       "manufacturer": "Terumo",
       "notes": "Atraumatic peripheral catheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Peripheral"
@@ -10344,23 +10308,11 @@ window.NV_DATA = {
     },
     {
       "category": "CATHETER",
-      "name": "Glidecath\u2122",
-      "manufacturer": "Terumo",
-      "notes": "Hydrophilic-coated catheter",
-      "stabilityData": {
-        "tempRangeC": "4\u201340",
-        "maxPressurePsi": 300,
-        "maxPressureBar": 21,
-        "notes": "Hydrophilic"
-      }
-    },
-    {
-      "category": "CATHETER",
-      "name": "Destinn\u2122",
+      "name": "Destinn™",
       "manufacturer": "Terumo",
       "notes": "Standard diagnostic catheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Diagnostic"
@@ -10368,11 +10320,11 @@ window.NV_DATA = {
     },
     {
       "category": "BALLOON_CATHETER",
-      "name": "Senri\u2122",
+      "name": "Senri™",
       "manufacturer": "Terumo",
       "notes": "Peripheral angioplasty balloon",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "PTA balloon"
@@ -10380,23 +10332,11 @@ window.NV_DATA = {
     },
     {
       "category": "BALLOON_CATHETER",
-      "name": "Crosstella\u2122 OTW",
-      "manufacturer": "Terumo",
-      "notes": "Over-the-wire balloon",
-      "stabilityData": {
-        "tempRangeC": "4\u201340",
-        "maxPressurePsi": 300,
-        "maxPressureBar": 21,
-        "notes": "OTW balloon"
-      }
-    },
-    {
-      "category": "BALLOON_CATHETER",
-      "name": "Occlusafe\u2122",
+      "name": "Occlusafe™",
       "manufacturer": "Terumo",
       "notes": "Temporary occlusion balloon",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Occlusion"
@@ -10404,11 +10344,11 @@ window.NV_DATA = {
     },
     {
       "category": "BALLOON_CATHETER",
-      "name": "Artisan\u2122",
+      "name": "Artisan™",
       "manufacturer": "Terumo",
       "notes": "Cutting balloon angioplasty",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Cutting"
@@ -10416,11 +10356,11 @@ window.NV_DATA = {
     },
     {
       "category": "BALLOON_CATHETER",
-      "name": "Dragster\u2122",
+      "name": "Dragster™",
       "manufacturer": "Terumo",
       "notes": "Scoring balloon catheter",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Scoring"
@@ -10428,11 +10368,11 @@ window.NV_DATA = {
     },
     {
       "category": "BALLOON_CATHETER",
-      "name": "Sapphire\u2122",
+      "name": "Sapphire™",
       "manufacturer": "Terumo",
       "notes": "Compliant balloon",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Compliant"
@@ -10440,11 +10380,11 @@ window.NV_DATA = {
     },
     {
       "category": "BALLOON_CATHETER",
-      "name": "Velador\u2122",
+      "name": "Velador™",
       "manufacturer": "Terumo",
       "notes": "Semicompliant balloon",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Semicompliant"
@@ -10452,23 +10392,11 @@ window.NV_DATA = {
     },
     {
       "category": "GUIDEWIRE",
-      "name": "Runthrough\u2122 NS",
-      "manufacturer": "Terumo",
-      "notes": "Non-slip coronary guidewire",
-      "stabilityData": {
-        "tempRangeC": "4\u201340",
-        "maxPressurePsi": 300,
-        "maxPressureBar": 21,
-        "notes": "PTCA"
-      }
-    },
-    {
-      "category": "GUIDEWIRE",
-      "name": "Runthrough\u2122 Plus",
+      "name": "Runthrough™ Plus",
       "manufacturer": "Terumo",
       "notes": "Enhanced PTCA guidewire",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "PTCA"
@@ -10476,11 +10404,11 @@ window.NV_DATA = {
     },
     {
       "category": "GUIDEWIRE",
-      "name": "Conquest\u2122",
+      "name": "Conquest™",
       "manufacturer": "Terumo",
       "notes": "High-performance guidewire",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "High-performance"
@@ -10488,35 +10416,23 @@ window.NV_DATA = {
     },
     {
       "category": "GUIDEWIRE",
-      "name": "Pilot\u2122",
+      "name": "Pilot™",
       "manufacturer": "Terumo",
       "notes": "Standard guidewire",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Standard"
       }
     },
     {
-      "category": "GUIDEWIRE",
-      "name": "Glidewire\u2122",
-      "manufacturer": "Terumo",
-      "notes": "Hydrophilic-coated guidewire",
-      "stabilityData": {
-        "tempRangeC": "4\u201340",
-        "maxPressurePsi": 300,
-        "maxPressureBar": 21,
-        "notes": "Hydrophilic"
-      }
-    },
-    {
       "category": "STENT",
-      "name": "Renzan\u2122",
+      "name": "Renzan™",
       "manufacturer": "Terumo",
       "notes": "Self-expanding peripheral stent",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Peripheral"
@@ -10524,23 +10440,11 @@ window.NV_DATA = {
     },
     {
       "category": "STENT",
-      "name": "Roadsaver\u2122",
-      "manufacturer": "Terumo",
-      "notes": "Carotid stent with emboli protection",
-      "stabilityData": {
-        "tempRangeC": "4\u201340",
-        "maxPressurePsi": 300,
-        "maxPressureBar": 21,
-        "notes": "Carotid"
-      }
-    },
-    {
-      "category": "STENT",
-      "name": "Destent\u2122",
+      "name": "Destent™",
       "manufacturer": "Terumo",
       "notes": "Peripheral stent",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Peripheral"
@@ -10548,59 +10452,23 @@ window.NV_DATA = {
     },
     {
       "category": "STENT",
-      "name": "Beamstent\u2122",
+      "name": "Beamstent™",
       "manufacturer": "Terumo",
       "notes": "Beam stent system",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Beam"
       }
     },
     {
-      "category": "COIL",
-      "name": "AZUR\u2122 HydroCoil",
-      "manufacturer": "Terumo",
-      "notes": "Hydrophilic-coated embolization coil",
-      "stabilityData": {
-        "tempRangeC": "4\u201340",
-        "maxPressurePsi": 300,
-        "maxPressureBar": 21,
-        "notes": "Embolization"
-      }
-    },
-    {
-      "category": "COIL",
-      "name": "AZUR\u2122 Framing Coil",
-      "manufacturer": "Terumo",
-      "notes": "Framing coil for aneurysms",
-      "stabilityData": {
-        "tempRangeC": "4\u201340",
-        "maxPressurePsi": 300,
-        "maxPressureBar": 21,
-        "notes": "Framing"
-      }
-    },
-    {
-      "category": "COIL",
-      "name": "AZUR\u2122 CX",
-      "manufacturer": "Terumo",
-      "notes": "Complex geometry coil",
-      "stabilityData": {
-        "tempRangeC": "4\u201340",
-        "maxPressurePsi": 300,
-        "maxPressureBar": 21,
-        "notes": "Complex"
-      }
-    },
-    {
       "category": "MICROSPHERE",
-      "name": "BioPearl\u2122",
+      "name": "BioPearl™",
       "manufacturer": "Terumo",
       "notes": "Biodegradable microspheres",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Embolotherapy"
@@ -10608,11 +10476,11 @@ window.NV_DATA = {
     },
     {
       "category": "MICROSPHERE",
-      "name": "Embosphere\u2122",
+      "name": "Embosphere™",
       "manufacturer": "Terumo",
       "notes": "Embolic microspheres",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Embolotherapy"
@@ -10620,11 +10488,11 @@ window.NV_DATA = {
     },
     {
       "category": "MICROSPHERE",
-      "name": "Spherex\u2122",
+      "name": "Spherex™",
       "manufacturer": "Terumo",
       "notes": "Calibrated microspheres",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Calibrated"
@@ -10632,23 +10500,11 @@ window.NV_DATA = {
     },
     {
       "category": "CLOSURE_DEVICE",
-      "name": "TR Band\u2122",
-      "manufacturer": "Terumo",
-      "notes": "Radial artery compression",
-      "stabilityData": {
-        "tempRangeC": "4\u201340",
-        "maxPressurePsi": 50,
-        "maxPressureBar": 3.4,
-        "notes": "Compression"
-      }
-    },
-    {
-      "category": "CLOSURE_DEVICE",
-      "name": "TR Band\u2122 Distal",
+      "name": "TR Band™ Distal",
       "manufacturer": "Terumo",
       "notes": "Distal radial compression",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 50,
         "maxPressureBar": 3.4,
         "notes": "Distal"
@@ -10656,35 +10512,23 @@ window.NV_DATA = {
     },
     {
       "category": "CLOSURE_DEVICE",
-      "name": "FemoSeal\u2122",
+      "name": "FemoSeal™",
       "manufacturer": "Terumo",
       "notes": "Femoral closure device",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Femoral"
       }
     },
     {
-      "category": "CLOSURE_DEVICE",
-      "name": "Angio-Seal\u2122",
-      "manufacturer": "Terumo",
-      "notes": "Angio-seal closure",
-      "stabilityData": {
-        "tempRangeC": "4\u201340",
-        "maxPressurePsi": 300,
-        "maxPressureBar": 21,
-        "notes": "Closure"
-      }
-    },
-    {
       "category": "SHEATH",
-      "name": "Glidesheath\u2122 5F",
+      "name": "Glidesheath™ 5F",
       "manufacturer": "Terumo",
       "notes": "5F introducer sheath",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Sheath"
@@ -10692,11 +10536,11 @@ window.NV_DATA = {
     },
     {
       "category": "SHEATH",
-      "name": "Glidesheath\u2122 6F",
+      "name": "Glidesheath™ 6F",
       "manufacturer": "Terumo",
       "notes": "6F introducer sheath",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Sheath"
@@ -10704,11 +10548,11 @@ window.NV_DATA = {
     },
     {
       "category": "SHEATH",
-      "name": "Glidesheath\u2122 8F",
+      "name": "Glidesheath™ 8F",
       "manufacturer": "Terumo",
       "notes": "8F introducer sheath",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Sheath"
@@ -10716,11 +10560,11 @@ window.NV_DATA = {
     },
     {
       "category": "SHEATH",
-      "name": "Destination\u2122 6F",
+      "name": "Destination™ 6F",
       "manufacturer": "Terumo",
       "notes": "6F destination sheath",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Destination"
@@ -10728,11 +10572,11 @@ window.NV_DATA = {
     },
     {
       "category": "SHEATH",
-      "name": "Destination\u2122 8F",
+      "name": "Destination™ 8F",
       "manufacturer": "Terumo",
       "notes": "8F destination sheath",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Destination"
@@ -10740,11 +10584,11 @@ window.NV_DATA = {
     },
     {
       "category": "SHEATH",
-      "name": "Rouen\u2122 7F",
+      "name": "Rouen™ 7F",
       "manufacturer": "Terumo",
       "notes": "7F long sheath",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Long"
@@ -10752,11 +10596,11 @@ window.NV_DATA = {
     },
     {
       "category": "SHEATH",
-      "name": "Flexor\u2122 Sheath",
+      "name": "Flexor™ Sheath",
       "manufacturer": "Terumo",
       "notes": "Flexible introducer sheath",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Flexible"
@@ -10764,11 +10608,11 @@ window.NV_DATA = {
     },
     {
       "category": "ACCESSORY",
-      "name": "Radifocus\u2122 Haemostasis Valve",
+      "name": "Radifocus™ Haemostasis Valve",
       "manufacturer": "Terumo",
       "notes": "Hemostasis valve",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Valve"
@@ -10776,11 +10620,11 @@ window.NV_DATA = {
     },
     {
       "category": "ACCESSORY",
-      "name": "Terumo\u2122 Manifold",
+      "name": "Terumo™ Manifold",
       "manufacturer": "Terumo",
       "notes": "Pressure manifold",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Manifold"
@@ -10788,11 +10632,11 @@ window.NV_DATA = {
     },
     {
       "category": "ACCESSORY",
-      "name": "Connector\u2122 Kit",
+      "name": "Connector™ Kit",
       "manufacturer": "Terumo",
       "notes": "Connection system",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Connector"
@@ -10800,11 +10644,11 @@ window.NV_DATA = {
     },
     {
       "category": "ACCESSORY",
-      "name": "Extension\u2122 Tube",
+      "name": "Extension™ Tube",
       "manufacturer": "Terumo",
       "notes": "Extension tubing",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Extension"
@@ -10812,11 +10656,11 @@ window.NV_DATA = {
     },
     {
       "category": "ACCESSORY",
-      "name": "Adapter\u2122 Set",
+      "name": "Adapter™ Set",
       "manufacturer": "Terumo",
       "notes": "Adapter set",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Adapter"
@@ -10824,14 +10668,926 @@ window.NV_DATA = {
     },
     {
       "category": "ABLATION_DEVICE",
-      "name": "Radiochoice\u2122",
+      "name": "Radiochoice™",
       "manufacturer": "Terumo",
       "notes": "Radiofrequency ablation system",
       "stabilityData": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "RF ablation"
+      }
+    },
+    {
+      "category": "SHEATH",
+      "name": "GLIDEACCESS System",
+      "manufacturer": "Terumo",
+      "odInch": null,
+      "idInch": 0.0525,
+      "odFr": null,
+      "idFr": 4,
+      "workingLengthCm": null,
+      "totalLengthCm": null,
+      "dmsoCompatible": null,
+      "notes": "Micro-access introducer kit, 4Fr/5Fr coaxial; includes 0.018\" x 40cm wire; introduces 0.035\"/0.038\" wires after 21G puncture. Source: terumois.com.",
+      "stabilityData": {
+        "tempRangeC": "4–40",
+        "maxPressurePsi": null,
+        "maxPressureBar": null,
+        "notes": "Store per IFU. Pressure rating not published on terumois.com."
+      }
+    },
+    {
+      "category": "SHEATH",
+      "name": "GLIDESHEATH Introducer Sheath",
+      "manufacturer": "Terumo",
+      "odInch": null,
+      "idInch": 0.087,
+      "odFr": null,
+      "idFr": 6,
+      "workingLengthCm": 16,
+      "totalLengthCm": 16,
+      "dmsoCompatible": null,
+      "notes": "Radial access sheath. Sheath ID 0.061\"-0.087\" by French size; tip ID 0.055\"-0.082\". Accepts 0.021\"/0.025\"/0.035\" wire by kit. Source: terumois.com.",
+      "stabilityData": {
+        "tempRangeC": "4–40",
+        "maxPressurePsi": null,
+        "maxPressureBar": null,
+        "notes": "Store per IFU. Pressure rating not published on terumois.com."
+      }
+    },
+    {
+      "category": "SHEATH",
+      "name": "GLIDESHEATH SLENDER Introducer Sheath",
+      "manufacturer": "Terumo",
+      "odInch": null,
+      "idInch": 0.0787,
+      "odFr": null,
+      "idFr": 6,
+      "workingLengthCm": 16,
+      "totalLengthCm": 16,
+      "dmsoCompatible": null,
+      "notes": "Hydrophilic thin-wall radial sheath, 5F/6F/7F, reduced outer profile and tapered tip to lower spasm and radial occlusion risk. Kit wires 0.021\"/0.025\". Source: terumois.com.",
+      "stabilityData": {
+        "tempRangeC": "4–40",
+        "maxPressurePsi": null,
+        "maxPressureBar": null,
+        "notes": "Store per IFU. Pressure rating not published on terumois.com."
+      }
+    },
+    {
+      "category": "SHEATH",
+      "name": "GLIDESHEATH SLENDER Tibial Pedal Kit",
+      "manufacturer": "Terumo",
+      "odInch": null,
+      "idInch": 0.0656,
+      "odFr": null,
+      "idFr": 5,
+      "workingLengthCm": 10,
+      "totalLengthCm": 10,
+      "dmsoCompatible": null,
+      "notes": "5Fr thin-wall kit for tibial pedal access in limb salvage; 0.021\" x 43cm wire, 4cm/7cm needles. Source: terumois.com.",
+      "stabilityData": {
+        "tempRangeC": "4–40",
+        "maxPressurePsi": null,
+        "maxPressureBar": null,
+        "notes": "Store per IFU. Pressure rating not published on terumois.com."
+      }
+    },
+    {
+      "category": "SHEATH",
+      "name": "PINNACLE DESTINATION Guiding Sheath",
+      "manufacturer": "Terumo",
+      "odInch": 0.109,
+      "idInch": 0.087,
+      "odFr": null,
+      "idFr": 6,
+      "workingLengthCm": 90,
+      "totalLengthCm": 90,
+      "dmsoCompatible": null,
+      "notes": "Guiding sheath for access and device delivery with shape retention in tortuous anatomy. Published ID/OD by size: 5Fr 0.076\"/0.098\"; 6Fr 0.087\"/0.109\"; 7Fr 0.101\"/0.122\"; 8Fr 0.115\"/0.136\". Lengths 45/65/90cm. Source: terumois.com.",
+      "stabilityData": {
+        "tempRangeC": "4–40",
+        "maxPressurePsi": null,
+        "maxPressureBar": null,
+        "notes": "Store per IFU. Pressure rating not published on terumois.com."
+      }
+    },
+    {
+      "category": "SHEATH",
+      "name": "PINNACLE Introducer Sheath",
+      "manufacturer": "Terumo",
+      "odInch": null,
+      "idInch": 0.0787,
+      "odFr": null,
+      "idFr": 6,
+      "workingLengthCm": 10,
+      "totalLengthCm": 10,
+      "dmsoCompatible": null,
+      "notes": "Kink-resistant femoral access sheath, 4-11F, 10cm or 25cm. Accepts 0.035\" (4Fr) or 0.038\" (5Fr+). Source: terumois.com.",
+      "stabilityData": {
+        "tempRangeC": "4–40",
+        "maxPressurePsi": null,
+        "maxPressureBar": null,
+        "notes": "Store per IFU. Pressure rating not published on terumois.com."
+      }
+    },
+    {
+      "category": "SHEATH",
+      "name": "PINNACLE PRECISION ACCESS SYSTEM Sheath",
+      "manufacturer": "Terumo",
+      "odInch": null,
+      "idInch": 0.0656,
+      "odFr": null,
+      "idFr": 5,
+      "workingLengthCm": null,
+      "totalLengthCm": null,
+      "dmsoCompatible": null,
+      "notes": "Micropuncture access kit, 4-8Fr (stiff in 4/5Fr), tapered needle for calcified or scarred arteries. 0.021\" wire. Source: terumois.com.",
+      "stabilityData": {
+        "tempRangeC": "4–40",
+        "maxPressurePsi": null,
+        "maxPressureBar": null,
+        "notes": "Store per IFU. Pressure rating not published on terumois.com."
+      }
+    },
+    {
+      "category": "SHEATH",
+      "name": "PINNACLE R/O II HiFlo Introducer Sheath",
+      "manufacturer": "Terumo",
+      "odInch": null,
+      "idInch": 0.0919,
+      "odFr": null,
+      "idFr": 7,
+      "workingLengthCm": 4,
+      "totalLengthCm": 4,
+      "dmsoCompatible": null,
+      "notes": "Short high-flow sheath, 6/7/8Fr, 4cm, 45-degree side-tube take-off. 0.038\" wire. Source: terumois.com.",
+      "stabilityData": {
+        "tempRangeC": "4–40",
+        "maxPressurePsi": null,
+        "maxPressureBar": null,
+        "notes": "Store per IFU. Pressure rating not published on terumois.com."
+      }
+    },
+    {
+      "category": "SHEATH",
+      "name": "PINNACLE R/O II Radiopaque Marker Introducer Sheath",
+      "manufacturer": "Terumo",
+      "odInch": null,
+      "idInch": 0.0787,
+      "odFr": null,
+      "idFr": 6,
+      "workingLengthCm": 10,
+      "totalLengthCm": 10,
+      "dmsoCompatible": null,
+      "notes": "Radiopaque-marker access sheath, 4-9Fr, 6/10/25cm. Accepts 0.035\" (4Fr) or 0.038\" (5-9Fr). Source: terumois.com.",
+      "stabilityData": {
+        "tempRangeC": "4–40",
+        "maxPressurePsi": null,
+        "maxPressureBar": null,
+        "notes": "Store per IFU. Pressure rating not published on terumois.com."
+      }
+    },
+    {
+      "category": "SHEATH",
+      "name": "PINNACLE TIF TIP Introducer Sheath",
+      "manufacturer": "Terumo",
+      "odInch": null,
+      "idInch": 0.0787,
+      "odFr": null,
+      "idFr": 6,
+      "workingLengthCm": 10,
+      "totalLengthCm": 10,
+      "dmsoCompatible": null,
+      "notes": "Total Integrated Fit tip for seamless wire-dilator-sheath transition, 5-8Fr, 10cm. Accepts 0.035\"/0.038\". Source: terumois.com.",
+      "stabilityData": {
+        "tempRangeC": "4–40",
+        "maxPressurePsi": null,
+        "maxPressureBar": null,
+        "notes": "Store per IFU. Pressure rating not published on terumois.com."
+      }
+    },
+    {
+      "category": "SHEATH",
+      "name": "R2P DESTINATION SLENDER Guiding Sheath",
+      "manufacturer": "Terumo",
+      "odInch": 0.1,
+      "idInch": 0.087,
+      "odFr": null,
+      "idFr": 6,
+      "workingLengthCm": 119,
+      "totalLengthCm": 119,
+      "dmsoCompatible": null,
+      "notes": "Thin-wall 6Fr guiding sheath for lower-extremity intervention via radial access. ID 0.087\" (2.2mm), OD 0.100\" (2.5mm). Lengths 75/85/95/105/119/149cm. Max wire 0.038\". Source: terumois.com.",
+      "stabilityData": {
+        "tempRangeC": "4–40",
+        "maxPressurePsi": null,
+        "maxPressureBar": null,
+        "notes": "Store per IFU. Pressure rating not published on terumois.com."
+      }
+    },
+    {
+      "category": "MICROCATHETER",
+      "name": "FINECROSS M3 Coronary Micro-Guide Catheter",
+      "manufacturer": "Terumo",
+      "odInch": 0.022,
+      "idInch": 0.018,
+      "odFr": 1.7,
+      "idFr": null,
+      "workingLengthCm": 150,
+      "totalLengthCm": 150,
+      "dmsoCompatible": null,
+      "notes": "Micro-guide catheter for wire support and crossability in complex coronary lesions. OD 2.5Fr proximal / 1.7Fr distal; ID 0.021\" proximal / 0.018\" distal. 0.014\" wire. Source: terumois.com.",
+      "stabilityData": {
+        "tempRangeC": "4–40",
+        "maxPressurePsi": null,
+        "maxPressureBar": null,
+        "notes": "Store per IFU. Pressure rating not published on terumois.com."
+      }
+    },
+    {
+      "category": "DIAGNOSTIC CATHETER",
+      "name": "GLIDECATH Hydrophilic Coated Catheter",
+      "manufacturer": "Terumo",
+      "odInch": 0.0656,
+      "idInch": 0.0433,
+      "odFr": 5,
+      "idFr": null,
+      "workingLengthCm": 100,
+      "totalLengthCm": 100,
+      "dmsoCompatible": null,
+      "notes": "Hydrophilic angiographic catheter for vessel-selective work. 4Fr ID 0.0405\"/0.0413\"; 5Fr 0.0433\"/0.0441\"; 5Fr XP 0.0472\"/0.0480\". 0.038\" wire. Source: terumois.com.",
+      "stabilityData": {
+        "tempRangeC": "4–40",
+        "maxPressurePsi": null,
+        "maxPressureBar": null,
+        "notes": "Store per IFU. Pressure rating not published on terumois.com."
+      }
+    },
+    {
+      "category": "GUIDING CATHETER",
+      "name": "HEARTRAIL III Guiding Catheter",
+      "manufacturer": "Terumo",
+      "odInch": 0.081,
+      "idInch": 0.071,
+      "odFr": 6,
+      "idFr": null,
+      "workingLengthCm": 100,
+      "totalLengthCm": 100,
+      "dmsoCompatible": null,
+      "notes": "Radial universal guiding catheter reaching both coronaries with one catheter. 5Fr OD 0.069\" ID 0.058\"; 6Fr OD 0.081\" ID 0.071\". Source: terumois.com.",
+      "stabilityData": {
+        "tempRangeC": "4–40",
+        "maxPressurePsi": null,
+        "maxPressureBar": null,
+        "notes": "Store per IFU. Pressure rating not published on terumois.com."
+      }
+    },
+    {
+      "category": "SUPPORT CATHETER",
+      "name": "NAVICROSS Support Catheter",
+      "manufacturer": "Terumo",
+      "odInch": 0.0547,
+      "idInch": null,
+      "odFr": null,
+      "idFr": null,
+      "workingLengthCm": 135,
+      "totalLengthCm": 135,
+      "dmsoCompatible": null,
+      "notes": "Double-braided peripheral support catheter with radiopaque markers. OD 0.85mm (0.018\" version) or 1.39mm (0.035\" version). Lengths 65/90/135/150cm. Source: terumois.com.",
+      "stabilityData": {
+        "tempRangeC": "4–40",
+        "maxPressurePsi": null,
+        "maxPressureBar": null,
+        "notes": "Store per IFU. Pressure rating not published on terumois.com."
+      }
+    },
+    {
+      "category": "DIAGNOSTIC CATHETER",
+      "name": "OPTITORQUE Diagnostic Catheter",
+      "manufacturer": "Terumo",
+      "odInch": 0.0787,
+      "idInch": null,
+      "odFr": 6,
+      "idFr": null,
+      "workingLengthCm": 100,
+      "totalLengthCm": 100,
+      "dmsoCompatible": null,
+      "notes": "Double-braided coronary diagnostic catheter with torque control for radial angiography. 5Fr (1.70mm) or 6Fr (2.00mm). Lengths 100/110cm. Lumen ID not published. Source: terumois.com.",
+      "stabilityData": {
+        "tempRangeC": "4–40",
+        "maxPressurePsi": null,
+        "maxPressureBar": null,
+        "notes": "Store per IFU. Pressure rating not published on terumois.com."
+      }
+    },
+    {
+      "category": "MICROCATHETER",
+      "name": "PG Pro Peripheral Microcatheter",
+      "manufacturer": "Terumo",
+      "odInch": 0.037,
+      "idInch": 0.027,
+      "odFr": 2.8,
+      "idFr": null,
+      "workingLengthCm": 165,
+      "totalLengthCm": 165,
+      "dmsoCompatible": null,
+      "notes": "Kink-resistant microcatheter for small tortuous vasculature. OD 2.8Fr (0.92/0.94mm), ID 0.027\". Lengths 140/165cm. Wire under 0.021\". Source: terumois.com.",
+      "stabilityData": {
+        "tempRangeC": "4–40",
+        "maxPressurePsi": null,
+        "maxPressureBar": null,
+        "notes": "Store per IFU. Pressure rating not published on terumois.com."
+      }
+    },
+    {
+      "category": "ASPIRATION CATHETER",
+      "name": "PRIORITYONE Aspiration Catheter",
+      "manufacturer": "Terumo",
+      "odInch": null,
+      "idInch": null,
+      "odFr": null,
+      "idFr": null,
+      "workingLengthCm": 140,
+      "totalLengthCm": 140,
+      "dmsoCompatible": null,
+      "notes": "Braided-shaft aspiration catheter with wire-style stylet for thrombus removal. 140cm; 0.014\" wire. Needs 6Fr guide ID over 0.070\" or 7Fr over 0.080\". Distal tip tube 9mm, RX segment 23cm. Source: terumois.com.",
+      "stabilityData": {
+        "tempRangeC": "4–40",
+        "maxPressurePsi": null,
+        "maxPressureBar": null,
+        "notes": "Store per IFU. Pressure rating not published on terumois.com."
+      }
+    },
+    {
+      "category": "MICROCATHETER",
+      "name": "PROGREAT ALPHA Microcatheter",
+      "manufacturer": "Terumo",
+      "odInch": 0.0264,
+      "idInch": 0.019,
+      "odFr": 2.0,
+      "idFr": null,
+      "workingLengthCm": 150,
+      "totalLengthCm": 150,
+      "dmsoCompatible": null,
+      "notes": "Thin-walled microcatheter for selective small-branch access in embolization. OD 2.0Fr distal / 2.7Fr proximal; ID 0.019\". Lengths 110/130/150cm. Max wire 0.016\". Source: terumois.com.",
+      "stabilityData": {
+        "tempRangeC": "4–40",
+        "maxPressurePsi": null,
+        "maxPressureBar": null,
+        "notes": "Store per IFU. Pressure rating not published on terumois.com."
+      }
+    },
+    {
+      "category": "MICROCATHETER",
+      "name": "PROGREAT LAMBDA Microcatheter",
+      "manufacturer": "Terumo",
+      "odInch": 0.0252,
+      "idInch": 0.019,
+      "odFr": 1.9,
+      "idFr": null,
+      "workingLengthCm": 165,
+      "totalLengthCm": 165,
+      "dmsoCompatible": null,
+      "notes": "Angled microcatheter for distal navigation and embolic delivery. OD 1.9Fr (0.64mm distal / 0.94mm proximal); ID 0.019\". Lengths 130/150/165cm. Max wire 0.016\". Source: terumois.com.",
+      "stabilityData": {
+        "tempRangeC": "4–40",
+        "maxPressurePsi": null,
+        "maxPressureBar": null,
+        "notes": "Store per IFU. Pressure rating not published on terumois.com."
+      }
+    },
+    {
+      "category": "MICROCATHETER",
+      "name": "PROGREAT Microcatheter",
+      "manufacturer": "Terumo",
+      "odInch": 0.0366,
+      "idInch": 0.027,
+      "odFr": 2.8,
+      "idFr": null,
+      "workingLengthCm": 150,
+      "totalLengthCm": 150,
+      "dmsoCompatible": null,
+      "notes": "Microcatheter for tortuous peripheral vasculature and embolic delivery. 2.4Fr ID 0.022\" (0.018\" wire); 2.7Fr ID 0.025\" (0.021\"); 2.8Fr ID 0.027\" (0.021\"). Lengths 110/130/150cm. Source: terumois.com.",
+      "stabilityData": {
+        "tempRangeC": "4–40",
+        "maxPressurePsi": null,
+        "maxPressureBar": null,
+        "notes": "Store per IFU. Pressure rating not published on terumois.com."
+      }
+    },
+    {
+      "category": "SUPPORT CATHETER",
+      "name": "R2P NAVICROSS Support Catheter",
+      "manufacturer": "Terumo",
+      "odInch": 0.0583,
+      "idInch": null,
+      "odFr": null,
+      "idFr": null,
+      "workingLengthCm": 200,
+      "totalLengthCm": 200,
+      "dmsoCompatible": null,
+      "notes": "Extra-long radial-to-peripheral support catheter, double-braided shaft with radiopaque markers. OD 1.48mm, 200cm, 0.035\" wire. Source: terumois.com.",
+      "stabilityData": {
+        "tempRangeC": "4–40",
+        "maxPressurePsi": null,
+        "maxPressureBar": null,
+        "notes": "Store per IFU. Pressure rating not published on terumois.com."
+      }
+    },
+    {
+      "category": "GUIDING CATHETER",
+      "name": "R2P SLENGUIDE Guiding Catheter",
+      "manufacturer": "Terumo",
+      "odInch": 0.0919,
+      "idInch": null,
+      "odFr": 7,
+      "idFr": null,
+      "workingLengthCm": 150,
+      "totalLengthCm": 150,
+      "dmsoCompatible": null,
+      "notes": "Slender-technology 7Fr guiding catheter with distal hydrophilic coating for radial-to-peripheral procedures. Lengths 120/150cm. Lumen ID not published. Source: terumois.com.",
+      "stabilityData": {
+        "tempRangeC": "4–40",
+        "maxPressurePsi": null,
+        "maxPressureBar": null,
+        "notes": "Store per IFU. Pressure rating not published on terumois.com."
+      }
+    },
+    {
+      "category": "PTA BALLOON",
+      "name": "CROSPERIO PTA Balloon Dilatation Catheter (0.014\")",
+      "manufacturer": "Terumo",
+      "odInch": null,
+      "idInch": null,
+      "odFr": null,
+      "idFr": 4,
+      "workingLengthCm": 150,
+      "totalLengthCm": 150,
+      "dmsoCompatible": null,
+      "notes": "Low-profile 0.014\" PTA balloon, RX and OTW. Balloon 1.5-4mm dia x 20-200mm. Catheter RX 150cm; OTW 65/150cm. 4Fr sheath. Rated burst pressure not published. Source: terumois.com.",
+      "stabilityData": {
+        "tempRangeC": "4–40",
+        "maxPressurePsi": null,
+        "maxPressureBar": null,
+        "notes": "Store per IFU. Pressure rating not published on terumois.com."
+      }
+    },
+    {
+      "category": "PTA BALLOON",
+      "name": "CROSSTELLA PTA Balloon Dilatation Catheter (0.018\")",
+      "manufacturer": "Terumo",
+      "odInch": null,
+      "idInch": null,
+      "odFr": null,
+      "idFr": 5,
+      "workingLengthCm": 200,
+      "totalLengthCm": 200,
+      "dmsoCompatible": null,
+      "notes": "Longest 0.018\" RX PTA balloon, built for radial-to-peripheral. Balloon 2-6mm dia x 20-200mm. Catheter 150/200cm. 4-5Fr sheath. Rated burst pressure not published. Source: terumois.com.",
+      "stabilityData": {
+        "tempRangeC": "4–40",
+        "maxPressurePsi": null,
+        "maxPressureBar": null,
+        "notes": "Store per IFU. Pressure rating not published on terumois.com."
+      }
+    },
+    {
+      "category": "PTA BALLOON",
+      "name": "METACROSS PTA Balloon Dilatation Catheter (0.035\")",
+      "manufacturer": "Terumo",
+      "odInch": null,
+      "idInch": null,
+      "odFr": null,
+      "idFr": 6,
+      "workingLengthCm": 135,
+      "totalLengthCm": 135,
+      "dmsoCompatible": null,
+      "notes": "0.035\" peripheral PTA balloon, RX and OTW, small balloon profile and high pushability. Balloon 3-12mm dia x 20-200mm. Catheter 65/90/135/200cm. 5-7Fr sheath. Rated burst pressure not published. Source: terumois.com.",
+      "stabilityData": {
+        "tempRangeC": "4–40",
+        "maxPressurePsi": null,
+        "maxPressureBar": null,
+        "notes": "Store per IFU. Pressure rating not published on terumois.com."
+      }
+    },
+    {
+      "category": "BALLOON",
+      "name": "TAKERU PTCA Balloon Dilatation Catheter",
+      "manufacturer": "Terumo",
+      "odInch": null,
+      "idInch": null,
+      "odFr": null,
+      "idFr": null,
+      "workingLengthCm": null,
+      "totalLengthCm": null,
+      "dmsoCompatible": null,
+      "notes": "Coronary PTCA balloon for crossing complex lesions and post-stent dilatation. Balloon 1.50-4.00mm dia x 6-21mm. Working length and rated burst pressure not published. Source: terumois.com.",
+      "stabilityData": {
+        "tempRangeC": "4–40",
+        "maxPressurePsi": null,
+        "maxPressureBar": null,
+        "notes": "Store per IFU. Pressure rating not published on terumois.com."
+      }
+    },
+    {
+      "category": "GUIDEWIRE",
+      "name": "GLIDEWIRE ADVANTAGE Hydrophilic Coated Guidewire",
+      "manufacturer": "Terumo",
+      "odInch": 0.035,
+      "idInch": null,
+      "odFr": null,
+      "idFr": null,
+      "workingLengthCm": 300,
+      "totalLengthCm": 300,
+      "dmsoCompatible": null,
+      "notes": "Hybrid nitinol hydrophilic peripheral wire; proximal pushability with distal trackability. 0.014\"/0.018\"/0.035\". Lengths 180/260/300cm. Angle tip; flexible tip 1cm (0.014\"/0.018\") or 5cm (0.035\"). Source: terumois.com.",
+      "stabilityData": {
+        "tempRangeC": "4–40",
+        "maxPressurePsi": null,
+        "maxPressureBar": null,
+        "notes": "Store per IFU. Pressure rating not published on terumois.com."
+      }
+    },
+    {
+      "category": "GUIDEWIRE",
+      "name": "GLIDEWIRE ADVANTAGE TRACK Peripheral Guidewire",
+      "manufacturer": "Terumo",
+      "odInch": 0.018,
+      "idInch": null,
+      "odFr": null,
+      "idFr": null,
+      "workingLengthCm": 300,
+      "totalLengthCm": 300,
+      "dmsoCompatible": null,
+      "notes": "Hydrophilic hybrid wire for above- and below-knee PAD/CLI. 0.014\"/0.018\", 180/300cm, 35-degree angle tip, 1cm flexible tip, 2cm gold coil. Source: terumois.com.",
+      "stabilityData": {
+        "tempRangeC": "4–40",
+        "maxPressurePsi": null,
+        "maxPressureBar": null,
+        "notes": "Store per IFU. Pressure rating not published on terumois.com."
+      }
+    },
+    {
+      "category": "GUIDEWIRE",
+      "name": "GLIDEWIRE Baby-J Hydrophilic Coated Guidewire",
+      "manufacturer": "Terumo",
+      "odInch": 0.035,
+      "idInch": null,
+      "odFr": null,
+      "idFr": null,
+      "workingLengthCm": 260,
+      "totalLengthCm": 260,
+      "dmsoCompatible": null,
+      "notes": "Hydrophilic wire for transradial access; tracks small radial arteries while avoiding side branches. 0.035\", 180/260cm, 1.5mm J-tip, 3cm taper. Source: terumois.com.",
+      "stabilityData": {
+        "tempRangeC": "4–40",
+        "maxPressurePsi": null,
+        "maxPressureBar": null,
+        "notes": "Store per IFU. Pressure rating not published on terumois.com."
+      }
+    },
+    {
+      "category": "GUIDEWIRE",
+      "name": "GLIDEWIRE Gold Hydrophilic Coated Guidewire",
+      "manufacturer": "Terumo",
+      "odInch": 0.018,
+      "idInch": null,
+      "odFr": null,
+      "idFr": null,
+      "workingLengthCm": 300,
+      "totalLengthCm": 300,
+      "dmsoCompatible": null,
+      "notes": "Hydrophilic wire with 1mm distal gold band for visibility in smaller vessels. 0.018\", 180/300cm, 45- or 70-degree angle tip, 3cm flexible tip. Source: terumois.com.",
+      "stabilityData": {
+        "tempRangeC": "4–40",
+        "maxPressurePsi": null,
+        "maxPressureBar": null,
+        "notes": "Store per IFU. Pressure rating not published on terumois.com."
+      }
+    },
+    {
+      "category": "GUIDEWIRE",
+      "name": "GLIDEWIRE GT Hydrophilic Coated Guidewire",
+      "manufacturer": "Terumo",
+      "odInch": 0.018,
+      "idInch": null,
+      "odFr": null,
+      "idFr": null,
+      "workingLengthCm": 200,
+      "totalLengthCm": 200,
+      "dmsoCompatible": null,
+      "notes": "Torque-control wire for tortuous, complex anatomy. 0.016\"/0.018\", 180/200cm. Straight/shapeable, 45, 90, or 90/60 double angle. Grind 25cm, radiopaque 2cm. Source: terumois.com.",
+      "stabilityData": {
+        "tempRangeC": "4–40",
+        "maxPressurePsi": null,
+        "maxPressureBar": null,
+        "notes": "Store per IFU. Pressure rating not published on terumois.com."
+      }
+    },
+    {
+      "category": "GUIDEWIRE",
+      "name": "GLIDEWIRE GT-R Hydrophilic Coated Guidewire",
+      "manufacturer": "Terumo",
+      "odInch": 0.018,
+      "idInch": null,
+      "odFr": null,
+      "idFr": null,
+      "workingLengthCm": 220,
+      "totalLengthCm": 220,
+      "dmsoCompatible": null,
+      "notes": "Super-elastic nitinol hydrophilic wire for durability and vessel selectivity. 0.016\"/0.018\", 180/220cm. Shapeable or pre-shaped 45/90/double angle. Taper 25-30cm. Source: terumois.com.",
+      "stabilityData": {
+        "tempRangeC": "4–40",
+        "maxPressurePsi": null,
+        "maxPressureBar": null,
+        "notes": "Store per IFU. Pressure rating not published on terumois.com."
+      }
+    },
+    {
+      "category": "ACCESSORY",
+      "name": "GLIDEWIRE TORQUE Device",
+      "manufacturer": "Terumo",
+      "odInch": null,
+      "idInch": null,
+      "odFr": null,
+      "idFr": null,
+      "workingLengthCm": null,
+      "totalLengthCm": null,
+      "dmsoCompatible": null,
+      "notes": "Torque device with tactile ridges for gripping and steering a guidewire. Fits 0.010\"-0.038\" wires. Source: terumois.com.",
+      "stabilityData": {
+        "tempRangeC": "4–40",
+        "maxPressurePsi": null,
+        "maxPressureBar": null,
+        "notes": "Store per IFU. Pressure rating not published on terumois.com."
+      }
+    },
+    {
+      "category": "GUIDEWIRE",
+      "name": "R2P GLIDEWIRE ADVANTAGE Hydrophilic Coated Guidewire",
+      "manufacturer": "Terumo",
+      "odInch": 0.035,
+      "idInch": null,
+      "odFr": null,
+      "idFr": null,
+      "workingLengthCm": 450,
+      "totalLengthCm": 450,
+      "dmsoCompatible": null,
+      "notes": "Extended-length GLIDEWIRE Advantage for radial-to-peripheral access. 0.018\" in 400/450/500cm; 0.035\" in 350/400/450cm. Distal GLIDEWIRE section 25cm. Source: terumois.com.",
+      "stabilityData": {
+        "tempRangeC": "4–40",
+        "maxPressurePsi": null,
+        "maxPressureBar": null,
+        "notes": "Store per IFU. Pressure rating not published on terumois.com."
+      }
+    },
+    {
+      "category": "MICROWIRE",
+      "name": "RUNTHROUGH NS Extra Floppy Coronary Guidewire",
+      "manufacturer": "Terumo",
+      "odInch": 0.014,
+      "idInch": null,
+      "odFr": null,
+      "idFr": null,
+      "workingLengthCm": 300,
+      "totalLengthCm": 300,
+      "dmsoCompatible": null,
+      "notes": "Soft atraumatic nitinol core-to-tip coronary wire. 0.014\", 180/300cm, straight tip, 3cm tip radiopacity. 150cm extension available. Source: terumois.com.",
+      "stabilityData": {
+        "tempRangeC": "4–40",
+        "maxPressurePsi": null,
+        "maxPressureBar": null,
+        "notes": "Store per IFU. Pressure rating not published on terumois.com."
+      }
+    },
+    {
+      "category": "MICROWIRE",
+      "name": "RUNTHROUGH NS HYPERCOAT Coronary Guidewire",
+      "manufacturer": "Terumo",
+      "odInch": 0.014,
+      "idInch": null,
+      "odFr": null,
+      "idFr": null,
+      "workingLengthCm": 300,
+      "totalLengthCm": 300,
+      "dmsoCompatible": null,
+      "notes": "Enhanced-hydrophilic escalation wire for tortuous distal coronary lesions. 0.014\", 180/300cm, straight tip, 3cm radiopacity, 1g tip weight. Source: terumois.com.",
+      "stabilityData": {
+        "tempRangeC": "4–40",
+        "maxPressurePsi": null,
+        "maxPressureBar": null,
+        "notes": "Store per IFU. Pressure rating not published on terumois.com."
+      }
+    },
+    {
+      "category": "MICROWIRE",
+      "name": "RUNTHROUGH NS IZANAI Coronary Guidewire",
+      "manufacturer": "Terumo",
+      "odInch": 0.014,
+      "idInch": null,
+      "odFr": null,
+      "idFr": null,
+      "workingLengthCm": 300,
+      "totalLengthCm": 300,
+      "dmsoCompatible": null,
+      "notes": "Soft atraumatic low-tip-weight wire with enhanced hydrophilic coating for tortuous or tight stenotic lesions. 0.014\", 180/300cm, 3cm radiopacity. Source: terumois.com.",
+      "stabilityData": {
+        "tempRangeC": "4–40",
+        "maxPressurePsi": null,
+        "maxPressureBar": null,
+        "notes": "Store per IFU. Pressure rating not published on terumois.com."
+      }
+    },
+    {
+      "category": "COIL",
+      "name": "AZUR CX Peripheral Coil System",
+      "manufacturer": "Terumo",
+      "odInch": 0.018,
+      "idInch": null,
+      "odFr": null,
+      "idFr": null,
+      "workingLengthCm": null,
+      "totalLengthCm": null,
+      "dmsoCompatible": null,
+      "notes": "Hydrogel-coated detachable coil for controlled mechanical occlusion. 0.018\" system loops 2-20mm; 0.035\" system 4-20mm. Delivery microcatheter ID 0.019\"-0.027\" (0.018\" system) or 0.041\"-0.047\" (0.035\" system). Repositionable 30min / 20min. Source: terumois.com.",
+      "stabilityData": {
+        "tempRangeC": "4–40",
+        "maxPressurePsi": null,
+        "maxPressureBar": null,
+        "notes": "Store per IFU. Pressure rating not published on terumois.com."
+      }
+    },
+    {
+      "category": "COIL",
+      "name": "AZUR Framing Coil System",
+      "manufacturer": "Terumo",
+      "odInch": 0.018,
+      "idInch": null,
+      "odFr": null,
+      "idFr": null,
+      "workingLengthCm": null,
+      "totalLengthCm": null,
+      "dmsoCompatible": null,
+      "notes": "Detachable framing coil building a 3D scaffold to anchor the mass and prevent migration before filling coils. Diameters 8/10/14/20mm, lengths 20/26/34/50cm. 0.018\" and 0.035\" systems. Source: terumois.com.",
+      "stabilityData": {
+        "tempRangeC": "4–40",
+        "maxPressurePsi": null,
+        "maxPressureBar": null,
+        "notes": "Store per IFU. Pressure rating not published on terumois.com."
+      }
+    },
+    {
+      "category": "COIL",
+      "name": "AZUR HYDROPACK Peripheral Coil System",
+      "manufacturer": "Terumo",
+      "odInch": 0.018,
+      "idInch": null,
+      "odFr": null,
+      "idFr": null,
+      "workingLengthCm": null,
+      "totalLengthCm": null,
+      "dmsoCompatible": null,
+      "notes": "Soft hydrogel coil pack for endovascular embolization with durable occlusion. Lengths 5/10/20/35/50/60cm. Microcatheter ID 0.021\"-0.027\" (Progreat 2.4Fr / 2.8Fr). Coil diameters not published. Source: terumois.com.",
+      "stabilityData": {
+        "tempRangeC": "4–40",
+        "maxPressurePsi": null,
+        "maxPressureBar": null,
+        "notes": "Store per IFU. Pressure rating not published on terumois.com."
+      }
+    },
+    {
+      "category": "COIL",
+      "name": "AZUR Peripheral HydroCoil Embolization System",
+      "manufacturer": "Terumo",
+      "odInch": 0.018,
+      "idInch": null,
+      "odFr": null,
+      "idFr": null,
+      "workingLengthCm": null,
+      "totalLengthCm": null,
+      "dmsoCompatible": null,
+      "notes": "Hydrogel-coated platinum coil, stated ~5x (0.018\") and 4x (0.035\") the filling volume of same-size bare platinum. Diameters 2-20mm, lengths 2-30cm, detachable and pushable. MR conditional to 3T. Source: terumois.com.",
+      "stabilityData": {
+        "tempRangeC": "4–40",
+        "maxPressurePsi": null,
+        "maxPressureBar": null,
+        "notes": "Store per IFU. Pressure rating not published on terumois.com."
+      }
+    },
+    {
+      "category": "EMBOLIC AGENT",
+      "name": "AZUR Vascular Plug",
+      "manufacturer": "Terumo",
+      "odInch": null,
+      "idInch": null,
+      "odFr": null,
+      "idFr": null,
+      "workingLengthCm": null,
+      "totalLengthCm": null,
+      "dmsoCompatible": null,
+      "notes": "Microvascular plug for selective arterial occlusion (splenic embolization, hemorrhage control, PAVM). Small 5mm OD for 2.5-4.5mm vessel; Medium 8mm for 4.5-6.5mm; Large 10mm for 6.5-8mm. Delivered via PG Pro up to 165cm. Source: terumois.com.",
+      "stabilityData": {
+        "tempRangeC": "4–40",
+        "maxPressurePsi": null,
+        "maxPressureBar": null,
+        "notes": "Store per IFU. Pressure rating not published on terumois.com."
+      }
+    },
+    {
+      "category": "MICROSPHERE",
+      "name": "HYDROPEARL Microspheres",
+      "manufacturer": "Terumo",
+      "odInch": null,
+      "idInch": null,
+      "odFr": null,
+      "idFr": null,
+      "workingLengthCm": null,
+      "totalLengthCm": null,
+      "dmsoCompatible": null,
+      "notes": "PEG microspheres for hypervascular tumors, uterine fibroids, AVMs and prostatic arteries in BPH. Sizes 75, 200, 400, 600, 800, 1100 micron. 75-400 via PROGREAT 2.0-2.8F or GLIDECATH 4.0F; 600 via 2.4F+; 800 via 2.7F+; 1100 via GLIDECATH 4.0F only. Source: terumois.com.",
+      "stabilityData": {
+        "tempRangeC": "4–40",
+        "maxPressurePsi": null,
+        "maxPressureBar": null,
+        "notes": "Store per IFU. Pressure rating not published on terumois.com."
+      }
+    },
+    {
+      "category": "VASCULAR CLOSURE DEVICE",
+      "name": "ANGIO-SEAL VIP Vascular Closure Device",
+      "manufacturer": "Terumo",
+      "odInch": null,
+      "idInch": 0.105,
+      "odFr": null,
+      "idFr": 8,
+      "workingLengthCm": null,
+      "totalLengthCm": null,
+      "dmsoCompatible": null,
+      "notes": "Active closure sealing the arteriotomy from inside for rapid hemostasis and same-day discharge. 6Fr (0.035\" wire) and 8Fr (0.038\" wire). Source: terumois.com.",
+      "stabilityData": {
+        "tempRangeC": "4–40",
+        "maxPressurePsi": null,
+        "maxPressureBar": null,
+        "notes": "Store per IFU. Pressure rating not published on terumois.com."
+      }
+    },
+    {
+      "category": "VASCULAR CLOSURE DEVICE",
+      "name": "TR BAND Radial Compression Device",
+      "manufacturer": "Terumo",
+      "odInch": null,
+      "idInch": null,
+      "odFr": null,
+      "idFr": null,
+      "workingLengthCm": null,
+      "totalLengthCm": null,
+      "dmsoCompatible": null,
+      "notes": "Dual-balloon band for precise radial artery compression after transradial access. Regular 24cm, Large 29cm. Source: terumois.com.",
+      "stabilityData": {
+        "tempRangeC": "4–40",
+        "maxPressurePsi": null,
+        "maxPressureBar": null,
+        "notes": "Store per IFU. Pressure rating not published on terumois.com."
+      }
+    },
+    {
+      "category": "PERIPHERAL STENT",
+      "name": "R2P MISAGO RX Self-Expanding Peripheral Stent",
+      "manufacturer": "Terumo",
+      "odInch": null,
+      "idInch": null,
+      "odFr": null,
+      "idFr": 6,
+      "workingLengthCm": 200,
+      "totalLengthCm": 200,
+      "dmsoCompatible": null,
+      "notes": "Self-expanding SFA and proximal popliteal stent for RVD 4-7mm, lesion length to 150mm. Stent 6-8mm dia x 40-150mm. 6Fr sheath, 200cm delivery system. Source: terumois.com.",
+      "stabilityData": {
+        "tempRangeC": "4–40",
+        "maxPressurePsi": null,
+        "maxPressureBar": null,
+        "notes": "Store per IFU. Pressure rating not published on terumois.com."
+      }
+    },
+    {
+      "category": "STENT",
+      "name": "ROADSAVER Carotid Stent System",
+      "manufacturer": "Terumo",
+      "odInch": null,
+      "idInch": null,
+      "odFr": null,
+      "idFr": null,
+      "workingLengthCm": 143,
+      "totalLengthCm": 143,
+      "dmsoCompatible": null,
+      "notes": "Dual-layer micro-mesh carotid stent restoring flow while containing plaque in patients at elevated surgical risk. Stent 5-10mm dia x 16-40mm. 143cm delivery system. Source: terumois.com.",
+      "stabilityData": {
+        "tempRangeC": "4–40",
+        "maxPressurePsi": null,
+        "maxPressureBar": null,
+        "notes": "Store per IFU. Pressure rating not published on terumois.com."
       }
     }
   ],
@@ -10841,7 +11597,7 @@ window.NV_DATA = {
       "primaryCategory": "AORTIC STENT GRAFT",
       "compatible": "Sentrant 18F",
       "compatibleCategory": "SHEATH",
-      "citation": "Endurant II IFU \u2014 18F delivery system requires 18F sheath",
+      "citation": "Endurant II IFU — 18F delivery system requires 18F sheath",
       "status": "VALIDATED"
     },
     {
@@ -10849,7 +11605,7 @@ window.NV_DATA = {
       "primaryCategory": "PTA BALLOON",
       "compatible": "6F Sheath",
       "compatibleCategory": "SHEATH",
-      "citation": "IN.PACT IFU \u2014 6mm balloon requires 6F sheath",
+      "citation": "IN.PACT IFU — 6mm balloon requires 6F sheath",
       "status": "VALIDATED"
     },
     {
@@ -10857,7 +11613,7 @@ window.NV_DATA = {
       "primaryCategory": "EPD",
       "compatible": "Navien A+ 072",
       "compatibleCategory": "GUIDING CATHETER",
-      "citation": "SpiderFX IFU \u2014 Requires 0.066\" min ID recovery catheter",
+      "citation": "SpiderFX IFU — Requires 0.066\" min ID recovery catheter",
       "status": "VALIDATED"
     },
     {
@@ -10865,7 +11621,7 @@ window.NV_DATA = {
       "primaryCategory": "VENOUS CLOSURE",
       "compatible": "7F Sheath",
       "compatibleCategory": "SHEATH",
-      "citation": "VenaSeal IFU \u2014 Requires 7F introducer",
+      "citation": "VenaSeal IFU — Requires 7F introducer",
       "status": "VALIDATED"
     },
     {
@@ -10873,7 +11629,7 @@ window.NV_DATA = {
       "primaryCategory": "BALLOON GUIDE CATHETER",
       "compatible": "8F Sheath",
       "compatibleCategory": "SHEATH",
-      "citation": "Cello IFU \u2014 Requires \u22658F introducer",
+      "citation": "Cello IFU — Requires ≥8F introducer",
       "status": "VALIDATED"
     },
     {
@@ -10881,7 +11637,7 @@ window.NV_DATA = {
       "primaryCategory": "GUIDING CATHETER",
       "compatible": "Solitaire X 6mm",
       "compatibleCategory": "STENT RETRIEVER",
-      "citation": "Arc IFU \u2014 Optimized for stent retriever delivery",
+      "citation": "Arc IFU — Optimized for stent retriever delivery",
       "status": "VALIDATED"
     },
     {
@@ -10889,7 +11645,7 @@ window.NV_DATA = {
       "primaryCategory": "STENT",
       "compatible": "Flexor Shuttle 6F",
       "compatibleCategory": "SHEATH",
-      "citation": "Zilver PTX IFU \u2014 Compatible with 6F sheaths",
+      "citation": "Zilver PTX IFU — Compatible with 6F sheaths",
       "status": "VALIDATED"
     },
     {
@@ -10897,7 +11653,7 @@ window.NV_DATA = {
       "primaryCategory": "PTA BALLOON",
       "compatible": "Flexor Shuttle 6F",
       "compatibleCategory": "SHEATH",
-      "citation": "Advance 35LP IFU \u2014 10mm balloon requires 6F access",
+      "citation": "Advance 35LP IFU — 10mm balloon requires 6F access",
       "status": "VALIDATED"
     },
     {
@@ -10905,7 +11661,7 @@ window.NV_DATA = {
       "primaryCategory": "FLOW DIVERTER",
       "compatible": "Marksman",
       "compatibleCategory": "MICROCATHETER",
-      "citation": "Pipeline Flex IFU \u2014 Requires 0.027\" ID microcatheter",
+      "citation": "Pipeline Flex IFU — Requires 0.027\" ID microcatheter",
       "status": "VALIDATED"
     },
     {
@@ -10913,7 +11669,7 @@ window.NV_DATA = {
       "primaryCategory": "STENT RETRIEVER",
       "compatible": "Phenom 17",
       "compatibleCategory": "MICROCATHETER",
-      "citation": "Solitaire X IFU \u2014 3mm model compatible with 0.017\" microcatheters",
+      "citation": "Solitaire X IFU — 3mm model compatible with 0.017\" microcatheters",
       "status": "VALIDATED"
     },
     {
@@ -10921,7 +11677,7 @@ window.NV_DATA = {
       "primaryCategory": "GUIDING CATHETER",
       "compatible": "RIST Guide 071",
       "compatibleCategory": "GUIDING CATHETER",
-      "citation": "RIST IFU \u2014 Select catheter hosted in RIST Guide",
+      "citation": "RIST IFU — Select catheter hosted in RIST Guide",
       "status": "VALIDATED"
     },
     {
@@ -10929,7 +11685,7 @@ window.NV_DATA = {
       "primaryCategory": "STENT",
       "compatible": "Prowler Select Plus",
       "compatibleCategory": "MICROCATHETER",
-      "citation": "Enterprise 2 IFU \u2014 Requires 0.021\" ID microcatheter",
+      "citation": "Enterprise 2 IFU — Requires 0.021\" ID microcatheter",
       "status": "VALIDATED"
     },
     {
@@ -10937,7 +11693,7 @@ window.NV_DATA = {
       "primaryCategory": "STENT RETRIEVER",
       "compatible": "Prowler Select Plus",
       "compatibleCategory": "MICROCATHETER",
-      "citation": "EmboTrap III IFU \u2014 Compatible with 0.021\" ID catheters",
+      "citation": "EmboTrap III IFU — Compatible with 0.021\" ID catheters",
       "status": "VALIDATED"
     },
     {
@@ -10945,7 +11701,7 @@ window.NV_DATA = {
       "primaryCategory": "COIL",
       "compatible": "Prowler Select LP",
       "compatibleCategory": "MICROCATHETER",
-      "citation": "Galaxy G3 IFU \u2014 Optimized for 0.0165\" ID microcatheters",
+      "citation": "Galaxy G3 IFU — Optimized for 0.0165\" ID microcatheters",
       "status": "VALIDATED"
     },
     {
@@ -10953,7 +11709,7 @@ window.NV_DATA = {
       "primaryCategory": "ASPIRATION CATHETER",
       "compatible": "Cerebase DA",
       "compatibleCategory": "SHEATH",
-      "citation": "Cerenovus Access IFU \u2014 CereGlide 71 hosted in Cerebase DA",
+      "citation": "Cerenovus Access IFU — CereGlide 71 hosted in Cerebase DA",
       "status": "VALIDATED"
     },
     {
@@ -10961,7 +11717,7 @@ window.NV_DATA = {
       "primaryCategory": "ASPIRATION CATHETER",
       "compatible": "AXS Infinity LS Plus",
       "compatibleCategory": "SHEATH",
-      "citation": "Vecta IFU \u2014 Compatible with 0.091\" ID long sheaths",
+      "citation": "Vecta IFU — Compatible with 0.091\" ID long sheaths",
       "status": "VALIDATED"
     },
     {
@@ -10969,7 +11725,7 @@ window.NV_DATA = {
       "primaryCategory": "STENT",
       "compatible": "Excelsior SL-10",
       "compatibleCategory": "MICROCATHETER",
-      "citation": "Neuroform Atlas IFU \u2014 Requires 0.0165\" ID microcatheter",
+      "citation": "Neuroform Atlas IFU — Requires 0.0165\" ID microcatheter",
       "status": "VALIDATED"
     },
     {
@@ -10977,7 +11733,7 @@ window.NV_DATA = {
       "primaryCategory": "STENT RETRIEVER",
       "compatible": "Excelsior XT-27",
       "compatibleCategory": "MICROCATHETER",
-      "citation": "Trevo NXT IFU \u2014 6mm model requires 0.027\" ID microcatheter",
+      "citation": "Trevo NXT IFU — 6mm model requires 0.027\" ID microcatheter",
       "status": "VALIDATED"
     },
     {
@@ -10985,7 +11741,7 @@ window.NV_DATA = {
       "primaryCategory": "COIL",
       "compatible": "Excelsior SL-10",
       "compatibleCategory": "MICROCATHETER",
-      "citation": "Target Coil IFU \u2014 Optimized for 0.0165\" ID microcatheters",
+      "citation": "Target Coil IFU — Optimized for 0.0165\" ID microcatheters",
       "status": "VALIDATED"
     },
     {
@@ -10993,23 +11749,23 @@ window.NV_DATA = {
       "primaryCategory": "RADIOEMBOLIZATION",
       "compatible": "TruSelect 2.0",
       "compatibleCategory": "MICROCATHETER",
-      "citation": "TheraSphere IFU \u2014 Compatible with 2.0F microcatheters",
+      "citation": "TheraSphere IFU — Compatible with 2.0F microcatheters",
       "status": "VALIDATED"
     },
     {
-      "primary": "Embozene 400\u00b5m",
+      "primary": "Embozene 400µm",
       "primaryCategory": "EMBOLIC AGENT",
       "compatible": "TruSelect 2.0",
       "compatibleCategory": "MICROCATHETER",
-      "citation": "Embozene IFU \u2014 Green spheres require min 0.015\" ID",
+      "citation": "Embozene IFU — Green spheres require min 0.015\" ID",
       "status": "VALIDATED"
     },
     {
-      "primary": "Embozene 900\u00b5m",
+      "primary": "Embozene 900µm",
       "primaryCategory": "EMBOLIC AGENT",
       "compatible": "TruSelect 2.6",
       "compatibleCategory": "MICROCATHETER",
-      "citation": "Embozene IFU \u2014 Teal spheres require min 0.025\" ID",
+      "citation": "Embozene IFU — Teal spheres require min 0.025\" ID",
       "status": "VALIDATED"
     },
     {
@@ -11017,7 +11773,7 @@ window.NV_DATA = {
       "primaryCategory": "CRYO-ABLATION NEEDLE",
       "compatible": "Visual-ICE",
       "compatibleCategory": "SYSTEM",
-      "citation": "Visual-ICE IFU \u2014 17G needle compatibility",
+      "citation": "Visual-ICE IFU — 17G needle compatibility",
       "status": "VALIDATED"
     },
     {
@@ -11025,43 +11781,43 @@ window.NV_DATA = {
       "primaryCategory": "PTA BALLOON",
       "compatible": "6F Sheath",
       "compatibleCategory": "SHEATH",
-      "citation": "Mustang IFU \u2014 10mm balloon requires 6F sheath",
+      "citation": "Mustang IFU — 10mm balloon requires 6F sheath",
       "status": "VALIDATED"
     },
     {
       "primary": "Wingspan Stent",
       "compatible": "Excelsior XT-27",
-      "citation": "Wingspan IFU \u2014 Requires 0.027\" ID delivery microcatheter.",
+      "citation": "Wingspan IFU — Requires 0.027\" ID delivery microcatheter.",
       "status": "VALIDATED"
     },
     {
       "primary": "Surpass Streamline",
       "compatible": "Excelsior XT-27",
-      "citation": "Surpass Streamline IFU \u2014 Requires large-bore delivery aids.",
+      "citation": "Surpass Streamline IFU — Requires large-bore delivery aids.",
       "status": "VALIDATED"
     },
     {
       "primary": "Surpass Elite",
       "compatible": "Excelsior XT-27",
-      "citation": "Surpass Elite IFU \u2014 Optimized for 0.027\" ID microcatheters.",
+      "citation": "Surpass Elite IFU — Optimized for 0.027\" ID microcatheters.",
       "status": "VALIDATED"
     },
     {
       "primary": "Target 3D",
       "compatible": "Excelsior SL-10",
-      "citation": "Target Coil IFU \u2014 Compatible with 0.0165\"+ ID microcatheters.",
+      "citation": "Target Coil IFU — Compatible with 0.0165\"+ ID microcatheters.",
       "status": "VALIDATED"
     },
     {
       "primary": "Target Helical",
       "compatible": "Excelsior SL-10",
-      "citation": "Target Coil IFU \u2014 Compatible with 0.0165\"+ ID microcatheters.",
+      "citation": "Target Coil IFU — Compatible with 0.0165\"+ ID microcatheters.",
       "status": "VALIDATED"
     },
     {
       "primary": "Target Tetra",
       "compatible": "Excelsior SL-10",
-      "citation": "Target Tetra IFU \u2014 Optimized for low-profile delivery.",
+      "citation": "Target Tetra IFU — Optimized for low-profile delivery.",
       "status": "VALIDATED"
     },
     {
@@ -11069,7 +11825,7 @@ window.NV_DATA = {
       "primaryCategory": "STENT",
       "compatible": "6F Sheath",
       "compatibleCategory": "SHEATH",
-      "citation": "Innova IFU \u2014 6F delivery system compatibility",
+      "citation": "Innova IFU — 6F delivery system compatibility",
       "status": "VALIDATED"
     },
     {
@@ -11077,7 +11833,7 @@ window.NV_DATA = {
       "primaryCategory": "STENT",
       "compatible": "6F Sheath",
       "compatibleCategory": "SHEATH",
-      "citation": "Epic IFU \u2014 6F delivery system compatibility",
+      "citation": "Epic IFU — 6F delivery system compatibility",
       "status": "VALIDATED"
     },
     {
@@ -11085,7 +11841,7 @@ window.NV_DATA = {
       "primaryCategory": "COIL",
       "compatible": "Renegade HI-FLO",
       "compatibleCategory": "MICROCATHETER",
-      "citation": "EMBOLD IFU \u2014 Compatible with 0.027\" ID microcatheters",
+      "citation": "EMBOLD IFU — Compatible with 0.027\" ID microcatheters",
       "status": "VALIDATED"
     },
     {
@@ -11093,7 +11849,7 @@ window.NV_DATA = {
       "primaryCategory": "ASPIRATION CATHETER",
       "compatible": "12F Sheath",
       "compatibleCategory": "SHEATH",
-      "citation": "Penumbra Indigo IFU \u2014 Requires 12F sheath or 14F guide",
+      "citation": "Penumbra Indigo IFU — Requires 12F sheath or 14F guide",
       "status": "VALIDATED"
     },
     {
@@ -11101,7 +11857,7 @@ window.NV_DATA = {
       "primaryCategory": "ASPIRATION CATHETER",
       "compatible": "8F Sheath",
       "compatibleCategory": "SHEATH",
-      "citation": "Penumbra Indigo IFU \u2014 Requires 8F sheath or 10F guide",
+      "citation": "Penumbra Indigo IFU — Requires 8F sheath or 10F guide",
       "status": "VALIDATED"
     },
     {
@@ -11109,7 +11865,7 @@ window.NV_DATA = {
       "primaryCategory": "ASPIRATION CATHETER",
       "compatible": "6F Sheath",
       "compatibleCategory": "SHEATH",
-      "citation": "Penumbra Indigo IFU \u2014 Requires 6F sheath or 8F guide",
+      "citation": "Penumbra Indigo IFU — Requires 6F sheath or 8F guide",
       "status": "VALIDATED"
     },
     {
@@ -11117,37 +11873,37 @@ window.NV_DATA = {
       "primaryCategory": "COIL",
       "compatible": "Lantern",
       "compatibleCategory": "MICROCATHETER",
-      "citation": "Penumbra Embolization IFU \u2014 Optimized for .025\" ID delivery",
+      "citation": "Penumbra Embolization IFU — Optimized for .025\" ID delivery",
       "status": "VALIDATED"
     },
     {
       "primary": "Interlock-18",
       "compatible": "Renegade HI-FLO",
-      "citation": "Interlock IFU \u2014 Requires 0.021\"+ ID microcatheter.",
+      "citation": "Interlock IFU — Requires 0.021\"+ ID microcatheter.",
       "status": "VALIDATED"
     },
     {
       "primary": "Interlock-35",
       "compatible": "Imager II 5F",
-      "citation": "Interlock IFU \u2014 Requires 0.035\"+ ID catheter.",
+      "citation": "Interlock IFU — Requires 0.035\"+ ID catheter.",
       "status": "VALIDATED"
     },
     {
       "primary": "Nester .018\"",
       "compatible": "Direxion",
-      "citation": "Nester IFU \u2014 Optimized for 0.018\"-0.021\" delivery.",
+      "citation": "Nester IFU — Optimized for 0.018\"-0.021\" delivery.",
       "status": "VALIDATED"
     },
     {
       "primary": "Nester .035\"",
       "compatible": "Infiniti 5F",
-      "citation": "Nester IFU \u2014 Requires 0.035\"-0.038\" ID catheters.",
+      "citation": "Nester IFU — Requires 0.035\"-0.038\" ID catheters.",
       "status": "VALIDATED"
     },
     {
       "primary": "Axium Prime",
       "compatible": "Excelsior SL-10",
-      "citation": "Axium Prime IFU \u2014 Validated for 0.0165\"+ ID microcatheters.",
+      "citation": "Axium Prime IFU — Validated for 0.0165\"+ ID microcatheters.",
       "status": "VALIDATED"
     },
     {
@@ -11155,7 +11911,7 @@ window.NV_DATA = {
       "primaryCategory": "VASCULAR CLOSURE DEVICE",
       "compatible": "Avanti+ 5F",
       "compatibleCategory": "SHEATH",
-      "citation": "ExoSeal IFU \u2014 compatible with standard sheaths up to 12cm",
+      "citation": "ExoSeal IFU — compatible with standard sheaths up to 12cm",
       "status": "VALIDATED"
     },
     {
@@ -11163,7 +11919,7 @@ window.NV_DATA = {
       "primaryCategory": "VASCULAR CLOSURE DEVICE",
       "compatible": "Avanti+ 6F",
       "compatibleCategory": "SHEATH",
-      "citation": "ExoSeal IFU \u2014 compatible with standard sheaths up to 12cm",
+      "citation": "ExoSeal IFU — compatible with standard sheaths up to 12cm",
       "status": "VALIDATED"
     },
     {
@@ -11171,7 +11927,7 @@ window.NV_DATA = {
       "primaryCategory": "VASCULAR CLOSURE DEVICE",
       "compatible": "Avanti+ 7F",
       "compatibleCategory": "SHEATH",
-      "citation": "ExoSeal IFU \u2014 compatible with standard sheaths up to 12cm",
+      "citation": "ExoSeal IFU — compatible with standard sheaths up to 12cm",
       "status": "VALIDATED"
     },
     {
@@ -11179,7 +11935,7 @@ window.NV_DATA = {
       "primaryCategory": "FLOW DIVERTER",
       "compatible": "Phenom 027",
       "compatibleCategory": "MICROCATHETER",
-      "citation": "Pipeline Flex IFU v4.2 \u00a73.1",
+      "citation": "Pipeline Flex IFU v4.2 §3.1",
       "status": "VALIDATED"
     },
     {
@@ -11187,7 +11943,7 @@ window.NV_DATA = {
       "primaryCategory": "FLOW DIVERTER",
       "compatible": "Marksman",
       "compatibleCategory": "MICROCATHETER",
-      "citation": "Pipeline Flex IFU v4.2 \u00a73.1",
+      "citation": "Pipeline Flex IFU v4.2 §3.1",
       "status": "VALIDATED"
     },
     {
@@ -11195,7 +11951,7 @@ window.NV_DATA = {
       "primaryCategory": "FLOW DIVERTER",
       "compatible": "Renegade Hi-Flo",
       "compatibleCategory": "MICROCATHETER",
-      "citation": "Pipeline Flex IFU \u2014 alternate (verify current)",
+      "citation": "Pipeline Flex IFU — alternate (verify current)",
       "status": "CONDITIONAL"
     },
     {
@@ -11203,7 +11959,7 @@ window.NV_DATA = {
       "primaryCategory": "FLOW DIVERTER",
       "compatible": "Phenom 027",
       "compatibleCategory": "MICROCATHETER",
-      "citation": "Pipeline Shield IFU \u00a73.1",
+      "citation": "Pipeline Shield IFU §3.1",
       "status": "VALIDATED"
     },
     {
@@ -11211,7 +11967,7 @@ window.NV_DATA = {
       "primaryCategory": "FLOW DIVERTER",
       "compatible": "Marksman",
       "compatibleCategory": "MICROCATHETER",
-      "citation": "Pipeline Shield IFU \u00a73.1",
+      "citation": "Pipeline Shield IFU §3.1",
       "status": "VALIDATED"
     },
     {
@@ -11219,7 +11975,7 @@ window.NV_DATA = {
       "primaryCategory": "FLOW DIVERTER",
       "compatible": "Headway 27",
       "compatibleCategory": "MICROCATHETER",
-      "citation": "FRED IFU \u00a73.1 \u2014 Headway 27 ONLY",
+      "citation": "FRED IFU §3.1 — Headway 27 ONLY",
       "status": "VALIDATED"
     },
     {
@@ -11227,7 +11983,7 @@ window.NV_DATA = {
       "primaryCategory": "FLOW DIVERTER",
       "compatible": "Headway 21",
       "compatibleCategory": "MICROCATHETER",
-      "citation": "FRED Jr IFU \u2014 Headway 21",
+      "citation": "FRED Jr IFU — Headway 21",
       "status": "VALIDATED"
     },
     {
@@ -11235,7 +11991,7 @@ window.NV_DATA = {
       "primaryCategory": "FLOW DIVERTER",
       "compatible": "XT-17",
       "compatibleCategory": "MICROCATHETER",
-      "citation": "Surpass Evolve IFU \u00a72 \u2014 XT-17 ONLY",
+      "citation": "Surpass Evolve IFU §2 — XT-17 ONLY",
       "status": "VALIDATED"
     },
     {
@@ -11243,7 +11999,7 @@ window.NV_DATA = {
       "primaryCategory": "FLOW DIVERTER",
       "compatible": "XT-27",
       "compatibleCategory": "MICROCATHETER",
-      "citation": "Surpass Evolve IFU \u00a72 \u2014 XT-27 ONLY",
+      "citation": "Surpass Evolve IFU §2 — XT-27 ONLY",
       "status": "VALIDATED"
     },
     {
@@ -11251,7 +12007,7 @@ window.NV_DATA = {
       "primaryCategory": "FLOW DIVERTER",
       "compatible": "Gama-17",
       "compatibleCategory": "MICROCATHETER",
-      "citation": "SILK IFU \u2014 Gama-17 validated",
+      "citation": "SILK IFU — Gama-17 validated",
       "status": "VALIDATED"
     },
     {
@@ -11259,7 +12015,7 @@ window.NV_DATA = {
       "primaryCategory": "STENT RETRIEVER",
       "compatible": "Marksman",
       "compatibleCategory": "MICROCATHETER",
-      "citation": "Solitaire X IFU \u00a73.3",
+      "citation": "Solitaire X IFU §3.3",
       "status": "VALIDATED"
     },
     {
@@ -11275,7 +12031,7 @@ window.NV_DATA = {
       "primaryCategory": "STENT RETRIEVER",
       "compatible": "Trak-21",
       "compatibleCategory": "MICROCATHETER",
-      "citation": "Trevo NXT IFU \u2014 alternate",
+      "citation": "Trevo NXT IFU — alternate",
       "status": "VALIDATED"
     },
     {
@@ -11291,7 +12047,7 @@ window.NV_DATA = {
       "primaryCategory": "STENT RETRIEVER",
       "compatible": "Excelsior 1018",
       "compatibleCategory": "MICROCATHETER",
-      "citation": "EmboTrap III IFU \u2014 0.021\" catheter",
+      "citation": "EmboTrap III IFU — 0.021\" catheter",
       "status": "VALIDATED"
     },
     {
@@ -11299,7 +12055,7 @@ window.NV_DATA = {
       "primaryCategory": "BRIDGING STENT",
       "compatible": "Excelsior 1018",
       "compatibleCategory": "MICROCATHETER",
-      "citation": "Enterprise 2 IFU \u00a74.1",
+      "citation": "Enterprise 2 IFU §4.1",
       "status": "VALIDATED"
     },
     {
@@ -11307,7 +12063,7 @@ window.NV_DATA = {
       "primaryCategory": "BRIDGING STENT",
       "compatible": "Headway 17 Advanced",
       "compatibleCategory": "MICROCATHETER",
-      "citation": "Enterprise 2 IFU \u00a74.1",
+      "citation": "Enterprise 2 IFU §4.1",
       "status": "VALIDATED"
     },
     {
@@ -11315,7 +12071,7 @@ window.NV_DATA = {
       "primaryCategory": "BRIDGING STENT",
       "compatible": "Excelsior SL-10",
       "compatibleCategory": "MICROCATHETER",
-      "citation": "LVIS Jr IFU \u00a73.2",
+      "citation": "LVIS Jr IFU §3.2",
       "status": "VALIDATED"
     },
     {
@@ -11323,7 +12079,7 @@ window.NV_DATA = {
       "primaryCategory": "BRIDGING STENT",
       "compatible": "Headway 17 Advanced",
       "compatibleCategory": "MICROCATHETER",
-      "citation": "LVIS Jr IFU \u00a73.2",
+      "citation": "LVIS Jr IFU §3.2",
       "status": "VALIDATED"
     },
     {
@@ -11339,7 +12095,7 @@ window.NV_DATA = {
       "primaryCategory": "BRIDGING STENT",
       "compatible": "Headway 17 Advanced",
       "compatibleCategory": "MICROCATHETER",
-      "citation": "LVIS IFU \u2014 alternate",
+      "citation": "LVIS IFU — alternate",
       "status": "VALIDATED"
     },
     {
@@ -11355,7 +12111,7 @@ window.NV_DATA = {
       "primaryCategory": "BRIDGING STENT",
       "compatible": "Excelsior SL-10",
       "compatibleCategory": "MICROCATHETER",
-      "citation": "LEO Baby IFU \u2014 SL-10 compatible",
+      "citation": "LEO Baby IFU — SL-10 compatible",
       "status": "VALIDATED"
     },
     {
@@ -11363,7 +12119,7 @@ window.NV_DATA = {
       "primaryCategory": "INTRASACCULAR DEVICE",
       "compatible": "Via 17",
       "compatibleCategory": "MICROCATHETER",
-      "citation": "WEB 17 IFU \u2014 Via 17 required",
+      "citation": "WEB 17 IFU — Via 17 required",
       "status": "VALIDATED"
     },
     {
@@ -11371,7 +12127,7 @@ window.NV_DATA = {
       "primaryCategory": "INTRASACCULAR DEVICE",
       "compatible": "Via 27",
       "compatibleCategory": "MICROCATHETER",
-      "citation": "WEB SL/SLS IFU \u2014 Via 27",
+      "citation": "WEB SL/SLS IFU — Via 27",
       "status": "VALIDATED"
     },
     {
@@ -11379,7 +12135,7 @@ window.NV_DATA = {
       "primaryCategory": "INTRASACCULAR DEVICE",
       "compatible": "Via 33",
       "compatibleCategory": "MICROCATHETER",
-      "citation": "WEB DL IFU \u2014 Via 33 larger sizes",
+      "citation": "WEB DL IFU — Via 33 larger sizes",
       "status": "VALIDATED"
     },
     {
@@ -11387,7 +12143,7 @@ window.NV_DATA = {
       "primaryCategory": "REMODELING BALLOON",
       "compatible": "X-Pedion 0.010",
       "compatibleCategory": "MICROWIRE",
-      "citation": "HyperGlide IFU \u2014 X-Pedion required",
+      "citation": "HyperGlide IFU — X-Pedion required",
       "status": "VALIDATED"
     },
     {
@@ -11395,7 +12151,7 @@ window.NV_DATA = {
       "primaryCategory": "REMODELING BALLOON",
       "compatible": "X-Pedion 0.010",
       "compatibleCategory": "MICROWIRE",
-      "citation": "HyperForm IFU \u2014 X-Pedion required",
+      "citation": "HyperForm IFU — X-Pedion required",
       "status": "VALIDATED"
     },
     {
@@ -11403,7 +12159,7 @@ window.NV_DATA = {
       "primaryCategory": "LIQUID EMBOLIC",
       "compatible": "Echelon-10",
       "compatibleCategory": "MICROCATHETER",
-      "citation": "Onyx IFU \u2014 Echelon-10 validated",
+      "citation": "Onyx IFU — Echelon-10 validated",
       "status": "VALIDATED"
     },
     {
@@ -11411,7 +12167,7 @@ window.NV_DATA = {
       "primaryCategory": "LIQUID EMBOLIC",
       "compatible": "Sonic 1.5Fr",
       "compatibleCategory": "MICROCATHETER",
-      "citation": "Onyx/Squid IFU \u2014 Sonic validated (DMSO)",
+      "citation": "Onyx/Squid IFU — Sonic validated (DMSO)",
       "status": "VALIDATED"
     },
     {
@@ -11419,7 +12175,7 @@ window.NV_DATA = {
       "primaryCategory": "LIQUID EMBOLIC",
       "compatible": "Headway 17 Advanced",
       "compatibleCategory": "MICROCATHETER",
-      "citation": "PHIL IFU \u2014 Headway 17; non-DMSO",
+      "citation": "PHIL IFU — Headway 17; non-DMSO",
       "status": "VALIDATED"
     },
     {
@@ -11979,7 +12735,7 @@ window.NV_DATA = {
       "primary": "PHIL Embolic Agent",
       "compatible": "Room temperature environment",
       "status": "EXCELLENT",
-      "citation": "IFU: PHIL polymerization at 37\u00b0C",
+      "citation": "IFU: PHIL polymerization at 37°C",
       "notes": "No temperature-dependent complications"
     },
     {
@@ -12230,25 +12986,25 @@ window.NV_DATA = {
     {
       "primary": "Silk Vista",
       "compatible": "Headway 21",
-      "citation": "Silk Vista IFU \u2014 Optimized for 0.021\" ID delivery.",
+      "citation": "Silk Vista IFU — Optimized for 0.021\" ID delivery.",
       "status": "VALIDATED"
     },
     {
       "primary": "CAT 12 Indigo",
       "compatible": "8F Sheath Standard",
-      "citation": "Indigo IFU \u2014 CAT12 requires high-flow 12F system (verify access).",
+      "citation": "Indigo IFU — CAT12 requires high-flow 12F system (verify access).",
       "status": "VALIDATED"
     },
     {
       "primary": "Cleaner 6F 65cm",
       "compatible": "Prelude 6F 11cm",
-      "citation": "Cleaner IFU \u2014 Requires 6F introducer access.",
+      "citation": "Cleaner IFU — Requires 6F introducer access.",
       "status": "VALIDATED"
     },
     {
       "primary": "Supera 6 x 40mm",
       "compatible": "Prelude 6F 11cm",
-      "citation": "Supera IFU \u2014 6F delivery system compatible.",
+      "citation": "Supera IFU — 6F delivery system compatible.",
       "status": "VALIDATED"
     },
     {
@@ -12353,7 +13109,7 @@ window.NV_DATA = {
       "primary": "QuiremSpheres Yttrium-90",
       "compatible": "Solthane 6",
       "status": "EXCELLENT",
-      "citation": "IFU: Uniform 30\u00b5m particles through standard systems",
+      "citation": "IFU: Uniform 30µm particles through standard systems",
       "notes": "Predictable embolization"
     },
     {
@@ -12543,7 +13299,7 @@ window.NV_DATA = {
       "compatible": "Graduated Access",
       "status": "GOOD",
       "citation": "IFU: Starting with smallest bore; upgrade as growth occurs",
-      "notes": "Neonatal\u2192infant\u2192small child progression pathway"
+      "notes": "Neonatal→infant→small child progression pathway"
     }
   ],
   "templates": [
@@ -12580,8 +13336,8 @@ window.NV_DATA = {
         }
       ],
       "checks": [
-        "Confirm guide catheter ID \u2265 device delivery requirement",
-        "Verify microcatheter working length \u2265 device deployment length",
+        "Confirm guide catheter ID ≥ device delivery requirement",
+        "Verify microcatheter working length ≥ device deployment length",
         "Ensure aspiration catheter is compatible with guide lumen",
         "Check IFU for maximum number of passes",
         "Confirm no off-label vessel diameter usage"
@@ -13290,9 +14046,9 @@ window.NV_DATA = {
           "thrombus size"
         ],
         "keyFactors": [
-          "Larger diameter vessels \u2192 larger aspiration catheter",
-          "Tortuous access \u2192 softer intermediate and microcatheters",
-          "Fresh thrombus \u2192 higher aspiration pressure tolerated"
+          "Larger diameter vessels → larger aspiration catheter",
+          "Tortuous access → softer intermediate and microcatheters",
+          "Fresh thrombus → higher aspiration pressure tolerated"
         ]
       },
       "embolization": {
@@ -13302,9 +14058,9 @@ window.NV_DATA = {
           "embolic agent"
         ],
         "keyFactors": [
-          "High-flow lesions \u2192 stiffer microcatheters",
-          "Liquid embolics \u2192 DMSO-compatible devices mandatory",
-          "Particle embolization \u2192 adequate catheter ID for particle size"
+          "High-flow lesions → stiffer microcatheters",
+          "Liquid embolics → DMSO-compatible devices mandatory",
+          "Particle embolization → adequate catheter ID for particle size"
         ]
       },
       "intervention": {
@@ -13314,9 +14070,9 @@ window.NV_DATA = {
           "plaque characteristics"
         ],
         "keyFactors": [
-          "Long stenosis \u2192 larger balloon length",
-          "Calcified lesion \u2192 higher pressure tolerance needed",
-          "Dissection risk \u2192 consider covered stent"
+          "Long stenosis → larger balloon length",
+          "Calcified lesion → higher pressure tolerance needed",
+          "Dissection risk → consider covered stent"
         ]
       }
     }
@@ -13472,7 +14228,7 @@ window.NV_DATA = {
             "material": "Nitinol mesh",
             "retrievableWindow": "Multiple passes possible",
             "notes": "Can be deployed, withdrawn, redeployed multiple times",
-            "meshOpenings": "130-150\u00b5m (clot capture)"
+            "meshOpenings": "130-150µm (clot capture)"
           },
           {
             "name": "Capture LP",
@@ -13652,7 +14408,7 @@ window.NV_DATA = {
         "heatingRequired": true,
         "heatingTemp_C": 37,
         "flushVolume_ml": 8,
-        "warnings": "Pre-warm to 37\u00b0C to reduce viscosity; may impair aspiration flow"
+        "warnings": "Pre-warm to 37°C to reduce viscosity; may impair aspiration flow"
       },
       {
         "name": "Iobitridol",
@@ -13706,7 +14462,7 @@ window.NV_DATA = {
         "notes": "High-osmolar ionic agent; deprecated in many centers due to osmotic complications",
         "heatingRequired": false,
         "flushVolume_ml": 5,
-        "warnings": "Higher osmolarity \u2192 increased neurologic complications; risk of polyurethane degradation"
+        "warnings": "Higher osmolarity → increased neurologic complications; risk of polyurethane degradation"
       }
     ],
     "liquidEmbolics": [
@@ -13849,7 +14605,7 @@ window.NV_DATA = {
       "workingLengthCm": 10,
       "totalLengthCm": 25,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21
       },
@@ -13867,7 +14623,7 @@ window.NV_DATA = {
       "workingLengthCm": 10,
       "totalLengthCm": 25,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 320,
         "maxPressureBar": 22
       },
@@ -13885,7 +14641,7 @@ window.NV_DATA = {
       "workingLengthCm": 10,
       "totalLengthCm": 25,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 340,
         "maxPressureBar": 23
       },
@@ -13903,7 +14659,7 @@ window.NV_DATA = {
       "workingLengthCm": 12,
       "totalLengthCm": 30,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21
       },
@@ -13921,7 +14677,7 @@ window.NV_DATA = {
       "workingLengthCm": 25,
       "totalLengthCm": 40,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 280,
         "maxPressureBar": 19
       },
@@ -13939,7 +14695,7 @@ window.NV_DATA = {
       "workingLengthCm": 100,
       "totalLengthCm": 110,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21
       },
@@ -13957,7 +14713,7 @@ window.NV_DATA = {
       "workingLengthCm": 100,
       "totalLengthCm": 110,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 320,
         "maxPressureBar": 22
       },
@@ -13975,7 +14731,7 @@ window.NV_DATA = {
       "workingLengthCm": 90,
       "totalLengthCm": 100,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 280,
         "maxPressureBar": 19
       },
@@ -13993,7 +14749,7 @@ window.NV_DATA = {
       "workingLengthCm": 95,
       "totalLengthCm": 105,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21
       },
@@ -14011,7 +14767,7 @@ window.NV_DATA = {
       "workingLengthCm": 135,
       "totalLengthCm": 145,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 350,
         "maxPressureBar": 24
       },
@@ -14030,7 +14786,7 @@ window.NV_DATA = {
       "workingLengthCm": 135,
       "totalLengthCm": 145,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 340,
         "maxPressureBar": 23
       },
@@ -14049,7 +14805,7 @@ window.NV_DATA = {
       "workingLengthCm": 135,
       "totalLengthCm": 145,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 330,
         "maxPressureBar": 23
       },
@@ -14067,7 +14823,7 @@ window.NV_DATA = {
       "workingLengthCm": 130,
       "totalLengthCm": 140,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 360,
         "maxPressureBar": 25
       },
@@ -14085,7 +14841,7 @@ window.NV_DATA = {
       "workingLengthCm": null,
       "totalLengthCm": null,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 400,
         "maxPressureBar": 28
       },
@@ -14104,7 +14860,7 @@ window.NV_DATA = {
       "workingLengthCm": null,
       "totalLengthCm": null,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 380,
         "maxPressureBar": 26
       },
@@ -14122,7 +14878,7 @@ window.NV_DATA = {
       "workingLengthCm": null,
       "totalLengthCm": null,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 350,
         "maxPressureBar": 24
       },
@@ -14141,7 +14897,7 @@ window.NV_DATA = {
       "workingLengthCm": null,
       "totalLengthCm": null,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 360,
         "maxPressureBar": 25
       },
@@ -14160,7 +14916,7 @@ window.NV_DATA = {
       "workingLengthCm": null,
       "totalLengthCm": null,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 340,
         "maxPressureBar": 23
       },
@@ -14178,7 +14934,7 @@ window.NV_DATA = {
       "workingLengthCm": 120,
       "totalLengthCm": 135,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 320,
         "maxPressureBar": 22
       },
@@ -14197,7 +14953,7 @@ window.NV_DATA = {
       "workingLengthCm": 120,
       "totalLengthCm": 135,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21
       },
@@ -14215,7 +14971,7 @@ window.NV_DATA = {
       "workingLengthCm": 130,
       "totalLengthCm": 145,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 330,
         "maxPressureBar": 23
       },
@@ -14234,7 +14990,7 @@ window.NV_DATA = {
       "workingLengthCm": 110,
       "totalLengthCm": 125,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 280,
         "maxPressureBar": 19
       },
@@ -14253,7 +15009,7 @@ window.NV_DATA = {
       "workingLengthCm": 100,
       "totalLengthCm": 115,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21
       },
@@ -14271,7 +15027,7 @@ window.NV_DATA = {
       "workingLengthCm": 150,
       "totalLengthCm": 150,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 350,
         "maxPressureBar": 24
       },
@@ -14290,7 +15046,7 @@ window.NV_DATA = {
       "workingLengthCm": 150,
       "totalLengthCm": 150,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 350,
         "maxPressureBar": 24
       },
@@ -14309,7 +15065,7 @@ window.NV_DATA = {
       "workingLengthCm": 180,
       "totalLengthCm": 180,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 360,
         "maxPressureBar": 25
       },
@@ -14328,7 +15084,7 @@ window.NV_DATA = {
       "workingLengthCm": 100,
       "totalLengthCm": 100,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 340,
         "maxPressureBar": 23
       },
@@ -14346,7 +15102,7 @@ window.NV_DATA = {
       "workingLengthCm": 100,
       "totalLengthCm": 110,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21
       },
@@ -14364,7 +15120,7 @@ window.NV_DATA = {
       "workingLengthCm": 110,
       "totalLengthCm": 120,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 320,
         "maxPressureBar": 22
       },
@@ -14382,7 +15138,7 @@ window.NV_DATA = {
       "workingLengthCm": 105,
       "totalLengthCm": 115,
       "stability": {
-        "tempRangeC": "4\u201340",
+        "tempRangeC": "4–40",
         "maxPressurePsi": 280,
         "maxPressureBar": 19
       },
@@ -15033,7 +15789,7 @@ window.NV_DATA = {
         "Backup devices available"
       ],
       "during_crossing": [
-        "Document crossing technique (soft \u2192 stiff progression)",
+        "Document crossing technique (soft → stiff progression)",
         "Monitor pressure (don't exceed device max)",
         "Assess collateral perfusion regularly",
         "Confirm intimal vs subintimal positioning",
@@ -15461,35 +16217,35 @@ window.NV_DATA = {
         "name": "Paclitaxel IN.PACT Admiral",
         "manufacturer": "Medtronic",
         "drug": "Paclitaxel",
-        "concentration": "3.5 \u00b5g/mm2",
+        "concentration": "3.5 µg/mm2",
         "sizes": "4-7F"
       },
       {
         "name": "Paclitaxel Zilver PTX",
         "manufacturer": "Cook Medical",
         "drug": "Paclitaxel",
-        "concentration": "3.1 \u00b5g/mm2",
+        "concentration": "3.1 µg/mm2",
         "sizes": "5-7F"
       },
       {
         "name": "Paclitaxel Passeo-18",
         "manufacturer": "Balt",
         "drug": "Paclitaxel",
-        "concentration": "2 \u00b5g/mm2",
+        "concentration": "2 µg/mm2",
         "sizes": "4-6F"
       },
       {
         "name": "Paclitaxel Luminor",
         "manufacturer": "Bard",
         "drug": "Paclitaxel + iopromide",
-        "concentration": "3 \u00b5g/mm2",
+        "concentration": "3 µg/mm2",
         "sizes": "4-7F"
       },
       {
         "name": "Paclitaxel Elucidate",
         "manufacturer": "Boston Scientific",
         "drug": "Paclitaxel",
-        "concentration": "2.5 \u00b5g/mm2",
+        "concentration": "2.5 µg/mm2",
         "sizes": "4-8F"
       }
     ],
@@ -15501,7 +16257,7 @@ window.NV_DATA = {
       "sizing-ratio": "DCB diameter should match vessel diameter (1:1 ratio; range 0.8-1.2)",
       "lesion-coverage": "DCB must cover entire lesion; multiple overlapping passes if lesion >60mm",
       "no-heparin-flush": "Flush with normal saline only; heparin impairs drug transfer to tissue",
-      "systemic-paclitaxel": "Total dose 60-80 \u00b5g per procedure; systemic levels well-tolerated"
+      "systemic-paclitaxel": "Total dose 60-80 µg per procedure; systemic levels well-tolerated"
     },
     "indications": {
       "primary": "Femoropopliteal stenosis/short occlusions as alternative to stenting",
@@ -15882,7 +16638,7 @@ window.NV_DATA = {
     "stone-extraction": "Extraction catheter ID must accommodate largest stone + retrieval basket"
   },
   "hccEmbolizationRules": {
-    "bead-selection": "100-300\u00b5m beads most common; <100\u00b5m contraindicated (systemic shunting)",
+    "bead-selection": "100-300µm beads most common; <100µm contraindicated (systemic shunting)",
     "particle-flow": "Match particle size to lesion vascularity",
     "lipiodol-ratio": "Mix lipiodol with TACE drug for visualization and prolonged release"
   },
@@ -16092,7 +16848,7 @@ window.NV_DATA = {
           },
           {
             "trigger": "procedure-time-limit",
-            "message": "MT typically limited to 24 hours from symptom onset (or 8\u201324h window per protocol)",
+            "message": "MT typically limited to 24 hours from symptom onset (or 8–24h window per protocol)",
             "checks": [
               "symptom-onset-time",
               "last-known-well-time"
@@ -16552,7 +17308,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Short arterial introducer sheath",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -16571,7 +17327,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Long sheath for neuro; coaxial insertion",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -16590,7 +17346,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "High-support proximal platform 80/90cm",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -16609,7 +17365,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Radial-compatible 0.088\" long sheath",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -16626,9 +17382,9 @@ window.NV_DATA = {
         "workingLengthCm": 95,
         "totalLengthCm": 95,
         "dmsoCompatible": null,
-        "notes": "8Fr OD / 0.091\" ID \u2013 largest platform",
+        "notes": "8Fr OD / 0.091\" ID – largest platform",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -16647,7 +17403,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Radial-compatible; 80-100cm",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -16666,7 +17422,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Slender-wall; 1Fr size advantage radial",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -16685,7 +17441,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Thin-wall hydrophilic; transradial preferred",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -16704,7 +17460,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Stiff economical guide; 5/6/7Fr variants",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -16723,7 +17479,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Flexible; can reach cavernous ICA",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -16742,7 +17498,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Very flexible distal; 95/105/115cm",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -16761,7 +17517,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "7Fr OD / 0.081\" ID",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -16780,7 +17536,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Good radial trackability",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -16799,7 +17555,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Braided; excellent radial trackability",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -16818,7 +17574,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Braided; 8Fr; high support; transradial compatible; 90-105cm lengths available",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -16837,7 +17593,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -16856,7 +17612,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Ultra-soft tip; radial-compatible 70-95cm",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -16875,7 +17631,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Designed for transradial access",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -16894,7 +17650,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Also sold as 6Fr Fubuki long sheath",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -16913,7 +17669,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "0.086\" ID; excellent flow arrest",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -16932,7 +17688,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "0.087\" ID; Cerenovus platform",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -16951,7 +17707,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "0.087\" lumen; prev. Q'Apel Medical",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -16970,7 +17726,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Older BGC; large lumen",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -16989,7 +17745,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -17008,7 +17764,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Dual use: intermediate + aspiration",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -17027,7 +17783,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "eXtra support stability variant",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -17046,7 +17802,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Plus version 0.070\" also available",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -17065,7 +17821,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Stiff; preferred flow-diverter support",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -17084,7 +17840,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Large-lumen; very supportive",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -17103,7 +17859,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -17122,7 +17878,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -17141,7 +17897,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -17160,7 +17916,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -17179,7 +17935,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "One of largest reperfusion catheters",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -17198,7 +17954,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Highly flexible; AVM/DAVF embolization",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -17217,7 +17973,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Larger Fargo; flow-diverter support",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -17236,7 +17992,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Large inner lumen",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -17255,7 +18011,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -17274,7 +18030,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -17293,7 +18049,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Lubricious outer coat; steam-shapeable",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -17312,7 +18068,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -17331,7 +18087,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Distal vessel aspiration M2/M3",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -17350,7 +18106,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -17369,7 +18125,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -17388,7 +18144,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "DMSO compatible; general purpose",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -17407,7 +18163,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Mid-size stent-assisted coiling",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -17426,7 +18182,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "IFU: Pipeline Flex/Shield",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -17445,7 +18201,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "IFU: Pipeline Flex; Solitaire X; stiffer shaft",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -17464,7 +18220,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "DMSO; coiling/liquid embolic; low OD",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -17483,7 +18239,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "DMSO; more rigid than Echelon-10",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -17502,7 +18258,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "1.5Fr tip; AVM/DAVF Onyx delivery",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -17521,7 +18277,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "1.5Fr detachable tip; DMSO; Onyx",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -17540,7 +18296,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "IFU: Target coils only; NOT DMSO",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -17559,7 +18315,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -17578,7 +18334,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "IFU: Surpass Evolve FD",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -17597,7 +18353,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "IFU: Surpass Evolve FD",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -17616,7 +18372,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "IFU: Trevo NXT/XP stent retrievers",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -17635,7 +18391,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Trevo ProVue system",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -17654,7 +18410,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "DMSO; coil detachment marker; LVIS Jr",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -17673,7 +18429,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "DMSO; LVIS stent delivery",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -17692,7 +18448,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "IFU: FRED flow diverter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -17711,7 +18467,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Ultra-low profile; 0.0165\" ID",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -17730,7 +18486,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "0.013\" ID; DMSO; AVM/DAVF Onyx",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -17749,7 +18505,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "IFU: WEB 17 intrasaccular device",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -17768,7 +18524,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "IFU: WEB SL/SLS intrasaccular device",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -17787,7 +18543,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "IFU: larger WEB devices",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -17806,7 +18562,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Flow-directed; NOT DMSO; NBCA/Squid",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -17825,7 +18581,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Flow-directed; NOT DMSO; max wire 0.010\"",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -17844,7 +18600,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Detachable tip; DMSO; Squid/Onyx",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -17863,7 +18619,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "DMSO; IFU: SILK flow diverter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -17882,7 +18638,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "High flow; Pipeline alternate delivery",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -17901,7 +18657,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Very torqueable; 200/300cm",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -17920,7 +18676,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Exchange length 300cm",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -17939,7 +18695,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Small vessel navigation",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -17958,7 +18714,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Exchange length",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -17977,7 +18733,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -17996,7 +18752,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Softer tip; docking extension available",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -18015,7 +18771,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Ultra-low profile; small vessel AVM",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -18034,7 +18790,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -18053,7 +18809,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Straight/angled/double-angle tips",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -18072,7 +18828,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Distal circulation; AVM embolization",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -18091,7 +18847,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Ultra-distal; softest available",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -18110,7 +18866,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Small vessel; AVM; slightly stiffer",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -18129,7 +18885,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Required wire for Hyperform/Hyperglide",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -18148,7 +18904,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Compatible with Hyperform",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -18167,7 +18923,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Small vessel / AVM",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -18186,7 +18942,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Most common diagnostic wire",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -18205,7 +18961,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Stiff support; guide catheter introduction",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -18224,7 +18980,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Requires SL-10 (officially); electrolytic",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -18243,7 +18999,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Ultra-low profile; fits Headway Duo 156",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -18262,7 +19018,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "0.015\" delivery; detachable coil",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -18281,7 +19037,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -18300,7 +19056,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Hydrogel-coated; expanding",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -18319,7 +19075,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Platinum coil; standard profile",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -18338,7 +19094,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Low-profile; fits Headway Duo 167",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -18357,7 +19113,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Delivered through Magic microcatheter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -18376,7 +19132,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Ultra-low profile; Headway Duo 167",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -18395,7 +19151,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "IFU: Phenom 027 or Marksman ONLY",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -18414,7 +19170,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Surface-modified PED; same delivery system",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -18433,7 +19189,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "IFU: Headway 27 ONLY",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -18452,7 +19208,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Small vessel; Headway 21 microcatheter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -18471,7 +19227,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "IFU: XT-17 or XT-27 ONLY",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -18490,7 +19246,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "CE-marked; IFU: Gama-17 microcatheter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -18509,7 +19265,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "CE-marked; 0.021\" microcatheter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -18528,7 +19284,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "CE-marked; retrievable",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -18547,7 +19303,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "IFU: SL-10; laser-cut; low-profile",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -18566,7 +19322,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "IFU: Excelsior 1018 or Headway 17",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -18585,7 +19341,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Braided; IFU: Headway 21 or Headway 17",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -18604,7 +19360,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Low-profile; IFU: Headway 17 or SL-10",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -18623,7 +19379,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "CE-marked; IFU: SL-10 compatible",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -18642,7 +19398,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "IFU: Marksman microcatheter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -18661,7 +19417,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "IFU: Trevo Pro 18 or Trak-21",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -18680,7 +19436,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "IFU: Trevo Pro 18 microcatheter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -18699,7 +19455,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Dual-layer; CE+FDA; 0.021\" catheter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -18718,7 +19474,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "CE-marked; 2nd gen retriever",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -18737,7 +19493,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "CE-marked; radially adjustable",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -18756,7 +19512,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "IFU: Via 17 microcatheter; FDA+CE",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -18775,7 +19531,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "IFU: Via 27 microcatheter; FDA+CE",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -18794,7 +19550,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "CE-marked; nitinol mesh; wide-neck",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -18813,7 +19569,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "CE 2020; bowl-shaped neck-bridge",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -18832,7 +19588,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "CE-marked; 2024 clinical data",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -18851,7 +19607,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Single-lumen; X-Pedion 0.010\" wire; DMSO",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -18870,7 +19626,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Conforms to aneurysm neck; DMSO",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -18889,7 +19645,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Compliant 3-5mm; accepts Synchro 14",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -18908,7 +19664,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Single/dual lumen; 4-6mm; 0.014\" wire",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -18927,7 +19683,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Single-lumen; 3-5mm; Traxcess 0.014\"",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -18944,9 +19700,9 @@ window.NV_DATA = {
         "workingLengthCm": 150,
         "totalLengthCm": null,
         "dmsoCompatible": null,
-        "notes": "Compliant; balloon 4mm \u00d7 10/15/20mm; range 2-5mm; 0.014\" GW; DMSO+Onyx compatible; min guide ID 0.053\"",
+        "notes": "Compliant; balloon 4mm × 10/15/20mm; range 2-5mm; 0.014\" GW; DMSO+Onyx compatible; min guide ID 0.053\"",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -18963,9 +19719,9 @@ window.NV_DATA = {
         "workingLengthCm": 150,
         "totalLengthCm": null,
         "dmsoCompatible": null,
-        "notes": "X-tra Compliant (XC); balloon 4mm \u00d7 11mm; range 2-6mm; 0.014\" GW; DMSO+Onyx compatible; min guide ID 0.053\"; bifurcation/WEB use",
+        "notes": "X-tra Compliant (XC); balloon 4mm × 11mm; range 2-6mm; 0.014\" GW; DMSO+Onyx compatible; min guide ID 0.053\"; bifurcation/WEB use",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -18984,7 +19740,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "EVOH copolymer; DMSO required; AVM",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -19003,7 +19759,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Higher viscosity; dural AVF/fistula",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -19022,7 +19778,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Non-DMSO; radiopaque; PHIL 25/30/45%",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -19041,7 +19797,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Low viscosity EVOH; equiv to Onyx 18",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -19060,7 +19816,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Standard viscosity EVOH; CE-marked",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -19079,7 +19835,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "n-Butyl cyanoacrylate; rapid poly",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -19098,7 +19854,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Standard 8Fr femoral introducer; hosts BGCs",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -19117,7 +19873,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Microwire",
         "stabilityData": {
-          "tempRangeC": "-20\u201360",
+          "tempRangeC": "-20–60",
           "maxPressurePsi": 480,
           "maxPressureBar": 33,
           "notes": "Nitinol, excellent thermal properties"
@@ -19136,7 +19892,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Microwire",
         "stabilityData": {
-          "tempRangeC": "-20\u201360",
+          "tempRangeC": "-20–60",
           "maxPressurePsi": 480,
           "maxPressureBar": 33,
           "notes": "Nitinol junior"
@@ -19155,7 +19911,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Microwire",
         "stabilityData": {
-          "tempRangeC": "-20\u201360",
+          "tempRangeC": "-20–60",
           "maxPressurePsi": 500,
           "maxPressureBar": 34,
           "notes": "Nitinol, standard"
@@ -19174,7 +19930,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Microwire",
         "stabilityData": {
-          "tempRangeC": "-20\u201360",
+          "tempRangeC": "-20–60",
           "maxPressurePsi": 500,
           "maxPressureBar": 34,
           "notes": "Nitinol, medium stiffness"
@@ -19193,7 +19949,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Microwire",
         "stabilityData": {
-          "tempRangeC": "-20\u201360",
+          "tempRangeC": "-20–60",
           "maxPressurePsi": 500,
           "maxPressureBar": 34,
           "notes": "Nitinol, medium-high stiffness"
@@ -19212,7 +19968,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Microwire",
         "stabilityData": {
-          "tempRangeC": "-20\u201360",
+          "tempRangeC": "-20–60",
           "maxPressurePsi": 500,
           "maxPressureBar": 34,
           "notes": "Nitinol, high stiffness"
@@ -19231,7 +19987,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Microwire",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -19250,7 +20006,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Microwire",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -19269,7 +20025,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Microwire",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -19288,7 +20044,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Microwire",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -19307,7 +20063,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Microwire",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -19326,7 +20082,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Microwire",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -19345,7 +20101,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Microwire",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -19364,7 +20120,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Intermediate catheter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 200,
           "maxPressureBar": 14,
           "notes": "Ultra-thin, lower pressure tolerance"
@@ -19383,7 +20139,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Intermediate catheter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 250,
           "maxPressureBar": 17,
           "notes": "Hybrid design"
@@ -19402,7 +20158,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Intermediate catheter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 250,
           "maxPressureBar": 17,
           "notes": "Silicone-based"
@@ -19421,7 +20177,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Aspiration catheter",
         "stabilityData": {
-          "tempRangeC": "-20\u2013100",
+          "tempRangeC": "-20–100",
           "maxPressurePsi": 400,
           "maxPressureBar": 28,
           "notes": "PTFE, excellent chemical/thermal stability"
@@ -19440,7 +20196,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Aspiration catheter",
         "stabilityData": {
-          "tempRangeC": "-20\u2013100",
+          "tempRangeC": "-20–100",
           "maxPressurePsi": 400,
           "maxPressureBar": 28,
           "notes": "PTFE, standard working length"
@@ -19459,7 +20215,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Aspiration catheter",
         "stabilityData": {
-          "tempRangeC": "-20\u2013100",
+          "tempRangeC": "-20–100",
           "maxPressurePsi": 400,
           "maxPressureBar": 28,
           "notes": "PTFE, extended length"
@@ -19478,7 +20234,7 @@ window.NV_DATA = {
         "dmsoCompatible": true,
         "notes": "Aspiration catheter",
         "stabilityData": {
-          "tempRangeC": "-20\u2013100",
+          "tempRangeC": "-20–100",
           "maxPressurePsi": 400,
           "maxPressureBar": 28,
           "notes": "PTFE, primary configuration"
@@ -19497,7 +20253,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Aspiration catheter",
         "stabilityData": {
-          "tempRangeC": "-20\u2013100",
+          "tempRangeC": "-20–100",
           "maxPressurePsi": 400,
           "maxPressureBar": 28,
           "notes": "PTFE, smaller bore"
@@ -19516,7 +20272,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Aspiration catheter",
         "stabilityData": {
-          "tempRangeC": "-20\u2013100",
+          "tempRangeC": "-20–100",
           "maxPressurePsi": 400,
           "maxPressureBar": 28,
           "notes": "PTFE, short segment"
@@ -19535,7 +20291,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Aspiration catheter",
         "stabilityData": {
-          "tempRangeC": "-10\u201360",
+          "tempRangeC": "-10–60",
           "maxPressurePsi": 380,
           "maxPressureBar": 26,
           "notes": "PTFE/silicone, short segment"
@@ -19554,7 +20310,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Aspiration catheter",
         "stabilityData": {
-          "tempRangeC": "-10\u201360",
+          "tempRangeC": "-10–60",
           "maxPressurePsi": 380,
           "maxPressureBar": 26,
           "notes": "PTFE/silicone, compact"
@@ -19573,7 +20329,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Aspiration catheter",
         "stabilityData": {
-          "tempRangeC": "-10\u201360",
+          "tempRangeC": "-10–60",
           "maxPressurePsi": 380,
           "maxPressureBar": 26,
           "notes": "PTFE/silicone, standard"
@@ -19592,7 +20348,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Aspiration catheter",
         "stabilityData": {
-          "tempRangeC": "-10\u201360",
+          "tempRangeC": "-10–60",
           "maxPressurePsi": 380,
           "maxPressureBar": 26,
           "notes": "PTFE/silicone, variant"
@@ -19611,7 +20367,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Aspiration catheter",
         "stabilityData": {
-          "tempRangeC": "-10\u201360",
+          "tempRangeC": "-10–60",
           "maxPressurePsi": 380,
           "maxPressureBar": 26,
           "notes": "Extended performance"
@@ -19630,7 +20386,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Aspiration catheter",
         "stabilityData": {
-          "tempRangeC": "-10\u201360",
+          "tempRangeC": "-10–60",
           "maxPressurePsi": 380,
           "maxPressureBar": 26,
           "notes": "Compact Provac variant"
@@ -19649,7 +20405,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Aspiration catheter",
         "stabilityData": {
-          "tempRangeC": "-10\u201360",
+          "tempRangeC": "-10–60",
           "maxPressurePsi": 380,
           "maxPressureBar": 26,
           "notes": "Standard Provac"
@@ -19668,7 +20424,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Aspiration catheter",
         "stabilityData": {
-          "tempRangeC": "-10\u201360",
+          "tempRangeC": "-10–60",
           "maxPressurePsi": 380,
           "maxPressureBar": 26,
           "notes": "Extended Provac"
@@ -19687,7 +20443,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Aspiration catheter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Integrated trap design"
@@ -19706,7 +20462,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Diagnostic catheter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -19725,7 +20481,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Diagnostic catheter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -19744,7 +20500,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Diagnostic catheter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -19763,7 +20519,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Diagnostic catheter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -19782,7 +20538,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Microcatheter",
         "stabilityData": {
-          "tempRangeC": "-10\u201350",
+          "tempRangeC": "-10–50",
           "maxPressurePsi": 350,
           "maxPressureBar": 24,
           "notes": "PTFE/silicone hybrid"
@@ -19801,7 +20557,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Microcatheter",
         "stabilityData": {
-          "tempRangeC": "-10\u201350",
+          "tempRangeC": "-10–50",
           "maxPressurePsi": 350,
           "maxPressureBar": 24,
           "notes": "PTFE/silicone hybrid"
@@ -19820,7 +20576,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Hybrid microcatheter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Hybrid polymer"
@@ -19839,7 +20595,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Hybrid microcatheter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Extended hybrid"
@@ -19858,7 +20614,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Microcatheter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 320,
           "maxPressureBar": 22,
           "notes": "Hydrophilic coating, monitor at high temp"
@@ -19877,7 +20633,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Microcatheter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Polyurethane, standard"
@@ -19896,7 +20652,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Microcatheter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Polyurethane, LIMA-modified"
@@ -19915,7 +20671,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Microcatheter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 280,
           "maxPressureBar": 19,
           "notes": "Silicone-based"
@@ -19934,7 +20690,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Microcatheter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Silicone, radiopaque"
@@ -19953,7 +20709,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Microcatheter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 280,
           "maxPressureBar": 19,
           "notes": "Polyurethane, soft tip"
@@ -19972,7 +20728,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Microcatheter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -19991,7 +20747,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Microcatheter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -20010,7 +20766,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Microcatheter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 320,
           "maxPressureBar": 22,
           "notes": "Compliant silicone"
@@ -20029,7 +20785,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Balloon microcatheter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 250,
           "maxPressureBar": 17,
           "notes": "Ultra-thin, reference device"
@@ -20048,7 +20804,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Balloon catheter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -20067,7 +20823,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Balloon catheter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -20086,7 +20842,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Balloon catheter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -20105,7 +20861,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Balloon catheter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -20124,7 +20880,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Balloon catheter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -20143,7 +20899,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Balloon catheter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -20162,7 +20918,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Liquid embolic agent",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -20181,7 +20937,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Liquid embolic agent",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -20200,7 +20956,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Microwire",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -20219,7 +20975,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Microwire",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -20238,7 +20994,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Microwire",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -20257,7 +21013,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Microwire",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -20276,7 +21032,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Cyanoacrylate embolic agent",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -20295,7 +21051,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Long sheath",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Silicone-based, standard hydrophobic sheath"
@@ -20314,7 +21070,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Extended platform sheath",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Silicone-based, tapered design"
@@ -20333,7 +21089,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Tapered sheath",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 280,
           "maxPressureBar": 19,
           "notes": "Fluoropolymer, radiopaque"
@@ -20352,7 +21108,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Hydrophilic microwire",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -20371,7 +21127,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Microwire",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -20390,7 +21146,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Compliant microcatheter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Extended length variant"
@@ -20409,7 +21165,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Compliant microcatheter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Shortened variant"
@@ -20428,7 +21184,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "4x20mm deflated balloon",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 350,
           "maxPressureBar": 24,
           "notes": "Silicone balloon, compliant"
@@ -20447,7 +21203,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "6x20mm deflated balloon",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 350,
           "maxPressureBar": 24,
           "notes": "Silicone balloon, larger"
@@ -20466,7 +21222,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Long sheath",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Silicone/polyurethane blend"
@@ -20485,7 +21241,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Extended sheath",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 320,
           "maxPressureBar": 22,
           "notes": "Enhanced polymer, higher pressure tolerance"
@@ -20504,7 +21260,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Standard microwire",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -20523,7 +21279,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Microwire 0.018\"",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -20542,7 +21298,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Microcatheter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 250,
           "maxPressureBar": 17,
           "notes": "Ultra-thin, delicate"
@@ -20561,7 +21317,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Flow-directed microcatheter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 320,
           "maxPressureBar": 22,
           "notes": "Flow-optimized design"
@@ -20580,7 +21336,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "High-density liquid embolic",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -20599,7 +21355,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Ethiodized liquid embolic",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -20618,7 +21374,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Long sheath",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 280,
           "maxPressureBar": 19,
           "notes": "Thermoplastic elastomer"
@@ -20637,7 +21393,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Microwire",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -20656,7 +21412,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Flow-directed microcatheter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 280,
           "maxPressureBar": 19,
           "notes": "Polyurethane, low friction"
@@ -20675,7 +21431,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Microcatheter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Silicone, trackable"
@@ -20694,7 +21450,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Detachable coil",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -20713,7 +21469,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Detachable coil",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -20732,7 +21488,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Microwire",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -20751,7 +21507,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Curved microwire",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -20770,7 +21526,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Intermediate catheter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -20789,7 +21545,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Aspiration catheter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 280,
           "maxPressureBar": 19,
           "notes": "Silicone polymer"
@@ -20808,7 +21564,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Aspiration catheter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Silicone polymer"
@@ -20827,7 +21583,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Balloon catheter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -20846,7 +21602,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Hydrophilic microwire",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -20865,7 +21621,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Curved hydrophilic microwire",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -20884,7 +21640,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Long sheath",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Silicone outer, fluoropolymer inner"
@@ -20903,7 +21659,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Aspiration catheter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Silicone-based"
@@ -20922,7 +21678,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Aspiration catheter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 320,
           "maxPressureBar": 22,
           "notes": "Silicone-based"
@@ -20941,7 +21697,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Detachable coil",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -20960,7 +21716,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Detachable coil",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -20979,7 +21735,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Long sheath",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 280,
           "maxPressureBar": 19,
           "notes": "Soft silicone tip"
@@ -20998,7 +21754,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Extended sheath",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Enhanced radiopacity"
@@ -21017,7 +21773,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Intermediate catheter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard intermediate"
@@ -21036,7 +21792,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Intermediate catheter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 320,
           "maxPressureBar": 22,
           "notes": "Larger bore intermediate"
@@ -21055,7 +21811,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Steerable microcatheter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Silicone-based"
@@ -21074,7 +21830,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Pure cyanoacrylate",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -21093,7 +21849,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Aspiration-compatible sheath",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 250,
           "maxPressureBar": 17,
           "notes": "Fluoropolymer, lower pressure"
@@ -21112,7 +21868,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Large-bore sheath",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Fluoropolymer, standard pressure"
@@ -21131,7 +21887,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Aspiration catheter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 350,
           "maxPressureBar": 24,
           "notes": "Proprietary polymer"
@@ -21150,7 +21906,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Large-bore aspiration catheter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 350,
           "maxPressureBar": 24,
           "notes": "Proprietary polymer, larger bore"
@@ -21169,7 +21925,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Separator microcatheter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Proprietary design"
@@ -21188,7 +21944,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Pushable coil",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -21207,7 +21963,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Pushable coil",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -21226,7 +21982,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Retrieval device",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -21245,7 +22001,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Retrieval device",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -21264,7 +22020,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Retrieval device",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -21283,7 +22039,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Flow-directed microcatheter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 250,
           "maxPressureBar": 17,
           "notes": "Ultra-thin lumen"
@@ -21302,7 +22058,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Microcatheter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 280,
           "maxPressureBar": 19,
           "notes": "Small lumen"
@@ -21321,7 +22077,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Microcatheter",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard lumen"
@@ -21340,7 +22096,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "2x10mm deflated balloon",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 320,
           "maxPressureBar": 22,
           "notes": "Compact balloon"
@@ -21359,7 +22115,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "3x10mm deflated balloon",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 320,
           "maxPressureBar": 22,
           "notes": "Standard balloon"
@@ -21378,7 +22134,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Long sheath",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 280,
           "maxPressureBar": 19,
           "notes": "Silicone-based"
@@ -21397,7 +22153,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Neuro sheath",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Reinforced silicone"
@@ -21416,7 +22172,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Standard diagnostic wire",
         "stabilityData": {
-          "tempRangeC": "-20\u201360",
+          "tempRangeC": "-20–60",
           "maxPressurePsi": 500,
           "maxPressureBar": 34,
           "notes": "Stainless steel, high stability"
@@ -21435,7 +22191,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Standard microwire",
         "stabilityData": {
-          "tempRangeC": "-20\u201360",
+          "tempRangeC": "-20–60",
           "maxPressurePsi": 500,
           "maxPressureBar": 34,
           "notes": "Stainless steel, high stability"
@@ -21454,7 +22210,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Stainless steel coil",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -21473,7 +22229,7 @@ window.NV_DATA = {
         "dmsoCompatible": null,
         "notes": "Stainless steel coil",
         "stabilityData": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21,
           "notes": "Standard polymer-based device"
@@ -21491,7 +22247,7 @@ window.NV_DATA = {
         "workingLengthCm": 10,
         "totalLengthCm": 25,
         "stability": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21
         },
@@ -21509,7 +22265,7 @@ window.NV_DATA = {
         "workingLengthCm": 10,
         "totalLengthCm": 25,
         "stability": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 320,
           "maxPressureBar": 22
         },
@@ -21527,7 +22283,7 @@ window.NV_DATA = {
         "workingLengthCm": 10,
         "totalLengthCm": 25,
         "stability": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 340,
           "maxPressureBar": 23
         },
@@ -21545,7 +22301,7 @@ window.NV_DATA = {
         "workingLengthCm": 12,
         "totalLengthCm": 30,
         "stability": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21
         },
@@ -21563,7 +22319,7 @@ window.NV_DATA = {
         "workingLengthCm": 25,
         "totalLengthCm": 40,
         "stability": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 280,
           "maxPressureBar": 19
         },
@@ -21581,7 +22337,7 @@ window.NV_DATA = {
         "workingLengthCm": 100,
         "totalLengthCm": 110,
         "stability": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21
         },
@@ -21599,7 +22355,7 @@ window.NV_DATA = {
         "workingLengthCm": 100,
         "totalLengthCm": 110,
         "stability": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 320,
           "maxPressureBar": 22
         },
@@ -21617,7 +22373,7 @@ window.NV_DATA = {
         "workingLengthCm": 90,
         "totalLengthCm": 100,
         "stability": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 280,
           "maxPressureBar": 19
         },
@@ -21635,7 +22391,7 @@ window.NV_DATA = {
         "workingLengthCm": 95,
         "totalLengthCm": 105,
         "stability": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21
         },
@@ -21653,7 +22409,7 @@ window.NV_DATA = {
         "workingLengthCm": 135,
         "totalLengthCm": 145,
         "stability": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 350,
           "maxPressureBar": 24
         },
@@ -21672,7 +22428,7 @@ window.NV_DATA = {
         "workingLengthCm": 135,
         "totalLengthCm": 145,
         "stability": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 340,
           "maxPressureBar": 23
         },
@@ -21691,7 +22447,7 @@ window.NV_DATA = {
         "workingLengthCm": 135,
         "totalLengthCm": 145,
         "stability": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 330,
           "maxPressureBar": 23
         },
@@ -21709,7 +22465,7 @@ window.NV_DATA = {
         "workingLengthCm": 130,
         "totalLengthCm": 140,
         "stability": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 360,
           "maxPressureBar": 25
         },
@@ -21727,7 +22483,7 @@ window.NV_DATA = {
         "workingLengthCm": null,
         "totalLengthCm": null,
         "stability": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 400,
           "maxPressureBar": 28
         },
@@ -21746,7 +22502,7 @@ window.NV_DATA = {
         "workingLengthCm": null,
         "totalLengthCm": null,
         "stability": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 380,
           "maxPressureBar": 26
         },
@@ -21764,7 +22520,7 @@ window.NV_DATA = {
         "workingLengthCm": null,
         "totalLengthCm": null,
         "stability": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 350,
           "maxPressureBar": 24
         },
@@ -21783,7 +22539,7 @@ window.NV_DATA = {
         "workingLengthCm": null,
         "totalLengthCm": null,
         "stability": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 360,
           "maxPressureBar": 25
         },
@@ -21802,7 +22558,7 @@ window.NV_DATA = {
         "workingLengthCm": null,
         "totalLengthCm": null,
         "stability": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 340,
           "maxPressureBar": 23
         },
@@ -21820,7 +22576,7 @@ window.NV_DATA = {
         "workingLengthCm": 120,
         "totalLengthCm": 135,
         "stability": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 320,
           "maxPressureBar": 22
         },
@@ -21839,7 +22595,7 @@ window.NV_DATA = {
         "workingLengthCm": 120,
         "totalLengthCm": 135,
         "stability": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21
         },
@@ -21857,7 +22613,7 @@ window.NV_DATA = {
         "workingLengthCm": 130,
         "totalLengthCm": 145,
         "stability": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 330,
           "maxPressureBar": 23
         },
@@ -21876,7 +22632,7 @@ window.NV_DATA = {
         "workingLengthCm": 110,
         "totalLengthCm": 125,
         "stability": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 280,
           "maxPressureBar": 19
         },
@@ -21895,7 +22651,7 @@ window.NV_DATA = {
         "workingLengthCm": 100,
         "totalLengthCm": 115,
         "stability": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21
         },
@@ -21913,7 +22669,7 @@ window.NV_DATA = {
         "workingLengthCm": 150,
         "totalLengthCm": 150,
         "stability": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 350,
           "maxPressureBar": 24
         },
@@ -21932,7 +22688,7 @@ window.NV_DATA = {
         "workingLengthCm": 150,
         "totalLengthCm": 150,
         "stability": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 350,
           "maxPressureBar": 24
         },
@@ -21951,7 +22707,7 @@ window.NV_DATA = {
         "workingLengthCm": 180,
         "totalLengthCm": 180,
         "stability": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 360,
           "maxPressureBar": 25
         },
@@ -21970,7 +22726,7 @@ window.NV_DATA = {
         "workingLengthCm": 100,
         "totalLengthCm": 100,
         "stability": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 340,
           "maxPressureBar": 23
         },
@@ -21988,7 +22744,7 @@ window.NV_DATA = {
         "workingLengthCm": 100,
         "totalLengthCm": 110,
         "stability": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 300,
           "maxPressureBar": 21
         },
@@ -22006,7 +22762,7 @@ window.NV_DATA = {
         "workingLengthCm": 110,
         "totalLengthCm": 120,
         "stability": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 320,
           "maxPressureBar": 22
         },
@@ -22024,7 +22780,7 @@ window.NV_DATA = {
         "workingLengthCm": 105,
         "totalLengthCm": 115,
         "stability": {
-          "tempRangeC": "4\u201340",
+          "tempRangeC": "4–40",
           "maxPressurePsi": 280,
           "maxPressureBar": 19
         },
@@ -22161,7 +22917,7 @@ window.NV_DATA = {
         "dmsoCompatible": null
       },
       {
-        "name": "LC Bead 100-300\u00b5m",
+        "name": "LC Bead 100-300µm",
         "category": "hcc-embolic-beads",
         "manufacturer": "BTG",
         "material": "polyvinyl-alcohol",
@@ -22169,7 +22925,7 @@ window.NV_DATA = {
         "notes": "Drug-eluting bead for TACE"
       },
       {
-        "name": "Embospheres 100-300\u00b5m",
+        "name": "Embospheres 100-300µm",
         "category": "hcc-embolic-particles",
         "manufacturer": "BioSphere Medical",
         "material": "trisacryl-gelatin",
