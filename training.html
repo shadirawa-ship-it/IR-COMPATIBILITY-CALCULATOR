@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#33691E">
+<title>IR Education — Training Modules | NV Compatibility Calculator</title>
+<meta name="description" content="Interventional Radiology training modules for doctors, nurses, and technologists — vascular access, embolization, peripheral intervention, neurovascular, carotid stenting, and chemoembolization.">
+<link rel="icon" href="icons/favicon.ico" type="image/x-icon">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<style>
+:root{
+  --pri:#558B2F;--pri-d:#33691E;--pri-l:#F1F8E9;--pri-c:#FFFFFF;
+  --sec:#2E7D32;--sec-l:#E8F5E9;
+  --bg:#F9FBE7;--surface:#FFFFFF;--surface2:#F1F8E9;
+  --txt:#1B5E20;--txt2:#33691E;--txt3:#757575;
+  --border:rgba(0,0,0,0.06);--border2:rgba(0,0,0,0.12);
+  --r:10px;--r2:16px;--r3:24px;
+  --sh:0 1px 3px rgba(0,0,0,0.06),0 1px 2px rgba(0,0,0,0.04);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  background:var(--bg);color:var(--txt2);line-height:1.5;
+}
+#topbar{
+  display:flex;align-items:center;gap:12px;padding:14px 20px;
+  background:linear-gradient(135deg,var(--pri-d),var(--pri));color:#fff;
+  box-shadow:var(--sh);position:sticky;top:0;z-index:10;
+}
+.appicon{width:34px;height:34px;background:rgba(255,255,255,0.15);border-radius:10px;
+  background:url('icons/brain-logo-64.png') center / contain no-repeat;border:1px solid rgba(255,255,255,0.3);flex-shrink:0;}
+.toptitles{flex:1;min-width:0;}
+.toptitle{font-weight:700;font-size:16px;}
+.topsub{font-size:12px;opacity:0.85;}
+.backlink{
+  color:#fff;text-decoration:none;font-size:13px;font-weight:600;
+  background:rgba(255,255,255,0.16);padding:8px 14px;border-radius:20px;
+  white-space:nowrap;transition:background .15s;
+}
+.backlink:hover{background:rgba(255,255,255,0.28);}
+main{max-width:1080px;margin:0 auto;padding:32px 20px 60px;}
+.hero{margin-bottom:32px;}
+.hero-title{font-size:28px;font-weight:800;color:var(--txt);margin-bottom:8px;}
+.hero-sub{font-size:15px;color:var(--txt3);max-width:640px;}
+.audience-row{display:flex;gap:8px;margin-top:16px;flex-wrap:wrap;}
+.audience-pill{
+  background:var(--sec-l);color:var(--sec);font-size:12px;font-weight:700;
+  padding:6px 14px;border-radius:20px;
+}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;margin-top:8px;}
+.card{
+  background:var(--surface);border:1px solid var(--border2);border-radius:var(--r2);
+  padding:22px;box-shadow:var(--sh);display:flex;flex-direction:column;gap:12px;
+  transition:transform .15s,box-shadow .15s;
+}
+.card:hover{transform:translateY(-2px);box-shadow:0 4px 14px rgba(0,0,0,0.09);}
+.card-num{
+  width:34px;height:34px;border-radius:10px;background:var(--pri-l);color:var(--pri-d);
+  font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center;
+}
+.card-title{font-size:17px;font-weight:700;color:var(--txt);}
+.card-desc{font-size:13.5px;color:var(--txt3);flex:1;}
+.card-meta{font-size:11.5px;color:var(--pri-d);font-weight:600;background:var(--surface2);
+  display:inline-block;padding:4px 10px;border-radius:20px;width:fit-content;}
+.card-dl{
+  margin-top:6px;display:inline-flex;align-items:center;gap:6px;
+  background:var(--pri);color:#fff;text-decoration:none;font-weight:700;font-size:13.5px;
+  padding:10px 16px;border-radius:var(--r);justify-content:center;transition:background .15s;
+}
+.card-dl:hover{background:var(--pri-d);}
+.footnote{
+  margin-top:40px;padding:16px 18px;background:var(--surface2);border-radius:var(--r);
+  font-size:12.5px;color:var(--txt3);border:1px solid var(--border);
+}
+</style>
+</head>
+<body>
+
+<div id="topbar">
+  <div class="appicon"></div>
+  <div class="toptitles">
+    <div class="toptitle">IR Education</div>
+    <div class="topsub">Interventional Radiology Training Modules</div>
+  </div>
+  <a class="backlink" href="index.html">← Compatibility Calculator</a>
+</div>
+
+<main>
+  <div class="hero">
+    <div class="hero-title">Training Modules</div>
+    <div class="hero-sub">Focused, evidence-based presentations covering procedure fundamentals, role-specific responsibilities, complications, and guideline references (SIR / CIRSE / ACR / AHA). Each module is ~10 slides and downloads as a PowerPoint (.pptx) file.</div>
+    <div class="audience-row">
+      <span class="audience-pill">IR Doctors</span>
+      <span class="audience-pill">IR Nurses</span>
+      <span class="audience-pill">IR Technologists</span>
+    </div>
+  </div>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-num">01</div>
+      <div class="card-title">Peripheral Vascular Intervention</div>
+      <div class="card-desc">Iliac & femoropopliteal angioplasty, stenting, thrombolysis, and CTO crossing — indications, procedure flow, and complications.</div>
+      <div class="card-meta">10 slides · TASC classification, Rutherford staging</div>
+      <a class="card-dl" href="training/01_Peripheral_Vascular_Intervention.pptx" download>⬇ Download Module</a>
+    </div>
+
+    <div class="card">
+      <div class="card-num">02</div>
+      <div class="card-title">Embolization Techniques</div>
+      <div class="card-desc">Particle, liquid, and coil embolic agents — how vessel size, flow, and treatment goal guide agent selection.</div>
+      <div class="card-meta">10 slides · Post-embolization syndrome, agent selection</div>
+      <a class="card-dl" href="training/02_Embolization_Techniques.pptx" download>⬇ Download Module</a>
+    </div>
+
+    <div class="card">
+      <div class="card-num">03</div>
+      <div class="card-title">Vascular Access</div>
+      <div class="card-desc">Tunneled catheters, implanted ports, and AV fistula creation & maturation for venous and dialysis access.</div>
+      <div class="card-meta">10 slides · KDOQI fistula-first, CLABSI prevention</div>
+      <a class="card-dl" href="training/03_Vascular_Access.pptx" download>⬇ Download Module</a>
+    </div>
+
+    <div class="card">
+      <div class="card-num">04</div>
+      <div class="card-title">Neurovascular Intervention</div>
+      <div class="card-desc">Mechanical thrombectomy for acute ischemic stroke and AVM embolization — patient selection and technique.</div>
+      <div class="card-meta">10 slides · LVO selection, TICI reperfusion grading</div>
+      <a class="card-dl" href="training/04_Neurovascular_Intervention.pptx" download>⬇ Download Module</a>
+    </div>
+
+    <div class="card">
+      <div class="card-num">05</div>
+      <div class="card-title">Carotid Artery Stenting</div>
+      <div class="card-desc">Embolic protection, technique, and stroke-risk reduction — indications versus endarterectomy.</div>
+      <div class="card-meta">10 slides · CIRSE standards, embolic protection devices</div>
+      <a class="card-dl" href="training/05_Carotid_Artery_Stenting.pptx" download>⬇ Download Module</a>
+    </div>
+
+    <div class="card">
+      <div class="card-num">06</div>
+      <div class="card-title">Chemoembolization (TACE)</div>
+      <div class="card-desc">Conventional and drug-eluting bead TACE for hepatocellular carcinoma — staging, technique, and follow-up.</div>
+      <div class="card-meta">10 slides · BCLC staging, cTACE vs. DEB-TACE</div>
+      <a class="card-dl" href="training/06_Chemoembolization_TACE.pptx" download>⬇ Download Module</a>
+    </div>
+
+  </div>
+
+  <div class="footnote">
+    These modules are reference education materials for healthcare professionals and are not a substitute for institutional protocols, current manufacturer IFUs, or clinical judgment. Always verify current guidelines and device-specific instructions before clinical use.
+  </div>
+</main>
+
+</body>
+</html>
