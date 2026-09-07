@@ -1127,14 +1127,22 @@ function addSelectSearch(container) {
       const label = wrap.querySelector('label');
       wrap.insertBefore(input, label ? label.nextSibling : select);
     }
-    if (wrap.querySelector('.sel-dd')) return;
-    if (getComputedStyle(wrap).position === 'static') wrap.style.position = 'relative';
+    if (input.dataset.ddWired) return;
+    input.dataset.ddWired = '1';
     const dd = document.createElement('div');
     dd.className = 'sel-dd';
-    dd.style.cssText = 'display:none;position:absolute;left:0;right:0;z-index:50;max-height:220px;overflow:auto;background:#fff;border:1px solid rgba(0,0,0,0.12);border-radius:10px;box-shadow:0 6px 20px rgba(0,0,0,0.14);margin-top:2px;';
-    wrap.appendChild(dd);
+    dd.style.cssText = 'display:none;position:fixed;z-index:9999;max-height:220px;overflow:auto;background:#fff;border:1px solid rgba(0,0,0,0.12);border-radius:10px;box-shadow:0 6px 20px rgba(0,0,0,0.18);';
+    document.body.appendChild(dd);
+
+    function positionDD() {
+      const r = input.getBoundingClientRect();
+      dd.style.left = r.left + 'px';
+      dd.style.top = (r.bottom + 2) + 'px';
+      dd.style.width = r.width + 'px';
+    }
 
     function renderList(q) {
+      positionDD();
       dd.innerHTML = '';
       const query = (q || '').trim().toLowerCase();
       let shown = 0;
@@ -1173,7 +1181,13 @@ function addSelectSearch(container) {
     input.addEventListener('focus', () => renderList(input.value));
     input.addEventListener('click', e => { e.stopPropagation(); renderList(input.value); });
     document.addEventListener('click', (e) => {
-      if (!wrap.contains(e.target)) dd.style.display = 'none';
+      if (e.target !== input) dd.style.display = 'none';
+    });
+    document.addEventListener('scroll', () => {
+      if (dd.style.display === 'block') positionDD();
+    }, true);
+    window.addEventListener('resize', () => {
+      if (dd.style.display === 'block') positionDD();
     });
     input.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') { dd.style.display = 'none'; input.blur(); }
