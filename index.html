@@ -1123,21 +1123,61 @@ function addSelectSearch(container) {
       input.className = 'sel-search';
       input.autocomplete = 'off';
       input.spellcheck = false;
-      input.placeholder = 'Search…';
+      input.placeholder = 'Search\u2026';
       const label = wrap.querySelector('label');
       wrap.insertBefore(input, label ? label.nextSibling : select);
-      input.addEventListener('input', () => {
-        const q = input.value.trim().toLowerCase();
-        let firstMatch = null;
-        options.forEach(opt => {
-          if (!opt.value) return; // always keep the "— select —" placeholder
-          const match = !q || opt.textContent.toLowerCase().includes(q);
-          opt.hidden = !match;
-          if (match && !firstMatch) firstMatch = opt;
-        });
-      });
-      input.addEventListener('click', e => e.stopPropagation());
     }
+    if (wrap.querySelector('.sel-dd')) return;
+    if (getComputedStyle(wrap).position === 'static') wrap.style.position = 'relative';
+    const dd = document.createElement('div');
+    dd.className = 'sel-dd';
+    dd.style.cssText = 'display:none;position:absolute;left:0;right:0;z-index:50;max-height:220px;overflow:auto;background:#fff;border:1px solid rgba(0,0,0,0.12);border-radius:10px;box-shadow:0 6px 20px rgba(0,0,0,0.14);margin-top:2px;';
+    wrap.appendChild(dd);
+
+    function renderList(q) {
+      dd.innerHTML = '';
+      const query = (q || '').trim().toLowerCase();
+      let shown = 0;
+      options.forEach(opt => {
+        if (!opt.value) return;
+        const match = !query || opt.textContent.toLowerCase().includes(query);
+        opt.hidden = !match;
+        if (!match) return;
+        if (shown >= 200) return;
+        shown++;
+        const item = document.createElement('div');
+        item.textContent = opt.textContent;
+        item.className = 'sel-dd-item';
+        item.style.cssText = 'padding:9px 12px;cursor:pointer;font-size:13.5px;color:#1B5E20;';
+        item.addEventListener('mouseenter', () => { item.style.background = '#F1F8E9'; });
+        item.addEventListener('mouseleave', () => { item.style.background = ''; });
+        item.addEventListener('mousedown', e => {
+          e.preventDefault();
+          select.value = opt.value;
+          select.dispatchEvent(new Event('change', { bubbles: true }));
+          input.value = opt.textContent;
+          dd.style.display = 'none';
+        });
+        dd.appendChild(item);
+      });
+      if (shown === 0) {
+        const empty = document.createElement('div');
+        empty.textContent = 'No matching devices';
+        empty.style.cssText = 'padding:10px 12px;font-size:13px;color:#757575;';
+        dd.appendChild(empty);
+      }
+      dd.style.display = 'block';
+    }
+
+    input.addEventListener('input', () => renderList(input.value));
+    input.addEventListener('focus', () => renderList(input.value));
+    input.addEventListener('click', e => { e.stopPropagation(); renderList(input.value); });
+    document.addEventListener('click', (e) => {
+      if (!wrap.contains(e.target)) dd.style.display = 'none';
+    });
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') { dd.style.display = 'none'; input.blur(); }
+    });
   });
 }
 
