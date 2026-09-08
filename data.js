@@ -1,5 +1,5 @@
 // NV Compatibility Calculator — reference dataset
-// Source: "neuro_ir_compatibilitydraft.xlsx" + Terumo Interventional Products (70 devices added - Sept 2, 2026)
+// Source: "neuro_ir_compatibilitydraft.xlsx" + Terumo Interventional Products (70 devices added - Sept 2, 2026) + Microport Neuro Products (13 devices added - Sept 8, 2026) + Endovastec Aortic Products (3 devices added - Sept 8, 2026) + Endovastec Peripheral Arterial Products (16 devices added - Sept 8, 2026) + Endovastec Tumor Intervention Products (3 devices added - Sept 8, 2026) + W.L. Gore FORTEGRA Venous Stent (1 device added - Sept 8, 2026) + W.L. Gore VIABAHN Endoprosthesis (3 devices added - Sept 8, 2026) + W.L. Gore VIABAHN VBX Balloon-Expandable Endoprosthesis (2 devices added - Sept 8, 2026) + W.L. Gore VIATORR TIPS Endoprosthesis (2 devices added - Sept 8, 2026) + W.L. Gore TIPS Access Set (1 device added - Sept 8, 2026)
 window.NV_DATA = {
   "version": "1.0",
   "source": "neuro_ir_compatibilitydraft.xlsx",
@@ -23071,6 +23071,381 @@ window.NV_DATA = {
         "material": "nitinol-hydrophilic",
         "odInch": 0.018,
         "dmsoCompatible": null
+      },
+      {
+        "name": "WILLIS™ Intracranial Stent Graft",
+        "category": "FLOW DIVERTER",
+        "manufacturer": "Microport Neuro",
+        "material": "nitinol-membrane",
+        "dmsoCompatible": null,
+        "notes": "Flow diverter for hemorrhagic stroke; ultra-thin 50µm membrane; embedded compression technology"
+      },
+      {
+        "name": "Tubridge™",
+        "category": "FLOW DIVERTER",
+        "manufacturer": "Microport Neuro",
+        "material": "nitinol-membrane",
+        "dmsoCompatible": null,
+        "notes": "Flow diverter for intracranial aneurysm treatment"
+      },
+      {
+        "name": "Fastrack™ Microcatheter System",
+        "category": "microcatheters",
+        "manufacturer": "Microport Neuro",
+        "material": "polyimide",
+        "dmsoCompatible": null,
+        "notes": "Support microcatheter for neurovascular intervention"
+      },
+      {
+        "name": "U-Track™ Support Catheter",
+        "category": "support-catheters",
+        "manufacturer": "Microport Neuro",
+        "material": "silicone",
+        "dmsoCompatible": null,
+        "notes": "Support catheter for neurovascular procedures"
+      },
+      {
+        "name": "NUMEN™ Family Guide Catheter",
+        "category": "guide-catheters",
+        "manufacturer": "Microport Neuro",
+        "material": "polyurethane",
+        "dmsoCompatible": null,
+        "notes": "Family of guide catheters for neurovascular access and support"
+      },
+      {
+        "name": "APOLLO™ Intracranial Stent",
+        "category": "INTRACRANIAL STENT",
+        "manufacturer": "Microport Neuro",
+        "material": "stainless-steel",
+        "dmsoCompatible": null,
+        "notes": "Self-expanding stent for intracranial atherosclerotic disease (ICAD)"
+      },
+      {
+        "name": "Bridge™ Intracranial Stent",
+        "category": "INTRACRANIAL STENT",
+        "manufacturer": "Microport Neuro",
+        "material": "stainless-steel",
+        "dmsoCompatible": null,
+        "notes": "Intracranial stent for ICAD and other applications"
+      },
+      {
+        "name": "DIVEER",
+        "category": "STENT RETRIEVER",
+        "manufacturer": "Microport Neuro",
+        "material": "nitinol",
+        "dmsoCompatible": null,
+        "notes": "Intervention device for intracranial applications"
+      },
+      {
+        "name": "NeuroHawk Thrombectomy System",
+        "category": "STENT RETRIEVER",
+        "manufacturer": "Microport Neuro",
+        "material": "nitinol",
+        "dmsoCompatible": null,
+        "notes": "Mechanical thrombectomy device for acute ischemic stroke"
+      },
+      {
+        "name": "WAVE-track™ Guidewire",
+        "category": "GUIDEWIRE",
+        "manufacturer": "Microport Neuro",
+        "material": "nitinol-hydrophilic",
+        "odInch": 0.018,
+        "dmsoCompatible": null,
+        "notes": "Hydrophilic guidewire for acute ischemic stroke intervention"
+      },
+      {
+        "name": "QUEEN-track™ Guidewire",
+        "category": "GUIDEWIRE",
+        "manufacturer": "Microport Neuro",
+        "material": "nitinol-hydrophilic",
+        "odInch": 0.018,
+        "dmsoCompatible": null,
+        "notes": "Hydrophilic guidewire for neurovascular procedures"
+      },
+      {
+        "name": "X-track™ Guidewire",
+        "category": "GUIDEWIRE",
+        "manufacturer": "Microport Neuro",
+        "material": "nitinol-hydrophilic",
+        "odInch": 0.018,
+        "dmsoCompatible": null,
+        "notes": "Hydrophilic guidewire for neurovascular access"
+      },
+      {
+        "name": "Minos™ Abdominal Aortic Stent Graft and Delivery System",
+        "category": "AORTIC STENT GRAFT",
+        "manufacturer": "Endovastec",
+        "material": "stainless-steel-polyester",
+        "dmsoCompatible": null,
+        "notes": "EVAR system for endovascular treatment of abdominal aortic aneurysms"
+      },
+      {
+        "name": "Aegis™ Bifurcated Aortic Stent Graft System",
+        "category": "AORTIC STENT GRAFT",
+        "manufacturer": "Endovastec",
+        "material": "stainless-steel-polyester",
+        "dmsoCompatible": null,
+        "notes": "Bifurcated EVAR system for abdominal aortic aneurysms involving iliac arteries"
+      },
+      {
+        "name": "Hercules™ Bifurcated Stent Graft System",
+        "category": "AORTIC STENT GRAFT",
+        "manufacturer": "Endovastec",
+        "material": "stainless-steel-polyester",
+        "dmsoCompatible": null,
+        "notes": "Bifurcated EVAR system for infrarenal abdominal aortic aneurysm treatment"
+      },
+      {
+        "name": "Reewarm™ PTX Drug Coated PTA Balloon Catheter",
+        "category": "PTA BALLOON",
+        "manufacturer": "Endovastec",
+        "material": "polyamide-polyester",
+        "dmsoCompatible": null,
+        "notes": "Drug-coated PTA balloon for peripheral vessel angioplasty"
+      },
+      {
+        "name": "ReeAmber™ PTA Balloon Dilatation Catheter",
+        "category": "PTA BALLOON",
+        "manufacturer": "Endovastec",
+        "material": "polyamide",
+        "dmsoCompatible": null,
+        "notes": "PTA balloon for iliac, femoral, popliteal, and infra-popliteal vessels"
+      },
+      {
+        "name": "Reewarm™ PTA Balloon Dilatation Catheter",
+        "category": "PTA BALLOON",
+        "manufacturer": "Endovastec",
+        "material": "polyamide",
+        "dmsoCompatible": null,
+        "notes": "PTA balloon for subinguinal peripheral vessel dilation"
+      },
+      {
+        "name": "Ryflumen™ High-Pressure PTA Balloon Dilatation Catheter",
+        "category": "PTA BALLOON",
+        "manufacturer": "Endovastec",
+        "material": "polyamide",
+        "dmsoCompatible": null,
+        "notes": "High-pressure PTA balloon for peripheral vascular stenosis"
+      },
+      {
+        "name": "HawkMaster™ Detachable Fibered Embolization Coils",
+        "category": "COIL",
+        "manufacturer": "Endovastec",
+        "material": "nitinol-polyester",
+        "dmsoCompatible": null,
+        "notes": "Detachable fibered coils for peripheral arterial aneurysm and AVM embolization"
+      },
+      {
+        "name": "HawkNest™ Fibered Embolization Coils",
+        "category": "COIL",
+        "manufacturer": "Endovastec",
+        "material": "nitinol-polyester",
+        "dmsoCompatible": null,
+        "notes": "Fibered coils for peripheral vascular aneurysm and AVM treatment"
+      },
+      {
+        "name": "Veryan BM3D™ BioMimics 3D Peripheral Self-Expanding Stent",
+        "category": "PERIPHERAL STENT",
+        "manufacturer": "Endovastec",
+        "material": "nitinol",
+        "dmsoCompatible": null,
+        "notes": "Self-expanding stent for superficial femoral artery lesions"
+      },
+      {
+        "name": "CROWNUS™ Peripheral Stent System",
+        "category": "PERIPHERAL STENT",
+        "manufacturer": "Endovastec",
+        "material": "stainless-steel",
+        "dmsoCompatible": null,
+        "notes": "Self-expanding stent for iliac, femoral, and subclavian stenosis/occlusion"
+      },
+      {
+        "name": "Vflower™ Venous Stent System",
+        "category": "PERIPHERAL STENT",
+        "manufacturer": "Endovastec",
+        "material": "nitinol",
+        "dmsoCompatible": null,
+        "notes": "Venous stent for non-thrombotic iliac vein lesions and post-thrombotic syndrome"
+      },
+      {
+        "name": "SeaDragon™ PTA Balloon Dilatation Catheter",
+        "category": "PTA BALLOON",
+        "manufacturer": "Endovastec",
+        "material": "polyamide",
+        "dmsoCompatible": null,
+        "notes": "PTA balloon for peripheral vasculature dilation"
+      },
+      {
+        "name": "Vewatch™ Vena Cava Filter",
+        "category": "IVC FILTER",
+        "manufacturer": "Endovastec",
+        "material": "nitinol",
+        "dmsoCompatible": null,
+        "notes": "Retrievable IVC filter for pulmonary embolism prevention"
+      },
+      {
+        "name": "Vepack™ Snare Retrieval Kit",
+        "category": "SNARE",
+        "manufacturer": "Endovastec",
+        "material": "nitinol-stainless-steel",
+        "dmsoCompatible": null,
+        "notes": "Snare system with sheath/dilator for vena cava filter retrieval"
+      },
+      {
+        "name": "Fishhawk™ Mechanical Thrombectomy Device",
+        "category": "THROMBECTOMY",
+        "manufacturer": "Endovastec",
+        "material": "nitinol",
+        "dmsoCompatible": null,
+        "notes": "Percutaneous endovascular thrombectomy device for venous and arterial occlusion"
+      },
+      {
+        "name": "VeinPro™ Endovenous Radiofrequency Closure System",
+        "category": "VENOUS CLOSURE",
+        "manufacturer": "Endovastec",
+        "material": "catheter-based",
+        "dmsoCompatible": null,
+        "notes": "Radiofrequency ablation system for varicose vein treatment"
+      },
+      {
+        "name": "Reflow-speX™ Support Catheter",
+        "category": "SUPPORT CATHETER",
+        "manufacturer": "Endovastec",
+        "material": "polyurethane",
+        "dmsoCompatible": null,
+        "notes": "Support catheter for peripheral vascular lesion access"
+      },
+      {
+        "name": "DEMANTOID™ Peripheral Vascular Guide Wire",
+        "category": "peripheral-guidewires",
+        "manufacturer": "Endovastec",
+        "material": "nitinol-hydrophilic",
+        "odInch": 0.035,
+        "dmsoCompatible": null,
+        "notes": "Guidewire for peripheral vasculature catheter insertion"
+      },
+      {
+        "name": "FinderSphere™ Polyvinyl Alcohol Embolic Microspheres",
+        "category": "MICROSPHERE",
+        "manufacturer": "Endovastec",
+        "material": "polyvinyl-alcohol",
+        "dmsoCompatible": null,
+        "notes": "Embolic microspheres for embolization treatment of hypervascular solid organ malignancies"
+      },
+      {
+        "name": "Torqueflex™ Peripheral Vascular Microcatheters",
+        "category": "MICROCATHETER",
+        "manufacturer": "Endovastec",
+        "material": "polyimide",
+        "dmsoCompatible": null,
+        "notes": "Microcatheter for injection of diagnostic, embolic, or therapeutic agents"
+      },
+      {
+        "name": "Tipspear™ Transjugular Liver Access Set",
+        "category": "ACCESSORY",
+        "manufacturer": "Endovastec",
+        "material": "catheter-based",
+        "dmsoCompatible": null,
+        "notes": "Transjugular access set for intrahepatic portosystemic shunt (TIPS) procedures"
+      },
+      {
+        "name": "GORE® VIABAHN® FORTEGRA Venous Stent",
+        "category": "PERIPHERAL STENT",
+        "manufacturer": "W.L. Gore & Associates",
+        "material": "nitinol-polyester",
+        "odInch": 0.028,
+        "odFr": 8.5,
+        "workingLengthCm": 5,
+        "dmsoCompatible": null,
+        "notes": "Self-expanding stent graft for symptomatic inferior vena cava and iliofemoral venous stenosis; diameters 7-26mm, lengths 50-150mm, 0.035-inch guidewire compatible"
+      },
+      {
+        "name": "GORE® VIABAHN® Endoprosthesis with Heparin Bioactive Surface (0.035\" Guidewire)",
+        "category": "STENT GRAFT",
+        "manufacturer": "W.L. Gore & Associates",
+        "material": "nitinol-polyester",
+        "odInch": 0.028,
+        "odFr": 6,
+        "workingLengthCm": 120,
+        "dmsoCompatible": null,
+        "notes": "Peripheral stent graft with heparin bioactive surface for arteriovenous access; diameters 2.5-25mm, 0.035-inch guidewire compatible; multiple lengths available"
+      },
+      {
+        "name": "GORE® VIABAHN® Endoprosthesis with Heparin Bioactive Surface (0.014/0.018\" Guidewire)",
+        "category": "STENT GRAFT",
+        "manufacturer": "W.L. Gore & Associates",
+        "material": "nitinol-polyester",
+        "odInch": 0.025,
+        "odFr": 5.5,
+        "workingLengthCm": 120,
+        "dmsoCompatible": null,
+        "notes": "Peripheral stent graft with heparin bioactive surface for smaller vessel access; diameters 2.5-25mm, 0.014/0.018-inch guidewire compatible; 120cm length"
+      },
+      {
+        "name": "GORE® VIABAHN® Endoprosthesis (0.035\" Guidewire)",
+        "category": "STENT GRAFT",
+        "manufacturer": "W.L. Gore & Associates",
+        "material": "nitinol-polyester",
+        "odInch": 0.028,
+        "odFr": 6,
+        "workingLengthCm": 120,
+        "dmsoCompatible": null,
+        "notes": "Original peripheral stent graft without bioactive surface; diameters 2.5-15mm, 0.035-inch guidewire compatible; multiple lengths available"
+      },
+      {
+        "name": "GORE® VIABAHN® VBX Balloon Expandable Endoprosthesis (Standard Profile)",
+        "category": "BALLOON-EXPANDABLE STENT",
+        "manufacturer": "W.L. Gore & Associates",
+        "material": "nitinol-polyester",
+        "odInch": 0.035,
+        "odFr": 7,
+        "workingLengthCm": 80,
+        "dmsoCompatible": null,
+        "notes": "Balloon-expandable peripheral stent graft for arterial stenosis and occlusions; diameters 5-12mm, variable lengths 15-79mm, 0.035-inch guidewire compatible"
+      },
+      {
+        "name": "GORE® VIABAHN® VBX Balloon Expandable Endoprosthesis (Reduced Profile)",
+        "category": "BALLOON-EXPANDABLE STENT",
+        "manufacturer": "W.L. Gore & Associates",
+        "material": "nitinol-polyester",
+        "odInch": 0.032,
+        "odFr": 6,
+        "workingLengthCm": 80,
+        "dmsoCompatible": null,
+        "notes": "Reduced profile version of balloon-expandable peripheral stent graft for lower access site trauma; diameters 5-12mm, variable lengths, 0.035-inch guidewire compatible"
+      },
+      {
+        "name": "GORE® VIATORR® TIPS Endoprosthesis with Controlled Expansion (Graft-lined)",
+        "category": "STENT GRAFT",
+        "manufacturer": "W.L. Gore & Associates",
+        "material": "nitinol-polyester",
+        "odInch": 0.035,
+        "odFr": 10,
+        "workingLengthCm": 18,
+        "dmsoCompatible": null,
+        "notes": "Transjugular intrahepatic portosystemic shunt (TIPS) covered stent for portal hypertension treatment; graft-lined variant; internal diameters 6-10mm, balloon diameters 6-10mm, 0.035-inch guidewire compatible"
+      },
+      {
+        "name": "GORE® VIATORR® TIPS Endoprosthesis with Controlled Expansion (Unlined)",
+        "category": "STENT GRAFT",
+        "manufacturer": "W.L. Gore & Associates",
+        "material": "nitinol",
+        "odInch": 0.035,
+        "odFr": 10,
+        "workingLengthCm": 18,
+        "dmsoCompatible": null,
+        "notes": "Transjugular intrahepatic portosystemic shunt (TIPS) stent for portal hypertension treatment; unlined variant; internal diameters 6-10mm, balloon diameters 6-10mm, 0.035-inch guidewire compatible"
+      },
+      {
+        "name": "GORE® TIPS Set",
+        "category": "ACCESSORY",
+        "manufacturer": "W.L. Gore & Associates",
+        "material": "stainless-steel-synthetic",
+        "odInch": null,
+        "odFr": 10,
+        "workingLengthCm": null,
+        "dmsoCompatible": null,
+        "notes": "Access kit for transjugular intrahepatic portosystemic shunt (TIPS) procedures; includes 16-gauge needle, 10 Fr introducer sheath, 10 Fr dilator, and 10 Fr guiding catheter; 0.035-inch guidewire compatible"
       }
     ]
   },
