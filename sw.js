@@ -1,4 +1,4 @@
-const CACHE_NAME = 'ir-trainer-v3.3.0';
+const CACHE_NAME = 'ir-trainer-v3.6.0';
 const SCOPE = self.registration.scope;
 
 const abs = p => new URL(p, SCOPE).toString();

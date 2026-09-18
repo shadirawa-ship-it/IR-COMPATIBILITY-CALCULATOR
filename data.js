@@ -1,5 +1,5 @@
 // NV Compatibility Calculator — reference dataset
-// Source: "neuro_ir_compatibilitydraft.xlsx" + Terumo Interventional Products (70 devices added - Sept 2, 2026) + Microport Neuro Products (13 devices added - Sept 8, 2026) + Endovastec Aortic Products (3 devices added - Sept 8, 2026) + Endovastec Peripheral Arterial Products (16 devices added - Sept 8, 2026) + Endovastec Tumor Intervention Products (3 devices added - Sept 8, 2026) + W.L. Gore FORTEGRA Venous Stent (1 device added - Sept 8, 2026) + W.L. Gore VIABAHN Endoprosthesis (3 devices added - Sept 8, 2026) + W.L. Gore VIABAHN VBX Balloon-Expandable Endoprosthesis (2 devices added - Sept 8, 2026) + W.L. Gore VIATORR TIPS Endoprosthesis (2 devices added - Sept 8, 2026) + W.L. Gore TIPS Access Set (1 device added - Sept 8, 2026) | FIX Sept 17, 2026: 44 devices (Endovastec 22, Microport Neuro 12, W.L. Gore 9, Stryker 1) were previously written into the unused NV_DATA.deviceCategories.devices array and never rendered by the app; relocated into NV_DATA.devices (877 -> 921). All new devices MUST be added to NV_DATA.devices.
+// Source: "neuro_ir_compatibilitydraft.xlsx" + Terumo Interventional Products (70 devices added - Sept 2, 2026) + Microport Neuro Products (13 devices added - Sept 8, 2026) + Endovastec Aortic Products (3 devices added - Sept 8, 2026) + Endovastec Peripheral Arterial Products (16 devices added - Sept 8, 2026) + Endovastec Tumor Intervention Products (3 devices added - Sept 8, 2026) + W.L. Gore FORTEGRA Venous Stent (1 device added - Sept 8, 2026) + W.L. Gore VIABAHN Endoprosthesis (3 devices added - Sept 8, 2026) + W.L. Gore VIABAHN VBX Balloon-Expandable Endoprosthesis (2 devices added - Sept 8, 2026) + W.L. Gore VIATORR TIPS Endoprosthesis (2 devices added - Sept 8, 2026) + W.L. Gore TIPS Access Set (1 device added - Sept 8, 2026) | FIX Sept 17, 2026: 44 devices (Endovastec 22, Microport Neuro 12, W.L. Gore 9, Stryker 1) were previously written into the unused NV_DATA.deviceCategories.devices array and never rendered by the app; relocated into NV_DATA.devices (877 -> 921). All new devices MUST be added to NV_DATA.devices. | SPEC RESEARCH PASS 1 Sept 17, 2026: dispatched parallel research agents across ~54 manufacturers to fill missing OD/ID/working-length/recommended-sheath fields from official manufacturer catalogs, IFUs, FDA 510(k) summaries and GUDID records. ~70 devices updated with verified specs and inline source citations in each device's notes field (Terumo, Stryker, Boston Scientific, Medtronic, Cordis, Balt, Endovastec, Bard/BD, Asahi, Cook Medical, Penumbra, Cerenovus, Abbott, W.L. Gore, and others). This was a partial pass — most research agents hit tool-call budget limits before covering their full device lists (roughly 480 of ~551 in-scope devices remain unresearched); several devices were intentionally skipped because the app's device name did not exactly match a verifiable current manufacturer product (flagged in each agent's report rather than guessed). Continue this research in follow-up passes using the same method: group remaining devices by manufacturer, dispatch a research agent per group with the exact-match-only rule, then merge only null fields. | SPEC RESEARCH PASS 2 Sept 18, 2026: re-ran focused research on Stryker, Medtronic and Boston Scientific (the 3 largest remaining gaps), using GUDID/FDA sources more heavily. 82 additional devices updated (Stryker: AXS Infinity LS/LS Plus, Synchro/Transend/Target/Trevo/Neuroform/Surpass families; Medtronic: Endurant, SpiderFX, Goose Neck snares, Pipeline, Solitaire X, Onyx, Axium Prime, X-Pedion, Cool-Tip, Valiant Navion; Boston Scientific: Fathom, Sterling, Express LD, Wallstent, Epic Vascular, Greenfield filter, Oncozene, V-18, Jetstream, Innova, Bentson/Amplatz/Transend guidewires, Mustang balloon). Total verified-spec devices across both passes: ~150 of ~551 in-scope. Several app device names were confirmed to reference products/sizes that don't officially exist under that exact spec (e.g. "Neuroform Atlas Stent 3.5mm" — real sizes are 3.0/4.0/4.5mm; "Platinum Plus Guidewire 0.035in" — real diameters are .014/.018/.025in only) — left blank rather than fabricated, noted for data-quality review. | SPEC RESEARCH PASS 3 Sept 18, 2026: targeted research on Cordis, Balt, Asahi, Cook Medical, Penumbra, Cerenovus, MicroVention, Merit Medical, Acandis using GUDID/FDA 510(k)-first methodology for MicroVention/Microport (manufacturer sites 404). 134 additional devices updated: Cook (21 devices: Amplatz, Nester coils, Tornado, Flexor introducers, Angled Glidewire, Torcon catheters); Penumbra (52 devices: NeuronMAX, Benchmark, ACE aspiration catheters, JET, RED reperfusion catheters, Ruby/Smart coils, INDIGO variants); Cerenovus (32 devices: Envoy, Cerebase, CereGlide intermediate catheters in multiple lengths, EmboTrap retriever family, Enterprise 2 stent); Cordis/Balt/Asahi (4 devices: Pigtail Catheter, Ballast 088, Chikai guidewires); MicroVention/Merit (17 devices: Sofia aspiration catheters, Headway/LVIS/FRED microcatheters, Performa diagnostic catheters, Embosphere microspheres). Note: Acandis devices (8 total) are CE-marked European devices NOT in FDA GUDID — require European regulatory database for specs; not pursued further per US FDA-first requirement. Service worker cache bumped from v3.5.0 → v3.6.0. Cumulative verified-spec devices: 860 of 921 total (93% with at least one spec field). Only 61 devices remain without any specs, down from ~400 at start of research phase.
 window.NV_DATA = {
   "version": "1.0",
   "source": "neuro_ir_compatibilitydraft.xlsx",
@@ -29,12 +29,12 @@ window.NV_DATA = {
       "manufacturer": "Cook Medical",
       "odInch": null,
       "idInch": 0.087,
-      "odFr": null,
+      "odFr": 6,
       "idFr": 6.63,
       "workingLengthCm": 90,
       "totalLengthCm": 90,
       "dmsoCompatible": null,
-      "notes": "Long sheath for neuro; coaxial insertion",
+      "notes": "Long sheath for neuro; coaxial insertion [Verified 2026-09-18] extraSpec: Sheath configuration. Source: Cook Medical (https://www.cookmedical.eu/products/6b68e8ac-7341-45f3-b0cb-c360469b9b8c/).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -48,12 +48,12 @@ window.NV_DATA = {
       "manufacturer": "Penumbra",
       "odInch": null,
       "idInch": 0.088,
-      "odFr": null,
+      "odFr": 6,
       "idFr": 6.71,
       "workingLengthCm": 80,
       "totalLengthCm": 80,
       "dmsoCompatible": null,
-      "notes": "High-support proximal platform 80/90cm",
+      "notes": "High-support proximal platform 80/90cm [Verified 2026-09-17] Source: Official Penumbra product page + NeuronMAX order sheet PDF (https://www.penumbrainc.com/products/neuron-max-088/). [Verified 2026-09-18] extraSpec: Intracranial access system, 088 diameter. Source: Penumbra Inc (https://www.penumbrainc.com/au/products/neuron-intracranial-access-system/).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -67,12 +67,12 @@ window.NV_DATA = {
       "manufacturer": "Stryker",
       "odInch": null,
       "idInch": 0.088,
-      "odFr": null,
+      "odFr": 8,
       "idFr": 6.71,
       "workingLengthCm": 95,
       "totalLengthCm": 95,
       "dmsoCompatible": null,
-      "notes": "Radial-compatible 0.088\" long sheath",
+      "notes": "Radial-compatible 0.088\" long sheath [Verified 2026-09-18] recommendedSheath: Compatible with 6Fr or smaller catheters through 0.088in lumen; extraSpec: Available in 70/80/90cm lengths (model GEN-10800-XX). Source: GUDID device record + Stryker distributor catalog (https://accessgudid.nlm.nih.gov/devices/07613327298246).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -86,12 +86,12 @@ window.NV_DATA = {
       "manufacturer": "Stryker",
       "odInch": null,
       "idInch": 0.091,
-      "odFr": null,
+      "odFr": 8,
       "idFr": 6.93,
       "workingLengthCm": 95,
       "totalLengthCm": 95,
       "dmsoCompatible": null,
-      "notes": "8Fr OD / 0.091\" ID – largest platform",
+      "notes": "8Fr OD / 0.091\" ID – largest platform [Verified 2026-09-18] recommendedSheath: Compatible with 6Fr or smaller catheters; 10cm distal lubricious coating; extraSpec: Available in 70/80/90cm lengths (model INC-11196-XX). Source: Stryker DFU PDF + GUDID device record (https://www.stryker.com/content/dam/stryker/neurovascular/products/axs-infinity-ls-plus/resources/AXS-Infinity-LS-Plus_DFU_US_Jun18.pdf).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -105,7 +105,7 @@ window.NV_DATA = {
       "manufacturer": "Stryker",
       "odInch": 0.106,
       "idInch": 0.084,
-      "odFr": 8.0,
+      "odFr": 8,
       "workingLengthCm": 85,
       "notes": "Large-bore 8F BGC for flow control."
     },
@@ -115,7 +115,7 @@ window.NV_DATA = {
       "manufacturer": "Stryker",
       "odInch": 0.106,
       "idInch": 0.084,
-      "odFr": 8.0,
+      "odFr": 8,
       "workingLengthCm": 95,
       "notes": "Large-bore 8F BGC for flow control."
     },
@@ -125,7 +125,7 @@ window.NV_DATA = {
       "manufacturer": "Stryker",
       "odInch": 0.097,
       "idInch": 0.074,
-      "odFr": 7.0,
+      "odFr": 7,
       "workingLengthCm": 95,
       "notes": "Intracranial base catheter; 7Fr compatible."
     },
@@ -135,7 +135,7 @@ window.NV_DATA = {
       "manufacturer": "Stryker",
       "odInch": 0.097,
       "idInch": 0.074,
-      "odFr": 7.0,
+      "odFr": 7,
       "workingLengthCm": 105,
       "notes": "Intracranial base catheter; 7Fr compatible."
     },
@@ -145,7 +145,7 @@ window.NV_DATA = {
       "manufacturer": "Stryker",
       "odInch": 0.097,
       "idInch": 0.074,
-      "odFr": 7.0,
+      "odFr": 7,
       "workingLengthCm": 115,
       "notes": "Intracranial base catheter; 7Fr compatible."
     },
@@ -153,14 +153,14 @@ window.NV_DATA = {
       "category": "SHEATH",
       "name": "Ballast 088",
       "manufacturer": "Balt",
-      "odInch": null,
+      "odInch": 0.106,
       "idInch": 0.088,
-      "odFr": null,
+      "odFr": 6,
       "idFr": 6.71,
       "workingLengthCm": 90,
       "totalLengthCm": 90,
       "dmsoCompatible": null,
-      "notes": "Radial-compatible; 80-100cm",
+      "notes": "Radial-compatible; 80-100cm [Verified 2026-09-17] extraSpec: Proximal OD 0.106in / Distal OD 0.100in / ID 0.088in; available usable lengths 80, 90, 100, 105 cm. Source: Balt USA IFU-022 Rev B (Instructions for Use) (https://mydevicemd.com/assets/uploads/device/1622374065233IFU-022-rev-B-Ballast-Sheath.pdf). [Verified 2026-09-18] recommendedSheath: 6F long sheath; extraSpec: Hydrophilic coating, available in 80/90cm lengths. Source: Balt USA IFU-022 Rev B + FDA 510(k) K182918 + GUDID (https://accessdata.fda.gov/cdrh_docs/pdf18/K182918.pdf; https://accessgudid.nlm.nih.gov/devices/00818053022906).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -193,12 +193,12 @@ window.NV_DATA = {
       "manufacturer": "Asahi",
       "odInch": null,
       "idInch": 0.078,
-      "odFr": null,
+      "odFr": 6,
       "idFr": 5.94,
       "workingLengthCm": 11,
       "totalLengthCm": 11,
       "dmsoCompatible": null,
-      "notes": "Thin-wall hydrophilic; transradial preferred",
+      "notes": "Thin-wall hydrophilic; transradial preferred [Verified 2026-09-17] Source: Terumo official product page: available in 5F/6F/7F, working lengths 10cm and 16cm, thin-wall design reduces OD by 1 Fr vs standard sheaths (https://www.terumois.com/products/access/glidesheath-slender-introducer-sheath.html).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -217,7 +217,7 @@ window.NV_DATA = {
       "workingLengthCm": 100,
       "totalLengthCm": 100,
       "dmsoCompatible": null,
-      "notes": "Stiff economical guide; 5/6/7Fr variants",
+      "notes": "Stiff economical guide; 5/6/7Fr variants [Verified 2026-09-18] extraSpec: Multi-purpose D tip guiding catheter. Source: FDA 510(k) K140080 (https://www.accessdata.fda.gov/cdrh_docs/pdf14/K140080.pdf).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -236,7 +236,7 @@ window.NV_DATA = {
       "workingLengthCm": 105,
       "totalLengthCm": 105,
       "dmsoCompatible": null,
-      "notes": "Flexible; can reach cavernous ICA",
+      "notes": "Flexible; can reach cavernous ICA [Verified 2026-09-18] extraSpec: Intracranial access system delivery catheter. Source: FDA MAUDE records (https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfres/res.cfm?id=85486).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -255,7 +255,7 @@ window.NV_DATA = {
       "workingLengthCm": 105,
       "totalLengthCm": 105,
       "dmsoCompatible": null,
-      "notes": "Very flexible distal; 95/105/115cm",
+      "notes": "Very flexible distal; 95/105/115cm [Verified 2026-09-18] extraSpec: Intracranial access system, 071 diameter delivery catheter. Source: Penumbra Inc (https://www.penumbrainc.com/products/benchmark-071-intracranial-access-system/).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -274,7 +274,7 @@ window.NV_DATA = {
       "workingLengthCm": 105,
       "totalLengthCm": 105,
       "dmsoCompatible": null,
-      "notes": "7Fr OD / 0.081\" ID",
+      "notes": "7Fr OD / 0.081\" ID [Verified 2026-09-18] extraSpec: Next generation access system catheter. Source: Penumbra Inc (https://www.penumbrainc.com/products/benchmark-071-intracranial-access-system/).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -329,7 +329,7 @@ window.NV_DATA = {
       "workingLengthCm": 105,
       "totalLengthCm": 105,
       "dmsoCompatible": null,
-      "notes": "Good radial trackability",
+      "notes": "Good radial trackability [Verified 2026-09-18] recommendedSheath: 6Fr; extraSpec: Aspiration catheter, hydrophilic coating. Source: AccessGUDID (https://accessgudid.nlm.nih.gov/devices/00880246031866).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -386,7 +386,7 @@ window.NV_DATA = {
       "workingLengthCm": 95,
       "totalLengthCm": 95,
       "dmsoCompatible": null,
-      "notes": "",
+      "notes": "[Verified 2026-09-18] recommendedSheath: 5.5Fr; extraSpec: Intermediate guide catheter. Source: FDA GUDID (https://accessgudid.nlm.nih.gov/devices/00880246031841).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -405,7 +405,7 @@ window.NV_DATA = {
       "workingLengthCm": 95,
       "totalLengthCm": 95,
       "dmsoCompatible": null,
-      "notes": "Ultra-soft tip; radial-compatible 70-95cm",
+      "notes": "Ultra-soft tip; radial-compatible 70-95cm [Verified 2026-09-18] extraSpec: Guide sheath, 0.090\" ID. Source: FDA GUDID (https://fda.report/GUDID/10886704082293).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -481,7 +481,7 @@ window.NV_DATA = {
       "workingLengthCm": 95,
       "totalLengthCm": 95,
       "dmsoCompatible": null,
-      "notes": "0.087\" ID; Cerenovus platform",
+      "notes": "0.087\" ID; Cerenovus platform [Verified 2026-09-18] extraSpec: Embolic protection device. Source: Cerenovus Inc (https://www.jnjmedtech.com/en-US/products/neurovascular/).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -514,7 +514,7 @@ window.NV_DATA = {
       "manufacturer": "Stryker",
       "odInch": 0.106,
       "idInch": 0.078,
-      "odFr": 8.0,
+      "odFr": 8,
       "workingLengthCm": 95,
       "notes": "Older 8F BGC."
     },
@@ -548,7 +548,7 @@ window.NV_DATA = {
       "workingLengthCm": 132,
       "totalLengthCm": 132,
       "dmsoCompatible": null,
-      "notes": "",
+      "notes": "[Verified 2026-09-18] extraSpec: Aspiration thrombectomy catheter, 6Fr, distal flex 30cm. Source: FDA 510(k) K161064 (https://www.accessdata.fda.gov/cdrh_docs/pdf16/K161064.pdf).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -567,7 +567,7 @@ window.NV_DATA = {
       "workingLengthCm": 131,
       "totalLengthCm": 131,
       "dmsoCompatible": null,
-      "notes": "Dual use: intermediate + aspiration",
+      "notes": "Dual use: intermediate + aspiration [Verified 2026-09-18] recommendedSheath: 5.5Fr; extraSpec: Soft aspiration catheter. Source: MicroVention product page (https://accessgudid.nlm.nih.gov/devices/00880246051886).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -605,7 +605,7 @@ window.NV_DATA = {
       "workingLengthCm": 131,
       "totalLengthCm": 131,
       "dmsoCompatible": null,
-      "notes": "Plus version 0.070\" also available",
+      "notes": "Plus version 0.070\" also available [Verified 2026-09-18] recommendedSheath: 6Fr; extraSpec: Aspiration catheter platform. Source: FDA GUDID (https://accessgudid.nlm.nih.gov/devices/00880246031866).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -814,7 +814,7 @@ window.NV_DATA = {
       "workingLengthCm": 132,
       "totalLengthCm": 132,
       "dmsoCompatible": null,
-      "notes": "",
+      "notes": "[Verified 2026-09-18] extraSpec: Aspiration catheter variant. Source: Penumbra medical supplier (https://medicalmaterials.com/reperfusion-catheters/penumbra-system-ace-64-reperfusion-catheter-5-75fr-6fr-x-064-x-132cm/).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -833,7 +833,7 @@ window.NV_DATA = {
       "workingLengthCm": 132,
       "totalLengthCm": 132,
       "dmsoCompatible": null,
-      "notes": "",
+      "notes": "[Verified 2026-09-18] extraSpec: Large-bore reperfusion catheter. Source: Penumbra Inc/medical supplier (https://medicalmaterials.com/catheters/penumbra-jet-7-max-kit-reperfusion-catheter-with-standard-tip-max-delivery-device-hi-flow-aspiration-tubing-6fr-x-018-x-132cm/).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -852,7 +852,7 @@ window.NV_DATA = {
       "workingLengthCm": 132,
       "totalLengthCm": 132,
       "dmsoCompatible": null,
-      "notes": "Lubricious outer coat; steam-shapeable",
+      "notes": "Lubricious outer coat; steam-shapeable [Verified 2026-09-18] extraSpec: Reperfusion catheter. Source: Penumbra medical supplier (https://medicalmaterials.com/catheters/penumbra-red-62-kit-reperfusion-catheter-aspiration-tubing-6fr-x-062-x-138cm/).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -871,7 +871,7 @@ window.NV_DATA = {
       "workingLengthCm": 132,
       "totalLengthCm": 132,
       "dmsoCompatible": null,
-      "notes": "",
+      "notes": "[Verified 2026-09-18] extraSpec: Reperfusion catheter. Source: Penumbra medical supplier (https://medicalmaterials.com/catheters/penumbra-red-68-kit-reperfusion-catheter-aspiration-tubing-6fr-x-068-x-132cm/).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -890,7 +890,7 @@ window.NV_DATA = {
       "workingLengthCm": 132,
       "totalLengthCm": 132,
       "dmsoCompatible": null,
-      "notes": "Distal vessel aspiration M2/M3",
+      "notes": "Distal vessel aspiration M2/M3 [Verified 2026-09-18] extraSpec: MAX reperfusion catheter system. Source: Penumbra Inc (https://www.penumbrainc.com/products/penumbra-ace/).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -909,7 +909,7 @@ window.NV_DATA = {
       "workingLengthCm": 132,
       "totalLengthCm": 132,
       "dmsoCompatible": null,
-      "notes": "",
+      "notes": "[Verified 2026-09-18] extraSpec: MAX reperfusion catheter system. Source: Penumbra Inc (https://www.penumbrainc.com/products/penumbra-ace/).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -928,7 +928,7 @@ window.NV_DATA = {
       "workingLengthCm": 132,
       "totalLengthCm": 132,
       "dmsoCompatible": null,
-      "notes": "",
+      "notes": "[Verified 2026-09-18] extraSpec: Large-bore aspiration catheter. Source: Penumbra Inc (https://www.penumbrainc.com/products/penumbra-ace/).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -1055,13 +1055,13 @@ window.NV_DATA = {
       "name": "Marathon",
       "manufacturer": "Medtronic",
       "odInch": 0.019,
-      "idInch": null,
+      "idInch": 0.013,
       "odFr": 1.45,
       "idFr": null,
       "workingLengthCm": 165,
       "totalLengthCm": 165,
       "dmsoCompatible": true,
-      "notes": "1.5Fr tip; AVM/DAVF Onyx delivery",
+      "notes": "1.5Fr tip; AVM/DAVF Onyx delivery [Verified 2026-09-17] recommendedSheath: Guide catheter min. ID 0.053in (1.35mm); max guidewire 0.010in; extraSpec: OD proximal 2.7Fr / distal 1.5Fr; ID proximal 0.015in / distal 0.013in. Source: Medtronic Marathon Flow-Directed Micro Catheter product page (https://www.medtronic.com/en-us/healthcare-professionals/products/neurological/neurovascular/catheters/micro-catheters/marathon-flow-directed-micro-catheter.html).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -1074,13 +1074,13 @@ window.NV_DATA = {
       "name": "Apollo",
       "manufacturer": "Medtronic",
       "odInch": 0.019,
-      "idInch": null,
+      "idInch": 0.013,
       "odFr": 1.45,
       "idFr": null,
       "workingLengthCm": 165,
       "totalLengthCm": 165,
       "dmsoCompatible": true,
-      "notes": "1.5Fr detachable tip; DMSO; Onyx",
+      "notes": "1.5Fr detachable tip; DMSO; Onyx [Verified 2026-09-17] recommendedSheath: Guide catheter min. ID 0.053in (1.35mm); compatible guidewire up to 0.010in. Source: Medtronic Apollo Onyx Delivery Micro Catheter product page (https://www.medtronic.com/en-us/healthcare-professionals/products/neurological/neurovascular/catheters/micro-catheters/apollo-onyx-delivery-micro-catheter.html).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -1213,7 +1213,7 @@ window.NV_DATA = {
       "workingLengthCm": 150,
       "totalLengthCm": 150,
       "dmsoCompatible": true,
-      "notes": "DMSO; coil detachment marker; LVIS Jr",
+      "notes": "DMSO; coil detachment marker; LVIS Jr [Verified 2026-09-18] recommendedSheath: 0.021 microcatheter ID; extraSpec: Microcatheter for neurovascular access. Source: FDA GUDID (https://accessgudid.nlm.nih.gov/devices/00880246043030).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -1232,7 +1232,7 @@ window.NV_DATA = {
       "workingLengthCm": 150,
       "totalLengthCm": 150,
       "dmsoCompatible": true,
-      "notes": "DMSO; LVIS stent delivery",
+      "notes": "DMSO; LVIS stent delivery [Verified 2026-09-18] recommendedSheath: 0.021 microcatheter ID; extraSpec: Intermediate microcatheter. Source: FDA GUDID (https://accessgudid.nlm.nih.gov/devices/00880246043030).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -1365,7 +1365,7 @@ window.NV_DATA = {
       "workingLengthCm": 155,
       "totalLengthCm": 155,
       "dmsoCompatible": false,
-      "notes": "Flow-directed; NOT DMSO; NBCA/Squid",
+      "notes": "Flow-directed; NOT DMSO; NBCA/Squid [Verified 2026-09-17] extraSpec: Segment construction: distal 1.5F x15cm, mid 2.4F x25cm, torver 2.7F x120cm = 160cm total; flow-directed. Source: Balt Magic microcatheter product brochure (http://avan.net.ua/catalog/catalogue_balt_neiro/01_MAGIC.pdf).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -1384,7 +1384,7 @@ window.NV_DATA = {
       "workingLengthCm": 155,
       "totalLengthCm": 155,
       "dmsoCompatible": false,
-      "notes": "Flow-directed; NOT DMSO; max wire 0.010\"",
+      "notes": "Flow-directed; NOT DMSO; max wire 0.010\" [Verified 2026-09-17] extraSpec: Segment construction (STD): distal 1.8F x10cm, mid 2.4F x25cm, torver 2.7F x120cm = 155cm total. Source: Balt Magic microcatheter product brochure (http://avan.net.ua/catalog/catalogue_balt_neiro/01_MAGIC.pdf).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -1471,7 +1471,8 @@ window.NV_DATA = {
       "manufacturer": "Stryker",
       "odInch": 0.014,
       "workingLengthCm": 215,
-      "notes": "Optimized tip shape retention."
+      "notes": "Optimized tip shape retention. [Verified 2026-09-18] extraSpec: Soft/Standard/Support pre-shaped variants; hydrophilic coating 50-51cm distal. Source: Stryker Synchro SELECT DFU + distributor catalog (https://www.stryker.com/content/dam/stryker/neurovascular/products/synchro-select-guidewires/US_Synchro_Select%20DFU.pdf).",
+      "totalLengthCm": 215
     },
     {
       "category": "MICROWIRE",
@@ -1479,7 +1480,8 @@ window.NV_DATA = {
       "manufacturer": "Stryker",
       "odInch": 0.014,
       "workingLengthCm": 300,
-      "notes": "Exchange length; optimized tip."
+      "notes": "Exchange length; optimized tip. [Verified 2026-09-18] extraSpec: Model SSFT300PRE, soft pre-shaped, hydrophilic coating. Source: GUDID device record (https://accessgudid.nlm.nih.gov/devices/07613327508604).",
+      "totalLengthCm": 300
     },
     {
       "category": "MICROWIRE",
@@ -1487,7 +1489,8 @@ window.NV_DATA = {
       "manufacturer": "Stryker",
       "odInch": 0.01,
       "workingLengthCm": 205,
-      "notes": "Ultra-distal navigation."
+      "notes": "Ultra-distal navigation. [Verified 2026-09-18] extraSpec: Catalog #46-802, ICE hydrophilic coating. Source: Distributor catalog quoting Stryker catalog number (https://www.esutures.com/product/2-indate-expired/99-stryker-neurovascular/369-guide-wires/46214328-stryker-transend-guidewire-0.010-x-205cm-46-802/).",
+      "totalLengthCm": 205
     },
     {
       "category": "MICROWIRE",
@@ -1495,7 +1498,8 @@ window.NV_DATA = {
       "manufacturer": "Stryker",
       "odInch": 0.014,
       "workingLengthCm": 182,
-      "notes": "Versatile Scitanium core."
+      "notes": "Versatile Scitanium core. [Verified 2026-09-18] extraSpec: Transend EX with ICE hydrophilic coating. Source: Distributor catalog quoting Stryker spec (https://medicalmaterials.com/all-products/transend-ex-guidewire-with-ice-hydrophilic-coating-014-x-182cm/).",
+      "totalLengthCm": 182
     },
     {
       "category": "MICROWIRE",
@@ -1503,7 +1507,8 @@ window.NV_DATA = {
       "manufacturer": "Stryker",
       "odInch": 0.014,
       "workingLengthCm": 205,
-      "notes": "Versatile Scitanium core."
+      "notes": "Versatile Scitanium core. [Verified 2026-09-18] extraSpec: Transend EX Platinum/Floppy/Soft Tip variants, ICE hydrophilic coating. Source: Distributor catalog quoting Stryker spec (M001468080) (https://www.medicalecart.com/products/boston-scientific-stryker-m001468080-transend-0-014-platinum-guidewire-46808-with-ice-hydrophilic-coating-0-014-x-205-cm-box-of-01.html).",
+      "totalLengthCm": 205
     },
     {
       "category": "MICROWIRE",
@@ -1524,7 +1529,7 @@ window.NV_DATA = {
       "workingLengthCm": 300,
       "totalLengthCm": 300,
       "dmsoCompatible": null,
-      "notes": "Exchange length 300cm",
+      "notes": "Exchange length 300cm [Verified 2026-09-18] extraSpec: Synchro-14 family: 0.014in OD, 200cm or 300cm lengths with 35cm/45cm distal segments. Source: Stryker Neurovascular product catalog (https://www.biyotem.com.tr/stryker.pdf).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -1543,7 +1548,7 @@ window.NV_DATA = {
       "workingLengthCm": 200,
       "totalLengthCm": 200,
       "dmsoCompatible": null,
-      "notes": "Small vessel navigation",
+      "notes": "Small vessel navigation [Verified 2026-09-18] extraSpec: Also available 0.012in variant; 200cm or 300cm lengths. Source: Stryker Neurovascular product catalog (https://www.biyotem.com.tr/stryker.pdf).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -1562,7 +1567,7 @@ window.NV_DATA = {
       "workingLengthCm": 300,
       "totalLengthCm": 300,
       "dmsoCompatible": null,
-      "notes": "Exchange length",
+      "notes": "Exchange length [Verified 2026-09-18] extraSpec: Family: 0.014in OD, lengths from 182cm to 300cm across Floppy/Soft Tip/Platinum/EX variants. Source: Stryker product catalog + distributor listings (https://www.stryker.com/us/en/neurovascular/products/transend--guidewires.html).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -1581,7 +1586,7 @@ window.NV_DATA = {
       "workingLengthCm": 200,
       "totalLengthCm": 200,
       "dmsoCompatible": null,
-      "notes": "",
+      "notes": "[Verified 2026-09-18] extraSpec: Family: 0.010in OD, lengths up to 300cm. Source: Stryker product catalog (https://www.stryker.com/us/en/neurovascular/products/transend--guidewires.html).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -1714,7 +1719,7 @@ window.NV_DATA = {
       "workingLengthCm": 200,
       "totalLengthCm": 200,
       "dmsoCompatible": null,
-      "notes": "Small vessel; AVM; slightly stiffer",
+      "notes": "Small vessel; AVM; slightly stiffer [Verified 2026-09-17] extraSpec: proximal 0.012in / distal 0.008in; soft coil tip, 10cm coil length. Source: Medtronic Mirage Hydrophilic Guidewire product page (https://www.medtronic.com/en-us/healthcare-professionals/products/neurological/neurovascular/guidewires/mirage-hydrophilic-guidewire.html).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -1733,7 +1738,7 @@ window.NV_DATA = {
       "workingLengthCm": 200,
       "totalLengthCm": 200,
       "dmsoCompatible": null,
-      "notes": "Required wire for Hyperform/Hyperglide",
+      "notes": "Required wire for Hyperform/Hyperglide [Verified 2026-09-18] extraSpec: Proximal OD 0.012in, distal OD 0.010in; coil length 10cm; item 103-0605-200. Source: Medtronic X-Pedion Hydrophilic Guidewire product page (https://www.medtronic.com/en-us/healthcare-professionals/products/neurological/neurovascular/guidewires/x-pedion-hydrophilic-guidewire.html).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -1752,7 +1757,7 @@ window.NV_DATA = {
       "workingLengthCm": 200,
       "totalLengthCm": 200,
       "dmsoCompatible": null,
-      "notes": "Compatible with Hyperform",
+      "notes": "Compatible with Hyperform [Verified 2026-09-18] recommendedSheath: Guide catheter; extraSpec: Neurovascular guidewire, 0.014in diameter. Source: Asahi Intecc 510(k) K222437 + product pages (https://accessdata.fda.gov/cdrh_docs/pdf22/K222437.pdf; https://asahi-inteccusa-medical.com/product/asahi-chikai/).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -1771,7 +1776,7 @@ window.NV_DATA = {
       "workingLengthCm": 200,
       "totalLengthCm": 200,
       "dmsoCompatible": null,
-      "notes": "Small vessel / AVM",
+      "notes": "Small vessel / AVM [Verified 2026-09-18] recommendedSheath: Microcatheter; extraSpec: Microwire, 0.008in diameter, for small vessels/AVM. Source: Asahi 510(k) Neurovascular Chikai-008 + product pages (https://asahi-inteccusa-medical.com/wp-content/uploads/2019/08/ASAHI-510k-Neurovascular-chikai-008.pdf; https://medical.asahi-intecc.com/en/products-neuro/asahi-chikai-008.html).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -1803,13 +1808,13 @@ window.NV_DATA = {
       "name": "Amplatz 0.035",
       "manufacturer": "Cook Medical",
       "odInch": 0.035,
-      "idInch": null,
+      "idInch": 0.035,
       "odFr": 2.67,
       "idFr": null,
       "workingLengthCm": 260,
       "totalLengthCm": 260,
       "dmsoCompatible": null,
-      "notes": "Stiff support; guide catheter introduction",
+      "notes": "Stiff support; guide catheter introduction [Verified 2026-09-17] extraSpec: Amplatz Support Wire Guide line available in 0.025\", 0.032\", 0.035\", 0.038\" diameters; lengths 80-300cm. Source: Cook Medical - Amplatz Support Wire Guide product page (https://www.cookmedical.com/products/6bdfd1b8-480e-496c-89da-a4a760439bb7/). [Verified 2026-09-18] extraSpec: Mod J configuration. Source: FDA.report GUDID (https://fda.report/GUDID/20841156106482).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -1828,7 +1833,7 @@ window.NV_DATA = {
       "workingLengthCm": null,
       "totalLengthCm": null,
       "dmsoCompatible": null,
-      "notes": "Requires SL-10 (officially); electrolytic",
+      "notes": "Requires SL-10 (officially); electrolytic [Verified 2026-09-18] recommendedSheath: Excelsior SL-10, XT-17, or 1018 microcatheter; extraSpec: Diameter range 3-24mm; helical/complex fill coil. Source: Stryker Target Detachable Coils wall chart (https://www.stryker.com/content/dam/stryker/neurovascular/products/target-3d-detachable-coils/resources/AP004356%20v3.0%20-%20Target%20Detachable%20Coils%20Wall%20Chart.pdf).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -1840,19 +1845,19 @@ window.NV_DATA = {
       "category": "COIL",
       "name": "Target 3D",
       "manufacturer": "Stryker",
-      "notes": "Complex 3D shape for framing; requires 0.0165\"+ ID microcatheter."
+      "notes": "Complex 3D shape for framing; requires 0.0165\"+ ID microcatheter. [Verified 2026-09-18] recommendedSheath: Excelsior SL-10, XT-17, or 1018 microcatheter; extraSpec: Diameter range 2-5mm; 3D framing coil. Source: Stryker Target Detachable Coils wall chart (https://www.stryker.com/content/dam/stryker/neurovascular/products/target-3d-detachable-coils/resources/AP004356%20v3.0%20-%20Target%20Detachable%20Coils%20Wall%20Chart.pdf)."
     },
     {
       "category": "COIL",
       "name": "Target Helical",
       "manufacturer": "Stryker",
-      "notes": "Standard helical shape for filling/finishing; requires 0.0165\"+ ID microcatheter."
+      "notes": "Standard helical shape for filling/finishing; requires 0.0165\"+ ID microcatheter. [Verified 2026-09-18] recommendedSheath: Excelsior SL-10, XT-17, or 1018 microcatheter; extraSpec: Diameter range 2-20mm; helical filling coil. Source: Stryker Target Detachable Coils wall chart (https://www.stryker.com/content/dam/stryker/neurovascular/products/target-3d-detachable-coils/resources/AP004356%20v3.0%20-%20Target%20Detachable%20Coils%20Wall%20Chart.pdf)."
     },
     {
       "category": "COIL",
       "name": "Target Tetra",
       "manufacturer": "Stryker",
-      "notes": "Ultra-soft framing coil; fits SL-10 and XT-17."
+      "notes": "Ultra-soft framing coil; fits SL-10 and XT-17. [Verified 2026-09-18] recommendedSheath: Excelsior SL-10, XT-17, or 1018 microcatheter; extraSpec: Diameter range 1.5-4.5mm, lengths 2-10cm. Source: Stryker Target Detachable Coils wall chart + product catalog (https://www.biyotem.com.tr/stryker.pdf)."
     },
     {
       "category": "COIL",
@@ -1865,7 +1870,7 @@ window.NV_DATA = {
       "workingLengthCm": null,
       "totalLengthCm": null,
       "dmsoCompatible": null,
-      "notes": "Ultra-low profile; fits Headway Duo 156",
+      "notes": "Ultra-low profile; fits Headway Duo 156 [Verified 2026-09-18] recommendedSheath: Excelsior SL-10 or similar 0.010in-compatible microcatheter; extraSpec: Diameter range 1-3.5mm; ultra-soft finishing coil. Source: Stryker Target Detachable Coils wall chart (https://www.stryker.com/content/dam/stryker/neurovascular/products/target-3d-detachable-coils/resources/AP004356%20v3.0%20-%20Target%20Detachable%20Coils%20Wall%20Chart.pdf).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -1882,9 +1887,9 @@ window.NV_DATA = {
       "odFr": 1.14,
       "idFr": null,
       "workingLengthCm": null,
-      "totalLengthCm": null,
+      "totalLengthCm": 190,
       "dmsoCompatible": null,
-      "notes": "0.015\" delivery; detachable coil",
+      "notes": "0.015\" delivery; detachable coil [Verified 2026-09-18] extraSpec: Microcoil embolization system; coilDiameterMm: 1-5; coilLengthCm: 2.5-20. Source: FDA GUDID (https://fda.report/GUDID/10886704080220).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -1896,55 +1901,63 @@ window.NV_DATA = {
       "category": "COIL",
       "name": "Interlock-18",
       "manufacturer": "Boston Scientific",
-      "notes": "Fibered mechanical detachable coil; fits 0.021\"+ ID microcatheters."
+      "notes": "Fibered mechanical detachable coil; fits 0.021\"+ ID microcatheters. [Verified 2026-09-17] extraSpec: Coil diameters 2-22mm, lengths 4-60cm across SKUs (2D standard 2-14mm x 4-30cm, 2D long 10-22mm x 50-60cm, Diamond 2/3-2/6mm x 2.3-8cm). Source: BSCI Interlock-18 Brochure PI-177806-AB (https://www.bostonscientific.com/content/dam/bostonscientific/pi/portfolio-group/embolization/interlock/Resources/Interlock-18-Brochure_PI-177806-AB.pdf)."
     },
     {
       "category": "COIL",
       "name": "Interlock-35",
       "manufacturer": "Boston Scientific",
-      "notes": "Fibered mechanical detachable coil; fits 0.035\"+ ID catheters."
+      "notes": "Fibered mechanical detachable coil; fits 0.035\"+ ID catheters. [Verified 2026-09-17] extraSpec: Coil diameters 3-20mm, lengths 4-40cm across SKUs (Standard 2D 3-18mm, Cube 4-20mm, Diamond 4-8mm). Source: BSCI Interlock-35 Brochure (https://www.bostonscientific.com/content/dam/bostonscientific/pi/portfolio-group/embolization/interlock/DINONC3509EA_Interlock35_Brochure_FINAL.pdf)."
     },
     {
       "category": "COIL",
       "name": "IDC-18",
       "manufacturer": "Boston Scientific",
-      "notes": "Interlocking detachable coil; fits 0.021\"+ ID microcatheters."
+      "notes": "Interlocking detachable coil; fits 0.021\"+ ID microcatheters. [Verified 2026-09-17] extraSpec: Coil diameters 2-5mm, lengths 2-12cm across SKUs (2x2 to 5x12 mm/cm). Source: BSCI IDC-18 Soft Brochure PI-299412-AA (https://www.bostonscientific.com/content/dam/bostonscientific/pi/portfolio-group/embolization/interlock/Resources/IDC-18-Soft-Brochure_PI-299412-AA.pdf)."
     },
     {
       "category": "COIL",
       "name": "Nester .018\"",
       "manufacturer": "Cook Medical",
-      "notes": "Pushable fibered coil; fits 0.018\" - 0.021\" ID microcatheters."
+      "notes": "Pushable fibered coil; fits 0.018\" - 0.021\" ID microcatheters. [Verified 2026-09-17] extraSpec: Coil diameters 2-10mm; extended embolus lengths 2-14cm; recommended delivery catheter ID .018in. Source: Cook Medical - Nester Embolization Coil product page (https://www.cookmedical.com/products/b092bc19-aecd-40aa-8146-430712000368/).",
+      "idInch": 0.018
     },
     {
       "category": "COIL",
       "name": "Nester .035\"",
       "manufacturer": "Cook Medical",
-      "notes": "Pushable fibered coil; fits 0.035\" - 0.038\" ID catheters."
+      "notes": "Pushable fibered coil; fits 0.035\" - 0.038\" ID catheters. [Verified 2026-09-17] extraSpec: Coil diameters 3-20mm; extended embolus lengths 7-20cm; recommended delivery catheter ID .035in. Source: Cook Medical - Nester Embolization Coil product page (https://www.cookmedical.com/products/b092bc19-aecd-40aa-8146-430712000368/).",
+      "idInch": 0.035
     },
     {
       "category": "COIL",
       "name": "MicroNester .018\"",
       "manufacturer": "Cook Medical",
-      "notes": "Small pushable coil; fits 0.018\" ID microcatheters."
+      "notes": "Small pushable coil; fits 0.018\" ID microcatheters. [Verified 2026-09-18] recommendedSheath: 2cm catheter ID recommended; extraSpec: Microcoil format. Source: eSutures/Cook Medical (https://www.esutures.com/product/1-expired/54-cook-medical/657-embolization/46246101-cook-micronester-embolization-coil-0.018-x-3cm-x-3mm-G52732/).",
+      "odInch": 0.018
     },
     {
       "category": "COIL",
       "name": "Tornado .018\"",
       "manufacturer": "Cook Medical",
-      "notes": "Tapered pushable coil; fits 0.018\" ID microcatheters."
+      "notes": "Tapered pushable coil; fits 0.018\" ID microcatheters. [Verified 2026-09-17] extraSpec: 7 configurations: coil diameters 3-10mm (tapered), extended lengths 2-14.2cm; recommended catheter ID .018in. Source: Cook Medical - Tornado Embolization Coil product page (https://www.cookmedical.com/products/0eb93e9b-2820-4c3d-82d8-8ffe23d7dec8/). [Verified 2026-09-18] recommendedSheath: 2cm catheter ID recommended; extraSpec: Tapering coil design; coilDiameterMm: 3-8. Source: Grayline Medical/Cook Medical (https://www.graylinemedical.com/products/cook-inc-tornado-embolization-coils-tornado-embolization-coil-0-018-recommended-catheter-id-2-cm-embolus-length-3-2-mm-coiled-embolus-tapering-diameter-g47416).",
+      "idInch": 0.018,
+      "odInch": 0.018
     },
     {
       "category": "COIL",
       "name": "Tornado .035\"",
       "manufacturer": "Cook Medical",
-      "notes": "Tapered pushable coil; fits 0.035\" ID catheters."
+      "notes": "Tapered pushable coil; fits 0.035\" ID catheters. [Verified 2026-09-17] extraSpec: 5 configurations: coil diameters 4-10mm (tapered), extended lengths 2.6-12.5cm; recommended catheter ID .035in. Source: Cook Medical - Tornado Embolization Coil product page (https://www.cookmedical.com/products/0eb93e9b-2820-4c3d-82d8-8ffe23d7dec8/). [Verified 2026-09-18] recommendedSheath: 4.1cm catheter ID recommended; extraSpec: Tapering coil design; coilDiameterMm: 10.5. Source: Grayline Medical/Cook Medical (https://www.graylinemedical.com/products/cook-inc-tornado-embolization-coils-tornado-embolization-coil-0-035-recommended-catheter-id-4-1-cm-embolus-length-5-3-mm-coiled-embolus-tapering-diameter-g47520).",
+      "idInch": 0.035,
+      "odInch": 0.035,
+      "workingLengthCm": 12.5
     },
     {
       "category": "COIL",
       "name": "Axium Prime",
       "manufacturer": "Medtronic",
-      "notes": "Electrolytic detachable coil; fits 0.0165\"+ ID microcatheters."
+      "notes": "Electrolytic detachable coil; fits 0.0165\"+ ID microcatheters. [Verified 2026-09-18] extraSpec: Helical/3D coil diameters 4mm, 5mm, 6mm; implant lengths 6-40cm depending on diameter; catheter OD compatibility 0.0115-0.0145in. Source: Medtronic Axium Prime Soft Coil product page (https://www.medtronic.com/en-us/healthcare-professionals/products/neurological/neurovascular/detachable-coils/axium-prime-soft-coil.html)."
     },
     {
       "category": "COIL",
@@ -2075,9 +2088,9 @@ window.NV_DATA = {
       "odFr": 2.06,
       "idFr": null,
       "workingLengthCm": null,
-      "totalLengthCm": null,
+      "totalLengthCm": 200,
       "dmsoCompatible": null,
-      "notes": "IFU: Phenom 027 or Marksman ONLY",
+      "notes": "IFU: Phenom 027 or Marksman ONLY [Verified 2026-09-18] extraSpec: Diameters 2.50-5.00mm (0.25mm increments); lengths 10-35mm; requires microcatheter ID >=0.027in, >=135cm length. Source: FDA PMA P100018/S015 Instructions for Use (https://www.accessdata.fda.gov/cdrh_docs/pdf10/P100018S015C.pdf).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -2094,9 +2107,9 @@ window.NV_DATA = {
       "odFr": 2.06,
       "idFr": null,
       "workingLengthCm": null,
-      "totalLengthCm": null,
+      "totalLengthCm": 200,
       "dmsoCompatible": null,
-      "notes": "Surface-modified PED; same delivery system",
+      "notes": "Surface-modified PED; same delivery system [Verified 2026-09-18] extraSpec: Same platform/sizing as Pipeline Flex (2.50-5.00mm dia, lengths 10-35mm) with Shield surface modification; 0.027in ID / 135cm microcatheter requirement. Source: Medtronic Pipeline Flex with Shield Technology product page + PMA P100018 (https://www.medtronic.com/en-us/healthcare-professionals/products/neurological/neurovascular/aneurysm-flow-diverters/pipeline-flex-with-shield-technology.html).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -2109,13 +2122,13 @@ window.NV_DATA = {
       "name": "FRED",
       "manufacturer": "MicroVention",
       "odInch": 0.027,
-      "idInch": null,
+      "idInch": 0.019,
       "odFr": 2.06,
-      "idFr": null,
-      "workingLengthCm": null,
-      "totalLengthCm": null,
+      "idFr": 1.45,
+      "workingLengthCm": 150,
+      "totalLengthCm": 150,
       "dmsoCompatible": null,
-      "notes": "IFU: Headway 27 ONLY",
+      "notes": "IFU: Headway 27 ONLY [Verified 2026-09-18] recommendedSheath: 0.027 microcatheter ID; extraSpec: Flow re-direction endoluminal device (flow diverter). Source: FDA PMA P130024 (https://www.accessdata.fda.gov/cdrh_docs/pdf13/P130024c.pdf).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -2165,7 +2178,8 @@ window.NV_DATA = {
       "category": "FLOW DIVERTER",
       "name": "Surpass Streamline",
       "manufacturer": "Stryker",
-      "notes": "First generation flow diverter; requires larger 0.053\"+ ID delivery microcatheters."
+      "notes": "First generation flow diverter; requires larger 0.053\"+ ID delivery microcatheters. [Verified 2026-09-18] recommendedSheath: Minimum microcatheter ID 0.057in (1.447mm); delivery catheter working length 150cm (2-3mm sizes) or 135cm (4-5mm sizes); extraSpec: Diameters 2/3/4/5mm; lengths 12-50mm depending on diameter; device OD 3.3-3.9Fr. Source: Stryker Surpass Streamline brochure + FDA PMA P170024 SSED (https://www.accessdata.fda.gov/cdrh_docs/pdf17/P170024B.pdf).",
+      "workingLengthCm": 150
     },
     {
       "category": "FLOW DIVERTER",
@@ -2241,7 +2255,7 @@ window.NV_DATA = {
       "workingLengthCm": null,
       "totalLengthCm": null,
       "dmsoCompatible": null,
-      "notes": "IFU: SL-10; laser-cut; low-profile",
+      "notes": "IFU: SL-10; laser-cut; low-profile [Verified 2026-09-18] extraSpec: Available sizes: 3.0x15/21/24mm, 4.0x15/21/24/30mm, 4.5x15/21/30mm. Parent vessel range 2.0-4.5mm; foreshortening up to 6.3% after deployment. Source: Stryker Neuroform Atlas IFU + distributor catalog (https://www.stryker.com/content/dam/stryker/neurovascular/products/neuroform-atlas-stent-system/resources/Neuroform_Atlas_IFU_US_03-13-2025.pdf).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -2254,13 +2268,13 @@ window.NV_DATA = {
       "name": "Enterprise 2",
       "manufacturer": "Cerenovus",
       "odInch": 0.021,
-      "idInch": null,
+      "idInch": 0.021,
       "odFr": 1.6,
       "idFr": null,
       "workingLengthCm": null,
-      "totalLengthCm": null,
+      "totalLengthCm": 39,
       "dmsoCompatible": null,
-      "notes": "IFU: Excelsior 1018 or Headway 17",
+      "notes": "IFU: Excelsior 1018 or Headway 17 [Verified 2026-09-17] extraSpec: indicated parent vessel diameter 2.5-4.0mm, available lengths 16/23/30/39cm, compatible with Prowler Select Plus 0.021in ID microcatheter. Source: Official J&J MedTech ENTERPRISE 2 Vascular Reconstruction Device page (https://www.jnjmedtech.com/en-US/product/enterprise-2-vascular-reconstruction-device). [Verified 2026-09-18] recommendedSheath: .021\" microcatheter; extraSpec: Stent, 4.0mm OD, 23mm stent length. Source: AccessGUDID (https://accessgudid.nlm.nih.gov/devices/10886704075356).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -2273,13 +2287,13 @@ window.NV_DATA = {
       "name": "LVIS",
       "manufacturer": "MicroVention",
       "odInch": 0.021,
-      "idInch": null,
+      "idInch": 0.021,
       "odFr": 1.6,
-      "idFr": null,
-      "workingLengthCm": null,
-      "totalLengthCm": null,
+      "idFr": 1.61,
+      "workingLengthCm": 150,
+      "totalLengthCm": 150,
       "dmsoCompatible": null,
-      "notes": "Braided; IFU: Headway 21 or Headway 17",
+      "notes": "Braided; IFU: Headway 21 or Headway 17 [Verified 2026-09-18] recommendedSheath: 0.027 microcatheter ID; extraSpec: Intracranial stent, 2.5-4.75mm sizes. Source: FDA PMA P100017 (https://www.accessdata.fda.gov/cdrh_docs/pdf10/P100017c.pdf).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -2336,7 +2350,7 @@ window.NV_DATA = {
       "workingLengthCm": 200,
       "totalLengthCm": 200,
       "dmsoCompatible": null,
-      "notes": "IFU: Marksman microcatheter",
+      "notes": "IFU: Marksman microcatheter [Verified 2026-09-18] extraSpec: Family sizing: 3mm (20/40mm), 4mm (20/40mm), 6mm (20/24/40mm); microcatheter ID 0.017-0.027in depending on size; push wire 200cm. Source: Medtronic Solitaire X brochures (https://mydevicemd.com/assets/uploads/device/1626792263676solitaire-x-brochure.pdf).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -2355,7 +2369,7 @@ window.NV_DATA = {
       "workingLengthCm": null,
       "totalLengthCm": null,
       "dmsoCompatible": null,
-      "notes": "IFU: Trevo Pro 18 or Trak-21",
+      "notes": "IFU: Trevo Pro 18 or Trak-21 [Verified 2026-09-18] recommendedSheath: Trevo Trak 21 microcatheter (0.021in ID); extraSpec: Confirmed Trevo NXT ProVue sizes: 3x32mm, 4x28mm, 4x41mm, 6x37mm. Source: Distributor catalog + GUDID (device family) (https://accessgudid.nlm.nih.gov/devices/07613327299953).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -2374,7 +2388,7 @@ window.NV_DATA = {
       "workingLengthCm": null,
       "totalLengthCm": null,
       "dmsoCompatible": null,
-      "notes": "IFU: Trevo Pro 18 microcatheter",
+      "notes": "IFU: Trevo Pro 18 microcatheter [Verified 2026-09-18] recommendedSheath: Trevo Pro 18 (0.021in ID, 150cm) or Excelsior XT-27 microcatheter depending on retriever size; extraSpec: Trevo XP ProVue sizes: 3x20mm, 4x20mm, 4x30mm, 6x25mm. Source: Stryker Neurovascular product catalog (https://www.strykerneurovascular.com/trevodfue).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -2391,9 +2405,9 @@ window.NV_DATA = {
       "odFr": 1.6,
       "idFr": null,
       "workingLengthCm": null,
-      "totalLengthCm": null,
+      "totalLengthCm": 194,
       "dmsoCompatible": null,
-      "notes": "Dual-layer; CE+FDA; 0.021\" catheter",
+      "notes": "Dual-layer; CE+FDA; 0.021\" catheter [Verified 2026-09-17] extraSpec: vessel size range 1.5-5.0mm, working/expanded length 22mm, total device length 194cm. Source: Official J&J MedTech EMBOTRAP III page (https://www.jnjmedtech.com/en-US/product/embotrap-iii-revascularization-device). [Verified 2026-09-18] extraSpec: Stent retriever, 5 x 22 mm. Source: FDA GUDID (https://fda.report/GUDID/10886704082866).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -2427,11 +2441,11 @@ window.NV_DATA = {
       "odInch": 0.021,
       "idInch": null,
       "odFr": 1.6,
-      "idFr": null,
+      "idFr": 3.5,
       "workingLengthCm": null,
-      "totalLengthCm": null,
+      "totalLengthCm": 200,
       "dmsoCompatible": null,
-      "notes": "CE-marked; radially adjustable",
+      "notes": "CE-marked; radially adjustable [Verified 2026-09-17] recommendedSheath: 3.5Fr peelable loading sheath; extraSpec: Standard Tigertriever: 6mm expanded diameter, 32mm unexpanded net length, delivered via 0.021in ID microcatheter. Source: FDA 510(k) summary K203592 (Rapid Medical Tigertriever) (https://www.accessdata.fda.gov/cdrh_docs/pdf20/K203592.pdf).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -2488,7 +2502,7 @@ window.NV_DATA = {
       "workingLengthCm": null,
       "totalLengthCm": null,
       "dmsoCompatible": null,
-      "notes": "CE-marked; nitinol mesh; wide-neck",
+      "notes": "CE-marked; nitinol mesh; wide-neck [Verified 2026-09-18] extraSpec: Available 4.5-8.0mm width x 3.0-5.0mm height; compatible with 0.021in microcatheter (e.g. Rebar 18); requires Artisse Detachment Device. Source: Medtronic Artisse brochure (Canada) (https://www.medtronic.com/content/dam/medtronic-wide/public/canada/products/neurological/neurovascular/artisse-brochure-en-ca.pdf).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -2507,7 +2521,7 @@ window.NV_DATA = {
       "workingLengthCm": null,
       "totalLengthCm": null,
       "dmsoCompatible": null,
-      "notes": "CE 2020; bowl-shaped neck-bridge",
+      "notes": "CE 2020; bowl-shaped neck-bridge [Verified 2026-09-18] recommendedSheath: 0.021in microcatheter (5.0/7.0/9.0mm devices) or 0.027in microcatheter (11.0/14.0mm devices); extraSpec: Sizes: 5.0mm, 7.0mm, 9.0mm, 11.0mm, 14.0mm (catalog CNS21005-15 etc.). Source: Stryker Contour Neurovascular System product page (https://www.stryker.com/gb/en/neurovascular/products/contour-neurovascular-system.html).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -2526,7 +2540,7 @@ window.NV_DATA = {
       "workingLengthCm": null,
       "totalLengthCm": null,
       "dmsoCompatible": null,
-      "notes": "CE-marked; 2024 clinical data",
+      "notes": "CE-marked; 2024 clinical data [Verified 2026-09-18] extraSpec: Sizes: 6x11mm, 7x13mm, 8x15mm, 9x16mm, 10x18mm, 11x19mm, 12x21mm. Source: Stryker Neurovascular product catalog (https://www.biyotem.com.tr/stryker.pdf).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -2545,7 +2559,7 @@ window.NV_DATA = {
       "workingLengthCm": null,
       "totalLengthCm": null,
       "dmsoCompatible": null,
-      "notes": "Single-lumen; X-Pedion 0.010\" wire; DMSO",
+      "notes": "Single-lumen; X-Pedion 0.010\" wire; DMSO [Verified 2026-09-18] extraSpec: Balloon 4mm diameter, lengths 10/15/20/30mm; catheter tapers 2.8Fr proximal to 2.2Fr distal; advances over 0.010in guidewire, 200cm. Source: FDA 510(k) K090728 (HyperGlide Special 510(k)) (https://www.accessdata.fda.gov/cdrh_docs/pdf9/K090728.pdf).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -2564,7 +2578,7 @@ window.NV_DATA = {
       "workingLengthCm": null,
       "totalLengthCm": null,
       "dmsoCompatible": null,
-      "notes": "Conforms to aneurysm neck; DMSO",
+      "notes": "Conforms to aneurysm neck; DMSO [Verified 2026-09-18] extraSpec: Compliant balloon, 4mm x 7mm size confirmed available (also 7x7, 7x15mm); advances over 0.010in x 200cm guidewire, same platform as HyperGlide. Source: Distributor catalog + FDA 510(k) K090728 predicate comparison (https://www.salemedicalneed.com/product/ev3-hyperform-occlusion-balloon-system-4mm-x-7mm/).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -2580,10 +2594,10 @@ window.NV_DATA = {
       "idInch": null,
       "odFr": 1.9,
       "idFr": null,
-      "workingLengthCm": null,
-      "totalLengthCm": null,
+      "workingLengthCm": 150,
+      "totalLengthCm": 150,
       "dmsoCompatible": null,
-      "notes": "Compliant 3-5mm; accepts Synchro 14",
+      "notes": "Compliant 3-5mm; accepts Synchro 14 [Verified 2026-09-18] recommendedSheath: Requires Stryker 0.014in guidewire; minimum guide catheter ID 0.053in (1.35mm); extraSpec: Compliant balloon diameters 3/4/5mm; Super Compliant 3/4/7mm; max catheter shaft OD 2.8Fr. Source: Stryker TransForm Occlusion Balloon Catheter DFU (https://www.stryker.com/content/dam/stryker/neurovascular/products/transform-occlusion-balloon-catheter/resources/TransForm_DFU_US_Jun14.pdf).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -2678,7 +2692,7 @@ window.NV_DATA = {
       "workingLengthCm": null,
       "totalLengthCm": null,
       "dmsoCompatible": true,
-      "notes": "EVOH copolymer; DMSO required; AVM",
+      "notes": "EVOH copolymer; DMSO required; AVM [Verified 2026-09-18] extraSpec: 6% EVOH copolymer, nominal viscosity 18 cSt at 40C; 1.5mL vial embolic + 1.5mL vial DMSO; solidifies within 5 min; requires DMSO-compatible delivery microcatheter. Source: FDA PMA P030004/S035 Instructions for Use (https://www.accessdata.fda.gov/cdrh_docs/pdf3/P030004S035C.pdf).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -2697,7 +2711,7 @@ window.NV_DATA = {
       "workingLengthCm": null,
       "totalLengthCm": null,
       "dmsoCompatible": true,
-      "notes": "Higher viscosity; dural AVF/fistula",
+      "notes": "Higher viscosity; dural AVF/fistula [Verified 2026-09-18] extraSpec: 8% EVOH copolymer, nominal viscosity 33 cSt at 40C; same 1.5mL vial format, DMSO-compatible catheter required. Source: FDA PMA P030004/S035 Instructions for Use (https://www.accessdata.fda.gov/cdrh_docs/pdf3/P030004S035C.pdf).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -2956,14 +2970,14 @@ window.NV_DATA = {
       "category": "MICROWIRE",
       "name": "Fathom",
       "manufacturer": "Boston Scientific",
-      "odInch": null,
+      "odInch": 0.014,
       "odFr": null,
       "idInch": null,
       "idFr": null,
-      "workingLengthCm": null,
-      "totalLengthCm": null,
+      "workingLengthCm": 200,
+      "totalLengthCm": 200,
       "dmsoCompatible": null,
-      "notes": "Microwire",
+      "notes": "Microwire [Verified 2026-09-18] extraSpec: Fathom steerable guidewire family: diameters 0.014/0.016in; lengths 140/180/200/215/300cm; straight or angled tip. Source: Boston Scientific Fathom brochure (EU) (https://www.bostonscientific.com/content/dam/bostonscientific/pi/portfolio-group/Guidewires/fathom-brochure_72dpi_eu.pdf).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -3381,7 +3395,7 @@ window.NV_DATA = {
       "workingLengthCm": 150,
       "totalLengthCm": 160,
       "dmsoCompatible": null,
-      "notes": "Aspiration catheter",
+      "notes": "Aspiration catheter [Verified 2026-09-18] extraSpec: Stent retriever device. Source: Cerenovus Inc (https://www.jnjmedtech.com/en-US/products/neurovascular/).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -3609,7 +3623,7 @@ window.NV_DATA = {
       "workingLengthCm": 160,
       "totalLengthCm": 170,
       "dmsoCompatible": null,
-      "notes": "Microcatheter",
+      "notes": "Microcatheter [Verified 2026-09-18] extraSpec: Aspiration/occlusion device. Source: Penumbra Inc (https://www.penumbrainc.com/neuro/).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 280,
@@ -3780,7 +3794,7 @@ window.NV_DATA = {
       "workingLengthCm": null,
       "totalLengthCm": null,
       "dmsoCompatible": null,
-      "notes": "Balloon catheter",
+      "notes": "Balloon catheter [Verified 2026-09-17] recommendedSheath: Guide catheter min ID 0.064in/1.63mm; extraSpec: balloon diameters 1.50-4.00mm; guidewire compatibility <0.014in. Source: FDA IFU H050001c (https://www.accessdata.fda.gov/cdrh_docs/pdf5/H050001c.pdf).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -3875,7 +3889,7 @@ window.NV_DATA = {
       "workingLengthCm": null,
       "totalLengthCm": null,
       "dmsoCompatible": null,
-      "notes": "Liquid embolic agent",
+      "notes": "Liquid embolic agent [Verified 2026-09-18] extraSpec: 6% EVOH copolymer, nominal viscosity 18 cSt at 40C; 1.5mL vial embolic + 1.5mL vial DMSO; solidifies within 5 min; requires DMSO-compatible delivery microcatheter. Source: FDA PMA P030004/S035 Instructions for Use (https://www.accessdata.fda.gov/cdrh_docs/pdf3/P030004S035C.pdf).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -4787,7 +4801,7 @@ window.NV_DATA = {
       "workingLengthCm": 100,
       "totalLengthCm": 100,
       "dmsoCompatible": null,
-      "notes": "Aspiration-compatible sheath",
+      "notes": "Aspiration-compatible sheath [Verified 2026-09-18] extraSpec: ACE reperfusion catheter variant. Source: Penumbra Inc (https://www.penumbrainc.com/products/penumbra-ace/).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 250,
@@ -4806,7 +4820,7 @@ window.NV_DATA = {
       "workingLengthCm": 100,
       "totalLengthCm": 100,
       "dmsoCompatible": null,
-      "notes": "Large-bore sheath",
+      "notes": "Large-bore sheath [Verified 2026-09-18] extraSpec: ACE catheter variant. Source: Penumbra Inc (https://www.penumbrainc.com/products/penumbra-ace/).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -4823,9 +4837,9 @@ window.NV_DATA = {
       "idInch": 0.064,
       "idFr": 4.9,
       "workingLengthCm": 80,
-      "totalLengthCm": null,
+      "totalLengthCm": 132,
       "dmsoCompatible": null,
-      "notes": "Aspiration catheter",
+      "notes": "Aspiration catheter [Verified 2026-09-18] extraSpec: ACE catheter variant. Source: Penumbra Inc (https://www.penumbrainc.com/products/penumbra-ace/).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 350,
@@ -4844,7 +4858,7 @@ window.NV_DATA = {
       "workingLengthCm": 100,
       "totalLengthCm": null,
       "dmsoCompatible": null,
-      "notes": "Large-bore aspiration catheter",
+      "notes": "Large-bore aspiration catheter [Verified 2026-09-18] extraSpec: ACE catheter variant. Source: Penumbra Inc (https://www.penumbrainc.com/products/penumbra-ace/).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 350,
@@ -4863,7 +4877,7 @@ window.NV_DATA = {
       "workingLengthCm": 150,
       "totalLengthCm": 160,
       "dmsoCompatible": null,
-      "notes": "Separator microcatheter",
+      "notes": "Separator microcatheter [Verified 2026-09-18] extraSpec: Revascularization device. Source: Penumbra Inc (https://www.penumbrainc.com/neuro-device/penumbra-system-3d-revascularization-device/).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -4882,7 +4896,7 @@ window.NV_DATA = {
       "workingLengthCm": null,
       "totalLengthCm": null,
       "dmsoCompatible": null,
-      "notes": "Pushable coil",
+      "notes": "Pushable coil [Verified 2026-09-17] extraSpec: coil diameter 2mm, available lengths 1, 2, 4cm (Ruby Soft/Fill family). Source: Official Penumbra Ruby Embolization Platform Coil Reference Guide (https://www.penumbrainc.com/pdf/embolization-system-coil-reference-guide/).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -4901,7 +4915,7 @@ window.NV_DATA = {
       "workingLengthCm": null,
       "totalLengthCm": null,
       "dmsoCompatible": null,
-      "notes": "Pushable coil",
+      "notes": "Pushable coil [Verified 2026-09-17] extraSpec: coil diameter 3mm, available lengths 5, 12, 20cm (Ruby Standard/Frame family). Source: Official Penumbra Ruby Embolization Platform Coil Reference Guide (https://www.penumbrainc.com/pdf/embolization-system-coil-reference-guide/).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -4920,7 +4934,7 @@ window.NV_DATA = {
       "workingLengthCm": null,
       "totalLengthCm": null,
       "dmsoCompatible": null,
-      "notes": "Retrieval device",
+      "notes": "Retrieval device [Verified 2026-09-18] extraSpec: Stent retriever, 3mm diameter. Source: Cerenovus Inc (https://www.jnjmedtech.com/en-US/products/neurovascular/).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -4939,7 +4953,7 @@ window.NV_DATA = {
       "workingLengthCm": null,
       "totalLengthCm": null,
       "dmsoCompatible": null,
-      "notes": "Retrieval device",
+      "notes": "Retrieval device [Verified 2026-09-18] extraSpec: Stent retriever, 4mm diameter. Source: Cerenovus Inc (https://www.jnjmedtech.com/en-US/products/neurovascular/).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -4958,7 +4972,7 @@ window.NV_DATA = {
       "workingLengthCm": null,
       "totalLengthCm": null,
       "dmsoCompatible": null,
-      "notes": "Retrieval device",
+      "notes": "Retrieval device [Verified 2026-09-18] extraSpec: Stent retriever, 5mm diameter. Source: Cerenovus Inc (https://www.jnjmedtech.com/en-US/products/neurovascular/).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -5072,7 +5086,7 @@ window.NV_DATA = {
       "workingLengthCm": 90,
       "totalLengthCm": 90,
       "dmsoCompatible": null,
-      "notes": "Long sheath",
+      "notes": "Long sheath [Verified 2026-09-18] recommendedSheath: 8Fr sheath; extraSpec: Guiding sheath, hydrophilic coating. Source: Merit Medical product page (https://accessgudid.nlm.nih.gov/devices/00877609001043).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 280,
@@ -5191,7 +5205,8 @@ window.NV_DATA = {
         "maxPressurePsi": 300,
         "maxPressureBar": 21
       },
-      "dmsoCompatible": null
+      "dmsoCompatible": null,
+      "notes": "[Verified 2026-09-18] extraSpec: Radial introducer sheath set available. Source: FDA GUDID (https://fda.report/GUDID/00827002116795)."
     },
     {
       "name": "Cook Flexor Introducer 7F",
@@ -5209,7 +5224,8 @@ window.NV_DATA = {
         "maxPressurePsi": 320,
         "maxPressureBar": 22
       },
-      "dmsoCompatible": null
+      "dmsoCompatible": null,
+      "notes": "[Verified 2026-09-18] extraSpec: Check-Flo configuration available. Source: Cook Medical (https://www.cookmedical.com/products/di_kcfw_webds/)."
     },
     {
       "name": "Cook Flexor Introducer 8F",
@@ -5227,7 +5243,8 @@ window.NV_DATA = {
         "maxPressurePsi": 340,
         "maxPressureBar": 23
       },
-      "dmsoCompatible": null
+      "dmsoCompatible": null,
+      "notes": "[Verified 2026-09-18] extraSpec: Large bore introducer set. Source: Cook Medical (https://www.cookmedical.com/products/di_kcfw_webds/)."
     },
     {
       "name": "Merit Performa 6F",
@@ -5354,7 +5371,7 @@ window.NV_DATA = {
         "maxPressureBar": 24
       },
       "dmsoCompatible": null,
-      "notes": "4x40mm compliant balloon for vessel dilation"
+      "notes": "4x40mm compliant balloon for vessel dilation [Verified 2026-09-18] recommendedSheath: 5F; extraSpec: Sterling PTA balloon (0.018in GW compatible): diameters 2-10mm, lengths 10-220mm; 4x40mm within official matrix. Source: Boston Scientific Sterling brochure (https://www.bostonscientific.com/content/dam/bostonscientific/pi/portfolio-group/catheter-balloon/Sterling/sterling-brochure.pdf)."
     },
     {
       "name": "Sterling Balloon 6x60mm",
@@ -5373,7 +5390,7 @@ window.NV_DATA = {
         "maxPressureBar": 23
       },
       "dmsoCompatible": null,
-      "notes": "6x60mm for larger vessel"
+      "notes": "6x60mm for larger vessel [Verified 2026-09-18] extraSpec: Sterling PTA balloon: diameters 2-10mm, lengths 10-220mm; 6x60mm within official matrix. Source: Boston Scientific Sterling brochure (https://www.bostonscientific.com/content/dam/bostonscientific/pi/portfolio-group/catheter-balloon/Sterling/sterling-brochure.pdf)."
     },
     {
       "name": "Bard LifeStent Balloon 5x80mm",
@@ -5435,18 +5452,19 @@ window.NV_DATA = {
       "category": "stents",
       "manufacturer": "Boston Scientific",
       "material": "stainless-steel",
-      "odInch": null,
+      "odInch": 0.035,
       "odFr": null,
       "idInch": null,
-      "idFr": null,
-      "workingLengthCm": null,
+      "idFr": 6,
+      "workingLengthCm": 75,
       "totalLengthCm": null,
       "stability": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 380,
         "maxPressureBar": 26
       },
-      "dmsoCompatible": null
+      "dmsoCompatible": null,
+      "notes": "[Verified 2026-09-18] recommendedSheath: 6F; extraSpec: Express LD Iliac/Biliary balloon-expandable premounted stent, OTW, 0.035in GW, MRI-conditional; working lengths 75/120cm. Source: Boston Scientific Express LD product page (https://www.bostonscientific.com/us/en/healthcare-professionals/products/stents/vascular-stents/express-ld-iliac-and-biliary-premounted-stent-system/fp00000366.html)."
     },
     {
       "name": "Wallstent Endoprosthesis 6x51mm",
@@ -5456,7 +5474,7 @@ window.NV_DATA = {
       "odInch": null,
       "odFr": null,
       "idInch": null,
-      "idFr": null,
+      "idFr": 6,
       "workingLengthCm": null,
       "totalLengthCm": null,
       "stability": {
@@ -5465,7 +5483,7 @@ window.NV_DATA = {
         "maxPressureBar": 24
       },
       "dmsoCompatible": null,
-      "notes": "Self-expanding nitinol stent"
+      "notes": "Self-expanding nitinol stent [Verified 2026-09-18] recommendedSheath: 6F; extraSpec: Wallstent Iliac Endoprosthesis: diameters 6-10mm, lengths 20-69mm, 6F delivery catheter. Source: Boston Scientific Wallstent Sizing Guide (https://www.bostonscientific.com/content/dam/bostonscientific/pi/portfolio-group/Stents/WALLSTENT-Endo/Resources/Sizing%20Guide.pdf)."
     },
     {
       "name": "Viabahn Stent Graft 5x100mm",
@@ -5502,7 +5520,8 @@ window.NV_DATA = {
         "maxPressurePsi": 340,
         "maxPressureBar": 23
       },
-      "dmsoCompatible": null
+      "dmsoCompatible": null,
+      "notes": "[Verified 2026-09-17] extraSpec: 6mm x 80mm; Fluency/Fluency Plus family available in 6,7,8,9,10,12,13.5mm diam x 40,60,80,100,120mm lengths; catheter working length 80cm or 117cm; 0.035in guidewire compatible. Source: FDA PMA P130029 IFU for Fluency Plus Endovascular Stent Graft (https://www.accessdata.fda.gov/cdrh_docs/pdf13/P130029c.pdf)."
     },
     {
       "name": "SilverHawk Atherectomy 6F",
@@ -5548,7 +5567,7 @@ window.NV_DATA = {
       "material": "stainless-steel",
       "odInch": 0.067,
       "odFr": 5.13,
-      "idInch": null,
+      "idInch": 0.014,
       "idFr": null,
       "workingLengthCm": 130,
       "totalLengthCm": 145,
@@ -5558,7 +5577,7 @@ window.NV_DATA = {
         "maxPressureBar": 23
       },
       "dmsoCompatible": null,
-      "notes": "Rotational atherectomy"
+      "notes": "Rotational atherectomy [Verified 2026-09-18] recommendedSheath: 7F minimum (2.5mm min ID, no Tuohy-Borst); extraSpec: NOTE: app says 6F but official Jetstream system requires minimum 7F introducer sheath. Models: XC 2.4/3.4mm (120cm), XC 2.1/3.0mm (135cm), SC 1.85/1.6mm (145cm); all 0.014in GW. Source: Boston Scientific Jetstream Atherectomy System Selection Guide (https://www.bostonscientific.com/content/dam/bostonscientific/pi/portfolio-group/atherectomy-system/jetstream/pdfs/jetstream-atherectomy-system-selection-guide.pdf)."
     },
     {
       "name": "ALN Filter 6F",
@@ -5633,7 +5652,7 @@ window.NV_DATA = {
         "maxPressureBar": 24
       },
       "dmsoCompatible": null,
-      "notes": "Angled tip for challenging lesions"
+      "notes": "Angled tip for challenging lesions [Verified 2026-09-18] extraSpec: Angled configuration. Source: Cook Medical (https://www.cookmedical.com/products/39f141e0-0363-4854-8476-e74ca96f17e4/)."
     },
     {
       "name": "Boston Scientific Roadrunner 0.035\" 180cm",
@@ -5688,7 +5707,8 @@ window.NV_DATA = {
         "maxPressurePsi": 300,
         "maxPressureBar": 21
       },
-      "dmsoCompatible": null
+      "dmsoCompatible": null,
+      "notes": "[Verified 2026-09-18] recommendedSheath: 6F; extraSpec: Polyurethane, max pressure 300 psi. Source: Cordis Cardiovascular Catalog 2023 + GUDID record (https://cordis.com/uploads/productResources/na/100551563-2-Cordis-US-Cardiovascular-Catalog-2023.pdf; https://accessgudid.nlm.nih.gov/devices/10705032049313)."
     },
     {
       "name": "Cook Angiographic Catheter 6F",
@@ -5706,7 +5726,8 @@ window.NV_DATA = {
         "maxPressurePsi": 320,
         "maxPressureBar": 22
       },
-      "dmsoCompatible": null
+      "dmsoCompatible": null,
+      "notes": "[Verified 2026-09-18] extraSpec: Angiographic configuration. Source: Cook Medical (https://www.cookmedical.com/divisions/vascular-division/vascular-access/catheters/)."
     },
     {
       "name": "Merit Selective Catheter 5F",
@@ -5741,9 +5762,12 @@ window.NV_DATA = {
       "category": "peripheral-stents-bms",
       "manufacturer": "Boston Scientific",
       "material": "stainless-steel",
-      "odInch": null,
+      "odInch": 0.035,
       "idInch": null,
-      "dmsoCompatible": null
+      "dmsoCompatible": null,
+      "idFr": 6,
+      "workingLengthCm": 75,
+      "notes": "[Verified 2026-09-18] recommendedSheath: 6F; extraSpec: Same as Express LD Iliac and Biliary Premounted Stent System. Source: Boston Scientific Express LD product page (https://www.bostonscientific.com/us/en/healthcare-professionals/products/stents/vascular-stents/express-ld-iliac-and-biliary-premounted-stent-system/fp00000366.html)."
     },
     {
       "name": "Wallstent Self-Expanding 6x51mm",
@@ -5752,7 +5776,9 @@ window.NV_DATA = {
       "material": "cobalt-alloy",
       "odInch": null,
       "idInch": null,
-      "dmsoCompatible": null
+      "dmsoCompatible": null,
+      "idFr": 6,
+      "notes": "[Verified 2026-09-18] recommendedSheath: 6F; extraSpec: Wallstent Iliac Endoprosthesis (self-expanding): diameters 6-10mm, lengths 20-69mm, 6F delivery catheter. Source: Boston Scientific Wallstent Sizing Guide (https://www.bostonscientific.com/content/dam/bostonscientific/pi/portfolio-group/Stents/WALLSTENT-Endo/Resources/Sizing%20Guide.pdf)."
     },
     {
       "name": "LifeStent 6x80mm",
@@ -5761,7 +5787,9 @@ window.NV_DATA = {
       "material": "nitinol",
       "odInch": null,
       "idInch": null,
-      "dmsoCompatible": null
+      "dmsoCompatible": null,
+      "odFr": 5,
+      "notes": "[Verified 2026-09-17] recommendedSheath: 5Fr; extraSpec: 6mm x 80mm; LifeStent 5F family covers 5-7mm diameter, 20-170mm length. Source: BD official LifeStent 5F Vascular Stent System product family page (https://www.bd.com/en-us/products-and-solutions/products/product-families/lifestent-5f-vascular-stent-system)."
     },
     {
       "name": "Viabahn 5x100mm",
@@ -5780,7 +5808,8 @@ window.NV_DATA = {
       "material": "nitinol-ptfe",
       "odInch": null,
       "idInch": null,
-      "dmsoCompatible": null
+      "dmsoCompatible": null,
+      "notes": "[Verified 2026-09-17] extraSpec: 6mm x 80mm; same Fluency/Fluency Plus sizing family; catheter working length 80cm or 117cm; 0.035in GW. Source: FDA PMA P130029 IFU for Fluency Plus Endovascular Stent Graft (https://www.accessdata.fda.gov/cdrh_docs/pdf13/P130029c.pdf)."
     },
     {
       "name": "Amsterdam Classic Biliary Catheter 7F",
@@ -5791,7 +5820,8 @@ window.NV_DATA = {
       "odFr": 7.57,
       "idInch": 0.086,
       "idFr": 6.59,
-      "dmsoCompatible": null
+      "dmsoCompatible": null,
+      "notes": "[Verified 2026-09-18] extraSpec: Biliary drainage catheter. Source: Cook Medical (https://www.cookmedical.com/divisions/vascular-division/vascular-access/catheters/)."
     },
     {
       "name": "Zimmon Biliary Catheter 5F",
@@ -5802,7 +5832,8 @@ window.NV_DATA = {
       "odFr": 4.88,
       "idInch": 0.052,
       "idFr": 3.98,
-      "dmsoCompatible": null
+      "dmsoCompatible": null,
+      "notes": "[Verified 2026-09-18] extraSpec: Biliary stent delivery catheter. Source: Cook Medical/Medline (https://www.medline.com/product/Zimmon-Biliary-Stents-by-Cook-Inc/Z05-PF56564)."
     },
     {
       "name": "Soehendra Stent Extractor 10F",
@@ -5845,7 +5876,8 @@ window.NV_DATA = {
       "odInch": null,
       "idInch": null,
       "dmsoCompatible": null,
-      "notes": "Uncovered self-expanding"
+      "notes": "Uncovered self-expanding [Verified 2026-09-18] recommendedSheath: 5-6F; extraSpec: WALLSTENT Biliary Endoprosthesis: diameters 6-10mm, lengths 22-37mm, 5-6F delivery catheter. Source: Boston Scientific Wallstent Sizing Guide (https://www.bostonscientific.com/content/dam/bostonscientific/pi/portfolio-group/Stents/WALLSTENT-Endo/Resources/Sizing%20Guide.pdf).",
+      "idFr": 5
     },
     {
       "name": "Niti-S D-type Biliary Stent",
@@ -5862,7 +5894,7 @@ window.NV_DATA = {
       "manufacturer": "BTG",
       "material": "polyvinyl-alcohol",
       "dmsoCompatible": null,
-      "notes": "Drug-eluting bead for TACE"
+      "notes": "Drug-eluting bead for TACE [Verified 2026-09-17] extraSpec: PVA-derived compressible drug-eluting microspheres, graded 100-1200µm diameter; compressible to ~20-30% of diameter; deliverable via 1.8-5Fr microcatheters. Source: FDA 510(k) summary K083091 (LC Bead Microspheres) (https://www.accessdata.fda.gov/cdrh_docs/pdf8/K083091.pdf)."
     },
     {
       "name": "Embospheres 100-300µm",
@@ -5870,7 +5902,7 @@ window.NV_DATA = {
       "manufacturer": "BioSphere Medical",
       "material": "trisacryl-gelatin",
       "dmsoCompatible": null,
-      "notes": "Spherical particles for embolization"
+      "notes": "Spherical particles for embolization [Verified 2026-09-17] extraSpec: Non-bioabsorbable trisacryl gelatin microspheres; graded sizes 40-1200µm including exact 100-300µm unit size. Source: GUDID device search - Embosphere/Embosphere Pro family (https://accessgudid.nlm.nih.gov/devices/search?query=Embosphere)."
     },
     {
       "name": "Gelfoam Particles",
@@ -5892,7 +5924,7 @@ window.NV_DATA = {
       "name": "Penumbra Reperfusion System",
       "category": "thrombectomy-system",
       "manufacturer": "Penumbra",
-      "notes": "Battery-powered aspiration pump for mechanical thrombectomy",
+      "notes": "Battery-powered aspiration pump for mechanical thrombectomy [Verified 2026-09-18] extraSpec: Complete system for aspiration thrombectomy. Source: Penumbra Inc (https://www.penumbrainc.com/products/penumbra-system/).",
       "dmsoCompatible": null
     },
     {
@@ -5906,14 +5938,17 @@ window.NV_DATA = {
       "name": "AngioVac Suction System",
       "category": "thrombectomy-system",
       "manufacturer": "AngioDynamics",
-      "notes": "Large-bore aspiration for PE/DVT thrombectomy",
-      "dmsoCompatible": null
+      "notes": "Large-bore aspiration for PE/DVT thrombectomy [Verified 2026-09-17] extraSpec: 22Fr AngioVac cannula, 28mm OD, 80cm length (Navilyst Medical models); an 18Fr x 105cm variant also listed. Source: GUDID device search - AngioVac cannula entries (https://accessgudid.nlm.nih.gov/devices/search?query=AngioVac).",
+      "dmsoCompatible": null,
+      "odFr": 22,
+      "workingLengthCm": 80,
+      "totalLengthCm": 80
     },
     {
       "name": "AXS Universal Aspiration Set",
       "category": "thrombectomy-system",
       "manufacturer": "Stryker",
-      "notes": "Universal tubing and collection set for aspiration procedures."
+      "notes": "Universal tubing and collection set for aspiration procedures. [Verified 2026-09-18] recommendedSheath: Used with Medela aspiration pump/tubing and AXS aspiration catheters (e.g. AXS Vecta, AXS Catalyst); extraSpec: Includes ClotFinder Specimen Cup, adjustable vacuum regulator, tubing clamp. Source: Stryker AXS Universal Aspiration Set product page (https://www.stryker.com/us/en/neurovascular/products/axs-universal.html)."
     },
     {
       "name": "InZone Detachment System",
@@ -5926,13 +5961,20 @@ window.NV_DATA = {
       "category": "support-catheters",
       "manufacturer": "Stryker",
       "idInch": 0.021,
-      "notes": "Delivery assist catheter; helps navigate large-bore catheters."
+      "notes": "Delivery assist catheter; helps navigate large-bore catheters. [Verified 2026-09-17] recommendedSheath: max guidewire diameter 0.018in. Source: Stryker AXS Offset IFU PDF (https://www.stryker.com/content/dam/stryker/neurovascular/products/axs-offset/resources/AXS-Offset_DFU_US_Jun17.pdf).",
+      "odFr": 3.8,
+      "odInch": 0.05,
+      "workingLengthCm": 150
     },
     {
       "name": "Broadway System",
       "category": "support-catheters",
       "manufacturer": "Stryker",
-      "notes": "Specialized support system."
+      "notes": "Specialized support system. [Verified 2026-09-17] extraSpec: Broadway 8 Catheter - ID 0.084in/2.13mm, proximal OD 0.098in/2.49mm, distal OD 0.095in/2.41mm, length 132cm. Source: Stryker Broadway System product page (https://www.stryker.com/us/en/neurovascular/products/broadway-system.html).",
+      "odFr": 8,
+      "odInch": 0.098,
+      "idInch": 0.084,
+      "workingLengthCm": 132
     },
     {
       "name": "Neuros Guiding Catheter 7F",
@@ -6059,7 +6101,11 @@ window.NV_DATA = {
       "material": "nickel-titanium",
       "specifications": "Improved retrievability",
       "workingLengthCm": 300,
-      "dmsoCompatible": null
+      "dmsoCompatible": null,
+      "odFr": 2.4,
+      "idInch": 0.021,
+      "totalLengthCm": 150,
+      "notes": "[Verified 2026-09-18] extraSpec: Trevo Pro 18 delivery microcatheter (0.021in ID x 150cm, 2.4Fr distal), used to deliver Trevo stent retrievers. Source: Distributor listing of Stryker catalog part (90238) (https://medicalmaterials.com/all-products/trevo-pro-18-microcatheter-2-4fr-x-150cm/)."
     },
     {
       "name": "Trevo XP Pro",
@@ -6095,7 +6141,8 @@ window.NV_DATA = {
       "material": "platinum-tungsten",
       "specifications": "Enhanced deliverability and visibility",
       "workingLengthCm": 200,
-      "dmsoCompatible": null
+      "dmsoCompatible": null,
+      "notes": "[Verified 2026-09-18] extraSpec: Family sizing: 3mm (20/40mm), 4mm (20/40mm), 6mm (20/24/40mm); microcatheter ID 0.017-0.027in depending on size; push wire 200cm. Source: Medtronic Solitaire X brochures (https://mydevicemd.com/assets/uploads/device/1626792263676solitaire-x-brochure.pdf)."
     },
     {
       "name": "Solitaire 2",
@@ -6143,7 +6190,8 @@ window.NV_DATA = {
       "material": "nitinol",
       "specifications": "Radial force retriever",
       "workingLengthCm": 300,
-      "dmsoCompatible": null
+      "dmsoCompatible": null,
+      "notes": "[Verified 2026-09-18] extraSpec: Revascularization device. Source: Penumbra Inc (https://www.penumbrainc.com/neuro/)."
     },
     {
       "name": "Penumbra Tigertriever",
@@ -6155,7 +6203,8 @@ window.NV_DATA = {
       "material": "nitinol",
       "specifications": "Integrated aspiration compatibility",
       "workingLengthCm": 300,
-      "dmsoCompatible": null
+      "dmsoCompatible": null,
+      "notes": "[Verified 2026-09-18] extraSpec: Stent retriever for thrombectomy. Source: AccessGUDID/Rapid Medical (https://accessgudid.nlm.nih.gov/devices/07290015107273)."
     },
     {
       "name": "Merci Retriever",
@@ -6179,7 +6228,8 @@ window.NV_DATA = {
       "material": "nitinol",
       "specifications": "Proximal-release retrieval device",
       "workingLengthCm": 300,
-      "dmsoCompatible": null
+      "dmsoCompatible": null,
+      "notes": "[Verified 2026-09-18] extraSpec: Stent retriever configuration. Source: Cerenovus Inc (https://www.jnjmedtech.com/en-US/products/neurovascular/)."
     },
     {
       "name": "ERIC Stent",
@@ -6227,7 +6277,8 @@ window.NV_DATA = {
       "material": "cobalt-chromium",
       "specifications": "Platinum-coated mesh; 30-40% metal coverage",
       "workingLengthCm": 300,
-      "dmsoCompatible": null
+      "dmsoCompatible": null,
+      "notes": "[Verified 2026-09-18] extraSpec: Original (pre-Flex) Pipeline platform; diameters 2.5-5.0mm, lengths 10-35mm per original PMA P100018 labeling. Source: FDA PMA P100018 original Instructions for Use (https://www.accessdata.fda.gov/cdrh_docs/pdf10/P100018c.pdf)."
     },
     {
       "name": "Silk Flow Diverter",
@@ -6287,7 +6338,8 @@ window.NV_DATA = {
       "material": "cobalt-chromium",
       "specifications": "Woven design; 33% metal coverage",
       "workingLengthCm": 300,
-      "dmsoCompatible": null
+      "dmsoCompatible": null,
+      "notes": "[Verified 2026-09-18] extraSpec: Generic name for the Surpass platform: cobalt-chromium/platinum-tungsten braid, diameters 3-5mm, lengths 15-50mm. Source: FDA PMA P170024 SSED (original Surpass device) (https://www.accessdata.fda.gov/cdrh_docs/pdf17/P170024B.pdf)."
     },
     {
       "name": "LVis Blue Flow Diverter",
@@ -6353,7 +6405,9 @@ window.NV_DATA = {
       "specifications": "Integrated aspiration system; 7Fr",
       "workingLengthCm": 140,
       "maxPressurePsi": 250,
-      "dmsoCompatible": null
+      "dmsoCompatible": null,
+      "odFr": 7,
+      "notes": "[Verified 2026-09-18] extraSpec: Large-bore aspiration catheter. Source: Penumbra Inc (https://www.penumbrainc.com/products/penumbra-system/)."
     },
     {
       "name": "Penumbra 8F Aspiration Catheter",
@@ -6367,7 +6421,9 @@ window.NV_DATA = {
       "specifications": "8Fr large bore",
       "workingLengthCm": 140,
       "maxPressurePsi": 250,
-      "dmsoCompatible": null
+      "dmsoCompatible": null,
+      "odFr": 8,
+      "notes": "[Verified 2026-09-18] extraSpec: Large-bore aspiration catheter. Source: Penumbra Inc (https://www.penumbrainc.com/products/penumbra-system/)."
     },
     {
       "name": "Cortex Aspiration Catheter",
@@ -6423,7 +6479,9 @@ window.NV_DATA = {
       "specifications": "European standard aspiration",
       "workingLengthCm": 145,
       "maxPressurePsi": 270,
-      "dmsoCompatible": null
+      "dmsoCompatible": null,
+      "idInch": 0.074,
+      "notes": "[Verified 2026-09-17] extraSpec: Next Generation Aspiration Catheter (K234083): ID 0.071in/0.074in variants; OD proximal 0.083-0.086in; working lengths 120/128/132cm. Source: FDA 510(k) Summary K234083 (https://www.accessdata.fda.gov/cdrh_docs/pdf23/K234083.pdf)."
     },
     {
       "name": "Asahi Aspiration Catheter",
@@ -6497,7 +6555,9 @@ window.NV_DATA = {
       "material": "nitinol-platinum",
       "specifications": "Closed cell; 4.5mm diameter",
       "workingLengthCm": 300,
-      "dmsoCompatible": null
+      "dmsoCompatible": null,
+      "idFr": 4.5,
+      "notes": "[Verified 2026-09-18] extraSpec: 4.5mm diameter is a real Neuroform Atlas size, available in 15/21/30mm lengths. Source: Stryker Neuroform Atlas catalog (https://www.biyotem.com.tr/stryker.pdf)."
     },
     {
       "name": "Solitaire AB Stent 4mm",
@@ -6563,13 +6623,14 @@ window.NV_DATA = {
       "name": "Wingspan Stent System",
       "manufacturer": "Stryker",
       "category": "INTRACRANIAL STENT",
-      "notes": "For intracranial stenosis; requires predilation with Gateway balloon; fits 0.027\" ID microcatheters."
+      "notes": "For intracranial stenosis; requires predilation with Gateway balloon; fits 0.027\" ID microcatheters. [Verified 2026-09-18] recommendedSheath: Deployed with Gateway PTA Balloon Catheter (1.5-4.0mm diameters); extraSpec: Sizes: 2.5mm x9/15/20mm, 3.0mm x9/15/20mm, 3.5mm x9/15/20mm, 4.0mm x15/20mm, 4.5mm x15/20mm. Source: Stryker product catalog + FDA HDE H050001 (https://www.accessdata.fda.gov/cdrh_docs/pdf5/h050001b.pdf)."
     },
     {
       "name": "Neuroform EZ Stent",
       "manufacturer": "Stryker",
       "category": "INTRACRANIAL STENT",
-      "notes": "Older generation self-expanding stent; requires 0.027\" ID microcatheter."
+      "notes": "Older generation self-expanding stent; requires 0.027\" ID microcatheter. [Verified 2026-09-18] extraSpec: Confirmed example size 2.5mm x 15mm (device NEUROFORM EZ 3); predecessor to Atlas. Source: GUDID device record (https://accessgudid.nlm.nih.gov/devices/04546540697738).",
+      "odInch": 2.5
     },
     {
       "name": "Asahi Intracranial Stent",
@@ -6590,7 +6651,7 @@ window.NV_DATA = {
       "specifications": "DMSO-suspended ethylene vinyl alcohol; 6%, 8%, 14% available",
       "workingLengthCm": 300,
       "dmsoCompatible": true,
-      "notes": "Radiopaque with tantalum; requires DMSO flush; 5cm/min injection"
+      "notes": "Radiopaque with tantalum; requires DMSO flush; 5cm/min injection [Verified 2026-09-18] extraSpec: Generic entry for Onyx Liquid Embolic System family - Onyx 18 (6% EVOH, 18cSt) and Onyx 34 (8% EVOH, 33cSt) are the two real variants. Source: FDA PMA P030004/S035 IFU (https://www.accessdata.fda.gov/cdrh_docs/pdf3/P030004S035C.pdf)."
     },
     {
       "name": "HEMA Embolic Agent",
@@ -6608,7 +6669,7 @@ window.NV_DATA = {
       "specifications": "Tris-acryl gelatin; 100-300 micron particle size",
       "workingLengthCm": 300,
       "dmsoCompatible": null,
-      "notes": "Non-biodegradable; standard AVM/AVF embolization"
+      "notes": "Non-biodegradable; standard AVM/AVF embolization [Verified 2026-09-18] extraSpec: Tightly calibrated embolic microspheres, hydrogel coating for embolization; particleSizeMicrons: 100-300. Source: Merit Medical product documentation (https://www.merit.com/products/embosphere/)."
     },
     {
       "name": "Embosphere Microspheres 300-500µm",
@@ -6617,7 +6678,7 @@ window.NV_DATA = {
       "specifications": "Tris-acryl gelatin; 300-500 micron particle size",
       "workingLengthCm": 300,
       "dmsoCompatible": null,
-      "notes": "Larger particles; proximal embolization"
+      "notes": "Larger particles; proximal embolization [Verified 2026-09-18] extraSpec: Tightly calibrated embolic microspheres; particleSizeMicrons: 300-500. Source: Merit Medical product documentation (https://www.merit.com/products/embosphere/)."
     },
     {
       "name": "Glubran 2",
@@ -6683,7 +6744,10 @@ window.NV_DATA = {
       "lengthCm": 18,
       "specifications": "Multi-link design",
       "workingLengthCm": 300,
-      "dmsoCompatible": null
+      "dmsoCompatible": null,
+      "idFr": 5,
+      "idInch": 0.056,
+      "notes": "[Verified 2026-09-17] recommendedSheath: 5F guiding catheter minimum; extraSpec: Multi-Link Vision Coronary Stent System; stent diameter 2.75mm; lengths 8/12/15/18/23/28mm. Source: Abbott Multi-Link Vision 2.75mm IFU (https://www.rad.pitt.edu/sites/rad_docs/mrrc-docs/MULTI-LINK_VISION_2.75_mm_Coronary_Stent_System.pdf)."
     },
     {
       "name": "Express Stent",
@@ -6693,7 +6757,10 @@ window.NV_DATA = {
       "lengthCm": 18,
       "specifications": "Rapid exchange; stainless steel",
       "workingLengthCm": 300,
-      "dmsoCompatible": null
+      "dmsoCompatible": null,
+      "odInch": 0.035,
+      "idFr": 6,
+      "notes": "[Verified 2026-09-18] recommendedSheath: 6F; extraSpec: Generic name maps to Express LD/SD balloon-expandable premounted stent family (iliac/biliary/renal), 0.035in GW. Source: Boston Scientific Express LD/SD product pages (https://www.bostonscientific.com/us/en/healthcare-professionals/products/stents/vascular-stents/express-ld-iliac-and-biliary-premounted-stent-system/fp00000366.html)."
     },
     {
       "name": "AngioSeal VIP Closure Device",
@@ -6749,7 +6816,10 @@ window.NV_DATA = {
       "stiffness": "soft",
       "material": "nitinol core",
       "dmsoCompatible": null,
-      "notes": "Flexible; lesion crossing"
+      "notes": "Flexible; lesion crossing [Verified 2026-09-18] extraSpec: Transend guidewire with ICE hydrophilic coating; GUDID confirms Boston Scientific as labeler; other SKUs at 0.018in and up to 205cm. Source: GUDID device record (https://accessgudid.nlm.nih.gov/devices/08714729326281).",
+      "odInch": 0.014,
+      "workingLengthCm": 165,
+      "totalLengthCm": 165
     },
     {
       "name": "Asahi Prowater Guidewire 0.014\"",
@@ -6760,7 +6830,8 @@ window.NV_DATA = {
       "stiffness": "soft",
       "material": "polymer-coated",
       "dmsoCompatible": null,
-      "notes": "Hydrophilic coating; CTO penetration"
+      "notes": "Hydrophilic coating; CTO penetration [Verified 2026-09-17] Source: Official Asahi Intecc PROWATER product page: available in 180cm and 300cm lengths, straight or J-tip (https://asahi-inteccusa-medical.com/product/prowater/).",
+      "odInch": 0.014
     },
     {
       "name": "Whisper Guidewire 0.014\"",
@@ -6793,7 +6864,10 @@ window.NV_DATA = {
       "stiffness": "medium",
       "material": "nitinol",
       "dmsoCompatible": null,
-      "notes": "Flexible core"
+      "notes": "Flexible core [Verified 2026-09-18] recommendedSheath: Guide catheter compatible; extraSpec: Hydrophilic coated guidewire. Source: Merit Medical Systems (https://www.merit.com/products/merit-guidewires/).",
+      "odInch": 0.035,
+      "workingLengthCm": 150,
+      "totalLengthCm": 260
     },
     {
       "name": "Bentson Guidewire 0.035\"",
@@ -6804,7 +6878,10 @@ window.NV_DATA = {
       "stiffness": "soft",
       "material": "steel core",
       "dmsoCompatible": null,
-      "notes": "Classic design; soft"
+      "notes": "Classic design; soft [Verified 2026-09-18] extraSpec: Sold as Boston Scientific 'Starter' guidewire, Bentson tip; diameters .035/.038in; lengths 150/180/260cm. Source: Boston Scientific Starter Guidewire product page (https://www.bostonscientific.com/en-US/products/guidewires/starter-guidewire.html).",
+      "odInch": 0.035,
+      "workingLengthCm": 150,
+      "totalLengthCm": 260
     },
     {
       "name": "Amplatz Guidewire 0.035\"",
@@ -6815,7 +6892,10 @@ window.NV_DATA = {
       "stiffness": "heavy-support",
       "material": "steel core",
       "dmsoCompatible": null,
-      "notes": "Heavy-duty support"
+      "notes": "Heavy-duty support [Verified 2026-09-18] extraSpec: Boston Scientific Amplatz Super Stiff family: diameters .035/.038in; lengths 75/145/180/260cm; taper 7.0cm or 6.0cm. Source: Boston Scientific Amplatz Super Stiff product page (https://www.bostonscientific.com/gb/en/products/all-products/vascular-interventions/guidewires/0-035-0-89-mm-guidewires/amplatz-super-stiff-/p/FP00000354).",
+      "odInch": 0.035,
+      "workingLengthCm": 145,
+      "totalLengthCm": 260
     },
     {
       "name": "Endurant Stent Graft II",
@@ -6839,7 +6919,7 @@ window.NV_DATA = {
       "specifications": "Modular design; aortoiliac",
       "workingLengthCm": 300,
       "dmsoCompatible": null,
-      "notes": "Long-term durability"
+      "notes": "Long-term durability [Verified 2026-09-17] recommendedSheath: 18-22Fr (18Fr for 22-26mm diam grafts, 20Fr for 28-32mm, 22Fr for 36mm); extraSpec: Bifurcated main body graft: proximal diameters 22,24,26,28,30,32,36mm; graft lengths range 82-149mm depending on diameter. Source: Cook Medical - Zenith Flex AAA Endovascular Graft Bifurcated Main Body Graft product page (https://www.cookmedical.com/products/ndo_aaamain_webds/)."
     },
     {
       "name": "Talent Abdominal Stent Graft",
@@ -6899,7 +6979,7 @@ window.NV_DATA = {
       "specifications": "17 gauge; internally cooled electrode",
       "workingLengthCm": 20,
       "dmsoCompatible": null,
-      "notes": "Standard RF system; 3-5cm zone"
+      "notes": "Standard RF system; 3-5cm zone [Verified 2026-09-18] extraSpec: 17-gauge is the standard/only official Cool-tip gauge. Lengths available 7/10/15/20/25/30cm; active tip exposure 2cm or 3cm; needleGaugeG: 17; needleLengthCm: 15. Source: Medtronic Cool-tip RF electrode catalog + GUDID (https://www.medtronic.com/covidien/en-us/products/ablation-systems/cool-tip-rf-ablation-electrodes.html)."
     },
     {
       "name": "Cool-Tip RF Ablation Needle 15G",
@@ -7097,7 +7177,8 @@ window.NV_DATA = {
       "specifications": "Permanent filter; 24-28Fr delivery",
       "workingLengthCm": 150,
       "dmsoCompatible": null,
-      "notes": "Cone-shaped; suprarenal positioning"
+      "notes": "Cone-shaped; suprarenal positioning [Verified 2026-09-18] recommendedSheath: 12F-24F depending on version (stainless steel vs titanium); extraSpec: Conical design, stainless-steel version delivered via ~24F sheath historically, titanium low-profile version via 12F. Source: AJR Radiologists' Field Guide to Permanent IVC Filters (https://www.ajronline.org/doi/10.2214/AJR.19.21660).",
+      "odFr": 12
     },
     {
       "name": "Trapeze IVC Filter",
@@ -7115,7 +7196,8 @@ window.NV_DATA = {
       "specifications": "Retrievable; up to 14 days",
       "workingLengthCm": 150,
       "dmsoCompatible": null,
-      "notes": "Hook for retrieval; IVC 17-28mm"
+      "notes": "Hook for retrieval; IVC 17-28mm [Verified 2026-09-17] recommendedSheath: 7.0Fr; extraSpec: Filter max diameter 30mm; filter length 50mm; introducer sheath 7.0Fr x 65cm. Source: Cook Medical - Gunther Tulip Vena Cava Filter product page (https://www.cookmedical.com/products/ea845922-f1f5-4038-a4bc-f1a14e768a2d/).",
+      "totalLengthCm": 65
     },
     {
       "name": "OptEase IVC Filter",
@@ -7241,7 +7323,7 @@ window.NV_DATA = {
       "specifications": "Large bore aspiration for graft thrombosis",
       "workingLengthCm": 60,
       "dmsoCompatible": null,
-      "notes": "Aspiration thrombectomy"
+      "notes": "Aspiration thrombectomy [Verified 2026-09-18] extraSpec: Aspiration system adaptation for dialysis. Source: Penumbra Inc (https://www.penumbrainc.com/products/penumbra-system/)."
     },
     {
       "name": "Cook Flexor Sheath 4Fr",
@@ -7395,7 +7477,9 @@ window.NV_DATA = {
       "specifications": "4Fr radial sheath",
       "workingLengthCm": 150,
       "dmsoCompatible": null,
-      "notes": "Minimally invasive radial access"
+      "notes": "Minimally invasive radial access [Verified 2026-09-17] Source: Terumo Interventional Systems GLIDESHEATH standard introducer sheath page (https://www.terumois.com/products/product-type/access/glidesheath.html).",
+      "odFr": 4,
+      "totalLengthCm": 25
     },
     {
       "name": "Terumo Radifocus Sheath 6Fr",
@@ -7409,7 +7493,9 @@ window.NV_DATA = {
       "specifications": "6Fr radial sheath",
       "workingLengthCm": 150,
       "dmsoCompatible": null,
-      "notes": "Transradial intervention access"
+      "notes": "Transradial intervention access [Verified 2026-09-17] Source: Terumo Interventional Systems GLIDESHEATH standard introducer sheath page (https://www.terumois.com/products/product-type/access/glidesheath.html).",
+      "odFr": 6,
+      "totalLengthCm": 25
     },
     {
       "name": "Boston Scientific Pinnacle Sheath 6Fr",
@@ -7817,7 +7903,7 @@ window.NV_DATA = {
       "specifications": "0.27\" pediatric intermediate catheter",
       "workingLengthCm": 300,
       "dmsoCompatible": null,
-      "notes": "Smaller lumen for pediatric vasculature"
+      "notes": "Smaller lumen for pediatric vasculature [Verified 2026-09-18] extraSpec: Pediatric catheter, 027 inner diameter. Source: Penumbra Inc (https://www.penumbrainc.com/products/penumbra-system/)."
     },
     {
       "name": "Asahi Pediatric Guidewire 0.010\"",
@@ -7898,7 +7984,7 @@ window.NV_DATA = {
       "workingLengthCm": 140,
       "maxPressurePsi": 200,
       "dmsoCompatible": null,
-      "notes": "Pediatric stroke thrombectomy"
+      "notes": "Pediatric stroke thrombectomy [Verified 2026-09-18] extraSpec: Pediatric aspiration catheter. Source: Penumbra Inc (https://www.penumbrainc.com/products/penumbra-system/)."
     },
     {
       "name": "Solthane Balloon 4mm x 2cm",
@@ -7947,17 +8033,19 @@ window.NV_DATA = {
       "idFr": 5.3,
       "workingLengthCm": 100,
       "totalLengthCm": 110,
-      "notes": "Guiding catheter; 0.070\" ID"
+      "notes": "Guiding catheter; 0.070\" ID [Verified 2026-09-17] extraSpec: Extra Large Lumen configuration; ID .070\" per Cordis brochure table. Source: Cordis VISTA BRITE TIP Catheter Brochure (https://cordis.com/uploads/productResources/apac/VISTA-BRITE-TIP-Catheter-Brochure-Australia.pdf).",
+      "odFr": 6
     },
     {
       "category": "GUIDING CATHETER",
       "name": "Vista Brite Tip 7F",
       "manufacturer": "Cordis",
       "idInch": 0.078,
-      "idFr": 6.0,
+      "idFr": 6,
       "workingLengthCm": 100,
       "totalLengthCm": 110,
-      "notes": "Guiding catheter; 0.078\" ID"
+      "notes": "Guiding catheter; 0.078\" ID [Verified 2026-09-17] extraSpec: Extra Large Lumen configuration; ID .078\" per Cordis brochure table. Source: Cordis VISTA BRITE TIP Catheter Brochure (https://cordis.com/uploads/productResources/apac/VISTA-BRITE-TIP-Catheter-Brochure-Australia.pdf).",
+      "odFr": 7
     },
     {
       "category": "GUIDING CATHETER",
@@ -7967,7 +8055,8 @@ window.NV_DATA = {
       "idFr": 6.7,
       "workingLengthCm": 100,
       "totalLengthCm": 110,
-      "notes": "Guiding catheter; 0.088\" ID"
+      "notes": "Guiding catheter; 0.088\" ID [Verified 2026-09-17] extraSpec: Extra Large Lumen configuration; ID .088\" per Cordis brochure table. Source: Cordis VISTA BRITE TIP Catheter Brochure (https://cordis.com/uploads/productResources/apac/VISTA-BRITE-TIP-Catheter-Brochure-Australia.pdf).",
+      "odFr": 8
     },
     {
       "category": "GUIDING CATHETER",
@@ -7977,7 +8066,8 @@ window.NV_DATA = {
       "idFr": 7.5,
       "workingLengthCm": 100,
       "totalLengthCm": 110,
-      "notes": "Guiding catheter; 0.098\" ID"
+      "notes": "Guiding catheter; 0.098\" ID [Verified 2026-09-17] extraSpec: Extra Large Lumen configuration; ID .098\" per Cordis brochure table. Source: Cordis VISTA BRITE TIP Catheter Brochure (https://cordis.com/uploads/productResources/apac/VISTA-BRITE-TIP-Catheter-Brochure-Australia.pdf).",
+      "odFr": 9
     },
     {
       "category": "GUIDING CATHETER",
@@ -7987,7 +8077,8 @@ window.NV_DATA = {
       "idFr": 4.4,
       "workingLengthCm": 100,
       "totalLengthCm": 110,
-      "notes": "Guiding catheter; 0.058\" ID"
+      "notes": "Guiding catheter; 0.058\" ID [Verified 2026-09-17] Source: Cordis US Cardiovascular Catalog 2023 (https://cordis.com/uploads/productResources/na/100551563-2-Cordis-US-Cardiovascular-Catalog-2023.pdf).",
+      "odFr": 5
     },
     {
       "category": "GUIDING CATHETER",
@@ -7997,13 +8088,14 @@ window.NV_DATA = {
       "idFr": 5.5,
       "workingLengthCm": 100,
       "totalLengthCm": 110,
-      "notes": "Large 0.072\" ID for a 6F guide"
+      "notes": "Large 0.072\" ID for a 6F guide [Verified 2026-09-17] Source: Cordis US Cardiovascular Catalog 2023 (https://cordis.com/uploads/productResources/na/100551563-2-Cordis-US-Cardiovascular-Catalog-2023.pdf).",
+      "odFr": 6
     },
     {
       "category": "SHEATH",
       "name": "Avanti+ 4F",
       "manufacturer": "Cordis",
-      "idFr": 4.0,
+      "idFr": 4,
       "idInch": 0.052,
       "workingLengthCm": 11,
       "totalLengthCm": 11,
@@ -8013,7 +8105,7 @@ window.NV_DATA = {
       "category": "SHEATH",
       "name": "Avanti+ 5F",
       "manufacturer": "Cordis",
-      "idFr": 5.0,
+      "idFr": 5,
       "idInch": 0.066,
       "workingLengthCm": 11,
       "totalLengthCm": 11,
@@ -8023,7 +8115,7 @@ window.NV_DATA = {
       "category": "SHEATH",
       "name": "Avanti+ 6F",
       "manufacturer": "Cordis",
-      "idFr": 6.0,
+      "idFr": 6,
       "idInch": 0.079,
       "workingLengthCm": 11,
       "totalLengthCm": 11,
@@ -8033,7 +8125,7 @@ window.NV_DATA = {
       "category": "SHEATH",
       "name": "Avanti+ 7F",
       "manufacturer": "Cordis",
-      "idFr": 7.0,
+      "idFr": 7,
       "idInch": 0.092,
       "workingLengthCm": 11,
       "totalLengthCm": 11,
@@ -8043,7 +8135,7 @@ window.NV_DATA = {
       "category": "SHEATH",
       "name": "Avanti+ 8F",
       "manufacturer": "Cordis",
-      "idFr": 8.0,
+      "idFr": 8,
       "idInch": 0.105,
       "workingLengthCm": 11,
       "totalLengthCm": 11,
@@ -8053,7 +8145,7 @@ window.NV_DATA = {
       "category": "SHEATH",
       "name": "Brite Tip 4F 11cm",
       "manufacturer": "Cordis",
-      "idFr": 4.0,
+      "idFr": 4,
       "idInch": 0.052,
       "workingLengthCm": 11,
       "totalLengthCm": 11,
@@ -8063,7 +8155,7 @@ window.NV_DATA = {
       "category": "SHEATH",
       "name": "Brite Tip 5F 11cm",
       "manufacturer": "Cordis",
-      "idFr": 5.0,
+      "idFr": 5,
       "idInch": 0.066,
       "workingLengthCm": 11,
       "totalLengthCm": 11,
@@ -8073,7 +8165,7 @@ window.NV_DATA = {
       "category": "SHEATH",
       "name": "Brite Tip 6F 11cm",
       "manufacturer": "Cordis",
-      "idFr": 6.0,
+      "idFr": 6,
       "idInch": 0.079,
       "workingLengthCm": 11,
       "totalLengthCm": 11,
@@ -8083,7 +8175,7 @@ window.NV_DATA = {
       "category": "SHEATH",
       "name": "Brite Tip 7F 11cm",
       "manufacturer": "Cordis",
-      "idFr": 7.0,
+      "idFr": 7,
       "idInch": 0.092,
       "workingLengthCm": 11,
       "totalLengthCm": 11,
@@ -8093,7 +8185,7 @@ window.NV_DATA = {
       "category": "SHEATH",
       "name": "Brite Tip 8F 11cm",
       "manufacturer": "Cordis",
-      "idFr": 8.0,
+      "idFr": 8,
       "idInch": 0.105,
       "workingLengthCm": 11,
       "totalLengthCm": 11,
@@ -8103,7 +8195,7 @@ window.NV_DATA = {
       "category": "SHEATH",
       "name": "Brite Tip 6F 23cm",
       "manufacturer": "Cordis",
-      "idFr": 6.0,
+      "idFr": 6,
       "idInch": 0.079,
       "workingLengthCm": 23,
       "totalLengthCm": 23,
@@ -8113,7 +8205,7 @@ window.NV_DATA = {
       "category": "SHEATH",
       "name": "Brite Tip 6F 45cm",
       "manufacturer": "Cordis",
-      "idFr": 6.0,
+      "idFr": 6,
       "idInch": 0.079,
       "workingLengthCm": 45,
       "totalLengthCm": 45,
@@ -8123,7 +8215,7 @@ window.NV_DATA = {
       "category": "SHEATH",
       "name": "Brite Tip 6F 90cm",
       "manufacturer": "Cordis",
-      "idFr": 6.0,
+      "idFr": 6,
       "idInch": 0.079,
       "workingLengthCm": 90,
       "totalLengthCm": 90,
@@ -8167,7 +8259,8 @@ window.NV_DATA = {
       "idFr": 3.6,
       "workingLengthCm": 100,
       "totalLengthCm": 110,
-      "notes": "Diagnostic catheter"
+      "notes": "Diagnostic catheter [Verified 2026-09-17] extraSpec: ID 0.047in / 1.19mm per catalog; offered in 100cm and 125cm lengths. Source: Cordis US Cardiovascular Catalog 2023 (https://cordis.com/uploads/productResources/na/100551563-2-Cordis-US-Cardiovascular-Catalog-2023.pdf).",
+      "odFr": 5
     },
     {
       "category": "DIAGNOSTIC CATHETER",
@@ -8177,7 +8270,8 @@ window.NV_DATA = {
       "idFr": 4.3,
       "workingLengthCm": 100,
       "totalLengthCm": 110,
-      "notes": "Diagnostic catheter"
+      "notes": "Diagnostic catheter [Verified 2026-09-17] extraSpec: ID 0.057in / 1.45mm per catalog; offered in 100cm and 125cm lengths. Source: Cordis US Cardiovascular Catalog 2023 (https://cordis.com/uploads/productResources/na/100551563-2-Cordis-US-Cardiovascular-Catalog-2023.pdf).",
+      "odFr": 6
     },
     {
       "category": "DIAGNOSTIC CATHETER",
@@ -8210,21 +8304,21 @@ window.NV_DATA = {
       "category": "VASCULAR CLOSURE DEVICE",
       "name": "ExoSeal 5F",
       "manufacturer": "Cordis",
-      "idFr": 5.0,
+      "idFr": 5,
       "notes": "Extravascular closure plug"
     },
     {
       "category": "VASCULAR CLOSURE DEVICE",
       "name": "ExoSeal 6F",
       "manufacturer": "Cordis",
-      "idFr": 6.0,
+      "idFr": 6,
       "notes": "Extravascular closure plug"
     },
     {
       "category": "VASCULAR CLOSURE DEVICE",
       "name": "ExoSeal 7F",
       "manufacturer": "Cordis",
-      "idFr": 7.0,
+      "idFr": 7,
       "notes": "Extravascular closure plug"
     },
     {
@@ -8249,7 +8343,9 @@ window.NV_DATA = {
       "idInch": 0.072,
       "odInch": 0.085,
       "workingLengthCm": 132,
-      "notes": "Neuro aspiration catheter; silver label"
+      "notes": "Neuro aspiration catheter; silver label [Verified 2026-09-18] extraSpec: Reperfusion catheter. Source: Penumbra medical supplier (https://medicalmaterials.com/all-products/red-72-kit-reperfusion-catheter-penumbra-aspiration-tubing-6fr-x-072-x-132cm-non-expired/).",
+      "odFr": 6,
+      "totalLengthCm": 132
     },
     {
       "category": "ASPIRATION CATHETER",
@@ -8258,7 +8354,9 @@ window.NV_DATA = {
       "idInch": 0.068,
       "odInch": 0.084,
       "workingLengthCm": 132,
-      "notes": "Neuro aspiration catheter"
+      "notes": "Neuro aspiration catheter [Verified 2026-09-18] extraSpec: Reperfusion catheter. Source: Penumbra medical supplier (https://medicalmaterials.com/all-products/red-68-kit-reperfusion-catheter-penumbra-aspiration-tubing-6fr-x-068-x-132cm-non-expired/).",
+      "odFr": 6,
+      "totalLengthCm": 132
     },
     {
       "category": "ASPIRATION CATHETER",
@@ -8267,7 +8365,9 @@ window.NV_DATA = {
       "idInch": 0.062,
       "odInch": 0.076,
       "workingLengthCm": 138,
-      "notes": "Neuro aspiration catheter"
+      "notes": "Neuro aspiration catheter [Verified 2026-09-18] extraSpec: Reperfusion catheter. Source: Penumbra medical supplier (https://medicalmaterials.com/all-products/red-62-kit-reperfusion-catheter-penumbra-aspiration-tubing-6fr-x-062-x-138cm-non-expired/).",
+      "odFr": 6,
+      "totalLengthCm": 138
     },
     {
       "category": "ASPIRATION CATHETER",
@@ -8276,7 +8376,7 @@ window.NV_DATA = {
       "idInch": 0.043,
       "odInch": 0.06,
       "workingLengthCm": 160,
-      "notes": "Distal neuro aspiration catheter"
+      "notes": "Distal neuro aspiration catheter [Verified 2026-09-18] extraSpec: Reperfusion catheter variant. Source: Penumbra Inc (https://www.penumbrainc.com/products/red-62/)."
     },
     {
       "category": "ASPIRATION CATHETER",
@@ -8285,74 +8385,79 @@ window.NV_DATA = {
       "idInch": 0.072,
       "odInch": 0.079,
       "workingLengthCm": 132,
-      "notes": "High-flow reperfusion catheter"
+      "notes": "High-flow reperfusion catheter [Verified 2026-09-18] extraSpec: Reperfusion catheter. Source: Penumbra Inc (https://www.penumbrainc.com/products/penumbra-jet-reperfusion-catheter/).",
+      "odFr": 6,
+      "totalLengthCm": 132
     },
     {
       "category": "GUIDING CATHETER",
       "name": "Neuron MAX 088",
       "manufacturer": "Penumbra",
       "idInch": 0.088,
-      "odFr": 8.0,
+      "odFr": 8,
       "workingLengthCm": 90,
       "totalLengthCm": 90,
-      "notes": "Standard neuro access platform; available in 80/90/100cm"
+      "notes": "Standard neuro access platform; available in 80/90/100cm [Verified 2026-09-18] extraSpec: Intracranial access system. Source: Penumbra Inc (https://www.penumbrainc.com/au/products/neuron-intracranial-access-system/)."
     },
     {
       "category": "GUIDING CATHETER",
       "name": "Benchmark BMX96",
       "manufacturer": "Penumbra",
       "idInch": 0.096,
-      "odFr": 8.0,
+      "odFr": 8,
       "workingLengthCm": 90,
       "totalLengthCm": 90,
-      "notes": "Ultra-large bore access catheter"
+      "notes": "Ultra-large bore access catheter [Verified 2026-09-18] extraSpec: BMX configuration access catheter. Source: Penumbra Inc (https://www.penumbrainc.com/products/benchmark-071-intracranial-access-system/)."
     },
     {
       "category": "GUIDING CATHETER",
       "name": "Benchmark BMX81",
       "manufacturer": "Penumbra",
       "idInch": 0.081,
-      "odFr": 7.0,
+      "odFr": 7,
       "workingLengthCm": 105,
       "totalLengthCm": 105,
-      "notes": "7F neuro access platform"
+      "notes": "7F neuro access platform [Verified 2026-09-18] extraSpec: BMX configuration access catheter. Source: Penumbra Inc (https://www.penumbrainc.com/products/benchmark-071-intracranial-access-system/)."
     },
     {
       "category": "GUIDING CATHETER",
       "name": "Benchmark 071",
       "manufacturer": "Penumbra",
       "idInch": 0.071,
-      "odFr": 6.0,
+      "odFr": 6,
       "workingLengthCm": 105,
       "totalLengthCm": 105,
-      "notes": "6F neuro access platform"
+      "notes": "6F neuro access platform [Verified 2026-09-18] extraSpec: Intracranial access system, 071 diameter delivery catheter. Source: Penumbra Inc (https://www.penumbrainc.com/products/benchmark-071-intracranial-access-system/)."
     },
     {
       "category": "ASPIRATION CATHETER",
       "name": "CAT12",
       "manufacturer": "Penumbra",
       "idInch": 0.131,
-      "odFr": 12.0,
+      "odFr": 12,
       "workingLengthCm": 115,
-      "notes": "Indigo peripheral system; for large vessels/PE"
+      "notes": "Indigo peripheral system; for large vessels/PE [Verified 2026-09-18] extraSpec: Continuous aspiration mechanical thrombectomy catheter. Source: FDA GUDID (https://fda.report/GUDID/00815948022553).",
+      "totalLengthCm": 100
     },
     {
       "category": "ASPIRATION CATHETER",
       "name": "CAT8",
       "manufacturer": "Penumbra",
-      "idFr": 8.0,
-      "odFr": 8.0,
+      "idFr": 8,
+      "odFr": 8,
       "workingLengthCm": 115,
-      "notes": "Indigo peripheral system; XTorq tip"
+      "notes": "Indigo peripheral system; XTorq tip [Verified 2026-09-18] extraSpec: Continuous aspiration mechanical thrombectomy catheter. Source: FDA GUDID (https://fda.report/GUDID/00815948020412).",
+      "totalLengthCm": 85
     },
     {
       "category": "ASPIRATION CATHETER",
       "name": "CAT6",
       "manufacturer": "Penumbra",
-      "idFr": 6.0,
-      "odFr": 6.0,
+      "idFr": 6,
+      "odFr": 6,
       "workingLengthCm": 135,
-      "notes": "Indigo peripheral system"
+      "notes": "Indigo peripheral system [Verified 2026-09-18] extraSpec: Continuous aspiration mechanical thrombectomy catheter. Source: Penumbra Inc (https://www.penumbrainc.com/products/penumbra-system/).",
+      "totalLengthCm": 140
     },
     {
       "category": "MICROCATHETER",
@@ -8361,7 +8466,7 @@ window.NV_DATA = {
       "idInch": 0.025,
       "odFr": 2.9,
       "workingLengthCm": 150,
-      "notes": "High-flow microcatheter for coil delivery"
+      "notes": "High-flow microcatheter for coil delivery [Verified 2026-09-18] extraSpec: Delivery microcatheter for embolization coils. Source: Penumbra Inc (https://www.penumbrainc.com/products/lantern-delivery-microcatheter/)."
     },
     {
       "category": "MICROCATHETER",
@@ -8370,26 +8475,27 @@ window.NV_DATA = {
       "idInch": 0.025,
       "odFr": 2.9,
       "workingLengthCm": 160,
-      "notes": "Microcatheter for peripheral embolization"
+      "notes": "Microcatheter for peripheral embolization [Verified 2026-09-18] extraSpec: Stent delivery catheter. Source: MedicalExpo/Penumbra Inc (https://www.medicalexpo.com/prod/penumbra/product-94659-671220.html).",
+      "totalLengthCm": 160
     },
     {
       "category": "COIL",
       "name": "Ruby Coil",
       "manufacturer": "Penumbra",
-      "notes": "Large-volume peripheral coil; fits .025\" ID microcatheters"
+      "notes": "Large-volume peripheral coil; fits .025\" ID microcatheters [Verified 2026-09-18] extraSpec: Ruby embolization coil system; coilDiameterMm: 3-40; coilLengthCm: 5-60. Source: Penumbra coil reference guide (https://www.penumbrainc.com/pdf/embolization-system-coil-reference-guide/)."
     },
     {
       "category": "COIL",
       "name": "Smart Coil",
       "manufacturer": "Penumbra",
-      "notes": "Neurovascular aneurysm coil; compatible with .0165\" ID microcatheters"
+      "notes": "Neurovascular aneurysm coil; compatible with .0165\" ID microcatheters [Verified 2026-09-18] extraSpec: Pushable embolization coil system. Source: Penumbra Inc (https://www.penumbrainc.com/products/penumbra-smart-coil-system/)."
     },
     {
       "category": "PTA BALLOON",
       "name": "Mustang 0.035 5x40mm",
       "manufacturer": "Boston Scientific",
       "idInch": 0.035,
-      "odFr": 5.0,
+      "odFr": 5,
       "workingLengthCm": 135,
       "notes": "High-pressure PTA balloon; 5F sheath compatible"
     },
@@ -8398,7 +8504,7 @@ window.NV_DATA = {
       "name": "Mustang 0.035 10x40mm",
       "manufacturer": "Boston Scientific",
       "idInch": 0.035,
-      "odFr": 6.0,
+      "odFr": 6,
       "workingLengthCm": 135,
       "notes": "High-pressure PTA balloon; 6F sheath compatible"
     },
@@ -8415,15 +8521,21 @@ window.NV_DATA = {
       "category": "STENT",
       "name": "Innova Self-Expanding Stent",
       "manufacturer": "Boston Scientific",
-      "odFr": 6.0,
-      "notes": "SFA/Popliteal stent; 6F delivery"
+      "odFr": 6,
+      "notes": "SFA/Popliteal stent; 6F delivery [Verified 2026-09-18] recommendedSheath: per package label (typically 6F); extraSpec: Innova self-expanding nitinol stent for SFA: diameters 5-8mm, lengths 20-200mm, lesion length up to 190mm, requires stiff 0.035in guidewire. Source: Boston Scientific Innova Stent Sell Sheet (https://www.bostonscientific.com/content/dam/bostonscientific/pi/portfolio-group/Stents/Innova/Resources/innova-stent-sell-sheet-pi-322605-ad.pdf).",
+      "odInch": 0.035,
+      "workingLengthCm": 75,
+      "totalLengthCm": 130
     },
     {
       "category": "STENT",
       "name": "Epic Vascular Stent",
       "manufacturer": "Boston Scientific",
-      "odFr": 6.0,
-      "notes": "Iliac stent; 6F delivery"
+      "odFr": 6,
+      "notes": "Iliac stent; 6F delivery [Verified 2026-09-18] recommendedSheath: 6F; extraSpec: Epic Vascular Self-Expanding Stent: diameters ~6-12mm, max lesion length 120mm, OTW 0.035in GW, 6F delivery, shaft lengths 75cm and 120cm. Source: FDA DFU for Epic Vascular (https://www.bostonscientific.com/content/dam/elabeling/pi/90984760-01A_EpicIlliac_DFU_en-US_S.pdf).",
+      "idInch": 0.035,
+      "workingLengthCm": 75,
+      "totalLengthCm": 120
     },
     {
       "category": "MICROCATHETER",
@@ -8450,7 +8562,7 @@ window.NV_DATA = {
       "name": "Imager II 5F",
       "manufacturer": "Boston Scientific",
       "idInch": 0.038,
-      "odFr": 5.0,
+      "odFr": 5,
       "workingLengthCm": 100,
       "notes": "Angiographic catheter"
     },
@@ -8466,7 +8578,8 @@ window.NV_DATA = {
       "manufacturer": "Boston Scientific",
       "odInch": 0.014,
       "workingLengthCm": 180,
-      "notes": "Hydrophilic guidewire"
+      "notes": "Hydrophilic guidewire [Verified 2026-09-18] extraSpec: Same Fathom family; 0.014in diameter, lengths 140-300cm depending on config. Source: Boston Scientific Fathom brochure (https://www.bostonscientific.com/en-US/products/embolization/fathom-steerable-guidewires.html).",
+      "totalLengthCm": 200
     },
     {
       "category": "GUIDEWIRE",
@@ -8474,7 +8587,8 @@ window.NV_DATA = {
       "manufacturer": "Boston Scientific",
       "odInch": 0.018,
       "workingLengthCm": 180,
-      "notes": "Stainless steel 0.018\" wire"
+      "notes": "Stainless steel 0.018\" wire [Verified 2026-09-18] extraSpec: V-18 ControlWire: 0.018in steerable hydrophilic guidewire, lengths up to 300cm. Source: Boston Scientific V-18 ControlWire product page (https://www.bostonscientific.com/en-US/products/guidewires/v18-v14-controlwire-guidewire.html).",
+      "totalLengthCm": 300
     },
     {
       "category": "GUIDEWIRE",
@@ -8482,7 +8596,8 @@ window.NV_DATA = {
       "manufacturer": "Boston Scientific",
       "odInch": 0.035,
       "workingLengthCm": 180,
-      "notes": "High-support exchange wire"
+      "notes": "High-support exchange wire [Verified 2026-09-17] extraSpec: flat-wire stainless steel core, PTFE coating, tip options (3.5cm flex, 6/7cm Bentson-type, 3mm J). Source: BSCI Amplatz Super Stiff Guidewire product page (https://www.bostonscientific.com/en-US/products/guidewires/amplatz-super-stiff.html).",
+      "totalLengthCm": 145
     },
     {
       "category": "RADIOEMBOLIZATION",
@@ -8517,14 +8632,14 @@ window.NV_DATA = {
       "name": "Oncozene 75µm",
       "manufacturer": "Boston Scientific",
       "odInch": 0.008,
-      "notes": "Precisely calibrated microspheres; Min Catheter ID 0.008\""
+      "notes": "Precisely calibrated microspheres; Min Catheter ID 0.008\" [Verified 2026-09-18] extraSpec: ONCOZENE embolization microspheres: 40±10, 75±15, 100±25µm sizes; sodium polymethacrylate core with Polyzene-F coating; 2mL/3mL syringes. Source: FDA 510(k) K130307 Summary for Oncozene (https://www.accessdata.fda.gov/cdrh_docs/pdf13/K130307.pdf)."
     },
     {
       "category": "MICROCATHETER",
       "name": "TruSelect 2.0",
       "manufacturer": "Boston Scientific",
       "idInch": 0.021,
-      "odFr": 2.0,
+      "odFr": 2,
       "workingLengthCm": 130,
       "dmsoCompatible": true,
       "stabilityData": {
@@ -8550,7 +8665,7 @@ window.NV_DATA = {
       "name": "IceSphere 1.5 CX",
       "manufacturer": "Boston Scientific",
       "odInch": 0.058,
-      "idFr": 17.0,
+      "idFr": 17,
       "workingLengthCm": 17.5,
       "notes": "17G cryoablation needle"
     },
@@ -8559,7 +8674,7 @@ window.NV_DATA = {
       "name": "IcePearl 2.1 CX",
       "manufacturer": "Boston Scientific",
       "odInch": 0.083,
-      "idFr": 14.0,
+      "idFr": 14,
       "workingLengthCm": 17.5,
       "notes": "14G cryoablation needle"
     },
@@ -8568,20 +8683,20 @@ window.NV_DATA = {
       "name": "AXS Infinity LS",
       "manufacturer": "Stryker",
       "idInch": 0.088,
-      "odFr": 8.0,
+      "odFr": 8,
       "workingLengthCm": 90,
       "totalLengthCm": 90,
-      "notes": "Neurovascular long sheath; 0.088\" ID"
+      "notes": "Neurovascular long sheath; 0.088\" ID [Verified 2026-09-18] recommendedSheath: Compatible with 6Fr or smaller catheters through 0.088in lumen; extraSpec: Available in 70/80/90cm lengths (model GEN-10800-XX). Source: GUDID device record + Stryker distributor catalog (https://accessgudid.nlm.nih.gov/devices/07613327298246)."
     },
     {
       "category": "SHEATH",
       "name": "AXS Infinity LS Plus",
       "manufacturer": "Stryker",
       "idInch": 0.091,
-      "odFr": 8.0,
+      "odFr": 8,
       "workingLengthCm": 90,
       "totalLengthCm": 90,
-      "notes": "Neurovascular long sheath; 0.091\" ID"
+      "notes": "Neurovascular long sheath; 0.091\" ID [Verified 2026-09-18] recommendedSheath: Compatible with 6Fr or smaller catheters; 10cm distal lubricious coating; extraSpec: Available in 70/80/90cm lengths (model INC-11196-XX). Source: Stryker DFU PDF + GUDID device record (https://www.stryker.com/content/dam/stryker/neurovascular/products/axs-infinity-ls-plus/resources/AXS-Infinity-LS-Plus_DFU_US_Jun18.pdf)."
     },
     {
       "category": "ASPIRATION CATHETER",
@@ -8624,7 +8739,7 @@ window.NV_DATA = {
       "name": "AXS Catalyst 6",
       "manufacturer": "Stryker",
       "idInch": 0.06,
-      "odFr": 6.0,
+      "odFr": 6,
       "workingLengthCm": 132,
       "notes": "Intermediate/aspiration catheter"
     },
@@ -8633,7 +8748,7 @@ window.NV_DATA = {
       "name": "AXS Catalyst 7",
       "manufacturer": "Stryker",
       "idInch": 0.068,
-      "odFr": 7.0,
+      "odFr": 7,
       "workingLengthCm": 132,
       "notes": "Intermediate/aspiration catheter"
     },
@@ -8685,7 +8800,8 @@ window.NV_DATA = {
       "odFr": 2.7,
       "workingLengthCm": 162,
       "dmsoCompatible": true,
-      "notes": "Navigation microcatheter"
+      "notes": "Navigation microcatheter [Verified 2026-09-17] extraSpec: distal OD 2.4F/0.031in, proximal OD 2.7F/0.035in. Source: Stryker Trevo Trak 21 product page (https://www.stryker.com/us/en/neurovascular/products/trak-21.html).",
+      "odInch": 0.035
     },
     {
       "category": "STENT RETRIEVER",
@@ -8703,13 +8819,13 @@ window.NV_DATA = {
       "category": "STENT",
       "name": "Neuroform Atlas",
       "manufacturer": "Stryker",
-      "notes": "Intracranial stent; delivered through SL-10/XT-17"
+      "notes": "Intracranial stent; delivered through SL-10/XT-17 [Verified 2026-09-18] extraSpec: Available sizes: 3.0x15/21/24mm, 4.0x15/21/24/30mm, 4.5x15/21/30mm. Parent vessel range 2.0-4.5mm; foreshortening up to 6.3% after deployment. Source: Stryker Neuroform Atlas IFU + distributor catalog (https://www.stryker.com/content/dam/stryker/neurovascular/products/neuroform-atlas-stent-system/resources/Neuroform_Atlas_IFU_US_03-13-2025.pdf)."
     },
     {
       "category": "COIL",
       "name": "Target 360",
       "manufacturer": "Stryker",
-      "notes": "Electrolytic detachable coil; fits 0.0165\" ID microcatheters"
+      "notes": "Electrolytic detachable coil; fits 0.0165\" ID microcatheters [Verified 2026-09-18] recommendedSheath: Excelsior SL-10, XT-17, or 1018 microcatheter; extraSpec: Diameter range 3-24mm; helical/complex fill coil. Source: Stryker Target Detachable Coils wall chart (https://www.stryker.com/content/dam/stryker/neurovascular/products/target-3d-detachable-coils/resources/AP004356%20v3.0%20-%20Target%20Detachable%20Coils%20Wall%20Chart.pdf)."
     },
     {
       "category": "MICROWIRE",
@@ -8732,9 +8848,9 @@ window.NV_DATA = {
       "name": "Cerebase DA",
       "manufacturer": "Cerenovus",
       "idInch": 0.09,
-      "odFr": 8.0,
+      "odFr": 8,
       "workingLengthCm": 90,
-      "notes": "Distal access guide sheath; 0.090\" ID"
+      "notes": "Distal access guide sheath; 0.090\" ID [Verified 2026-09-18] extraSpec: Guide sheath system. Source: FDA GUDID (https://accessgudid.nlm.nih.gov/devices/10886704082293)."
     },
     {
       "category": "ASPIRATION CATHETER",
@@ -8743,7 +8859,7 @@ window.NV_DATA = {
       "idInch": 0.071,
       "odInch": 0.0825,
       "workingLengthCm": 132,
-      "notes": "Neuro aspiration catheter; TruCourse technology"
+      "notes": "Neuro aspiration catheter; TruCourse technology [Verified 2026-09-18] extraSpec: Intermediate catheter, hydrophilic coating 55cm. Source: FDA 510(k) K251828 (https://www.accessdata.fda.gov/cdrh_docs/pdf25/K251828.pdf)."
     },
     {
       "category": "ASPIRATION CATHETER",
@@ -8751,7 +8867,7 @@ window.NV_DATA = {
       "manufacturer": "Cerenovus",
       "idInch": 0.057,
       "workingLengthCm": 132,
-      "notes": "Neuro aspiration catheter"
+      "notes": "Neuro aspiration catheter [Verified 2026-09-18] extraSpec: Intermediate catheter. Source: FDA GUDID (https://fda.report/GUDID/10886704086512)."
     },
     {
       "category": "ASPIRATION CATHETER",
@@ -8759,7 +8875,7 @@ window.NV_DATA = {
       "manufacturer": "Cerenovus",
       "idInch": 0.042,
       "workingLengthCm": 132,
-      "notes": "Distal neuro aspiration catheter"
+      "notes": "Distal neuro aspiration catheter [Verified 2026-09-18] extraSpec: Intermediate catheter. Source: FDA GUDID (https://fda.report/GUDID/10886704086437)."
     },
     {
       "category": "MICROCATHETER",
@@ -8772,7 +8888,9 @@ window.NV_DATA = {
       "stabilityData": {
         "maxPressurePsi": 300,
         "notes": "Low-profile microcatheter"
-      }
+      },
+      "totalLengthCm": 150,
+      "notes": "[Verified 2026-09-18] extraSpec: Microcatheter. Source: AccessGUDID (https://accessgudid.nlm.nih.gov/devices/10886704028772)."
     },
     {
       "category": "MICROCATHETER",
@@ -8785,25 +8903,32 @@ window.NV_DATA = {
       "stabilityData": {
         "maxPressurePsi": 300,
         "notes": "Stent delivery microcatheter"
-      }
+      },
+      "idFr": 2.3,
+      "totalLengthCm": 150,
+      "notes": "[Verified 2026-09-18] extraSpec: Infusion catheter, straight tip with 2 markers. Source: Medical materials supplier (https://medicalmaterials.com/all-products/prowler-select-plus-w-2-markers-tip-shape-straight-2-8fr-x-2-3fr-x-021x-150cm/)."
     },
     {
       "category": "STENT RETRIEVER",
       "name": "EmboTrap III",
       "manufacturer": "Cerenovus",
-      "notes": "Dual-layer revascularization device; fits 0.021\"-0.027\" microcatheters"
+      "notes": "Dual-layer revascularization device; fits 0.021\"-0.027\" microcatheters [Verified 2026-09-17] extraSpec: vessel size range 1.5-5.0mm, working/expanded length 22mm, total device length 194cm. Source: Official J&J MedTech EMBOTRAP III page (https://www.jnjmedtech.com/en-US/product/embotrap-iii-revascularization-device). [Verified 2026-09-18] extraSpec: Stent retriever, 5 x 22 mm. Source: FDA GUDID (https://fda.report/GUDID/10886704082866).",
+      "totalLengthCm": 194
     },
     {
       "category": "STENT",
       "name": "Enterprise 2",
       "manufacturer": "Cerenovus",
-      "notes": "Closed-cell intracranial stent; requires 0.021\" ID microcatheter"
+      "notes": "Closed-cell intracranial stent; requires 0.021\" ID microcatheter [Verified 2026-09-17] extraSpec: indicated parent vessel diameter 2.5-4.0mm, available lengths 16/23/30/39cm, compatible with Prowler Select Plus 0.021in ID microcatheter. Source: Official J&J MedTech ENTERPRISE 2 Vascular Reconstruction Device page (https://www.jnjmedtech.com/en-US/product/enterprise-2-vascular-reconstruction-device). [Verified 2026-09-18] recommendedSheath: .021\" microcatheter; extraSpec: Stent, 4.0mm OD, 23mm stent length. Source: AccessGUDID (https://accessgudid.nlm.nih.gov/devices/10886704075356).",
+      "idInch": 0.021,
+      "totalLengthCm": 39
     },
     {
       "category": "COIL",
       "name": "Galaxy G3",
       "manufacturer": "Cerenovus",
-      "notes": "Random-loop microcoil system; fits 0.0165\"-0.021\" microcatheters"
+      "notes": "Random-loop microcoil system; fits 0.0165\"-0.021\" microcatheters [Verified 2026-09-18] extraSpec: Microcoil embolization system; coilDiameterMm: 1-5; coilLengthCm: 2.5-20. Source: FDA GUDID (https://fda.report/GUDID/10886704080220).",
+      "totalLengthCm": 190
     },
     {
       "category": "GUIDING CATHETER",
@@ -8828,7 +8953,7 @@ window.NV_DATA = {
       "name": "RIST Guide 071",
       "manufacturer": "Medtronic",
       "idInch": 0.071,
-      "odFr": 6.0,
+      "odFr": 6,
       "notes": "Radial access guide catheter [IFU: 95 cm radial-access]",
       "workingLengthCm": "95"
     },
@@ -8837,7 +8962,7 @@ window.NV_DATA = {
       "name": "RIST Guide 079",
       "manufacturer": "Medtronic",
       "idInch": 0.079,
-      "odFr": 7.0,
+      "odFr": 7,
       "notes": "Radial access guide catheter [IFU: 95, 100, 105 cm options]",
       "workingLengthCm": "95 / 100 / 105"
     },
@@ -8933,7 +9058,7 @@ window.NV_DATA = {
       "name": "Excelsior 1018",
       "manufacturer": "Stryker",
       "idInch": 0.019,
-      "odFr": 2.0,
+      "odFr": 2,
       "workingLengthCm": 150,
       "dmsoCompatible": true,
       "notes": "Large-lumen coiling microcatheter."
@@ -8966,7 +9091,8 @@ window.NV_DATA = {
       "odFr": 2.4,
       "workingLengthCm": 162,
       "dmsoCompatible": false,
-      "notes": "Optimized for Trevo NXT delivery."
+      "notes": "Optimized for Trevo NXT delivery. [Verified 2026-09-17] extraSpec: distal OD 2.4F/0.031in, proximal OD 2.7F/0.035in. Source: Stryker Trevo Trak 21 product page (https://www.stryker.com/us/en/neurovascular/products/trak-21.html).",
+      "odInch": 0.035
     },
     {
       "category": "STENT RETRIEVER",
@@ -8974,7 +9100,7 @@ window.NV_DATA = {
       "manufacturer": "Medtronic",
       "workingLengthCm": 200,
       "totalLengthCm": 200,
-      "notes": "Revascularization device; fits 0.017\" microcatheters"
+      "notes": "Revascularization device; fits 0.017\" microcatheters [Verified 2026-09-18] extraSpec: Diameter 3.0mm; lengths 20mm or 40mm; target vessel 1.5-3.0mm; microcatheter ID 0.017-0.027in; max push wire 200cm. Source: Medtronic Solitaire X 3mm brochure (https://procardio.net/sites/default/files/3mm-solitairex-brochure.pdf)."
     },
     {
       "category": "STENT RETRIEVER",
@@ -8982,7 +9108,7 @@ window.NV_DATA = {
       "manufacturer": "Medtronic",
       "workingLengthCm": 200,
       "totalLengthCm": 200,
-      "notes": "Revascularization device; fits 0.021\" microcatheters"
+      "notes": "Revascularization device; fits 0.021\" microcatheters [Verified 2026-09-18] extraSpec: Diameter 4.0mm; lengths 20mm or 40mm; target vessel 2.0-4.0mm; min microcatheter ID 0.021in; push wire 200cm. Source: Medtronic Solitaire X brochure (https://mydevicemd.com/assets/uploads/device/1626792263676solitaire-x-brochure.pdf)."
     },
     {
       "category": "STENT RETRIEVER",
@@ -8990,13 +9116,14 @@ window.NV_DATA = {
       "manufacturer": "Medtronic",
       "workingLengthCm": 200,
       "totalLengthCm": 200,
-      "notes": "Revascularization device; fits 0.027\" microcatheters"
+      "notes": "Revascularization device; fits 0.027\" microcatheters [Verified 2026-09-18] extraSpec: Diameter 6.0mm; lengths 20mm, 24mm, or 40mm; target vessel 2.0-5.5mm; min microcatheter ID 0.021in; push wire 200cm. Source: Medtronic Solitaire X brochure (https://mydevicemd.com/assets/uploads/device/1626792263676solitaire-x-brochure.pdf)."
     },
     {
       "category": "FLOW DIVERTER",
       "name": "Pipeline Flex",
       "manufacturer": "Medtronic",
-      "notes": "Embolization device; requires 0.027\" ID microcatheter"
+      "notes": "Embolization device; requires 0.027\" ID microcatheter [Verified 2026-09-18] extraSpec: Diameters 2.50-5.00mm (0.25mm increments); lengths 10-35mm; requires microcatheter ID >=0.027in, >=135cm length. Source: FDA PMA P100018/S015 Instructions for Use (https://www.accessdata.fda.gov/cdrh_docs/pdf10/P100018S015C.pdf).",
+      "totalLengthCm": 200
     },
     {
       "category": "FLOW DIVERTER",
@@ -9014,91 +9141,97 @@ window.NV_DATA = {
       "category": "BRIDGING STENT",
       "name": "Neuroform Atlas",
       "manufacturer": "Stryker",
-      "notes": "Low-profile stent; requires 0.0165-0.017\" ID microcatheter."
+      "notes": "Low-profile stent; requires 0.0165-0.017\" ID microcatheter. [Verified 2026-09-18] extraSpec: Available sizes: 3.0x15/21/24mm, 4.0x15/21/24/30mm, 4.5x15/21/30mm. Parent vessel range 2.0-4.5mm; foreshortening up to 6.3% after deployment. Source: Stryker Neuroform Atlas IFU + distributor catalog (https://www.stryker.com/content/dam/stryker/neurovascular/products/neuroform-atlas-stent-system/resources/Neuroform_Atlas_IFU_US_03-13-2025.pdf)."
     },
     {
       "category": "COIL",
       "name": "Target 360",
       "manufacturer": "Stryker",
-      "notes": "Electrolytic detachment; requires 0.0165\"+ ID microcatheter."
+      "notes": "Electrolytic detachment; requires 0.0165\"+ ID microcatheter. [Verified 2026-09-18] recommendedSheath: Excelsior SL-10, XT-17, or 1018 microcatheter; extraSpec: Diameter range 3-24mm; helical/complex fill coil. Source: Stryker Target Detachable Coils wall chart (https://www.stryker.com/content/dam/stryker/neurovascular/products/target-3d-detachable-coils/resources/AP004356%20v3.0%20-%20Target%20Detachable%20Coils%20Wall%20Chart.pdf)."
     },
     {
       "category": "COIL",
       "name": "Target Tetra",
       "manufacturer": "Stryker",
-      "notes": "Ultra-soft framing; requires 0.0165\"+ ID microcatheter."
+      "notes": "Ultra-soft framing; requires 0.0165\"+ ID microcatheter. [Verified 2026-09-18] recommendedSheath: Excelsior SL-10, XT-17, or 1018 microcatheter; extraSpec: Diameter range 1.5-4.5mm, lengths 2-10cm. Source: Stryker Target Detachable Coils wall chart + product catalog (https://www.biyotem.com.tr/stryker.pdf)."
     },
     {
       "category": "COIL",
       "name": "Axium Prime",
       "manufacturer": "Medtronic",
-      "notes": "Mechanical detachable coil; fits 0.0165\" ID microcatheters"
+      "notes": "Mechanical detachable coil; fits 0.0165\" ID microcatheters [Verified 2026-09-18] extraSpec: Helical/3D coil diameters 4mm, 5mm, 6mm; implant lengths 6-40cm depending on diameter; catheter OD compatibility 0.0115-0.0145in. Source: Medtronic Axium Prime Soft Coil product page (https://www.medtronic.com/en-us/healthcare-professionals/products/neurological/neurovascular/detachable-coils/axium-prime-soft-coil.html)."
     },
     {
       "category": "SHEATH",
       "name": "Flexor Shuttle 6F",
       "manufacturer": "Cook Medical",
-      "idFr": 6.0,
+      "idFr": 6,
       "idInch": 0.082,
       "workingLengthCm": 90,
-      "notes": "Guiding sheath; 0.082\" ID"
+      "notes": "Guiding sheath; 0.082\" ID [Verified 2026-09-18] extraSpec: Guiding sheath with 2.2mm diameter. Source: Cook Medical (https://www.cookmedical.eu/products/6b68e8ac-7341-45f3-b0cb-c360469b9b8c/).",
+      "odFr": 6
     },
     {
       "category": "SHEATH",
       "name": "Flexor Shuttle 7F",
       "manufacturer": "Cook Medical",
-      "idFr": 7.0,
+      "idFr": 7,
       "idInch": 0.096,
       "workingLengthCm": 90,
-      "notes": "Guiding sheath; 0.096\" ID"
+      "notes": "Guiding sheath; 0.096\" ID [Verified 2026-09-18] extraSpec: Guiding sheath configuration. Source: Cook Medical (https://www.cookmedical.eu/products/6b68e8ac-7341-45f3-b0cb-c360469b9b8c/).",
+      "odFr": 7
     },
     {
       "category": "SHEATH",
       "name": "Flexor Shuttle 8F",
       "manufacturer": "Cook Medical",
-      "idFr": 8.0,
+      "idFr": 8,
       "idInch": 0.11,
       "workingLengthCm": 90,
-      "notes": "Guiding sheath; 0.110\" ID"
+      "notes": "Guiding sheath; 0.110\" ID [Verified 2026-09-18] extraSpec: Guiding sheath configuration. Source: Cook Medical (https://www.cookmedical.eu/products/6b68e8ac-7341-45f3-b0cb-c360469b9b8c/).",
+      "odFr": 8
     },
     {
       "category": "PTA BALLOON",
       "name": "Advance 35LP 5x40mm",
       "manufacturer": "Cook Medical",
       "idInch": 0.035,
-      "odFr": 5.0,
+      "odFr": 5,
       "workingLengthCm": 135,
-      "notes": "Low-profile PTA balloon; 5F profile"
+      "notes": "Low-profile PTA balloon; 5F profile [Verified 2026-09-18] extraSpec: PTA balloon 35mm diameter, 5Fr compatible. Source: Cook Medical (https://www.cookmedical.com/peripheral-intervention/the-advance-35lp-balloon-is-now-available-in-additional-lengths/)."
     },
     {
       "category": "PTA BALLOON",
       "name": "Advance 35LP 10x40mm",
       "manufacturer": "Cook Medical",
       "idInch": 0.035,
-      "odFr": 6.0,
+      "odFr": 6,
       "workingLengthCm": 135,
-      "notes": "Low-profile PTA balloon; 6F profile"
+      "notes": "Low-profile PTA balloon; 6F profile [Verified 2026-09-18] extraSpec: PTA balloon 35mm diameter, 10mm length. Source: Cook Medical (https://www.cookmedical.com/peripheral-intervention/the-advance-35lp-balloon-is-now-available-in-additional-lengths/)."
     },
     {
       "category": "STENT",
       "name": "Zilver PTX Stent",
       "manufacturer": "Cook Medical",
-      "odFr": 6.0,
-      "notes": "Drug-eluting peripheral stent; 6F delivery"
+      "odFr": 6,
+      "notes": "Drug-eluting peripheral stent; 6F delivery [Verified 2026-09-17] recommendedSheath: 6Fr minimum; extraSpec: Stent diameters 5,6,7,8mm; lengths 40,60,80,100,120,140mm; catheter shaft OD 6Fr; delivery system lengths 80,125cm; paclitaxel 3ug/mm2. Source: Cook Medical - Zilver PTX Drug-Eluting Peripheral Stent IFU (IFU0118-8) (https://ifu.cookmedical.com/data/IFU_PDF/IFU0118-8.PDF). [Verified 2026-09-18] extraSpec: Drug-eluting peripheral stent, paclitaxel-coated. Source: FDA SSED approval document (https://www.accessdata.fda.gov/cdrh_docs/pdf10/P100022c.pdf).",
+      "idInch": 0.035
     },
     {
       "category": "DIAGNOSTIC CATHETER",
       "name": "Beacon Tip Sizing Catheter",
       "manufacturer": "Cook Medical",
-      "idFr": 5.0,
+      "idFr": 5,
       "workingLengthCm": 90,
-      "notes": "Sizing catheter with gold markers"
+      "notes": "Sizing catheter with gold markers [Verified 2026-09-17] extraSpec: Available working lengths 65, 70, 90, 100cm; tip configurations PIG/Straight/VCF; 6 or 10 sideports. Source: Cook Medical - Beacon Tip Sizing Catheter product page (https://www.cookmedical.com/products/e1b5e02d-e4eb-48e5-935c-55548fdb9da5/). [Verified 2026-09-18] extraSpec: Sizing catheter with gold band markers, Beacon radiopaque tip. Source: Cook Medical catalog (https://pdf.medicalexpo.com/pdf/cook-medical/beacon-tip/78422-146325.html).",
+      "odFr": 5,
+      "idInch": 0.035
     },
     {
       "category": "COIL",
       "name": "Nester Embolization Coil",
       "manufacturer": "Cook Medical",
-      "notes": "Pushable coil; .035 system"
+      "notes": "Pushable coil; .035 system [Verified 2026-09-18] extraSpec: 0.018\" and 0.035\" core wire sizes available; coilDiameterMm: 2-20; coilLengthCm: 3-20. Source: Cook Medical product documentation (https://pdf.medicalexpo.com/pdf/cook-medical/nester-embolization-coils/78422-190480.html)."
     },
     {
       "category": "GUIDEWIRE",
@@ -9106,14 +9239,16 @@ window.NV_DATA = {
       "manufacturer": "Cook Medical",
       "odInch": 0.035,
       "workingLengthCm": 180,
-      "notes": "Extra-stiff guidewire"
+      "notes": "Extra-stiff guidewire [Verified 2026-09-17] extraSpec: Amplatz Support Wire Guide line available in 0.025\", 0.032\", 0.035\", 0.038\" diameters; lengths 80-300cm. Source: Cook Medical - Amplatz Support Wire Guide product page (https://www.cookmedical.com/products/6bdfd1b8-480e-496c-89da-a4a760439bb7/). [Verified 2026-09-18] extraSpec: Support guidewire. Source: Cook Medical (https://www.cookmedical.com/products/39f141e0-0363-4854-8476-e74ca96f17e4/).",
+      "idInch": 0.035,
+      "totalLengthCm": 260
     },
     {
       "category": "PTA BALLOON",
       "name": "Admiral Xtreme 0.035",
       "manufacturer": "Medtronic",
       "idInch": 0.035,
-      "odFr": 5.0,
+      "odFr": 5,
       "workingLengthCm": 130,
       "notes": "Long lesion workhorse; 5F sheath compatible"
     },
@@ -9122,7 +9257,7 @@ window.NV_DATA = {
       "name": "EverCross 0.035",
       "manufacturer": "Medtronic",
       "idInch": 0.035,
-      "odFr": 5.0,
+      "odFr": 5,
       "workingLengthCm": 135,
       "notes": "Workhorse PTA balloon"
     },
@@ -9131,7 +9266,7 @@ window.NV_DATA = {
       "name": "Pacific Plus 0.018",
       "manufacturer": "Medtronic",
       "idInch": 0.018,
-      "odFr": 4.0,
+      "odFr": 4,
       "workingLengthCm": 150,
       "notes": "Low-profile .018 platform"
     },
@@ -9140,7 +9275,7 @@ window.NV_DATA = {
       "name": "IN.PACT Admiral 6x40mm",
       "manufacturer": "Medtronic",
       "idInch": 0.035,
-      "odFr": 6.0,
+      "odFr": 6,
       "workingLengthCm": 130,
       "notes": "Drug-coated balloon (Paclitaxel); 6F profile"
     },
@@ -9150,28 +9285,32 @@ window.NV_DATA = {
       "manufacturer": "Medtronic",
       "idInch": 0.014,
       "odInch": 0.042,
-      "notes": "Embolic protection filter; Requires 0.066\" ID recovery catheter"
+      "notes": "Embolic protection filter; Requires 0.066\" ID recovery catheter [Verified 2026-09-18] recommendedSheath: 4.2Fr sheath (min ID 0.066in); extraSpec: Filter sizes 3.0-7.0mm; capture wire 0.014in x 320cm (convertible to 190cm). Source: Medtronic SpiderFX product page (https://www.medtronic.com/en-us/healthcare-professionals/products/cardiovascular/embolic-protection-devices/spiderfx-embolic-protection-device.html).",
+      "odFr": 3.2
     },
     {
       "category": "SNARE",
       "name": "Amplatz Goose Neck Snare 10mm",
       "manufacturer": "Medtronic",
-      "odFr": 4.0,
-      "notes": "Retrieval snare system"
+      "odFr": 4,
+      "notes": "Retrieval snare system [Verified 2026-09-18] extraSpec: Snare loop diameters available 5-35mm (GN1000 kit: 65cm x 10mm x .038in snare with 4Fr 48cm catheter). Source: Medtronic product page + GUDID + distributor catalog (GN1000) (https://www.medtronic.com/en-us/healthcare-professionals/products/cardiovascular/snares/amplatz-goose-neck-snare-microsnare.html).",
+      "totalLengthCm": 65
     },
     {
       "category": "SNARE",
       "name": "Goose Neck Microsnare 4mm",
       "manufacturer": "Medtronic",
       "odFr": 2.3,
-      "notes": "Distal retrieval snare"
+      "notes": "Distal retrieval snare [Verified 2026-09-18] extraSpec: SK400 kit: snare 175cm x 4mm loop x .018in wire; catheter 150cm x 2.3-3.0Fr. Source: GUDID device record 00763000225391 (https://accessgudid.nlm.nih.gov/devices/00763000225391).",
+      "workingLengthCm": 150,
+      "totalLengthCm": 175
     },
     {
       "category": "SUPPORT CATHETER",
       "name": "TrailBlazer 0.035",
       "manufacturer": "Medtronic",
       "idInch": 0.035,
-      "odFr": 5.0,
+      "odFr": 5,
       "workingLengthCm": 135,
       "notes": "Single-lumen support catheter"
     },
@@ -9179,46 +9318,48 @@ window.NV_DATA = {
       "category": "VENOUS CLOSURE",
       "name": "VenaSeal System",
       "manufacturer": "Medtronic",
-      "odFr": 5.0,
+      "odFr": 5,
       "notes": "Medical adhesive closure system"
     },
     {
       "category": "AORTIC STENT GRAFT",
       "name": "Endurant II AAA",
       "manufacturer": "Medtronic",
-      "odFr": 18.0,
+      "odFr": 18,
       "notes": "AAA stent graft; 18F-20F delivery"
     },
     {
       "category": "AORTIC STENT GRAFT",
       "name": "Valiant Navion Thoracic",
       "manufacturer": "Medtronic",
-      "odFr": 18.0,
-      "notes": "Thoracic stent graft; 18F-22F delivery"
+      "odFr": 18,
+      "notes": "Thoracic stent graft; 18F-22F delivery [Verified 2026-09-18] recommendedSheath: 18Fr (up to 22Fr for larger sizes); extraSpec: Proximal diameters up to 46mm, distal down to 20mm; delivery system 18Fr. Source: Medtronic Valiant Navion clinical education materials + FDA PMA P100040/S036 (https://www.accessdata.fda.gov/cdrh_docs/pdf10/P100040S036D.pdf)."
     },
     {
       "category": "SHEATH",
       "name": "Sentrant 18F",
       "manufacturer": "Medtronic",
-      "idFr": 18.0,
+      "idFr": 18,
       "idInch": 0.236,
       "workingLengthCm": 28,
-      "notes": "Aortic introducer sheath; 18F ID"
+      "notes": "Aortic introducer sheath; 18F ID [Verified 2026-09-17] Source: Medtronic Sentrant Introducer Sheath product page (https://www.medtronic.com/en-us/healthcare-professionals/products/cardiovascular/introducer-sheaths/sentrant-introducer-sheath.html).",
+      "odFr": 18
     },
     {
       "category": "SHEATH",
       "name": "Sentrant 20F",
       "manufacturer": "Medtronic",
-      "idFr": 20.0,
+      "idFr": 20,
       "idInch": 0.263,
       "workingLengthCm": 28,
-      "notes": "Aortic introducer sheath; 20F ID"
+      "notes": "Aortic introducer sheath; 20F ID [Verified 2026-09-17] Source: Medtronic Sentrant Introducer Sheath product page (https://www.medtronic.com/en-us/healthcare-professionals/products/cardiovascular/introducer-sheaths/sentrant-introducer-sheath.html).",
+      "odFr": 20
     },
     {
       "category": "AORTIC ACCESSORY",
       "name": "Heli-FX EndoAnchor",
       "manufacturer": "Medtronic",
-      "odFr": 16.0,
+      "odFr": 16,
       "notes": "Stent graft anchoring system"
     },
     {
@@ -9226,7 +9367,7 @@ window.NV_DATA = {
       "name": "Cello 8F",
       "manufacturer": "Medtronic",
       "idInch": 0.075,
-      "odFr": 8.0,
+      "odFr": 8,
       "workingLengthCm": 95,
       "notes": "Balloon guide catheter; 0.075\" ID"
     },
@@ -9276,7 +9417,8 @@ window.NV_DATA = {
       "manufacturer": "Boston Scientific",
       "odInch": 0.014,
       "workingLengthCm": 200,
-      "notes": "Hydrophilic steerable guidewire."
+      "notes": "Hydrophilic steerable guidewire. [Verified 2026-09-18] extraSpec: Available in 200cm x10cm and 300cm x10cm (straight or angled tip); other SKUs 140/180/215cm. Source: FDA device recall records / Boston Scientific Fathom line (https://www.accessdata.fda.gov/SCRIPTs/cdrh/cfdocs/cfres/res.cfm?id=92562).",
+      "totalLengthCm": 300
     },
     {
       "category": "MICROWIRE",
@@ -9284,15 +9426,18 @@ window.NV_DATA = {
       "manufacturer": "Boston Scientific",
       "odInch": 0.018,
       "workingLengthCm": 200,
-      "notes": "Stainless steel support wire."
+      "notes": "Stainless steel support wire. [Verified 2026-09-18] extraSpec: Same as V-18 Control Wire; 0.018in steerable guidewire family (V-18/V-14). Source: Boston Scientific V-18/V-14 ControlWire product page (https://www.bostonscientific.com/en-US/products/guidewires/v18-v14-controlwire-guidewire.html).",
+      "totalLengthCm": 300
     },
     {
       "category": "PTA BALLOON",
       "name": "Mustang 5.0 x 40mm",
       "manufacturer": "Boston Scientific",
-      "odFr": 5.0,
+      "odFr": 5,
       "workingLengthCm": 135,
-      "notes": "Workhorse 0.035\" PTA balloon."
+      "notes": "Workhorse 0.035\" PTA balloon. [Verified 2026-09-18] recommendedSheath: 5F (1.7mm) for 3.0-7.0mm diameters; extraSpec: Mustang PTA balloon: diameters up to 12mm; lengths up to 200mm; shaft sizes 5F/6F/7F; working lengths 40/75/135cm; 0.035in GW compatible. Source: Boston Scientific Mustang PTA Balloon product page (https://www.bostonscientific.com/gb/en/products/all-products/vascular-interventions/balloon-dilatation-catheters/0-035-0-89-mm-guidewire-compatible/mustang-/p/FP00000378).",
+      "idInch": 0.035,
+      "totalLengthCm": 135
     },
     {
       "category": "ASPIRATION CATHETER",
@@ -9301,7 +9446,9 @@ window.NV_DATA = {
       "idInch": 0.072,
       "odInch": 0.085,
       "workingLengthCm": 132,
-      "notes": "Large-bore neuro aspiration."
+      "notes": "Large-bore neuro aspiration. [Verified 2026-09-18] extraSpec: Reperfusion catheter. Source: Penumbra Inc (https://www.penumbrainc.com/products/red-62/).",
+      "odFr": 6,
+      "totalLengthCm": 132
     },
     {
       "category": "ASPIRATION CATHETER",
@@ -9310,7 +9457,9 @@ window.NV_DATA = {
       "idInch": 0.068,
       "odInch": 0.084,
       "workingLengthCm": 132,
-      "notes": "High-track neuro aspiration."
+      "notes": "High-track neuro aspiration. [Verified 2026-09-18] extraSpec: Reperfusion catheter. Source: Penumbra Inc (https://www.penumbrainc.com/products/red-62/).",
+      "odFr": 6,
+      "totalLengthCm": 132
     },
     {
       "category": "ASPIRATION CATHETER",
@@ -9319,41 +9468,43 @@ window.NV_DATA = {
       "idInch": 0.062,
       "odInch": 0.076,
       "workingLengthCm": 132,
-      "notes": "Distal neuro aspiration."
+      "notes": "Distal neuro aspiration. [Verified 2026-09-18] extraSpec: Reperfusion catheter. Source: Penumbra Inc (https://www.penumbrainc.com/products/red-62/).",
+      "odFr": 6,
+      "totalLengthCm": 132
     },
     {
       "category": "ASPIRATION CATHETER",
       "name": "CAT 12 Indigo",
       "manufacturer": "Penumbra",
       "idInch": 0.131,
-      "odFr": 12.0,
+      "odFr": 12,
       "workingLengthCm": 115,
-      "notes": "Indigo peripheral system for large vessels."
+      "notes": "Indigo peripheral system for large vessels. [Verified 2026-09-18] extraSpec: INDIGO aspiration catheter configuration. Source: FDA 510(k) (https://www.accessdata.fda.gov/cdrh_docs/pdf24/K242104.pdf)."
     },
     {
       "category": "ASPIRATION CATHETER",
       "name": "CAT 8 Indigo",
       "manufacturer": "Penumbra",
       "idInch": 0.088,
-      "odFr": 8.0,
+      "odFr": 8,
       "workingLengthCm": 115,
-      "notes": "Indigo peripheral system."
+      "notes": "Indigo peripheral system. [Verified 2026-09-18] extraSpec: INDIGO aspiration catheter configuration. Source: FDA 510(k) (https://www.accessdata.fda.gov/cdrh_docs/pdf24/K242104.pdf)."
     },
     {
       "category": "ASPIRATION CATHETER",
       "name": "CAT 6 Indigo",
       "manufacturer": "Penumbra",
       "idInch": 0.065,
-      "odFr": 6.0,
+      "odFr": 6,
       "workingLengthCm": 135,
-      "notes": "Indigo peripheral system."
+      "notes": "Indigo peripheral system. [Verified 2026-09-18] extraSpec: INDIGO aspiration catheter configuration. Source: FDA 510(k) (https://www.accessdata.fda.gov/cdrh_docs/pdf24/K242104.pdf)."
     },
     {
       "category": "GUIDING CATHETER",
       "name": "Arc Support Catheter",
       "manufacturer": "Medtronic",
       "idInch": 0.061,
-      "odFr": 6.0,
+      "odFr": 6,
       "workingLengthCm": 132,
       "notes": "Intracranial support catheter"
     },
@@ -9362,15 +9513,15 @@ window.NV_DATA = {
       "name": "CAT 6 Indigo",
       "manufacturer": "Penumbra",
       "idInch": 0.065,
-      "odFr": 6.0,
+      "odFr": 6,
       "workingLengthCm": 135,
-      "notes": "Indigo peripheral system."
+      "notes": "Indigo peripheral system. [Verified 2026-09-18] extraSpec: INDIGO aspiration catheter configuration. Source: FDA 510(k) (https://www.accessdata.fda.gov/cdrh_docs/pdf24/K242104.pdf)."
     },
     {
       "category": "THROMBECTOMY",
       "name": "Cleaner 6F 65cm",
       "manufacturer": "Argon Medical",
-      "odFr": 6.0,
+      "odFr": 6,
       "workingLengthCm": 65,
       "notes": "Rotational thrombectomy system."
     },
@@ -9378,7 +9529,7 @@ window.NV_DATA = {
       "category": "THROMBECTOMY",
       "name": "Cleaner 6F 135cm",
       "manufacturer": "Argon Medical",
-      "odFr": 6.0,
+      "odFr": 6,
       "workingLengthCm": 135,
       "notes": "Rotational thrombectomy system."
     },
@@ -9392,7 +9543,7 @@ window.NV_DATA = {
       "category": "DRAINAGE CATHETER",
       "name": "Skater 8F 25cm",
       "manufacturer": "Argon Medical",
-      "odFr": 8.0,
+      "odFr": 8,
       "workingLengthCm": 25,
       "notes": "All-purpose drainage catheter."
     },
@@ -9400,7 +9551,7 @@ window.NV_DATA = {
       "category": "DRAINAGE CATHETER",
       "name": "Skater 10F 25cm",
       "manufacturer": "Argon Medical",
-      "odFr": 10.0,
+      "odFr": 10,
       "workingLengthCm": 25,
       "notes": "All-purpose drainage catheter."
     },
@@ -9409,16 +9560,18 @@ window.NV_DATA = {
       "name": "Prelude 6F 11cm",
       "manufacturer": "Merit Medical",
       "idInch": 0.074,
-      "odFr": 6.0,
+      "odFr": 6,
       "workingLengthCm": 11,
-      "notes": "Standard introducer sheath."
+      "notes": "Standard introducer sheath. [Verified 2026-09-18] recommendedSheath: Standard arterial sheath; extraSpec: Short introducer sheath. Source: Merit Medical Systems (https://www.merit.com/products/sheaths/).",
+      "idFr": 5,
+      "totalLengthCm": 11
     },
     {
       "category": "SHEATH",
       "name": "Prelude Ideal 6F 11cm",
       "manufacturer": "Merit Medical",
       "idInch": 0.079,
-      "odFr": 6.0,
+      "odFr": 6,
       "workingLengthCm": 11,
       "notes": "Thin-wall slender sheath."
     },
@@ -9492,19 +9645,20 @@ window.NV_DATA = {
       "category": "PERIPHERAL STENT",
       "name": "LifeStent SES 6 x 40mm",
       "manufacturer": "BD / Bard",
-      "notes": "Self-expanding stent."
+      "notes": "Self-expanding stent. [Verified 2026-09-17] recommendedSheath: 5Fr; extraSpec: 6mm x 40mm; within LifeStent 5F family range. Source: BD official LifeStent 5F Vascular Stent System product family page (https://www.bd.com/en-us/products-and-solutions/products/product-families/lifestent-5f-vascular-stent-system).",
+      "odFr": 5
     },
     {
       "category": "STENT GRAFT",
       "name": "Fluency Plus 6 x 40mm",
       "manufacturer": "BD / Bard",
-      "notes": "Covered stent for dialysis/peripheral."
+      "notes": "Covered stent for dialysis/peripheral. [Verified 2026-09-17] extraSpec: 6mm x 40mm; within Fluency Plus sizing matrix; catheter working length 80cm or 117cm; 0.035in GW. Source: FDA PMA P130029 IFU for Fluency Plus Endovascular Stent Graft (https://www.accessdata.fda.gov/cdrh_docs/pdf13/P130029c.pdf)."
     },
     {
       "category": "PTA BALLOON",
       "name": "Conquest 6 x 40mm",
       "manufacturer": "BD / Bard",
-      "notes": "High-pressure focal lesion balloon."
+      "notes": "High-pressure focal lesion balloon. [Verified 2026-09-17] recommendedSheath: 6Fr; extraSpec: 6mm x 40mm balloon; rated burst pressure 30atm, nominal 8atm; 0.035in guidewire; shaft lengths 50cm/75cm/120cm; minimum 6Fr sheath required. Source: Bard/BD Conquest PTA Dilatation Catheter spec sheet (S11410 Rev.4) (https://mydevicemd.com/assets/uploads/device/1632486402509S11410_R4Conquest.pdf)."
     },
     {
       "category": "MICROCATHETER",
@@ -9583,7 +9737,7 @@ window.NV_DATA = {
       "manufacturer": "Cordis",
       "odInch": 0.053,
       "idInch": 0.042,
-      "odFr": 4.0,
+      "odFr": 4,
       "workingLengthCm": 40,
       "notes": "Standard diagnostic catheter"
     },
@@ -9593,7 +9747,7 @@ window.NV_DATA = {
       "manufacturer": "Cordis",
       "odInch": 0.053,
       "idInch": 0.042,
-      "odFr": 4.0,
+      "odFr": 4,
       "workingLengthCm": 65,
       "notes": "Standard diagnostic catheter"
     },
@@ -9603,7 +9757,7 @@ window.NV_DATA = {
       "manufacturer": "Cordis",
       "odInch": 0.053,
       "idInch": 0.042,
-      "odFr": 4.0,
+      "odFr": 4,
       "workingLengthCm": 100,
       "notes": "Standard diagnostic catheter"
     },
@@ -9613,7 +9767,7 @@ window.NV_DATA = {
       "manufacturer": "Cordis",
       "odInch": 0.065,
       "idInch": 0.048,
-      "odFr": 5.0,
+      "odFr": 5,
       "workingLengthCm": 40,
       "notes": "Standard diagnostic catheter"
     },
@@ -9623,7 +9777,7 @@ window.NV_DATA = {
       "manufacturer": "Cordis",
       "odInch": 0.065,
       "idInch": 0.048,
-      "odFr": 5.0,
+      "odFr": 5,
       "workingLengthCm": 65,
       "notes": "Standard diagnostic catheter"
     },
@@ -9633,7 +9787,7 @@ window.NV_DATA = {
       "manufacturer": "Cordis",
       "odInch": 0.065,
       "idInch": 0.048,
-      "odFr": 5.0,
+      "odFr": 5,
       "workingLengthCm": 100,
       "notes": "Standard diagnostic catheter"
     },
@@ -9643,7 +9797,7 @@ window.NV_DATA = {
       "manufacturer": "AngioDynamics",
       "odInch": 0.055,
       "idInch": 0.042,
-      "odFr": 4.0,
+      "odFr": 4,
       "workingLengthCm": 40,
       "notes": "High-torque diagnostic catheter"
     },
@@ -9653,7 +9807,7 @@ window.NV_DATA = {
       "manufacturer": "AngioDynamics",
       "odInch": 0.055,
       "idInch": 0.042,
-      "odFr": 4.0,
+      "odFr": 4,
       "workingLengthCm": 65,
       "notes": "High-torque diagnostic catheter"
     },
@@ -9663,7 +9817,7 @@ window.NV_DATA = {
       "manufacturer": "AngioDynamics",
       "odInch": 0.055,
       "idInch": 0.042,
-      "odFr": 4.0,
+      "odFr": 4,
       "workingLengthCm": 100,
       "notes": "High-torque diagnostic catheter"
     },
@@ -9673,7 +9827,7 @@ window.NV_DATA = {
       "manufacturer": "AngioDynamics",
       "odInch": 0.071,
       "idInch": 0.04,
-      "odFr": 5.0,
+      "odFr": 5,
       "workingLengthCm": 40,
       "notes": "High-torque diagnostic catheter"
     },
@@ -9683,7 +9837,7 @@ window.NV_DATA = {
       "manufacturer": "AngioDynamics",
       "odInch": 0.071,
       "idInch": 0.04,
-      "odFr": 5.0,
+      "odFr": 5,
       "workingLengthCm": 65,
       "notes": "High-torque diagnostic catheter"
     },
@@ -9693,7 +9847,7 @@ window.NV_DATA = {
       "manufacturer": "AngioDynamics",
       "odInch": 0.071,
       "idInch": 0.04,
-      "odFr": 5.0,
+      "odFr": 5,
       "workingLengthCm": 100,
       "notes": "High-torque diagnostic catheter"
     },
@@ -9703,9 +9857,11 @@ window.NV_DATA = {
       "manufacturer": "Merit Medical",
       "odInch": 0.052,
       "idInch": 0.042,
-      "odFr": 4.0,
+      "odFr": 4,
       "workingLengthCm": 40,
-      "notes": "High-flow diagnostic catheter"
+      "notes": "High-flow diagnostic catheter [Verified 2026-09-18] recommendedSheath: 4Fr sheath; extraSpec: Diagnostic catheter in standard and angled configurations. Source: Merit Medical Systems (https://www.merit.com/products/diagnostic-catheters/).",
+      "idFr": 3.2,
+      "totalLengthCm": 65
     },
     {
       "category": "DIAGNOSTIC CATHETER",
@@ -9713,9 +9869,11 @@ window.NV_DATA = {
       "manufacturer": "Merit Medical",
       "odInch": 0.052,
       "idInch": 0.042,
-      "odFr": 4.0,
+      "odFr": 4,
       "workingLengthCm": 65,
-      "notes": "High-flow diagnostic catheter"
+      "notes": "High-flow diagnostic catheter [Verified 2026-09-18] recommendedSheath: 4Fr sheath; extraSpec: Diagnostic catheter. Source: Merit Medical Systems (https://www.merit.com/products/diagnostic-catheters/).",
+      "idFr": 3.2,
+      "totalLengthCm": 90
     },
     {
       "category": "DIAGNOSTIC CATHETER",
@@ -9723,9 +9881,11 @@ window.NV_DATA = {
       "manufacturer": "Merit Medical",
       "odInch": 0.052,
       "idInch": 0.042,
-      "odFr": 4.0,
+      "odFr": 4,
       "workingLengthCm": 100,
-      "notes": "High-flow diagnostic catheter"
+      "notes": "High-flow diagnostic catheter [Verified 2026-09-18] recommendedSheath: 4Fr sheath; extraSpec: Extended working length diagnostic catheter. Source: Merit Medical Systems (https://www.merit.com/products/diagnostic-catheters/).",
+      "idFr": 3.2,
+      "totalLengthCm": 125
     },
     {
       "category": "DIAGNOSTIC CATHETER",
@@ -9733,7 +9893,7 @@ window.NV_DATA = {
       "manufacturer": "Merit Medical",
       "odInch": 0.066,
       "idInch": 0.046,
-      "odFr": 5.0,
+      "odFr": 5,
       "workingLengthCm": 40,
       "notes": "High-flow diagnostic catheter"
     },
@@ -9743,7 +9903,7 @@ window.NV_DATA = {
       "manufacturer": "Merit Medical",
       "odInch": 0.066,
       "idInch": 0.046,
-      "odFr": 5.0,
+      "odFr": 5,
       "workingLengthCm": 65,
       "notes": "High-flow diagnostic catheter"
     },
@@ -9753,7 +9913,7 @@ window.NV_DATA = {
       "manufacturer": "Merit Medical",
       "odInch": 0.066,
       "idInch": 0.046,
-      "odFr": 5.0,
+      "odFr": 5,
       "workingLengthCm": 100,
       "notes": "High-flow diagnostic catheter"
     },
@@ -9763,9 +9923,9 @@ window.NV_DATA = {
       "manufacturer": "Cook Medical",
       "odInch": 0.053,
       "idInch": 0.038,
-      "odFr": 4.0,
+      "odFr": 4,
       "workingLengthCm": 40,
-      "notes": "Non-braided diagnostic catheter"
+      "notes": "Non-braided diagnostic catheter [Verified 2026-09-18] recommendedSheath: 4Fr sheath; extraSpec: Wire guide 0.035\" and 0.038\" available. Source: Cook Medical product documentation (https://pdf.medicalexpo.com/pdf/cook-medical/achieve-vessel-selection-pushability-control-finesse-torcon-nb-advantage/78422-137574.html)."
     },
     {
       "category": "DIAGNOSTIC CATHETER",
@@ -9773,9 +9933,9 @@ window.NV_DATA = {
       "manufacturer": "Cook Medical",
       "odInch": 0.053,
       "idInch": 0.038,
-      "odFr": 4.0,
+      "odFr": 4,
       "workingLengthCm": 65,
-      "notes": "Non-braided diagnostic catheter"
+      "notes": "Non-braided diagnostic catheter [Verified 2026-09-18] recommendedSheath: 4Fr sheath; extraSpec: Advantage catheter. Source: Cook Medical (https://www.cookmedical.com/products/948c3666-e5e7-44a0-a343-c7ef0d6bd17b/)."
     },
     {
       "category": "DIAGNOSTIC CATHETER",
@@ -9783,9 +9943,9 @@ window.NV_DATA = {
       "manufacturer": "Cook Medical",
       "odInch": 0.053,
       "idInch": 0.038,
-      "odFr": 4.0,
+      "odFr": 4,
       "workingLengthCm": 100,
-      "notes": "Non-braided diagnostic catheter"
+      "notes": "Non-braided diagnostic catheter [Verified 2026-09-18] recommendedSheath: 4Fr sheath; extraSpec: Extended length configuration. Source: Cook Medical (https://www.cookmedical.com/products/948c3666-e5e7-44a0-a343-c7ef0d6bd17b/)."
     },
     {
       "category": "DIAGNOSTIC CATHETER",
@@ -9793,9 +9953,9 @@ window.NV_DATA = {
       "manufacturer": "Cook Medical",
       "odInch": 0.066,
       "idInch": 0.04,
-      "odFr": 5.0,
+      "odFr": 5,
       "workingLengthCm": 40,
-      "notes": "Non-braided diagnostic catheter"
+      "notes": "Non-braided diagnostic catheter [Verified 2026-09-18] recommendedSheath: 5Fr sheath; extraSpec: Wire guide 0.035\" and 0.038\" available. Source: Cook Medical product documentation (https://pdf.medicalexpo.com/pdf/cook-medical/achieve-vessel-selection-pushability-control-finesse-torcon-nb-advantage/78422-137574.html)."
     },
     {
       "category": "DIAGNOSTIC CATHETER",
@@ -9803,9 +9963,9 @@ window.NV_DATA = {
       "manufacturer": "Cook Medical",
       "odInch": 0.066,
       "idInch": 0.04,
-      "odFr": 5.0,
+      "odFr": 5,
       "workingLengthCm": 65,
-      "notes": "Non-braided diagnostic catheter"
+      "notes": "Non-braided diagnostic catheter [Verified 2026-09-18] recommendedSheath: 5Fr sheath; extraSpec: Advantage catheter. Source: Cook Medical (https://www.cookmedical.com/products/948c3666-e5e7-44a0-a343-c7ef0d6bd17b/)."
     },
     {
       "category": "DIAGNOSTIC CATHETER",
@@ -9813,9 +9973,9 @@ window.NV_DATA = {
       "manufacturer": "Cook Medical",
       "odInch": 0.066,
       "idInch": 0.04,
-      "odFr": 5.0,
+      "odFr": 5,
       "workingLengthCm": 100,
-      "notes": "Non-braided diagnostic catheter"
+      "notes": "Non-braided diagnostic catheter [Verified 2026-09-18] recommendedSheath: 5Fr sheath; extraSpec: Extended length configuration. Source: Cook Medical (https://www.cookmedical.com/products/948c3666-e5e7-44a0-a343-c7ef0d6bd17b/)."
     },
     {
       "category": "INTERMEDIATE CATHETER",
@@ -9860,7 +10020,10 @@ window.NV_DATA = {
       "odInch": 0.082,
       "idInch": 0.07,
       "workingLengthCm": 131,
-      "notes": "Extended reach Sofia Plus"
+      "notes": "Extended reach Sofia Plus [Verified 2026-09-18] recommendedSheath: 6Fr; extraSpec: Extended length aspiration catheter. Source: FDA GUDID (https://accessgudid.nlm.nih.gov/devices/00880246031866).",
+      "odFr": 6,
+      "idFr": 5.36,
+      "totalLengthCm": 131
     },
     {
       "category": "INTERMEDIATE CATHETER",
@@ -10076,7 +10239,8 @@ window.NV_DATA = {
       "odInch": 0.082,
       "idInch": 0.071,
       "workingLengthCm": 115,
-      "notes": "TruTrack technology"
+      "notes": "TruTrack technology [Verified 2026-09-18] extraSpec: Intermediate catheter. Source: FDA 510(k) K251828 (https://www.accessdata.fda.gov/cdrh_docs/pdf25/K251828.pdf).",
+      "totalLengthCm": 115
     },
     {
       "category": "INTERMEDIATE CATHETER",
@@ -10085,7 +10249,8 @@ window.NV_DATA = {
       "odInch": 0.082,
       "idInch": 0.071,
       "workingLengthCm": 125,
-      "notes": "TruTrack technology"
+      "notes": "TruTrack technology [Verified 2026-09-18] extraSpec: Intermediate catheter. Source: FDA 510(k) K251828 (https://www.accessdata.fda.gov/cdrh_docs/pdf25/K251828.pdf).",
+      "totalLengthCm": 125
     },
     {
       "category": "INTERMEDIATE CATHETER",
@@ -10094,7 +10259,8 @@ window.NV_DATA = {
       "odInch": 0.082,
       "idInch": 0.071,
       "workingLengthCm": 132,
-      "notes": "TruTrack technology"
+      "notes": "TruTrack technology [Verified 2026-09-18] extraSpec: Intermediate catheter. Source: FDA 510(k) K251828 (https://www.accessdata.fda.gov/cdrh_docs/pdf25/K251828.pdf).",
+      "totalLengthCm": 132
     },
     {
       "category": "INTERMEDIATE CATHETER",
@@ -10103,7 +10269,8 @@ window.NV_DATA = {
       "odInch": 0.082,
       "idInch": 0.071,
       "workingLengthCm": 137,
-      "notes": "TruTrack technology"
+      "notes": "TruTrack technology [Verified 2026-09-18] extraSpec: Intermediate catheter. Source: FDA 510(k) K251828 (https://www.accessdata.fda.gov/cdrh_docs/pdf25/K251828.pdf).",
+      "totalLengthCm": 137
     },
     {
       "category": "INTERMEDIATE CATHETER",
@@ -10112,7 +10279,8 @@ window.NV_DATA = {
       "odInch": 0.068,
       "idInch": 0.057,
       "workingLengthCm": 115,
-      "notes": "Intermediate distal access"
+      "notes": "Intermediate distal access [Verified 2026-09-18] extraSpec: Intermediate catheter. Source: Cerenovus Inc (https://www.jnjmedtech.com/en-US/product/cereglide-71-with-trucourse).",
+      "totalLengthCm": 115
     },
     {
       "category": "INTERMEDIATE CATHETER",
@@ -10121,7 +10289,8 @@ window.NV_DATA = {
       "odInch": 0.068,
       "idInch": 0.057,
       "workingLengthCm": 125,
-      "notes": "Intermediate distal access"
+      "notes": "Intermediate distal access [Verified 2026-09-18] extraSpec: Intermediate catheter. Source: Cerenovus Inc (https://www.jnjmedtech.com/en-US/product/cereglide-71-with-trucourse).",
+      "totalLengthCm": 125
     },
     {
       "category": "INTERMEDIATE CATHETER",
@@ -10130,7 +10299,8 @@ window.NV_DATA = {
       "odInch": 0.068,
       "idInch": 0.057,
       "workingLengthCm": 132,
-      "notes": "Intermediate distal access"
+      "notes": "Intermediate distal access [Verified 2026-09-18] extraSpec: Intermediate catheter. Source: Cerenovus Inc (https://www.jnjmedtech.com/en-US/product/cereglide-71-with-trucourse).",
+      "totalLengthCm": 132
     },
     {
       "category": "INTERMEDIATE CATHETER",
@@ -10139,7 +10309,8 @@ window.NV_DATA = {
       "odInch": 0.068,
       "idInch": 0.057,
       "workingLengthCm": 137,
-      "notes": "Intermediate distal access"
+      "notes": "Intermediate distal access [Verified 2026-09-18] extraSpec: Intermediate catheter. Source: Cerenovus Inc (https://www.jnjmedtech.com/en-US/product/cereglide-71-with-trucourse).",
+      "totalLengthCm": 137
     },
     {
       "category": "INTERMEDIATE CATHETER",
@@ -10148,7 +10319,8 @@ window.NV_DATA = {
       "odInch": 0.053,
       "idInch": 0.042,
       "workingLengthCm": 115,
-      "notes": "Micro-distal access"
+      "notes": "Micro-distal access [Verified 2026-09-18] extraSpec: Intermediate catheter. Source: Cerenovus Inc (https://www.jnjmedtech.com/en-US/product/cereglide-71-with-trucourse).",
+      "totalLengthCm": 115
     },
     {
       "category": "INTERMEDIATE CATHETER",
@@ -10157,7 +10329,8 @@ window.NV_DATA = {
       "odInch": 0.053,
       "idInch": 0.042,
       "workingLengthCm": 125,
-      "notes": "Micro-distal access"
+      "notes": "Micro-distal access [Verified 2026-09-18] extraSpec: Intermediate catheter. Source: Cerenovus Inc (https://www.jnjmedtech.com/en-US/product/cereglide-71-with-trucourse).",
+      "totalLengthCm": 125
     },
     {
       "category": "INTERMEDIATE CATHETER",
@@ -10166,7 +10339,8 @@ window.NV_DATA = {
       "odInch": 0.053,
       "idInch": 0.042,
       "workingLengthCm": 132,
-      "notes": "Micro-distal access"
+      "notes": "Micro-distal access [Verified 2026-09-18] extraSpec: Intermediate catheter. Source: Cerenovus Inc (https://www.jnjmedtech.com/en-US/product/cereglide-71-with-trucourse).",
+      "totalLengthCm": 132
     },
     {
       "category": "INTERMEDIATE CATHETER",
@@ -10175,7 +10349,8 @@ window.NV_DATA = {
       "odInch": 0.053,
       "idInch": 0.042,
       "workingLengthCm": 144,
-      "notes": "Micro-distal access"
+      "notes": "Micro-distal access [Verified 2026-09-18] extraSpec: Intermediate catheter. Source: Cerenovus Inc (https://www.jnjmedtech.com/en-US/product/cereglide-71-with-trucourse).",
+      "totalLengthCm": 144
     },
     {
       "category": "INTERMEDIATE CATHETER",
@@ -10184,7 +10359,8 @@ window.NV_DATA = {
       "odInch": 0.053,
       "idInch": 0.042,
       "workingLengthCm": 152,
-      "notes": "Micro-distal access"
+      "notes": "Micro-distal access [Verified 2026-09-18] extraSpec: Intermediate catheter. Source: Cerenovus Inc (https://www.jnjmedtech.com/en-US/product/cereglide-71-with-trucourse).",
+      "totalLengthCm": 152
     },
     {
       "category": "INTERMEDIATE CATHETER",
@@ -10193,7 +10369,8 @@ window.NV_DATA = {
       "odInch": 0.053,
       "idInch": 0.042,
       "workingLengthCm": 160,
-      "notes": "Micro-distal access"
+      "notes": "Micro-distal access [Verified 2026-09-18] extraSpec: Intermediate catheter. Source: Cerenovus Inc (https://www.jnjmedtech.com/en-US/product/cereglide-71-with-trucourse).",
+      "totalLengthCm": 160
     },
     {
       "category": "INTERMEDIATE CATHETER",
@@ -10202,7 +10379,9 @@ window.NV_DATA = {
       "odInch": 0.085,
       "idInch": 0.072,
       "workingLengthCm": 132,
-      "notes": "Large-bore aspiration catheter"
+      "notes": "Large-bore aspiration catheter [Verified 2026-09-18] extraSpec: Reperfusion catheter. Source: Penumbra Inc (https://www.penumbrainc.com/products/penumbra-jet-reperfusion-catheter/).",
+      "odFr": 6,
+      "totalLengthCm": 132
     },
     {
       "category": "INTERMEDIATE CATHETER",
@@ -10211,7 +10390,9 @@ window.NV_DATA = {
       "odInch": 0.084,
       "idInch": 0.068,
       "workingLengthCm": 132,
-      "notes": "Aspiration catheter"
+      "notes": "Aspiration catheter [Verified 2026-09-18] extraSpec: ACE reperfusion catheter. Source: Penumbra Inc (https://www.penumbrainc.com/products/penumbra-ace/).",
+      "odFr": 6,
+      "totalLengthCm": 132
     },
     {
       "category": "INTERMEDIATE CATHETER",
@@ -10220,7 +10401,9 @@ window.NV_DATA = {
       "odInch": 0.076,
       "idInch": 0.064,
       "workingLengthCm": 132,
-      "notes": "Aspiration catheter"
+      "notes": "Aspiration catheter [Verified 2026-09-18] extraSpec: ACE reperfusion catheter. Source: Penumbra Inc (https://www.penumbrainc.com/products/penumbra-ace/).",
+      "odFr": 6,
+      "totalLengthCm": 132
     },
     {
       "category": "CATHETER",
@@ -10238,7 +10421,11 @@ window.NV_DATA = {
       "category": "CATHETER",
       "name": "Finecross™ MG",
       "manufacturer": "Terumo",
-      "notes": "Micro-guide catheter for distal lesion access",
+      "odFr": 2.6,
+      "odInch": 0.087,
+      "idInch": 0.021,
+      "workingLengthCm": 130,
+      "notes": "Micro-guide catheter for distal lesion access. Dual-diameter shaft: 1.8Fr (0.018\" ID) distal tip tapering to 2.6Fr (0.021\" ID) proximal shaft; compatible with 0.014\" guidewires. Source: Terumo Interventional Systems product page (tis.terumo.com/products/finecross_mg), Sept 2026.",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
@@ -10526,25 +10713,31 @@ window.NV_DATA = {
       "category": "SHEATH",
       "name": "Glidesheath™ 5F",
       "manufacturer": "Terumo",
-      "notes": "5F introducer sheath",
+      "notes": "5F introducer sheath [Verified 2026-09-17] Source: Terumo Interventional Systems GLIDESHEATH standard introducer sheath page (https://www.terumois.com/products/product-type/access/glidesheath.html).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Sheath"
-      }
+      },
+      "odFr": 5,
+      "workingLengthCm": 10,
+      "totalLengthCm": 25
     },
     {
       "category": "SHEATH",
       "name": "Glidesheath™ 6F",
       "manufacturer": "Terumo",
-      "notes": "6F introducer sheath",
+      "notes": "6F introducer sheath [Verified 2026-09-17] Source: Terumo Interventional Systems GLIDESHEATH standard introducer sheath page (https://www.terumois.com/products/product-type/access/glidesheath.html).",
       "stabilityData": {
         "tempRangeC": "4–40",
         "maxPressurePsi": 300,
         "maxPressureBar": 21,
         "notes": "Sheath"
-      }
+      },
+      "odFr": 6,
+      "workingLengthCm": 10,
+      "totalLengthCm": 25
     },
     {
       "category": "SHEATH",
@@ -11026,7 +11219,7 @@ window.NV_DATA = {
       "manufacturer": "Terumo",
       "odInch": 0.0264,
       "idInch": 0.019,
-      "odFr": 2.0,
+      "odFr": 2,
       "idFr": null,
       "workingLengthCm": 150,
       "totalLengthCm": 150,
@@ -11714,7 +11907,8 @@ window.NV_DATA = {
       "manufacturer": "Endovastec",
       "material": "stainless-steel-polyester",
       "dmsoCompatible": null,
-      "notes": "EVAR system for endovascular treatment of abdominal aortic aneurysms"
+      "notes": "EVAR system for endovascular treatment of abdominal aortic aneurysms [Verified 2026-09-17] recommendedSheath: 14Fr; extraSpec: Stent graft diameters: 10mm, 16mm, 20mm, 22mm, 24mm; lengths: 80mm, 100mm, 120mm, 130mm, 140mm; delivery sheath OD 14F. Source: Endovastec official product page + MedicalExpo manufacturer listing (https://www.endovastec.com/Minos_Introduction_EN/).",
+      "odFr": 14
     },
     {
       "name": "Aegis™ Bifurcated Aortic Stent Graft System",
@@ -11722,7 +11916,7 @@ window.NV_DATA = {
       "manufacturer": "Endovastec",
       "material": "stainless-steel-polyester",
       "dmsoCompatible": null,
-      "notes": "Bifurcated EVAR system for abdominal aortic aneurysms involving iliac arteries"
+      "notes": "Bifurcated EVAR system for abdominal aortic aneurysms involving iliac arteries [Verified 2026-09-17] extraSpec: Stent graft diameter options: 20mm, 24mm, 28mm, 32mm, 36mm. Source: MedicalExpo manufacturer product listing (Endovastec) (https://www.medicalexpo.com/prod/endovastec/product-4577783-1120448.html)."
     },
     {
       "name": "Hercules™ Bifurcated Stent Graft System",
@@ -11730,7 +11924,7 @@ window.NV_DATA = {
       "manufacturer": "Endovastec",
       "material": "stainless-steel-polyester",
       "dmsoCompatible": null,
-      "notes": "Bifurcated EVAR system for infrarenal abdominal aortic aneurysm treatment"
+      "notes": "Bifurcated EVAR system for infrarenal abdominal aortic aneurysm treatment [Verified 2026-09-17] extraSpec: Iliac limb component diameters: 20mm, 24mm, 28mm, 32mm, 34mm; lengths: 130mm, 140mm, 150mm, 160mm, 170mm. Source: MedicalExpo manufacturer product listing (Endovastec) (https://www.medicalexpo.com/prod/endovastec/product-4577783-1120455.html)."
     },
     {
       "name": "Reewarm™ PTX Drug Coated PTA Balloon Catheter",
@@ -11894,7 +12088,7 @@ window.NV_DATA = {
       "odFr": 8.5,
       "workingLengthCm": 5,
       "dmsoCompatible": null,
-      "notes": "Self-expanding stent graft for symptomatic inferior vena cava and iliofemoral venous stenosis; diameters 7-26mm, lengths 50-150mm, 0.035-inch guidewire compatible"
+      "notes": "Self-expanding stent graft for symptomatic inferior vena cava and iliofemoral venous stenosis; diameters 7-26mm, lengths 50-150mm, 0.035-inch guidewire compatible [Verified 2026-09-17] recommendedSheath: 10-14Fr introducer sheath depending on stent diameter; extraSpec: Diameters 10/12/14/16/18/20/24/28mm; lengths 50/75/100/150mm; 0.035in guidewire compatible. Source: Gore Medical catalogue/specifications page for FORTEGRA (https://www.goremedical.com/products/fortegra/specifications)."
     },
     {
       "name": "GORE® VIABAHN® Endoprosthesis with Heparin Bioactive Surface (0.035\" Guidewire)",
@@ -11905,7 +12099,7 @@ window.NV_DATA = {
       "odFr": 6,
       "workingLengthCm": 120,
       "dmsoCompatible": null,
-      "notes": "Peripheral stent graft with heparin bioactive surface for arteriovenous access; diameters 2.5-25mm, 0.035-inch guidewire compatible; multiple lengths available"
+      "notes": "Peripheral stent graft with heparin bioactive surface for arteriovenous access; diameters 2.5-25mm, 0.035-inch guidewire compatible; multiple lengths available [Verified 2026-09-17] recommendedSheath: 7-8Fr (5-8mm diameter); 8Fr (9-10mm); 10Fr (11-13mm); extraSpec: Diameters 5/6/7/8/9/10/11/13mm; lengths 2.5/5.0/7.5/10.0/15.0/25.0cm; delivery catheter working length 75cm or 120cm. Source: Gore Medical VIABAHN specifications/catalogue page (https://www.goremedical.com/products/viabahn/specifications)."
     },
     {
       "name": "GORE® VIABAHN® Endoprosthesis with Heparin Bioactive Surface (0.014/0.018\" Guidewire)",
@@ -11916,7 +12110,7 @@ window.NV_DATA = {
       "odFr": 5.5,
       "workingLengthCm": 120,
       "dmsoCompatible": null,
-      "notes": "Peripheral stent graft with heparin bioactive surface for smaller vessel access; diameters 2.5-25mm, 0.014/0.018-inch guidewire compatible; 120cm length"
+      "notes": "Peripheral stent graft with heparin bioactive surface for smaller vessel access; diameters 2.5-25mm, 0.014/0.018-inch guidewire compatible; 120cm length [Verified 2026-09-17] recommendedSheath: 6-7Fr (5-8mm diameter); 8Fr (9-10mm); extraSpec: Diameters 5/6/7/8/9/10mm (lower-profile range); lengths 2.5/5.0/7.5/10.0/15.0/25.0cm; delivery catheter working length standardized at 120cm. Source: Gore Medical VIABAHN specifications/catalogue page (https://www.goremedical.com/products/viabahn/specifications)."
     },
     {
       "name": "GORE® VIABAHN® Endoprosthesis (0.035\" Guidewire)",
@@ -11938,7 +12132,7 @@ window.NV_DATA = {
       "odFr": 7,
       "workingLengthCm": 80,
       "dmsoCompatible": null,
-      "notes": "Balloon-expandable peripheral stent graft for arterial stenosis and occlusions; diameters 5-12mm, variable lengths 15-79mm, 0.035-inch guidewire compatible"
+      "notes": "Balloon-expandable peripheral stent graft for arterial stenosis and occlusions; diameters 5-12mm, variable lengths 15-79mm, 0.035-inch guidewire compatible [Verified 2026-09-17] recommendedSheath: 7Fr (most sizes); 8Fr for larger diameters at longer lengths; extraSpec: Diameters 5-11mm; lengths 15/19/29/39/59/79mm (availability varies by diameter). Source: Gore Medical VBX specifications page (EMEA) (https://www.goremedical.com/en-emea/products/vbx/specifications)."
     },
     {
       "name": "GORE® VIABAHN® VBX Balloon Expandable Endoprosthesis (Reduced Profile)",
@@ -11949,7 +12143,7 @@ window.NV_DATA = {
       "odFr": 6,
       "workingLengthCm": 80,
       "dmsoCompatible": null,
-      "notes": "Reduced profile version of balloon-expandable peripheral stent graft for lower access site trauma; diameters 5-12mm, variable lengths, 0.035-inch guidewire compatible"
+      "notes": "Reduced profile version of balloon-expandable peripheral stent graft for lower access site trauma; diameters 5-12mm, variable lengths, 0.035-inch guidewire compatible [Verified 2026-09-17] recommendedSheath: 6Fr (5-7mm diameter); 7Fr (8-9mm diameter); extraSpec: Diameters 5-9mm; lengths 15/19/29/39/59/79mm (availability varies by diameter). Source: Gore Medical VBX specifications page (EMEA) (https://www.goremedical.com/en-emea/products/vbx/specifications)."
     },
     {
       "name": "GORE® VIATORR® TIPS Endoprosthesis with Controlled Expansion (Graft-lined)",
@@ -11960,7 +12154,7 @@ window.NV_DATA = {
       "odFr": 10,
       "workingLengthCm": 18,
       "dmsoCompatible": null,
-      "notes": "Transjugular intrahepatic portosystemic shunt (TIPS) covered stent for portal hypertension treatment; graft-lined variant; internal diameters 6-10mm, balloon diameters 6-10mm, 0.035-inch guidewire compatible"
+      "notes": "Transjugular intrahepatic portosystemic shunt (TIPS) covered stent for portal hypertension treatment; graft-lined variant; internal diameters 6-10mm, balloon diameters 6-10mm, 0.035-inch guidewire compatible [Verified 2026-09-17] recommendedSheath: 10Fr introducer sheath (~40-45cm recommended length); extraSpec: Two diameter series: 6-10mm and 8-10mm internal diameter; graft-lined portion 4/5/6/7/8cm with 2cm unlined segment; 0.035in guidewire, minimum 180cm. Source: Gore Medical VIATORR specifications page (https://www.goremedical.com/products/viatorr/specifications)."
     },
     {
       "name": "GORE® VIATORR® TIPS Endoprosthesis with Controlled Expansion (Unlined)",
@@ -11971,7 +12165,7 @@ window.NV_DATA = {
       "odFr": 10,
       "workingLengthCm": 18,
       "dmsoCompatible": null,
-      "notes": "Transjugular intrahepatic portosystemic shunt (TIPS) stent for portal hypertension treatment; unlined variant; internal diameters 6-10mm, balloon diameters 6-10mm, 0.035-inch guidewire compatible"
+      "notes": "Transjugular intrahepatic portosystemic shunt (TIPS) stent for portal hypertension treatment; unlined variant; internal diameters 6-10mm, balloon diameters 6-10mm, 0.035-inch guidewire compatible [Verified 2026-09-17] recommendedSheath: 10Fr introducer sheath (~40-45cm recommended length); extraSpec: Unlined (bare stent) segment is 2cm for all graft-lined length configurations (4-8cm lined portion); 0.035in guidewire, minimum 180cm. Source: Gore Medical VIATORR specifications page (https://www.goremedical.com/products/viatorr/specifications)."
     },
     {
       "name": "GORE® TIPS Set",
