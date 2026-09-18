@@ -1,3 +1,11 @@
+/*
+  IR Compatibility Calculator - Service Worker
+    Copyright © 2026 shadirawa-ship-it
+      Licensed under CC BY-NC-ND 4.0
+        
+          Educational reference tool for interventional radiology
+            NOT for clinical decision-making
+            */
 const CACHE_NAME = 'ir-trainer-v3.6.0';
 const SCOPE = self.registration.scope;
 
