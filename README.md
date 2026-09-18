@@ -1,3 +1,13 @@
+# Copyright and License
+
+**Copyright © 2026 shadirawa-ship-it**
+
+**License:** Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 (CC BY-NC-ND 4.0)
+
+This application is provided for **educational reference purposes only** and is **NOT cleared for clinical decision-making**. All rights reserved. For detailed license terms and restrictions, see the [LICENSE](LICENSE) file.
+
+---
+
 # NV Compatibility Calculator
 
 A standalone, offline-capable web app for interventional radiology device
