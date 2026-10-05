@@ -1,0 +1,46 @@
+[
+  {
+    "category": "Flow Diverter",
+    "name": "DERIVO",
+    "manufacturer": "Acandis",
+    "vesselCompatibilityMm": "1.5-6.0",
+    "microcatheterIdInch": "0.027",
+    "microcatheterIdFr": "3",
+    "extraSpec": "Braided, self-expanding nitinol flow diverter with platinum core and BlueXide coating. Vessel diameters 3.5mm available through 0.021\" microcatheter.",
+    "deviceSizes": "Diameters: 3.5, 4.0, 4.5, 5.0, 5.5, 6.0 mm; Lengths: 15, 20, 25, 30, 40, 50 mm",
+    "notes": "CE marked (European approval only, not FDA approved). Designed for delivery through 0.027\" ID (3F) microcatheter. Braided design with proximal and distal flared ends. Platinum markers for visibility. Foreshortening ≤72%. MR compatible up to 3 Tesla. Single-use only. Available in comprehensive size range for tortuous vessel anatomy. Source: Acandis product documentation (https://acandis.com/en/haemorrhagic-stroke/derivo-derivo-mini-embolisation-device/), Safety and Clinical Performance Summary (https://www.acandis.com/wp-content/uploads/2024/01/AC_SSCP_Derivo_Derivomini_Rev03_20231128_Web.pdf)",
+    "source": "Acandis / European regulatory research (CE-marked device)",
+    "sourceUrl": "https://acandis.com/en/haemorrhagic-stroke/derivo-derivo-mini-embolisation-device/",
+    "incomplete": true,
+    "incompleteFields": ["odInch", "odFr", "idInch", "idFr", "workingLengthCm", "totalLengthCm"]
+  },
+  {
+    "category": "Flow Diverter",
+    "name": "DERIVO mini",
+    "manufacturer": "Acandis",
+    "vesselCompatibilityMm": "1.5-3.5",
+    "microcatheterIdInch": "0.021",
+    "microcatheterIdFr": "2.5",
+    "extraSpec": "Braided, self-expanding nitinol flow diverter with platinum core and BlueXide coating. Low-profile variant for distal and small vessel access through 0.021\" microcatheter.",
+    "deviceSizes": "Diameters: 2.5, 3.0, 3.5 mm; Lengths: 15, 20, 25 mm",
+    "notes": "CE marked (European approval only, not FDA approved). Designed for delivery through 0.021\" ID (2.5F) microcatheter. Enables treatment of small and distal vessel aneurysms. Braided design with proximal and distal flared ends. Platinum markers for visibility. Foreshortening ≤72%. MR compatible up to 3 Tesla. Single-use only. Source: Acandis product documentation (https://acandis.com/en/haemorrhagic-stroke/derivo-derivo-mini-embolisation-device/), Safety and Clinical Performance Summary (https://www.acandis.com/wp-content/uploads/2024/01/AC_SSCP_Derivo_Derivomini_Rev03_20231128_Web.pdf), Clinical Study (https://doi.org/10.3390/brainsci14090911)",
+    "source": "Acandis / European regulatory research (CE-marked device)",
+    "sourceUrl": "https://acandis.com/en/haemorrhagic-stroke/derivo-derivo-mini-embolisation-device/",
+    "incomplete": true,
+    "incompleteFields": ["odInch", "odFr", "idInch", "idFr", "workingLengthCm", "totalLengthCm"]
+  },
+  {
+    "category": "Flow Diverter",
+    "name": "DERIVO 2heal",
+    "manufacturer": "Acandis",
+    "vesselCompatibilityMm": "1.5-8.0",
+    "microcatheterIdInch": "0.0165-0.039",
+    "extraSpec": "Braided, self-expanding nitinol flow diverter with integrated platinum core and HEAL Technology for enhanced biocompatibility. Extended vessel compatibility range (1.5-8.0mm) for large-diameter aneurysms.",
+    "deviceLengths": "Up to 50 mm",
+    "notes": "CE marked (European approval only, not FDA approved). Advanced generation with HEAL Technology coating for improved blood compatibility. Supports vessel diameters from 1.5-8.0mm, enabling treatment of large-diameter aneurysms. Optimised design for controlled deployment and uniform wall apposition. Full-length visibility with integrated platinum core. Acandis provides case-specific 3D sizing support. MR compatible up to 3 Tesla. Source: Acandis product documentation (https://acandis.com/en/haemorrhagic-stroke/derivo-2heal-embolisation-device/), Clinical Studies (https://pubmed.ncbi.nlm.nih.gov/37574801/, https://link.springer.com/article/10.1007/s00062-024-01446-8)",
+    "source": "Acandis / European regulatory research (CE-marked device)",
+    "sourceUrl": "https://acandis.com/en/haemorrhagic-stroke/derivo-2heal-embolisation-device/",
+    "incomplete": true,
+    "incompleteFields": ["odInch", "odFr", "idInch", "idFr", "workingLengthCm", "totalLengthCm"]
+  }
+]
